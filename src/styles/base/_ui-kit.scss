@@ -1,0 +1,44 @@
+$white: #FFFFFF;
+$black: #1F2120;
+$grey-1: #E3E3E3;
+$grey-2: #3B3D3C;
+$grey-3: #ACADAC;
+$grey-4: #8F9190;
+$grey-5: #F8F8F8;
+$grey-6: #E0E0E0;
+$grey-7: #4C4E4D;
+$animation: all 0.5s ease;
+
+body {
+  background: $white;
+  font-family: $mainFont;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  outline: none;
+  transition: $animation;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+}

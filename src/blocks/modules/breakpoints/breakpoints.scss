@@ -1,0 +1,41 @@
+.breakpoints {
+    border-bottom: 1px solid $grey-1;
+
+    &__container {
+        max-width: 1920px;
+        width: 100%;
+        padding: 25px 303px;
+        margin: 0 auto;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: -2px -15.5px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 2px 15.5px;
+
+        &:not(:first-child):before {
+            content: '';
+            position: absolute;
+            left: -17.5px;
+            width: 3px;
+            height: 3px;
+            background-color: $grey-4;
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 16px;
+        color: $grey-3;
+    }
+}
