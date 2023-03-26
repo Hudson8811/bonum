@@ -1,0 +1,108 @@
+.catalog-block {
+	$parent: &;
+
+	padding: 107px 0 152px;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__wrapper {
+		position: relative;
+		height: 0;
+		padding-top: 54.7%;
+		margin-top: 54px;
+	}
+
+	&__tabs {
+		display: flex;
+		flex-direction: column;
+		gap: 1px;
+		width: 40.3%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__tabs-item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: calc(25% - 1px / 4 * 3);
+		padding: 10px 42px;
+		background-color: rgba($black, 0.55);
+		position: relative;
+
+		&.active {
+			background-color: rgba($black, 0.2);
+
+			#{$parent}__toggle-icon {
+				width: 23px;
+				height: 23px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='5.84326' y='6.55029' width='1' height='15' transform='rotate(-45 5.84326 6.55029)' fill='white'/%3e%3crect x='16.4497' y='5.84314' width='1' height='15' transform='rotate(45 16.4497 5.84314)' fill='white'/%3e%3c/svg%3e ");
+				background-size: 23px;
+			}
+		}
+	}
+
+	&__tabs-item-inner {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 48px;
+			height: 48px;
+			align-self: flex-start;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			line-height: 24px;
+			color: $white;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 58px;
+				background-color: $grey-8b;
+				margin: 0 40px;
+			}
+		}
+	}
+
+	&__content {
+		position: absolute;
+		inset: 0;
+	}
+
+	&__toggle-icon {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='7' width='1' height='15' fill='white'/%3e%3crect x='15' y='7' width='1' height='15' transform='rotate(90 15 7)' fill='white'/%3e%3c/svg%3e ");
+		background-repeat: no-repeat;
+		background-size: 15px 15px;
+	}
+
+	&__bg {
+		img {
+			@include adaptive-image;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: absolute;
+		right: 48px;
+		top: 48px;
+	}
+}

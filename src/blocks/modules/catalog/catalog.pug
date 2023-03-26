@@ -1,0 +1,33 @@
+section.catalog-block
+	.container
+		.h1.catalog-block__title каталог техники BONUM
+		.catalog-block__wrapper
+			.catalog-block__tabs
+				.catalog-block__tabs-item
+					.catalog-block__tabs-item-inner
+						img(src='./img/svg/i-truck-1.svg', alt="")
+						span Полуприцепы-цистерны
+						.catalog-block__toggle-icon
+				.catalog-block__tabs-item.active
+					.catalog-block__tabs-item-inner
+						img(src='./img/svg/i-truck-2.svg', alt="")
+						span Зерновозы
+						.catalog-block__toggle-icon
+				.catalog-block__tabs-item
+					.catalog-block__tabs-item-inner
+						img(src='./img/svg/i-truck-3.svg', alt="")
+						span Сельскохозяйственные <br> полуприцепы
+						.catalog-block__toggle-icon
+				.catalog-block__tabs-item
+					.catalog-block__tabs-item-inner
+						img(src='./img/svg/i-truck-4.svg', alt="")
+						span Магистральные <br> полуприцепы
+						.catalog-block__toggle-icon
+
+			.catalog-block__content
+				.catalog-block__content-item
+					.catalog-block__bg
+						img(src='./img/picture/catalog/1.jpg', srcset='./img/picture/catalog/1@2x.jpg 2x', alt='')
+					.catalog-block__buttons
+						+button('Выбрать технику', 'button--small catalog-block__button', '#')
+						+button('скачать каталог', 'button--small button--outline catalog-block__button', '#')

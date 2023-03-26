@@ -1,0 +1,61 @@
+.hero {
+	width: 100%;
+
+	&__slider {
+		position: relative;
+	}
+
+	&__slide,
+	&__container {
+		min-height: calc(100vh - 72px);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 20px;
+		height: 70%;
+		position: relative;
+		padding-top: 19vh;
+		padding-bottom: 13vh;
+	}
+
+	&__bg {
+		position: absolute;
+		inset: 0;
+
+		img {
+			@include cover-image();
+		}
+	}
+
+	&__title {
+		max-width: 500px;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+
+		.swiper-btn--prev,
+		.swiper-btn--next {
+			position: relative;
+		}
+
+		.swiper-btn--prev {
+			left: calc((100% - 1314px) / 4 - 44px / 2);
+		}
+
+		.swiper-btn--next {
+			right: calc((100% - 1314px) / 4 - 44px / 2);
+		}
+	}
+}

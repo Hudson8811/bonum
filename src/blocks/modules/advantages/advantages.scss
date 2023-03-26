@@ -1,0 +1,144 @@
+.advantages {
+	background-color: $black;
+	position: relative;
+	color: $white;
+
+	&__container {
+		position: relative;
+		padding-top: 115px;
+		padding-bottom: 115px;
+	}
+
+	&__title,
+	&__skip,
+	&__text {
+		position: absolute;
+		left: 53px;
+	}
+
+	&__title {
+		top: 33px;
+	}
+
+	&__text {
+		display: flex;
+		gap: 32px;
+		max-width: 657px;
+		top: 50%;
+		left: 53px;
+		transform: translateY(-50%);
+		z-index: 2;
+	}
+
+	&__skip {
+		display: flex;
+		align-items: center;
+		bottom: 30px;
+
+		img {
+			margin-right: 6px;
+		}
+
+		span {
+			font-size: 15px;
+			line-height: 150%;
+			font-weight: 600;
+			color: $grey-4;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		margin-left: 20px;
+	}
+
+	&__image {
+		width: 75.6%;
+		height: 0;
+		padding-top: 47.2%;
+		margin-left: auto;
+		position: relative;
+
+		img {
+			@include adaptive-image;
+		}
+
+		span {
+			max-width: 445px;
+			background-color: $white;
+			padding: 45px 40px;
+			font-size: 15px;
+			line-height: 30px;
+			color: $black;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+	}
+
+	&__pagination-wrapper {
+		position: absolute;
+		top: 0;
+		left: 16px;
+		bottom: 0;
+		z-index: 3;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 100%;
+			background-color: $grey-3a;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__pagination.swiper-pagination-bullets {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		width: auto;
+		padding: 32px 0;
+		background-color: $black;
+		position: absolute;
+		top: 50%;
+		left: -2.5px;
+		bottom: unset;
+		transform: translateY(-50%);
+
+		.swiper-pagination-bullet {
+			display: block;
+			width: 5px;
+			height: 5px;
+			background: $grey-3a;
+			border-radius: 50% !important;
+			margin: 0 !important;
+			opacity: 1;
+
+			&.swiper-pagination-bullet-active {
+				background-color: $white;
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 60px 0 20px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 29%;
+		z-index: 1;
+
+		.swiper-btn {
+			width: 88px;
+			height: 44px;
+			transform: rotate(90deg);
+		}
+	}
+}

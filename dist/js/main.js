@@ -12,7 +12,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  Fancybox.bind('.company__video', {
+    type: "video"
+  });
+
+  /* Accordion */
+  var accordion = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-accordion');
+  if (accordion && accordion.length > 0) {
+    accordion.each(function () {
+      var toggle = accordion.find('.js-toggle');
+      var content = accordion.find('.js-content');
+      toggle.on('click', function () {
+        if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('open')) {
+          toggle.removeClass('open');
+          content.slideUp(300);
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('open');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).next().slideDown(300);
+        }
+      });
+    });
+  }
+});
 if (document.querySelector('.slider-top')) {
   var swiperTop = new Swiper('.slider-top__top', {
     direction: 'horizontal',
@@ -36,7 +57,6 @@ if (document.querySelector('.slider-top')) {
   swiperTop.controller.control = swiperBottom;
   swiperBottom.controller.control = swiperTop;
 }
-;
 if (document.querySelector('.gallery')) {
   var swiperGallery = new Swiper('.gallery__slider', {
     direction: 'horizontal',
@@ -51,7 +71,35 @@ if (document.querySelector('.gallery')) {
     }
   });
 }
-;
+if (document.querySelector('.js-hero-slider')) {
+  var swiperHero = new Swiper('.js-hero-slider', {
+    loop: true,
+    slidesPerView: 1,
+    speed: 700,
+    navigation: {
+      prevEl: '.hero__nav .swiper-btn--prev',
+      nextEl: '.hero__nav .swiper-btn--next'
+    }
+  });
+}
+if (document.querySelector('.js-advantages-slider')) {
+  var swiperAdvantages = new Swiper('.js-advantages-slider', {
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    pagination: {
+      el: '.advantages__pagination',
+      type: 'bullets'
+    },
+    navigation: {
+      prevEl: '.advantages__nav .swiper-btn--prev',
+      nextEl: '.advantages__nav .swiper-btn--next'
+    }
+  });
+}
 
 /***/ }),
 

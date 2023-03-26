@@ -7,6 +7,9 @@ $grey-4: #8F9190;
 $grey-5: #F8F8F8;
 $grey-6: #E0E0E0;
 $grey-7: #4C4E4D;
+$grey-8b: #8B8B8B;
+$grey-3a: #3A3A3A;
+$grey-e9: #E9E9E9;
 $animation: all 0.5s ease;
 
 body {
@@ -14,6 +17,7 @@ body {
   font-family: $mainFont;
   font-weight: 400;
   font-style: normal;
+  color: $black;
 }
 
 ul {
@@ -39,6 +43,26 @@ img {
   cursor: pointer;
 }
 
-.link {
+.link,
+a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 1346px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Swiper */
+.swiper-btn {
+  width: 44px;
+  height: 88px;
+  cursor: pointer;
+
+  &--next svg {
+    transform: rotate(180deg);
+  }
 }

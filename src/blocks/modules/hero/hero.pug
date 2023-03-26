@@ -1,0 +1,36 @@
+section.hero
+	.hero__slider.swiper.js-hero-slider
+		.swiper-wrapper
+			.hero__slide.swiper-slide
+				.hero__bg
+					img(src='./img/picture/hero/1.jpg', srcset='./img/picture/hero/1@2x.jpg 2x', alt='')
+				.container.hero__container
+					h1.hero__title Pellentesque eu rhoncus tortor, a viverra 1
+					+button('Выбрать технику', 'hero__button', '#')
+			.hero__slide.swiper-slide
+				.hero__bg
+					img(src='./img/picture/hero/2.jpg', srcset='./img/picture/hero/2@2x.jpg 2x', alt='')
+				.container.hero__container
+					h1.hero__title Pellentesque eu rhoncus tortor, a viverra 2
+					+button('Выбрать технику', 'hero__button', '#')
+			.hero__slide.swiper-slide
+				.hero__bg
+					img(src='./img/picture/hero/1.jpg', srcset='./img/picture/hero/1@2x.jpg 2x', alt='')
+				.container.hero__container
+					h1.hero__title Pellentesque eu rhoncus tortor, a viverra 3
+					+button('Выбрать технику', 'hero__button', '#')
+			.hero__slide.swiper-slide
+				.hero__bg
+					img(src='./img/picture/hero/2.jpg', srcset='./img/picture/hero/2@2x.jpg 2x', alt='')
+				.container.hero__container
+					h1.hero__title Pellentesque eu rhoncus tortor, a viverra 4
+					+button('Выбрать технику', 'hero__button', '#')
+		.hero__nav
+			.swiper-btn.swiper-btn--prev
+				svg(width='88' height='44' viewBox='0 0 88 44' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(d='M1 12C6.88637 29.9983 23.8146 43 43.7796 43C63.7446 43 80.6728 29.9983 86.5592 12' stroke='white' stroke-width='2')
+					path(d='M43.7793 0L49.5528 10L38.0058 10L43.7793 0ZM42.7793 24L42.7793 9L44.7793 9L44.7793 24L42.7793 24Z' fill='white')
+			.swiper-btn.swiper-btn--next
+				svg(width='88' height='44' viewBox='0 0 88 44' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(d='M1 32C6.88637 14.0017 23.8146 0.999999 43.7796 0.999998C63.7446 0.999997 80.6728 14.0017 86.5592 32' stroke='white' stroke-width='2')
+					path(d='M43.7793 44L49.5528 34L38.0058 34L43.7793 44ZM42.7793 20L42.7793 35L44.7793 35L44.7793 20L42.7793 20Z' fill='white')
