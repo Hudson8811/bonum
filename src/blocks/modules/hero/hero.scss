@@ -48,14 +48,28 @@
 		.swiper-btn--prev,
 		.swiper-btn--next {
 			position: relative;
+
+			svg {
+				path {
+					&:first-child {
+						stroke: $grey-4;
+					}
+
+					&:last-child {
+						fill: $grey-4;
+					}
+				}
+			}
 		}
 
 		.swiper-btn--prev {
 			left: calc((100% - 1314px) / 4 - 44px / 2);
+			transform: rotate(-90deg);
 		}
 
 		.swiper-btn--next {
 			right: calc((100% - 1314px) / 4 - 44px / 2);
+			transform: rotate(90deg);
 		}
 	}
 }

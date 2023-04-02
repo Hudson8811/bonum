@@ -12,11 +12,11 @@
 @import "base/ui-kit";
 @import "base/general";
 
-// БЭМ-блоки
-@import "../blocks/modules/modules";
-
 // Компоненты
 @import "../blocks/components/components";
+
+// БЭМ-блоки
+@import "../blocks/modules/modules";
 
 // Стили целых страниц без разбития на модули
 @import "pages/main";

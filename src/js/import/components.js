@@ -95,3 +95,44 @@ if (document.querySelector('.js-advantages-slider')) {
         },
     });
 }
+
+if (document.querySelector('.js-leasing-slider')) {
+    const swiperLeasing = new Swiper('.js-leasing-slider', {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: '.leasing__nav-extended .nav-extended__pagi',
+            clickable: true,
+            bulletActiveClass: 'nav-extended__fraction-active',
+            bulletClass: 'nav-extended__fraction',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
+            }
+        },
+        navigation: {
+            prevEl: '.leasing__nav-extended .swiper-btn--prev',
+            nextEl: '.leasing__nav-extended .swiper-btn--next'
+        },
+    });
+}
+
+if (document.querySelector('.js-news-slider')) {
+    const swiperNews = new Swiper('.js-news-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.news__nav-extended .nav-extended__pagi',
+            clickable: true,
+            bulletActiveClass: 'nav-extended__fraction-active',
+            bulletClass: 'nav-extended__fraction',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
+            }
+        },
+        navigation: {
+            prevEl: '.news__nav-extended .swiper-btn--prev',
+            nextEl: '.news__nav-extended .swiper-btn--next'
+        },
+    });
+}

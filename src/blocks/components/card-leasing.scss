@@ -1,0 +1,67 @@
+.card-leasing {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	background-color: $grey-5;
+	padding: 40px 56px 31px 56px;
+
+	&--colored {
+		background-color: $yellow;
+	}
+
+	&__subtitle {
+		font-size: 13px;
+		font-weight: 600;
+		color: rgba($black, 0.5);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-bottom: 1px solid rgba($black, 0.15);
+		padding-bottom: 6px;
+		margin-bottom: 24px;
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 160%;
+		margin-bottom: 50px;
+	}
+
+	&__image {
+		margin-bottom: 56px;
+
+		img {
+			object-fit: contain;
+			margin: 0 auto;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+		border-top: 1px solid rgba($black, 0.15);
+		padding-top: 14px;
+		margin-top: auto;
+	}
+
+	&__offer {
+		& > span {
+			display: inline-block;
+			font-size: 15px;
+			line-height: 135%;
+			font-weight: 600;
+			margin-top: 7px;
+		}
+	}
+
+	&__from {
+		font-size: 48px;
+		line-height: 1;
+		font-weight: 600;
+
+		span {
+			font-size: 24px;
+		}
+	}
+}

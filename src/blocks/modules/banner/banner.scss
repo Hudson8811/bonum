@@ -1,0 +1,36 @@
+.banner {
+	padding: 56px 0 40px;
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__bg {
+		position: absolute;
+		inset: 0;
+
+		img {
+			@include cover-image;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		position: relative;
+		padding: 76px 90px 66px 90px;
+	}
+
+	&__title {
+		max-width: 743px;
+		text-transform: initial;
+		color: $white;
+	}
+
+	&__button {
+		min-width: 243px;
+	}
+}

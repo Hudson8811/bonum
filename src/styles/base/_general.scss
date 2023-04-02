@@ -31,6 +31,8 @@ h1,
 
 body {
 	font-family: $mainFont;
+	line-height: 150%;
+	color: $black;
 }
 
 *::-webkit-scrollbar {
@@ -41,4 +43,8 @@ body {
 	box-sizing: border-box;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+a {
+	color: $black;
 }

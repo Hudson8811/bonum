@@ -1,32 +1,4 @@
-.button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 223px;
-	padding: 15px;
-	border: 1px solid $white;
-	background-color: $white;
-	font-size: 14px;
-	line-height: 150%;
-	color: $black;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	cursor: pointer;
-	box-sizing: border-box;
-	transition: 0.3s ease;
-
-	&--outline {
-		background-color: transparent;
-		color: $white;
-	}
-
-	&--outline-inverse {
-		background-color: transparent;
-		color: $black;
-		border-color: $black;
-	}
-
-	&--small {
-		padding: 11px 15px;
-	}
-}
+@import "button";
+@import "nav-extended";
+@import "card-leasing";
+@import "card-news";

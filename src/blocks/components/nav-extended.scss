@@ -1,0 +1,62 @@
+.nav-extended {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+
+	&__group {
+		display: flex;
+		align-items: center;
+		gap: 67px;
+	}
+
+	&__pagi {
+		display: flex;
+		gap: 38px;
+	}
+
+	&__fraction {
+		font-size: 16px;
+		line-height: 200%;
+		color: $grey-4;
+		transition: $animation;
+	}
+
+	&__fraction-active {
+		font-weight: 600;
+		color: $black;
+	}
+
+	&__link {
+		white-space: nowrap;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+	}
+
+	.swiper-btn {
+		&.swiper-button-disabled svg path {
+			&:first-child {
+				stroke: $grey-4;
+			}
+
+			&:last-child {
+				fill: $grey-4;
+			}
+		}
+
+		svg path {
+			&:first-child {
+				stroke: $black;
+			}
+
+			&:last-child {
+				fill: $black;
+			}
+		}
+	}
+}
