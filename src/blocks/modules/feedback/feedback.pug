@@ -1,5 +1,16 @@
 section.feedback
 	.feedback__image
 		img(src='./img/picture/feedback.jpg', srcset='./img/picture/feedback@2x.jpg 2x', alt='')
-	form.feedback__form(action='', method='post')
-		.title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+	.feedback__outer
+		form.feedback__form(action='', method='post')
+			.title.feedback__title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+			+field('text', 'firstName', 'Имя', 'feedback__field')(required='true')
+			+field('text', 'number', 'Телефон', 'feedback__field')(required='true')
+			+field('email', 'email', 'Email', 'feedback__field')
+			+field(
+				'checkbox',
+				'policy',
+				'Я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных',
+				'feedback__field'
+			)(required='true')
+			+button('отправить', 'button--outline-inverse feedback__button')(type='submit')

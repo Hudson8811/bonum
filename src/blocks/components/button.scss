@@ -32,5 +32,10 @@
 
 	&--big {
 		padding: 20px 15px;
+
+		@include max(lg) {
+			font-size: 12px;
+			padding: 17.5px 15px;
+		}
 	}
 }

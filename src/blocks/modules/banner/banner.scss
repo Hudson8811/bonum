@@ -1,5 +1,16 @@
 .banner {
-	padding: 56px 0 40px;
+	padding: 56px 0 150px;
+
+	@include max(lg) {
+		padding: 56px 0 96px;
+	}
+
+	&__container {
+		@include max(lg) {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
 
 	&__wrapper {
 		position: relative;
@@ -21,16 +32,31 @@
 		justify-content: space-between;
 		gap: 20px;
 		position: relative;
-		padding: 76px 90px 66px 90px;
+		padding: 76px 90px 66px;
+
+		@include max(lg) {
+			max-width: 845px;
+			padding: 80px 20px 75px;
+			margin: 0 auto;
+		}
 	}
 
 	&__title {
 		max-width: 743px;
 		text-transform: initial;
 		color: $white;
+
+		@include max(lg) {
+			max-width: 480px;
+			font-size: 32px;
+		}
 	}
 
 	&__button {
 		min-width: 243px;
+
+		@include max(lg) {
+			min-width: 226px;
+		}
 	}
 }

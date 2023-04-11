@@ -7,6 +7,11 @@
 		position: relative;
 		padding-top: 115px;
 		padding-bottom: 115px;
+
+		@include max(lg) {
+			padding-top: 92px;
+			padding-bottom: 93px;
+		}
 	}
 
 	&__title,
@@ -14,10 +19,23 @@
 	&__text {
 		position: absolute;
 		left: 53px;
+
+		@include max(lg) {
+			left: 40px;
+		}
 	}
 
 	&__title {
 		top: 33px;
+
+		@include max(lg) {
+			top: 14px;
+			font-size: 18px;
+		}
+
+		@include max(md) {
+			max-width: 174px;
+		}
 	}
 
 	&__text {
@@ -28,12 +46,22 @@
 		left: 53px;
 		transform: translateY(-50%);
 		z-index: 2;
+
+		@include max(lg) {
+			gap: 20px;
+			top: 45%;
+			font-size: 40px;
+		}
 	}
 
 	&__skip {
 		display: flex;
 		align-items: center;
 		bottom: 30px;
+
+		@include max(lg) {
+			bottom: 10px;
+		}
 
 		img {
 			margin-right: 6px;
@@ -59,6 +87,11 @@
 		margin-left: auto;
 		position: relative;
 
+		@include max(lg) {
+			width: 67%;
+			padding-top: 58%;
+		}
+
 		img {
 			@include adaptive-image;
 		}
@@ -74,6 +107,13 @@
 			right: 0;
 			bottom: 0;
 			z-index: 2;
+
+			@include max(lg) {
+				max-width: 372px;
+				padding: 27px;
+				font-size: 13px;
+				line-height: 200%;
+			}
 		}
 	}
 
@@ -135,8 +175,29 @@
 		left: 29%;
 		z-index: 1;
 
+		@include max(lg) {
+			padding: 10px 0 20px;
+			left: 38.5%;
+		}
+
+		@include max(md) {
+			padding: 0;
+			left: 36%;
+		}
+
 		.swiper-btn {
 			transform: rotate(90deg);
+
+			svg {
+				@include max(lg) {
+					display: block;
+					height: 72px;
+				}
+
+				@include max(md) {
+					width: 24px;
+				}
+			}
 		}
 	}
 }

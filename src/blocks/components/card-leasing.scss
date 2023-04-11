@@ -5,6 +5,10 @@
 	background-color: $grey-5;
 	padding: 40px 56px 31px 56px;
 
+	@include max(lg) {
+		padding: 30px;
+	}
+
 	&--colored {
 		background-color: $yellow;
 	}
@@ -18,18 +22,35 @@
 		border-bottom: 1px solid rgba($black, 0.15);
 		padding-bottom: 6px;
 		margin-bottom: 24px;
+
+		@include max(lg) {
+			font-size: 11px;
+			padding-bottom: 0;
+			margin-bottom: 27px;
+		}
 	}
 
 	&__title {
 		font-size: 24px;
 		line-height: 160%;
 		margin-bottom: 50px;
+
+		@include max(lg) {
+			font-size: 16px;
+			margin-bottom: 22px;
+		}
 	}
 
 	&__image {
 		margin-bottom: 56px;
 
+		@include max(lg) {
+			margin-bottom: 23px;
+		}
+
 		img {
+			width: 100%;
+			height: 100%;
 			object-fit: contain;
 			margin: 0 auto;
 		}
@@ -43,6 +64,18 @@
 		border-top: 1px solid rgba($black, 0.15);
 		padding-top: 14px;
 		margin-top: auto;
+
+		@include max(lg) {
+			align-items: flex-end;
+		}
+
+		img {
+			@include max(lg) {
+				width: 28px;
+				height: 28px;
+				margin-bottom: 10px;
+			}
+		}
 	}
 
 	&__offer {
@@ -52,6 +85,12 @@
 			line-height: 135%;
 			font-weight: 600;
 			margin-top: 7px;
+
+			@include max(lg) {
+				font-size: 12px;
+				line-height: 135%;
+				margin-top: 4px;
+			}
 		}
 	}
 
@@ -60,8 +99,16 @@
 		line-height: 1;
 		font-weight: 600;
 
+		@include max(lg) {
+			font-size: 40px;
+		}
+
 		span {
 			font-size: 24px;
+
+			@include max(lg) {
+				font-size: 16px;
+			}
 		}
 	}
 }

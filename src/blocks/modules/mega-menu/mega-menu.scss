@@ -1,0 +1,152 @@
+.mega-menu {
+	$parent: &;
+
+	width: 100%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: $grey-5;
+	border-bottom: 1px solid $grey-d9;
+	cursor: default;
+	overflow-y: auto;
+	opacity: 0;
+	pointer-events: none;
+	transition: $animation;
+
+	&.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	&__close {
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 78px;
+		left: 80px;
+		cursor: pointer;
+
+		&:hover {
+			img {
+				transform: rotate(180deg);
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			transition: $animation;
+		}
+	}
+
+	&__container {
+		height: 100%;
+	}
+
+	&__wrapper {
+		display: flex;
+		height: auto;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 25%;
+
+		&:first-child {
+			border-left: 1px solid $grey-d9;
+		}
+
+		&:last-child {
+			border-right: 1px solid $grey-d9;
+		}
+
+		& + #{$parent}__item {
+			border-left: 1px solid $grey-d9;
+		}
+	}
+
+	&__title,
+	&__list,
+	&__catalog {
+		padding: 0 32px;
+	}
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+		min-height: 150px;
+		height: 150px;
+		font-size: 20px;
+		line-height: 150%;
+		padding-bottom: 18px;
+	}
+
+	&__image {
+		width: 100%;
+		height: 0;
+		padding-top: 72%;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			inset: 0;
+		}
+	}
+
+	&__list {
+		flex-grow: 1;
+		margin-top: 33px;
+		margin-bottom: 20px;
+
+		li {
+			& + li {
+				margin-top: 14px;
+			}
+
+			a {
+				font-size: 15px;
+				line-height: 150%;
+			}
+		}
+	}
+
+	&__catalog {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		border-top: 1px solid $grey-d9;
+		margin-top: auto;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		transition: $animation;
+
+		&:hover {
+			background-color: $black;
+
+			span {
+				color: $white;
+			}
+
+			svg {
+				fill: $white;
+			}
+		}
+
+		span {
+			font-size: 15px;
+			line-height: 150%;
+			transition: $animation;
+		}
+
+		svg {
+			fill: #000000;
+			transition: $animation;
+		}
+	}
+}

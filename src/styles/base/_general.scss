@@ -16,6 +16,10 @@ h1,
 	line-height: 150%;
 	font-weight: 300;
 	text-transform: uppercase;
+
+	@include max(lg) {
+		font-size: 40px;
+	}
 }
 
 .title {
@@ -23,6 +27,10 @@ h1,
 	line-height: 150%;
 	font-weight: 600;
 	text-transform: uppercase;
+
+	@include max(lg) {
+		font-size: 18px;
+	}
 
 	&--white {
 		color: $white;

@@ -1,10 +1,13 @@
-mixin field(fieldType, type, fieldName, className, hint)
-	label.field(class=className)
-		case fieldType
-			when 'input'
-				input(type=type, name=fieldName, placeholder=hint)&attributes(attributes)
+mixin field(type, fieldName, ph, className)
+	label.field(class=type == 'checkbox' ? className + ' field--checkbox' : className)
+		case type
+			when 'text'
+				input(type='text', name=fieldName, placeholder=ph)&attributes(attributes)
+			when 'email'
+				input(type='email', name=fieldName, placeholder=ph)&attributes(attributes)
 			when 'textarea'
-				textarea(name=fieldName, placeholder=hint)
-		span.field__hint!= hint
-		span.field__underline
-		.field-error
+				textarea(name=fieldName, placeholder=ph)&attributes(attributes)
+			when 'checkbox'
+				input(type='checkbox', name=fieldName)&attributes(attributes)
+				b
+				span!= ph

@@ -3,6 +3,7 @@ include ../helpers/mixins.pug
 
 block variables
 	- const title = "Homepage";
+	- const headerModClass = 'header--light';
 
 block content
 	include ../../blocks/modules/header/header.pug
@@ -16,6 +17,8 @@ block content
 		include ../../blocks/modules/news/news.pug
 		include ../../blocks/modules/banner/banner.pug
 		include ../../blocks/modules/feedback/feedback.pug
+
+	include ../../blocks/modules/footer/footer.pug
 
 block scripts
 	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")

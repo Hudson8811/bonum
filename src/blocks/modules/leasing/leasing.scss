@@ -1,11 +1,23 @@
 .leasing {
 	padding: 128px 0 104px;
 
+	@include max(lg) {
+		padding: 98px 0 50px;
+	}
+
 	&__slider {
 		margin-top: 56px;
+
+		@include max(lg) {
+			margin-top: 46px;
+		}
 	}
 
 	&__nav-extended {
 		margin-top: 53px;
+
+		@include max(lg) {
+			margin-top: 40px;
+		}
 	}
 }

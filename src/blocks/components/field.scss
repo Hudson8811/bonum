@@ -1,0 +1,104 @@
+.field {
+	display: block;
+
+	&--checkbox {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		cursor: pointer;
+
+		@include max(lg) {
+			gap: 10px;
+		}
+
+		&:hover b {
+			border-color: $black !important;
+		}
+	}
+
+	input {
+		width: 100%;
+		padding: 20px 0;
+		border: 0;
+		border-bottom: 1px solid $grey-4;
+		transition: $animation;
+
+		@include max(lg) {
+			padding: 18px 0;
+		}
+
+		&:focus,
+		&:hover {
+			border-color: $black;
+		}
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&::placeholder {
+			font-size: 16px;
+			line-height: 150%;
+			color: $grey-4;
+
+			@include max(lg) {
+				font-size: 14px;
+			}
+		}
+
+		&:focus::placeholder {
+			opacity: 0;
+		}
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked + b {
+			border-color: $black;
+
+			&::before {
+				opacity: 1;
+			}
+		}
+
+		& + b + span {
+			font-size: 13px;
+			line-height: 150%;
+
+			@include max(lg) {
+				font-size: 12px;
+			}
+		}
+
+		& + b {
+			display: block;
+			min-width: 24px;
+			max-width: 24px;
+			height: 24px;
+			border: 1px solid $grey-6;
+			position: relative;
+			transition: $animation;
+
+			@include max(lg) {
+				min-width: 20px;
+				max-width: 20px;
+				height: 20px;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 40px;
+				height: 40px;
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40px' height='40px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4 12L8.94975 16.9497L19.5572 6.34326' stroke='%231F2120' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 60%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+			}
+		}
+	}
+}

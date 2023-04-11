@@ -9,11 +9,19 @@
 		display: flex;
 		align-items: center;
 		gap: 67px;
+
+		@include max(lg) {
+			gap: 85px;
+		}
 	}
 
 	&__pagi {
 		display: flex;
 		gap: 38px;
+
+		@include max(lg) {
+			gap: 32px;
+		}
 	}
 
 	&__fraction {
@@ -21,6 +29,10 @@
 		line-height: 200%;
 		color: $grey-4;
 		transition: $animation;
+
+		@include max(lg) {
+			font-size: 14px;
+		}
 	}
 
 	&__fraction-active {
@@ -30,6 +42,10 @@
 
 	&__link {
 		white-space: nowrap;
+
+		@include max(lg) {
+			font-size: 14px;
+		}
 	}
 
 	&__nav {

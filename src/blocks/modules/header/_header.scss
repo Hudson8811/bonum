@@ -1,110 +1,170 @@
 .header {
-    background-color: $black;
+	$parent: &;
 
-    &__container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 1920px;
-        min-height: 72px;
-        padding-left: 56px;
-        margin: 0 auto;
-    }
-    
-    &__logo {
-        display: block;
-        width: 66px;
-        height: 44px;
-        margin-right: auto;
+	width: 100%;
+	background-color: $black;
+	z-index: 30;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: $animation;
 
-        &-svg {
-            fill: $white;
-        }
-    }
+	&.open {
+		& + .menu {
+			transform: translateX(0);
+		}
+	}
 
-    .catalog {
-        &__btn {
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            padding: 0;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 1920px;
+		min-height: 72px;
+		padding-left: 56px;
+		margin: 0 auto;
+	}
 
-            &-svg {
-                fill: $white;
-                margin-right: 10px;
-            }
+	&__logo {
+		display: block;
+		width: 66px;
+		height: 44px;
+		margin-right: auto;
 
-            &-text {
-                font-size: 15px;
-                line-height: 18px;
-                color: $white;
-            }
-        }
-    }
-    
-    .nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 132px;
+		&-svg {
+			fill: $white;
+		}
+	}
 
-        &__item {
-            text-decoration: none;
-            font-size: 15px;
-            line-height: 18px;
-            color: $white;
-        }
-        &__item:not(:first-child) {
-            margin-left: 55px;
-        }
-    }
+	.catalog {
+		&__btn {
+			display: flex;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			padding: 0;
 
-    .lang {
-        margin-right: 54px;
+			&-svg {
+				fill: $white;
+				margin-right: 10px;
+			}
 
-        &__btn {
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            padding: 0;
+			&-text {
+				font-size: 15px;
+				line-height: 18px;
+				color: $white;
+			}
+		}
+	}
 
-            &-svg {
-                fill: $white;
-                margin-right: 10px;
-            }
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 132px;
 
-            &-text {
-                font-size: 15px;
-                line-height: 18px;
-                color: $white;
-            }
-        }
-    }
+		&__item {
+			text-decoration: none;
+			font-size: 15px;
+			line-height: 18px;
+			color: $white;
+		}
 
-    .contact {
-        display: flex;
-        align-items: center;
+		&__item:not(:first-child) {
+			margin-left: 55px;
+		}
+	}
 
-        &__link {
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 15px;
-            line-height: 18px;
-            color: $white;
-            padding: 0 25px;
-        }
+	.lang {
+		margin-right: 54px;
 
-        &__link-mail {
-            border-left: 1px solid $grey-2;
-        }
+		&__btn {
+			display: flex;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			padding: 0;
 
-        &__link-svg {
-            fill: $white;
-        }
-    }
+			&-svg {
+				fill: $white;
+				margin-right: 10px;
+			}
+
+			&-text {
+				font-size: 15px;
+				line-height: 18px;
+				color: $white;
+			}
+		}
+	}
+
+	.contact {
+		display: flex;
+		align-items: center;
+
+		&__link {
+			min-height: 72px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			font-size: 15px;
+			line-height: 18px;
+			color: $white;
+			padding: 0 25px;
+		}
+
+		&__link-mail {
+			border-left: 1px solid $grey-2;
+		}
+
+		&__link-svg {
+			fill: $white;
+		}
+	}
+
+	&--light {
+		background-color: $white;
+
+		.catalog {
+			&__btn-svg {
+				fill: $grey-7;
+			}
+
+			&__btn-text {
+				color: $grey-7;
+			}
+		}
+
+		.nav__item {
+			color: $black;
+		}
+
+		.lang {
+			&__btn-svg {
+				fill: $black;
+			}
+
+			&__btn-text {
+				color: $black;
+			}
+		}
+
+		.contact {
+			&__link {
+				color: $black;
+				border-left-color: $grey-6;
+			}
+
+			&__link-svg {
+				fill: $black;
+			}
+		}
+
+		#{$parent} {
+			&__logo-svg {
+				fill: $black;
+			}
+		}
+	}
 }
