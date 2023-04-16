@@ -6,6 +6,7 @@
 	top: 100%;
 	left: 0;
 	background-color: $grey-5;
+	border-top: 1px solid $grey-d9;
 	border-bottom: 1px solid $grey-d9;
 	cursor: default;
 	overflow-y: auto;
@@ -18,6 +19,12 @@
 		pointer-events: auto;
 	}
 
+	&__content {
+		@include max(lg) {
+			display: none;
+		}
+	}
+
 	&__close {
 		width: 20px;
 		height: 20px;
@@ -25,6 +32,11 @@
 		top: 78px;
 		left: 80px;
 		cursor: pointer;
+
+		@include max(1550) {
+			top: 30px;
+			left: 30px;
+		}
 
 		&:hover {
 			img {
@@ -41,6 +53,10 @@
 
 	&__container {
 		height: 100%;
+
+		@include max(1550) {
+			padding: 0 80px;
+		}
 	}
 
 	&__wrapper {

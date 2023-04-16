@@ -42,6 +42,38 @@ img {
 	overflow: hidden;
 }
 
+.d-none-mobile {
+	display: block !important;
+
+	@include max(md) {
+		display: none !important;
+	}
+}
+
+.d-none-desktop {
+	display: none !important;
+
+	@include max(md) {
+		display: block !important;
+	}
+}
+
+.d-none-flex-mobile {
+	display: flex !important;
+
+	@include max(md) {
+		display: none !important;
+	}
+}
+
+.d-none-flex-desktop {
+	display: none !important;
+
+	@include max(md) {
+		display: flex !important;
+	}
+}
+
 .btn {
 	outline: none;
 	transition: $animation;
