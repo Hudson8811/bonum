@@ -1,0 +1,77 @@
+.conditions {
+	padding: 128px 0;
+
+	@include max(lg) {
+		padding: 20px 0 58px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 77px;
+
+		@include max(sm) {
+			flex-direction: column;
+			gap: 27px;
+		}
+	}
+
+	&__content {
+		width: calc(48% - 77px / 2);
+
+		@include max(sm) {
+			width: 100%;
+			order: 1;
+		}
+	}
+
+	&__image {
+		width: calc(52% - 77px / 2);
+		height: 0;
+		padding-top: 35%;
+		position: relative;
+
+		@include max(sm) {
+			width: 100%;
+			padding-top: 75%;
+		}
+
+		img {
+			@include adaptive-image();
+			object-fit: contain;
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 150%;
+
+		@include max(sm) {
+			font-size: 16px;
+		}
+	}
+
+	&__list {
+		margin-top: 23px;
+		list-style: outside;
+		padding-left: 14px;
+
+		li {
+			font-size: 15px;
+			line-height: 170%;
+			color: $grey-7;
+
+			@include max(sm) {
+				font-size: 13px;
+			}
+
+			& + li {
+				margin-top: 9px;
+
+				@include max(sm) {
+					margin-top: 14px;
+				}
+			}
+		}
+	}
+}

@@ -1,9 +1,23 @@
 import $, {event, type} from "jquery";
 
 $(document).ready(function () {
-	Fancybox.bind('.company__video', {
-		type: "video"
-	});
+	var video = $('.company__video');
+
+	if (video && video.length > 0) {
+		Fancybox.bind('.company__video', {
+			type: "video"
+		});
+	}
+
+	/* Show all brands */
+	var brandsBtn = $('.brands__button');
+
+	if (brandsBtn && brandsBtn.length > 0) {
+		brandsBtn.on('click', function () {
+			$(this).hide();
+			$(this).prev().find('.brands__item').show();
+		});
+	}
 
 	/* Accordion */
 	var accordion = $('.js-accordion');

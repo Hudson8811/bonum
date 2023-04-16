@@ -263,7 +263,7 @@
 
 			svg {
 				display: none;
-				fill: $black;
+				fill: $white;
 
 				@include max(1800) {
 					display: block;
@@ -299,7 +299,7 @@
 		justify-content: center;
 		min-height: 72px;
 		padding: 0 25px;
-		border-left: 1px solid $grey-6;
+		border-left: 1px solid $grey-2;
 		cursor: pointer;
 
 		@include max(1600) {
@@ -312,7 +312,7 @@
 		}
 
 		svg {
-			fill: $black;
+			fill: $white;
 		}
 	}
 
@@ -355,11 +355,23 @@
 			&__link-svg {
 				fill: $black;
 			}
+
+			&__link-tel svg {
+				fill: $black;
+			}
 		}
 
 		#{$parent} {
 			&__logo-svg {
 				fill: $black;
+			}
+
+			&__burger {
+				border-left-color: $grey-6;
+
+				svg {
+					fill: $black;
+				}
 			}
 		}
 	}

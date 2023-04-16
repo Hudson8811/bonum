@@ -1,0 +1,50 @@
+.spare {
+	padding: 60px 0 130px;
+
+	@include max(sm) {
+		padding: 25px 0 56px;
+	}
+
+	&__title {
+		margin-top: 60px;
+
+		@include max(sm) {
+			margin-top: 36px;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+		margin-top: 68px;
+
+		@include max(lg) {
+			gap: 16px;
+		}
+
+		@include max(sm) {
+			margin-top: 24px;
+		}
+	}
+
+	&__item {
+		width: calc(100% / 3 - 30px / 3 * 2);
+
+		@include max(lg) {
+			width: calc(100% / 2 - 16px / 2);
+		}
+
+		@include max(sm) {
+			width: 100%;
+		}
+	}
+
+	&__banner {
+		padding: 128px 0;
+
+		@include max(sm) {
+			padding: 50px 0 54px;
+		}
+	}
+}

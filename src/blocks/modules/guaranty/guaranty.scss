@@ -1,0 +1,70 @@
+.guaranty {
+	&__wrapper {
+		display: flex;
+		border: 1px solid $grey-6;
+
+		@include max(sm) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		width: 50%;
+		padding: 56px 72px;
+
+		@include max(lg) {
+			padding: 32px 26px;
+		}
+
+		@include max(sm) {
+			width: 100%;
+		}
+
+		&:nth-child(odd) {
+			border-right: 1px solid $grey-6;
+
+			@include max(sm) {
+				border-right: 0;
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		padding-bottom: 24px;
+		margin-bottom: 24px;
+		border-bottom: 1px solid $grey-6;
+
+		@include max(sm) {
+			padding-bottom: 16px;
+			margin-bottom: 18px;
+		}
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		background-color: $grey-4;
+
+		@include max(sm) {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 150%;
+		color: $grey-7;
+
+		@include max(sm) {
+			font-size: 13px;
+		}
+	}
+}

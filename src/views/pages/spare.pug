@@ -1,0 +1,82 @@
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
+
+block variables
+	- const title = "Spare";
+
+block content
+	include ../../blocks/modules/header/header.pug
+	include ../../blocks/modules/breakpoints/breakpoints.pug
+
+	.main-page
+		.spare
+			.container
+				.title Запчасти
+				.spare__title.h1 Комплектующие для полуприцепов BONUM
+				.spare__wrapper
+					.spare__item.card-spare
+						.card-spare__title Бензовозы
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Битумовозы
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Нефтевозы с <br> термоизоляцией
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Нефтевозы без <br> термоизоляции
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Цементовозы
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Зерновозы бортовые
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Зерновозы <br> самосвальные
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Сельхозтехника
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+					.spare__item.card-spare
+						.card-spare__title Полуприцепы <br> тентованные
+						.card-spare__image
+							img(src='./img/picture/slider-top-1.png', alt='')
+						+button('Прайс', 'button--inverse button--small card-spare__button', '#')
+
+			include ../../blocks/modules/brands/brands.pug
+			include ../../blocks/modules/conditions/conditions.pug
+			include ../../blocks/modules/contacts/contacts.pug
+
+			section.banner.spare__banner
+				.container.banner__container
+					.banner__wrapper
+						.banner__bg
+							img(src='./img/picture/banner.jpg', srcset='./img/picture/banner@2x.jpg 2x', alt='')
+						.banner__content
+							.h1.h1--uppercase.banner__title Ознакомьтесь с нашим каталогом полуприцепов
+							+button('в каталог', 'button--big banner__button', '#')
+
+
+			include ../../blocks/modules/guaranty/guaranty.pug
+	include ../../blocks/modules/footer/footer.pug
+
+block scripts
+	script(src="js/vendor.js")
+	script(src="js/main.js")

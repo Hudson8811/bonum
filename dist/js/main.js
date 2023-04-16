@@ -13,9 +13,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  Fancybox.bind('.company__video', {
-    type: "video"
-  });
+  var video = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.company__video');
+  if (video && video.length > 0) {
+    Fancybox.bind('.company__video', {
+      type: "video"
+    });
+  }
+
+  /* Show all brands */
+  var brandsBtn = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.brands__button');
+  if (brandsBtn && brandsBtn.length > 0) {
+    brandsBtn.on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hide();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).prev().find('.brands__item').show();
+    });
+  }
 
   /* Accordion */
   var accordion = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-accordion');
