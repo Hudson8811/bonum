@@ -1,0 +1,704 @@
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
+
+block variables
+	- const title = "page";
+
+block content
+	include ../../blocks/modules/header/header
+	
+	.about-page
+		section.hero-about-page
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Главная
+						li.breakpoints__item
+							span.breakpoints__text О заводе
+			.hero-about-page__row 
+				.hero-about-page__body 
+					.hero-about-page__body-inner
+						.title О заводе BONUM
+						.hero-about-page__image.hero-about-page__image-mob 
+							img(src="img/about-page/hero.jpg", alt="alt")
+						.h1 Lorem ipsum dolor sit amet, consect
+						p Завод BONUM производит полуприцепы и спецтехнику различного назначения: шторные, шторно-бортовые полуприцепы, контейнеровозы, полуприцепы-цистерны, зерновозы и спецтехнику для сельского хозяйства.
+				.hero-about-page__image-wrapper.hero-about-page__image-desk 
+					.hero-about-page__image 
+						img(src="img/about-page/hero.jpg", alt="alt")
+		section.mission-about-page
+			.container
+				.mission-about-page__row 
+					.mission-about-page__img.resp-desk 
+						img(src="img/about-page/mission.jpg", alt="alt")
+					.mission-about-page__body 
+						.title наша миссия
+						.mission-about-page__img.resp-mob 
+							img(src="img/about-page/mission.jpg", alt="alt")
+						ul 
+							li Обеспечить рынок качественной полуприцепной техникой для безопасной и эффективной перевозки грузов и спецтехникой для сельского хозяйства.
+							li Мы считаем, что коммерческий транспорт должен быть не только функциональным и эффективным, но и красивым.
+							li Поэтому техника BONUM не только работает на благо вашего бизнеса, но и создают живую рекламу на дорогах.
+		section.team-about-page
+			.team-about-page__container 
+				.container 
+					.title команда bonum
+					.team-about-page__row 
+						.team-about-page__text 
+							.h1 Люди — главная ценность
+						.team-about-page__nums 
+							.team-about-page__nums-item 
+								.team-about-page__num 960
+								span сотрудников
+							.team-about-page__nums-item 
+								.team-about-page__num 72
+								span инженера
+							.team-about-page__nums-item 
+								.team-about-page__num 56
+								span вакансий
+			.team-about-page__swiper-container
+				.container
+					.team-about-page__swiper.swiper 
+						.swiper-wrapper 
+							.team-about-page__slide.swiper-slide 
+								.team-about-page__img 
+									img(src="img/about-page/team-slider1.jpg", alt="alt")
+							.team-about-page__slide.swiper-slide 
+								.team-about-page__img.team-about-page__img--double  
+									img(src="img/about-page/team-slider2.jpg", alt="alt")
+									img(src="img/about-page/team-slider3.jpg", alt="alt")
+							.team-about-page__slide.swiper-slide 
+								.team-about-page__img 
+									img(src="img/about-page/team-slider4.jpg", alt="alt")
+							.team-about-page__slide.swiper-slide 
+								.team-about-page__img.team-about-page__img--double  
+									img(src="img/about-page/team-slider5.jpg", alt="alt")
+									img(src="img/about-page/team-slider6.jpg", alt="alt")
+						.swiper-btn.swiper-btn--prev
+							svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+								path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+						.swiper-btn.swiper-btn--next
+							svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+								path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+		section.company
+			.container
+				.title наши принципы
+			.company__accordion.js-accordion
+				.company__toggle.js-toggle.open
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/svg/i-company-1.svg', alt="")
+							span Надежность и функциональность
+						.company__dots
+							img(src='./img/svg/i-dots.svg', alt="")
+				.company__content.js-content(style='display: block')
+					.container
+						.company__wrapper
+							.company__col
+								.h1 тщательный контроль
+								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
+								+button('о компании', 'button--small button--outline-inverse company__button', '#')
+							.company__col
+								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/svg/i-company-2.svg', alt="")
+							span Экономическая эффективность
+						.company__dots
+							img(src='./img/svg/i-dots.svg', alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col
+								.h1 тщательный контроль
+								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
+								+button('о компании', 'button--small button--outline-inverse company__button', '#')
+							.company__col
+								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/svg/i-company-3.svg', alt="")
+							span Непрерывное совершенствование
+						.company__dots
+							img(src='./img/svg/i-dots.svg', alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col
+								.h1 тщательный контроль
+								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
+								+button('о компании', 'button--small button--outline-inverse company__button', '#')
+							.company__col
+								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/svg/i-company-1.svg', alt="")
+							span Забота о клиентах
+						.company__dots
+							img(src='./img/svg/i-dots.svg', alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col
+								.h1 Забота о клиентах
+								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
+								+button('о компании', 'button--small button--outline-inverse company__button', '#')
+							.company__col
+								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
+		section.nums-about-page
+			.container 
+				.nums-about-page__header 
+					.title bonum в цифрах
+					.h1 Quis autem vel eum iure reprehenderit qui
+				.nums-about-page__items 
+					.nums-about-page__row 
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 86
+								.nums-about-page__text компаний из России и стран СНГ отдали предпочтение технике BONUM
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 9
+									span лет
+								.nums-about-page__text sed ut perspiciatis unde omnis iste natus error sit voluptatem
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 95
+									span %
+								.nums-about-page__text клиентов удовлетворены качеством и надежностью техники BONUM
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 50
+								.nums-about-page__text et harum quidem rerum facilis est et expedita distinctio
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 100
+									span %
+								.nums-about-page__text nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+						.nums-about-page__item
+							.nums-about-page__column
+								.nums-about-page__num 1 290
+								.nums-about-page__text Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+		section.achievements-about-page
+			.container 
+				.title наши достижения
+				.achievements-about-page__items 
+					.achievements-about-page__row 
+						.achievements-about-page__item-1.achievements-about-page__big 
+							.achievements-about-page__column
+								.achievements-about-page__text Занимаем одну из лидирующих позиций по производству полуприцепов-цистерн в России.
+						.achievements-about-page__item-2.achievements-about-page__small 
+							.achievements-about-page__column
+								.achievements-about-page__text Поставляем технику в регионы России с самым холодным климатом. BONUM эффективны в суровых условиях.
+					.achievements-about-page__row 
+						.achievements-about-page__item-3.achievements-about-page__small 
+							.achievements-about-page__column
+								.achievements-about-page__text Получили звание надёжного экспортёра в рамках прохождения добровольной сертификации «Made in Russia».
+						.achievements-about-page__item-4.achievements-about-page__big 
+							.achievements-about-page__column
+								.achievements-about-page__text Удостоились высокого уровня доверия клиентов – надёжность техники проверена в работе, о чём свидетельствуют благодарственные письма и положительные отзывы от клиентов.
+								a(href='').achievements-about-page__btn.achievements-about-page__btn--white смотреть отзывы
+					.achievements-about-page__row 
+						.achievements-about-page__item-5.achievements-about-page__big 
+							.achievements-about-page__column
+								.achievements-about-page__text Являемся поставщиком полуприцепов для крупнейших топливных, строительных, сельскохозяйственных и транспортных компаний России и СНГ.
+								a(href='').achievements-about-page__btn выбрать технику
+						.achievements-about-page__item-6.achievements-about-page__small 
+							.achievements-about-page__column
+								.achievements-about-page__text Подтвердили соответствие высоким стандартам качества производства победами в федеральных конкурсах
+								a(href='').achievements-about-page__btn подробнее
+		section.geography-about-page
+			.geography-about-page__left 
+				.geography-about-page__body 
+					.title География
+					.h1 Nam libero tempore, cum soluta nobis
+					.geography-about-page__map.resp-mob 
+						img(src="img/about-page/geography.png", alt="alt")
+					.geography-about-page__items 
+						.geography-about-page__nums 
+							.geography-about-page__item 
+								.geography-about-page__num 2
+								span завода
+							.geography-about-page__item 
+								.geography-about-page__num 10
+								span филиалов
+							.geography-about-page__item.geography-about-page__item--big 
+								.geography-about-page__num 150
+								span сервисных центров по всем регионах России 
+					.geography-about-page__btns 
+						a(href='').geography-about-page__btn.geography-about-page__btn--white адреса филиалов
+						a(href='').geography-about-page__btn адреса СЦ
+			.geography-about-page__right.resp-desk 
+				.geography-about-page__map 
+					img(src="img/about-page/geography.png", alt="alt")
+		section.journal-about-page
+			.container 
+				.title.resp-mob журнал BOnum #3
+				.journal-about-page__container 
+					.journal-about-page__left 
+						.journal-about-page__img
+							img(src="img/about-page/journal.jpg", alt="alt")
+						a(href='').journal-about-page__btn запросить журнал
+					.journal-about-page__right 
+						.title.resp-desk журнал BOnum #3
+						.h1 В этом выпуске
+						.journal-about-page__swiper.swiper(thumbsSlider="")
+							.swiper-wrapper 
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Команда Bonum
+											p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. 
+										.journal-about-page__num 01
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Наши новости
+											p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+										.journal-about-page__num 02
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Запоминающиеся отгрузки
+											p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+										.journal-about-page__num 03
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Скидки от партнеров
+											p Curabitur est neque, tincidunt eu placerat et, commodo a massa.  tristique risus.
+										.journal-about-page__num 04
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Команда Bonum
+											p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. 
+										.journal-about-page__num 05
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Наши новости
+											p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+										.journal-about-page__num 06
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Запоминающиеся отгрузки
+											p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+										.journal-about-page__num 07
+								.journal-about-page__slide.swiper-slide 
+									.journal-about-page__item
+										.journal-about-page__text 
+											.journal-about-page__subtitle Скидки от партнеров
+											p Curabitur est neque, tincidunt eu placerat et, commodo a massa.  tristique risus.
+										.journal-about-page__num 08
+						.swiper-btns.resp-desk
+							.swiper-btn.swiper-btn--prev
+								svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+									path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+							.swiper-btn.swiper-btn--next
+								svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+									path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+					.journal-about-page__nav-mob
+						.journal-about-page__nav-mob-inner
+							.journal-about-page__swiper-pagination.swiper.resp-mob
+								.swiper-wrapper 
+									.swiper-slide 
+										.journal-about-page__num 01
+									.swiper-slide 
+										.journal-about-page__num 02
+									.swiper-slide 
+										.journal-about-page__num 03
+									.swiper-slide 
+										.journal-about-page__num 04
+									.swiper-slide 
+										.journal-about-page__num 05
+									.swiper-slide 
+										.journal-about-page__num 06
+									.swiper-slide 
+										.journal-about-page__num 07
+									.swiper-slide 
+										.journal-about-page__num 08
+						.swiper-btns.resp-mob
+							.swiper-btn.swiper-btn--prev
+								svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+									path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+							.swiper-btn.swiper-btn--next
+								svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+									path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+		section.history-about-page
+			.history-about-page__container
+				.swiper.history-about-page__swiper 
+					.swiper-wrapper 
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2014
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history2.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2015
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2016
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2017
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2018
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2019
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2020
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2021
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+						.swiper-slide 
+							.history-about-page__left 
+								.history-about-page__body 
+									.title История компании
+									.history-about-page__img.resp-mob 
+										img(src="img/about-page/history2.jpg", alt="alt")
+									.h1 2022
+										.swiper-btns.resp-mob
+											.swiper-btn.swiper-btn--prev
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+											.swiper-btn.swiper-btn--next
+												svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+													path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+													path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+									p Выпущена первая единица техники БОНУМ – трехосный бензовоз
+									.swiper-btn.swiper-btn--next.swiper-btn--alongnext 
+										<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_47_445)">
+										<path d="M9 9.92992L17.5993 16L9 22.0701V9.92992Z" stroke="#8F9190" stroke-width="2"/>
+										<rect x="22" y="8" width="2" height="16" fill="#8F9190"/>
+										</g>
+										<defs>
+										<clipPath id="clip0_47_445">
+										<rect width="32" height="32" fill="white"/>
+										</clipPath>
+										</defs>
+										</svg>
+										span Пропустить
+							.history-about-page__right.resp-desk  
+								.history-about-page__img 
+									img(src="img/about-page/history1.jpg", alt="alt")
+				.history-about-page__swiper-pagination-wrapper
+					.swiper.history-about-page__swiper-pagination(thumbsslider='')
+						.swiper-wrapper
+							.history-about-page__swiper-pagination-progress
+							.swiper-slide
+								.history-about-page__swiper-num 2014
+							.swiper-slide
+								.history-about-page__swiper-num 2015
+							.swiper-slide
+								.history-about-page__swiper-num 2016
+							.swiper-slide
+								.history-about-page__swiper-num 2017
+							.swiper-slide
+								.history-about-page__swiper-num 2018
+							.swiper-slide
+								.history-about-page__swiper-num 2019
+							.swiper-slide
+								.history-about-page__swiper-num 2020
+							.swiper-slide
+								.history-about-page__swiper-num 2021
+							.swiper-slide
+								.history-about-page__swiper-num 2022
+		section.feedback
+			.feedback__image
+				img(src='./img/picture/feedback.jpg', srcset='./img/picture/feedback@2x.jpg 2x', alt='')
+			.feedback__outer
+				form.feedback__form(action='', method='post')
+					.title.feedback__title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+					+field('text', 'firstName', 'Имя', 'feedback__field')(required='true')
+					+field('text', 'number', 'Телефон', 'feedback__field')(required='true')
+					+field('email', 'email', 'Email', 'feedback__field')
+					+field(
+						'checkbox',
+						'policy',
+						'Я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных',
+						'feedback__field'
+					)(required='true')
+					+button('отправить', 'button--outline-inverse feedback__button')(type='submit')
+
+
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")

@@ -1,0 +1,225 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "page";
+
+block content
+	include ../../blocks/modules/header/header
+	
+	.stocks-single
+		section.stocks-single-top
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Главная
+						li.breakpoints__item
+							span.breakpoints__text О заводе
+			.container
+				.stocks-single-top__row 
+					.stocks-single-top__body 
+						.stocks-single-top__body-inner
+							.title Акции и лизинг
+							.h1 Акция на сельхозтехнику BONUM
+							span.stocks-single-top__date до 18 февраля 2023
+
+		section.stocks-single-content 
+			.container 
+				.stocks-single-content__row 
+					.stocks-single-content__left 
+						.card-leasing.card-leasing--colored
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.stocks-single-content__left-item-1
+							p Для клиентов BONUM при покупке сельскохозяйственной техники в лизинг доступно выгодное предложение:
+							h3 до 15% скидка
+						.stocks-single-content__left-item-2
+							h3 Качественная сельскохозяйственная техника - залог богатого урожая.
+							p Наша техника создана чтобы сделать уборочные работы быстрее и продуктивнее. С заботой о почве и вниманием к эффективности
+						.stocks-single-content__left-item-3
+							h3 Предложение действует при покупке:
+							ul 
+								li Бункеров-перегрузчиков BONUM
+								li Самосвальных тракторных полуприцепов BONUM
+						a.stocks-single-content__btn(href="") в каталог
+						.stocks-single-content__share 
+							h3.stocks-single-content__share-title Поделиться:
+							.stocks-single-content__share-row
+								a(href="") 
+									<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="48" height="48" rx="24" fill="#D3D3D3"/>
+									<path d="M31.6704 20.1528C31.4859 19.4674 30.9456 18.9271 30.2602 18.7426C29.0082 18.3999 24 18.3999 24 18.3999C24 18.3999 18.9917 18.3999 17.7397 18.7294C17.0675 18.9139 16.514 19.4674 16.3295 20.1528C16 21.4048 16 24.0012 16 24.0012C16 24.0012 16 26.6107 16.3295 27.8496C16.514 28.5349 17.0544 29.0753 17.7397 29.2598C19.0049 29.6025 24 29.6025 24 29.6025C24 29.6025 29.0082 29.6025 30.2602 29.273C30.9456 29.0885 31.4859 28.5481 31.6704 27.8628C31.9999 26.6107 31.9999 24.0144 31.9999 24.0144C31.9999 24.0144 32.0131 21.4048 31.6704 20.1528Z" fill="white"/>
+									<path d="M22.4053 26.3999L26.57 24.0012L22.4053 21.6025V26.3999Z" fill="#D3D3D3"/>
+									</svg>
+
+								a(href="") 
+									<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="48" height="48" rx="24" fill="#D3D3D3"/>
+									<path d="M16.5403 20C17.0997 20 17.9523 20 18.4318 20C18.6716 20 18.8581 20.1599 18.938 20.373C19.1778 21.0657 19.7106 22.5843 20.3234 23.6233C21.1493 24.982 21.6821 25.4882 22.0285 25.4349C22.3748 25.355 22.2683 24.4492 22.2683 23.7299C22.2683 23.0105 22.3482 21.785 22.0018 21.2255L21.469 20.4529C21.3358 20.2664 21.469 20.0266 21.6821 20.0266H24.7193C25.0124 20.0266 25.2521 20.2664 25.2521 20.5595V24.4226C25.2521 24.4226 25.3854 25.1152 26.1313 24.3959C26.8773 23.6766 27.6766 22.3445 28.3426 20.9857L28.609 20.3463C28.6889 20.1599 28.8754 20.0266 29.0886 20.0266H31.0601C31.4331 20.0266 31.6995 20.3996 31.5663 20.746L31.3531 21.3055C31.3531 21.3055 30.6338 22.7441 29.8878 23.7565C29.1419 24.7955 28.982 25.0353 29.0886 25.3017C29.1951 25.5682 31.1134 27.3532 31.5929 28.2057C31.7261 28.4455 31.8327 28.6586 31.9393 28.8451C32.1258 29.1914 31.8593 29.6444 31.4597 29.6444H29.2218C29.0353 29.6444 28.8488 29.5378 28.7689 29.3779L28.5557 29.0316C28.5557 29.0316 27.197 27.4331 26.3711 26.9269C25.5186 26.4473 25.5452 27.14 25.5452 27.14V28.552C25.5452 29.1382 25.0657 29.6177 24.4795 29.6177H23.9467C23.9467 29.6177 21.0161 29.6177 18.6716 26.1276C16.8333 23.4102 16.2205 21.6518 16.0074 20.6394C15.9541 20.3197 16.1939 20 16.5403 20Z" fill="white"/>
+									</svg>
+
+								a(href="") 
+									<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="48" height="48" rx="24" fill="#D3D3D3"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.3581 23.5289C20.4924 21.7276 23.2493 20.5401 24.6287 19.9664C28.5672 18.3282 29.3855 18.0437 29.919 18.0343C30.0363 18.0322 30.2986 18.0613 30.4685 18.1992C30.612 18.3156 30.6515 18.4728 30.6703 18.5832C30.6892 18.6936 30.7128 18.9451 30.6941 19.1415C30.4806 21.384 29.5571 26.826 29.0873 29.3376C28.8885 30.4004 28.4971 30.7567 28.1181 30.7916C27.2945 30.8674 26.6692 30.2473 25.8715 29.7244C24.6233 28.9062 23.9181 28.3969 22.7065 27.5985C21.3063 26.6758 22.214 26.1686 23.012 25.3398C23.2208 25.1229 26.8495 21.8224 26.9197 21.5229C26.9285 21.4855 26.9367 21.3459 26.8538 21.2722C26.7708 21.1985 26.6484 21.2237 26.5601 21.2438C26.4349 21.2722 24.4409 22.5901 20.5781 25.1976C20.0121 25.5863 19.4995 25.7757 19.0401 25.7657C18.5338 25.7548 17.5597 25.4794 16.8356 25.244C15.9475 24.9553 15.2416 24.8027 15.303 24.3124C15.3351 24.057 15.6867 23.7959 16.3581 23.5289Z" fill="white"/>
+									</svg>
+
+								a(href="") 
+									<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_24_633)">
+									<path d="M24.0072 48.0144C37.266 48.0144 48.0144 37.266 48.0144 24.0072C48.0144 10.7484 37.266 0 24.0072 0C10.7484 0 0 10.7484 0 24.0072C0 37.266 10.7484 48.0144 24.0072 48.0144Z" fill="#D3D3D3"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M23.3262 16.0241C22.4072 16.1446 21.7894 16.3405 21.0888 16.8828C20.78 17.1239 20.569 17.3424 20.328 17.6588C20.1095 17.9375 19.9061 18.3142 19.7705 18.6532C19.2281 20.0694 19.5219 21.4932 20.3807 22.6759C20.7574 23.1882 21.5634 23.7833 22.1586 23.9867C22.7537 24.1901 23.2358 24.288 23.9289 24.2504C26.8367 24.0696 28.6598 20.9056 27.2887 18.2313C27.1606 17.9827 27.0326 17.8094 26.8819 17.606C26.1211 16.5665 24.5767 15.8583 23.3262 16.0241ZM23.3413 18.4573C22.377 18.6532 21.797 19.4969 21.9401 20.4084C22.0757 21.2446 22.8893 22.0055 23.9213 21.8247C25.4205 21.561 25.8122 19.6551 24.6822 18.7963C24.3658 18.5552 23.8535 18.3518 23.3413 18.4573Z" fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M21.518 31.4749C21.6988 31.2941 23.5219 29.4635 23.6273 29.3957C23.7403 29.4635 23.8985 29.6443 24.004 29.7498L25.8195 31.5728C26.0681 31.8289 26.3619 32.0097 26.8968 31.9871C27.3036 31.8817 27.6049 31.7235 27.7932 31.3694C27.8535 31.264 27.9062 31.1359 27.9288 31.0003C28.0569 30.2997 27.5974 29.9306 27.3186 29.6443C27.1755 29.5012 25.3826 27.7459 25.3148 27.6329C26.1133 27.4371 26.7762 27.1583 27.4166 26.7967C27.7631 26.6084 28.0192 26.4502 28.1548 26.0585C28.4637 25.2072 27.8083 24.4012 26.9947 24.4238C26.5201 24.4388 26.3092 24.6799 25.9626 24.8456C24.3807 25.5763 22.7761 25.5839 21.2167 24.8004C20.8928 24.6347 20.6065 24.3786 20.1394 24.4087C19.243 24.4539 18.7834 25.388 19.0998 26.1112C19.2656 26.4803 19.5142 26.6159 19.8607 26.8118C20.4784 27.1734 21.179 27.4446 21.9474 27.6329C21.8796 27.7384 20.0566 29.5313 19.9134 29.6744C19.6196 29.9607 19.1752 30.3223 19.3183 31.0455C19.5368 32.1755 20.7195 32.2809 21.518 31.4749Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_24_633">
+									<rect width="48" height="48" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+
+								a(href="") 
+									<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="48" height="48" rx="24" fill="#D3D3D3"/>
+									<g clip-path="url(#clip0_24_639)">
+									<path d="M24.0324 28.8153C21.3745 28.8153 20.1601 27.4613 20.1601 26.4682C20.1598 26.2313 20.257 26.0047 20.429 25.8417C20.6009 25.6788 20.8324 25.5938 21.0689 25.6069C22.2069 25.6069 21.9092 27.3138 24.0324 27.3138C25.1177 27.3138 25.7551 26.6605 25.7551 26.0468C25.7551 25.678 25.5444 25.2565 24.8279 25.0879L22.4572 24.49C20.5526 24.0053 20.2207 22.9463 20.2207 21.9638C20.2207 19.9249 22.0857 19.1874 23.8612 19.1874C25.497 19.1874 27.441 20.0909 27.441 21.3131C27.441 21.84 27.0011 22.1218 26.4901 22.1218C25.5181 22.1218 25.6814 20.7573 23.7268 20.7573C22.7548 20.7573 22.2438 21.213 22.2438 21.8505C22.2438 22.488 22.9998 22.704 23.6636 22.8489L25.4127 23.244C27.3304 23.676 27.8414 24.8008 27.8414 25.8782C27.8414 27.5351 26.5586 28.8153 24.0298 28.8153H24.0324ZM31.3712 25.3092C31.4471 24.8743 31.485 24.4336 31.4845 23.9921C31.4938 21.7744 30.5193 19.6668 28.8239 18.2372C27.1284 16.8077 24.8863 16.2035 22.7021 16.5874C22.0308 16.2009 21.2694 15.9983 20.4947 16C18.9046 16.0097 17.4389 16.8619 16.6439 18.239C15.8488 19.6161 15.8437 21.3116 16.6304 22.6935C16.1914 25.1054 16.9603 27.5795 18.6891 29.3177C20.4179 31.056 22.8878 31.8384 25.3021 31.4126C25.9726 31.7988 26.7331 32.0014 27.5069 32C29.0962 31.9898 30.5609 31.1379 31.3558 29.7616C32.1507 28.3854 32.1565 26.6909 31.3712 25.3092Z" fill="white"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_24_639">
+									<rect width="16" height="16" fill="white" transform="translate(16 16)"/>
+									</clipPath>
+									</defs>
+									</svg>
+					.stocks-single-content__right 
+						.stocks-single-content__form.resp-desk 
+							.title Заказать технику в лизинг
+							form(action="" method="method")
+								.my-new-form__item
+									input.my-new-form__input(type='text' name='name' placeholder='Имя')
+								.my-new-form__item
+									input.my-new-form__input(type='tel' name='name' placeholder='Телефон')
+								.my-new-form__item
+									input.my-new-form__input(type='email' name='name' placeholder='Email')
+								.my-new-form-checkbox
+									input#my-new-formAgreement.my-new-form-checkbox__input(checked='' type='checkbox' name='agreement')
+									label.my-new-form-checkbox__label(for='my-new-formAgreement')
+										span
+											| Даю согласие на обработку моих персональных данных
+								button.my-new-form__right-button(type='submit') откликнуться
+
+		section.leasing
+			.container
+				.title акции и лизинг
+				.leasing__slider.swiper.js-leasing-slider
+					.swiper-wrapper
+						.card-leasing.card-leasing--colored.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.card-leasing.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.card-leasing.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.card-leasing.card-leasing--colored.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.card-leasing.card-leasing--colored.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+						.card-leasing.swiper-slide
+							.card-leasing__subtitle Лизинг
+							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
+							.card-leasing__image
+								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
+							.card-leasing__bottom
+								.card-leasing__offer
+									.card-leasing__from от 0<span>%</span>
+									span на первый <br> взнос
+								img(src='./img/svg/i-arrow-link.svg', alt="")
+					.leasing__nav-extended.nav-extended
+						.nav-extended__group
+							.nav-extended__pagi
+							a.nav-extended__link(href='#', target='_blank') Посмотреть все
+						.nav-extended__nav
+							.swiper-btn.swiper-btn--prev
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#8F9190' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#8F9190')
+							.swiper-btn.swiper-btn--next
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#1F2120' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#1F2120')
+
+
+
+
+		.stocks-single-content__form.resp-mob 
+			.title Заказать технику в лизинг
+			form(action="" method="method")
+				.my-new-form__item
+					input.my-new-form__input(type='text' name='name' placeholder='Имя')
+				.my-new-form__item
+					input.my-new-form__input(type='tel' name='name' placeholder='Телефон')
+				.my-new-form__item
+					input.my-new-form__input(type='email' name='name' placeholder='Email')
+				.my-new-form-checkbox
+					input#my-new-formAgreement.my-new-form-checkbox__input(checked='' type='checkbox' name='agreement')
+					label.my-new-form-checkbox__label(for='my-new-formAgreement')
+						span
+							| Даю согласие на обработку моих персональных данных
+				button.my-new-form__right-button(type='submit') откликнуться
+
+
+		include ../../blocks/modules/footer/footer
+
+
+
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")

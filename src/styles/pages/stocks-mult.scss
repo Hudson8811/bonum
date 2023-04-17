@@ -1,0 +1,262 @@
+.stocks-mult {
+	section {
+		margin-top: 130px;
+		@media (max-width: 1200px){
+			margin-top: 70px;
+		}
+		&:first-child{
+			margin: 0;
+		}
+	}
+	.container {
+		max-width: 1346px!important;
+	}
+	.resp-desk {
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+	.resp-mob {
+		display: none;
+		@media (max-width: 768px){
+			display: block;
+		}
+	}
+	.h1 {
+		@media (max-width: 390px){
+			font-size: 20px;
+		}
+	}
+	.title {
+		@media (max-width: 390px){
+			font-size: 13px;
+		}
+	}
+}
+.stocks-mult-hero {
+	background: #F8F8F8;
+	overflow: hidden;
+	.breakpoints__container {
+		padding: 25px 16px;
+		max-width: 1346px !important;
+		margin: 0 auto;
+	}
+	&__row {
+		display: flex;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+		}
+	}
+	&__body {
+		flex: 0 1 50%;
+		padding-top: 25px;
+		padding-right: 130px;
+		padding-bottom: 99px;
+		@media (max-width: 1200px){
+			padding: 20px 40px 40px 16px;
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+			padding: 0px 16px 40px;
+		}
+		&-inner {
+			max-width: 545px;
+			margin-left: auto;
+			padding-left: 16px;
+			@media (max-width: 1200px){
+				padding: 0;
+			}
+			@media (max-width: 768px){
+				max-width: 100%;
+			}
+		}
+		.breakpoints {
+			border-bottom: none;
+			padding: 16px;
+			margin: 0 -16px;
+			@media (max-width: 768px){
+				background-color: #ffffff;
+			}
+		}
+		.breakpoints__container {
+			padding: 0;
+		}
+		.title {
+			padding-top: 90px;
+			@media (max-width: 1200px){
+				padding-top: 40px;
+			}
+			@media (max-width: 768px){
+				padding-top: 23px;
+			}
+		}
+		.h1 {
+			margin-top: 80px;
+			@media (max-width: 1200px){
+				padding-top: 40px;
+				margin: 0;
+			}
+		}
+		p {
+			margin-top: 64px;
+			@media (max-width: 1200px){
+				margin-top: 30px;
+			}
+		}
+	}
+	&__buttons {
+		display: flex;
+		margin-top: 82px;
+		@media (max-width: 1200px){
+			flex-wrap: wrap;
+			margin-top: 36px;
+		}
+	}
+	&__button {
+		display: block;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		border: 1px solid #1F2120;
+		padding: 16px 45px;
+		@media (max-width: 1200px){
+			flex: 0 1 70%;
+			text-align: center;
+			padding: 12px;
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+		&-black {
+			color: #FFFFFF;
+			background: #1F2120;
+		}
+		&-white {
+			margin-left: 32px;
+			color: #1F2120;
+			background: #F8F8F8;
+			@media (max-width: 1200px){
+				margin: 0;
+				margin-top: 16px;
+			}
+		}
+	}
+	&__image-wrapper {
+		background: #C4C4C4;
+		flex: 0 1 50%;
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+	}
+	&__image {
+		position: relative;
+		width: calc(100% + 300px);
+		min-height: 100%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-desk  {
+			@media (max-width: 768px){
+				display: none;
+			}
+		}
+		&-mob  {
+			display: none;
+			@media (max-width: 768px){
+				margin-top: 40px;
+				margin-left: -16px;
+				display: block;
+				padding-top: 82%;
+				width: calc(100% + 32px);
+			}
+		}
+	}
+}
+.stocks-mult-cards {
+	&__items {
+		margin: -15px;
+	} 
+	&__row {
+		margin-top: 80px;
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 1200px){
+			margin-top: 40px;
+		}
+		.card-leasing {
+
+		}
+	} 
+	&__item {
+		display: block;
+		padding: 15px;
+		flex: 0 1 50%;
+		@media (max-width: 1200px){
+			flex: 1 1 100%;
+		}
+		figure {
+			margin: 0;
+			padding: 0;
+		}
+	} 
+}
+
+.stocks-mult-benefits {
+	&__items {
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		border-width: 0.5px;
+		border-style: solid;
+		border-color: #E0E0E0;
+	}
+	&__item {
+		padding: 44px;
+		border-width: 0.5px;
+		border-style: solid;
+		border-color: #E0E0E0;
+		flex: 0 1 33.333%;
+		@media (max-width: 900px){
+			flex: 1 1 100%;
+		}
+		&--quarter {
+			flex: 0 1 25%;
+			@media (max-width: 1200px){
+				flex: 0 1 50%;
+			}
+			@media (max-width: 900px){
+				flex: 1 1 100%;
+			}
+		}
+	}
+	&__column {
+	}
+	&__icon {
+		width: 48px;
+		height: 48px;
+		min-width: 48px;
+		min-height: 48px;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__text {
+		p {
+			text-transform: none;
+			margin-top: 20px;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 200%;
+		}
+	}
+}
