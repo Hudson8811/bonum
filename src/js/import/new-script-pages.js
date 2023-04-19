@@ -68,3 +68,9 @@ var swiper2 = new Swiper(".history-about-page__swiper", {
 		},
 	},
 });
+
+
+
+Fancybox.bind('.my-fancy-video', {
+	type: "video"
+});

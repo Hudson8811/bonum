@@ -1,0 +1,619 @@
+.philosophy-page {
+	section {
+		margin-top: 130px;
+		@media (max-width: 1200px){
+			margin-top: 70px;
+		}
+		&:first-child{
+			margin: 0;
+		}
+	}
+	.container {
+		max-width: 1346px!important;
+	}
+	.resp-desk {
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+	.resp-mob {
+		display: none;
+		@media (max-width: 768px){
+			display: block;
+		}
+	}
+	.h1 {
+		@media (max-width: 390px){
+			font-size: 20px;
+		}
+	}
+	.title {
+		@media (max-width: 390px){
+			font-size: 13px;
+		}
+	}
+}
+.hero-philosophy-page {
+	background: #F8F8F8;
+	overflow: hidden;
+	.breakpoints__container {
+		padding: 25px 16px;
+		max-width: 1346px !important;
+		margin: 0 auto;
+	}	
+	&__row {
+		display: flex;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+		}
+	}
+	&__body {
+		flex: 0 1 50%;
+		padding-top: 25px;
+		padding-right: 100px;
+		padding-bottom: 99px;
+		@media (max-width: 1200px){
+			padding: 20px 40px 40px 16px;
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+			padding: 0px 16px 40px;
+		}
+		&-inner {
+			max-width: 570px;
+			margin-left: auto;
+			padding-left: 16px;
+			@media (max-width: 1200px){
+				padding: 0;
+			}
+			@media (max-width: 768px){
+				max-width: 100%;
+			}
+		}
+		.breakpoints {
+			border-bottom: none;
+			padding: 16px;
+			margin: 0 -16px;
+			@media (max-width: 768px){
+				background-color: #ffffff;
+			}
+		}
+		.breakpoints__container {
+			padding: 0;
+		}
+		.title {
+			padding-top: 90px;
+			@media (max-width: 1200px){
+				padding-top: 40px;
+			}
+			@media (max-width: 768px){
+				padding-top: 23px;
+			}
+		}
+		.h1 {
+			margin-top: 80px;
+			@media (max-width: 1200px){
+				padding-top: 40px;
+				margin: 0;
+			}
+		}
+		p {
+			margin-top: 64px;
+			@media (max-width: 1200px){
+				margin-top: 30px;
+			}
+		}
+	}
+	&__buttons {
+		display: flex;
+		margin-top: 82px;
+		@media (max-width: 1200px){
+			flex-wrap: wrap;
+			margin-top: 36px;
+		}
+	}
+	&__button {
+		text-align: center;
+		display: block;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		border: 1px solid #1F2120;
+		padding: 16px 45px;
+		@media (max-width: 1200px){
+			flex: 0 1 70%;
+			text-align: center;
+			padding: 12px;
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+		&-black {
+			color: #FFFFFF;
+			background: #1F2120;
+		}
+		&-white {
+			margin-left: 32px;
+			color: #1F2120;
+			background: #F8F8F8;
+			@media (max-width: 1200px){
+				margin: 0;
+				margin-top: 16px;
+			}
+		}
+	}
+	&__image-wrapper {
+		flex: 0 1 50%;
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+	}
+	&__image {
+		position: relative;
+		width: calc(100% + 300px);
+		min-height: 100%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-desk  {
+			@media (max-width: 768px){
+				display: none;
+			}
+		}
+		&-mob  {
+			display: none;
+			@media (max-width: 768px){
+				margin-top: 40px;
+				margin-left: -16px;
+				display: block;
+				padding-top: 82%;
+				width: calc(100% + 32px);
+			}
+		}
+	}
+}
+
+.structure-philosophy-page {
+	&__row {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+		}
+		&::before{
+			content:'';
+			position: absolute;
+			z-index: -2;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 645px;
+			height: 269px;
+			background: url('../img/philosophy-page/structure-bg.png') 0 0 / 100% 100% no-repeat;
+			@media (max-width: 768px){
+				width: 337px;
+				height: 139px;
+			}
+		}
+	}
+	&__item {
+		flex: 0 1 336px;
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+		&--middle {
+			flex: 1 1 auto;
+			align-self: center;
+			display: flex;
+			justify-content: center;
+			@media (max-width: 768px){
+				order: -1;
+				margin-bottom: 40px;
+			}
+		}
+		.h1 {
+			margin-bottom: 80px;
+		}
+	}
+	&__img {
+		flex: 0 1 446px;
+		@media (max-width: 768px){
+			margin-top: 32px;
+			flex: 0 1 350px;
+		}
+		@media (max-width: 450px){
+			flex: 0 1 233px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__point {
+		display: flex;
+		margin-top: 48px;
+		@media (max-width: 768px){
+			margin-top: 24px;
+		}
+	}
+	&__num {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 135%;
+		color: #1F2120;
+		flex: 0 1 18px;
+		@media (max-width: 768px){
+			font-size: 16px;
+		}
+	}
+	&__text {
+		margin-left: 12px;
+		@media (max-width: 768px){
+			margin-left: 8px;
+		}
+		p {
+			margin-top: 20px;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 150%;
+			color: #565B59;
+			@media (max-width: 768px){
+				font-size: 13px;
+			}
+		}
+	}
+	&__subtitle {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 135%;
+		color: #1F2120;
+		@media (max-width: 768px){
+			font-size: 16px;
+		}
+	}
+}
+
+
+.losses-philosophy-page {
+	background: #F8F8F8;
+	padding: 72px 0;
+	@media (max-width: 768px){
+		padding: 40px 0;
+	}
+	.container {
+		>p {
+			margin-top: 64px;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 200%;
+			color: #1F2120;
+			@media (max-width: 768px){
+				margin-top: 40px;
+				font-size: 15px;
+			}
+		}
+	}
+	&__items {
+		margin-top: 40px;
+		@media (max-width: 768px){
+			margin-top: 32px;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -30px -15px 0;
+		@media (max-width: 768px){
+			margin: -20px -15px 0;
+		}
+	}
+	&__item {
+		flex: 0 1 50%;
+		padding: 30px 15px 0;
+		@media (max-width: 992px){
+			padding: 20px 15px 0;
+			flex: 1 1 100%;
+		}
+		&--dif {
+			flex: 0 1 33.333%;
+			@media (max-width: 992px){
+				flex: 1 1 100%;
+			}
+		}
+	}
+	&__column {
+		padding: 48px;
+		background: #FFFFFF;
+		min-height: 100%;
+		@media (max-width: 768px){
+			padding: 32px;
+		}
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		svg {
+			width: 40px;
+			height: 40px;
+			margin-right: 16px;
+			@media (max-width: 768px){
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	&__subtitle {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		color: #1F2120;
+		@media (max-width: 768px){
+			font-size: 16px;
+		}
+	}
+	&__text {
+		border-top: 1px solid #E0E0E0;
+		margin-top: 16px;
+		padding-top: 16px;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 150%;
+		color: #4C4E4D;
+		@media (max-width: 768px){
+			font-size: 13px;
+		}
+	}
+}
+
+
+.indicators-philosophy-page {
+	&__row {
+		margin-top: 64px;
+		display: flex;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+			margin-top: 32px;
+		}
+	}
+	&__img {
+		flex: 1 1 auto;
+		min-height: 100%;
+		position: relative;
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		@media (max-width: 768px){
+			min-height: 0;
+			flex: 1 1 100%;
+			padding-top: 64%;
+			margin-top: 32px;
+			margin-bottom: 40px;
+		}
+	}
+	&__body {
+		flex: 0 1 calc(50% + 58px);
+		padding-top: 70px;
+		padding-left: 58px;
+		padding-right: 33px;
+		padding-bottom: 70px;
+		@media (max-width: 1200px){
+			padding: 20px 0 20px 40px;
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+			padding: 0;
+		}
+		ul {
+			list-style: inside;
+			li {
+				margin-top: 16px;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 170%;
+				color: #4C4E4D;
+			}
+		}
+	}
+	&__subtitle {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 180%;
+		color: #1F2120;
+	}
+
+	&__table {
+		margin-top: 52px;
+		min-width: 1014px;
+		@media (max-width: 1200px){
+			margin-top: 48px;
+		}
+		&-wrapper {
+			overflow: auto;
+		}
+	}
+	&__thead {
+		background: #1F2120;
+	}
+	&__th {
+		text-align: left;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 150%;
+		color: #FFFFFF;
+		flex: 0 1 25%;
+		margin-left: 78px;
+		@media (max-width: 1200px){
+			margin-left: 40px;
+			font-size: 15px;
+		}
+		&:first-child{
+			margin: 0;
+		}
+	}
+	&__tbody {
+		>* {
+			&:nth-child(1){
+				background: #F3F3F3;
+			}
+			&:nth-child(2){
+				background: #F8F8F8;
+			}
+		}
+	}
+	&__tr {
+		display: flex;
+		padding: 20px 56px;
+		border-bottom: 3px solid #ffffff;
+		@media (max-width: 1200px){
+			border-bottom: 1px solid #ffffff;
+			padding: 16px 40px;
+		}
+	}
+	&__td {
+		flex: 0 1 25%;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 150%;
+		color: #1F2120;
+		padding: 20px 0;
+		margin-left: 78px;
+		@media (max-width: 1200px){
+			font-size: 13px;
+			margin-left: 40px;
+			padding: 8px 0;
+		}
+		&:first-child{
+			margin: 0;
+		}
+	}
+}
+
+
+
+.seminar-philosophy-page {
+	&__row {
+		display: flex;
+		@media (max-width: 768px){
+			flex-wrap: wrap;
+		}
+	}
+	&__body {
+		flex: 0 1 50%;
+		padding-top: 30px;
+		padding-left: 30px;
+		padding-bottom: 30px;
+		@media (max-width: 1200px){
+		}
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+			padding: 0;
+		}
+		p {
+			margin-top: 48px;
+			@media (max-width: 768px){
+				margin-top: 24px;
+			}
+		}
+	}
+	&__image-wrapper {
+		flex: 0 1 calc(50% - 15px);
+		@media (max-width: 768px){
+			flex: 1 1 100%;
+		}
+	}
+	&__image {
+		position: relative;
+		min-height: 100%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&-desk  {
+			@media (max-width: 768px){
+				display: none;
+			}
+		}
+		&-mob  {
+			display: none;
+			@media (max-width: 768px){
+				margin-top: 40px;
+				margin-left: -16px;
+				display: block;
+				padding-top: 82%;
+				width: calc(100% + 32px);
+			}
+		}
+	}
+}
+
+
+
+.recommendations-philosophy-page {
+	&__container {
+		width: 978.04px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.h1 {
+		text-align: center;
+		margin-bottom: 64px;
+		@media (max-width: 768px){
+			margin-bottom: 32px;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 24px;
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 150%;
+		color: #1F2120;
+	}
+	&__diagram {
+		margin-bottom: 52px;
+		position: relative;
+		padding-top: 46.5%;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	ul {
+		list-style: inside;
+		margin-top: 16px;
+		max-width: 801px;
+		li {
+			margin-top: 8px;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 150%;
+			color: #4C4E4D;
+		}
+	}
+}
