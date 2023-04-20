@@ -1,4 +1,4 @@
-import $, {event, type} from "jquery";
+import $, { event, type } from "jquery";
 
 $(document).ready(function () {
 	var video = $('.company__video');
@@ -37,32 +37,34 @@ $(document).ready(function () {
 			});
 		});
 	}
+
+
 });
-if (document.querySelector('.slider-top')) {
+// if (document.querySelector('.slider-top')) {
 
-	const swiperTop = new Swiper('.slider-top__top', {
-		direction: 'horizontal',
-		loop: true,
-		centeredSlides: true,
-		slidesPerView: 1,
-		speed: 700,
-		spaceBetween: -300,
-		navigation: {
-			prevEl: '.slider-top__prev',
-			nextEl: '.slider-top__next',
-		},
-	});
-	const swiperBottom = new Swiper('.slider-info__slider', {
-		direction: 'horizontal',
-		loop: true,
-		slidesPerView: 1,
-		speed: 700,
-		effect: "fade",
-	});
+// 	const swiperTop = new Swiper('.slider-top__top', {
+// 		direction: 'horizontal',
+// 		loop: true,
+// 		centeredSlides: true,
+// 		slidesPerView: 1,
+// 		speed: 700,
+// 		spaceBetween: -300,
+// 		navigation: {
+// 			prevEl: '.slider-top__prev',
+// 			nextEl: '.slider-top__next',
+// 		},
+// 	});
+// 	const swiperBottom = new Swiper('.slider-info__slider', {
+// 		direction: 'horizontal',
+// 		loop: true,
+// 		slidesPerView: 1,
+// 		speed: 700,
+// 		effect: "fade",
+// 	});
 
-	swiperTop.controller.control = swiperBottom;
-	swiperBottom.controller.control = swiperTop;
-}
+// 	swiperTop.controller.control = swiperBottom;
+// 	swiperBottom.controller.control = swiperTop;
+// }
 
 if (document.querySelector('.gallery')) {
 	const swiperGallery = new Swiper('.gallery__slider', {
@@ -153,9 +155,36 @@ if (document.querySelector('.js-news-slider')) {
 				spaceBetween: 24
 			},
 			1280: {
-          slidesPerView: 3,
-          spaceBetween: 30
+				slidesPerView: 3,
+				spaceBetween: 30
 			}
 		}
 	});
+}
+
+
+var tabNavsMat = document.querySelectorAll(".options--tabControl");
+var tabPanesMat = document.querySelectorAll(".options--tabs-content");
+if (tabNavsMat !== null & tabPanesMat !== null) {
+	tabClick()
+}
+function tabClick() {
+	for (var i = 0; i < tabNavsMat.length; i++) {
+		tabNavsMat[i].addEventListener("click", function (e) {
+			e.preventDefault();
+			var activeTabAttr = e.target.getAttribute("data-tab");
+
+			for (var j = 0; j < tabNavsMat.length; j++) {
+				var contentAttr = tabPanesMat[j].getAttribute("data-tab-content");
+
+				if (activeTabAttr === contentAttr) {
+					tabNavsMat[j].classList.add("active");
+					tabPanesMat[j].classList.add("active");
+				} else {
+					tabNavsMat[j].classList.remove("active");
+					tabPanesMat[j].classList.remove("active");
+				}
+			};
+		});
+	}
 }
