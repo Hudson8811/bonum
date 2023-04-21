@@ -1,5 +1,6 @@
 .main-page {
 
+    //скрытие блоков без адаптивности
     .gallery,
     .feedback {
         @include max(xl2) {
@@ -7,23 +8,47 @@
         }
     }
 
+    &+.footer {
+        @include max(xl2) {
+            display: none !important;
+        }
+    }
+
+    //скрытие блоков без адаптивности
+
+
     .slider {
         .slider-top {
-            &__container {
-                overflow: visible;
-                max-width: 1920px;
-                width: 100%;
-                padding: 68px 303px 48px;
-                margin: 0 auto;
-            }
-
             &--buttons {
                 position: relative;
                 display: flex;
                 justify-content: center;
 
+                @include max(sm) {
+                    max-width: 310px;
+                    flex-flow: column nowrap;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
                 &__order {
                     margin-right: 64px;
+
+                    @include max(lg) {
+                        margin-right: 58px;
+                    }
+
+                    @include max(sm) {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                .company__button {
+                    @include max(sm) {
+                        width: 100%;
+                        margin-top: 0;
+                    }
                 }
             }
 
@@ -34,12 +59,23 @@
                     padding-top: 68px;
                     padding-bottom: 48px;
 
+                    @include max(lg) {
+                        padding-top: 56px;
+                        padding-bottom: 40px;
+                    }
+
                     &-title {
                         font-size: 48px;
                         line-height: 150%;
                         text-align: center;
                         color: $black;
                         transition: $animation;
+
+                        @include max(xs) {
+                            font-size: 20px;
+                            line-height: 16px;
+                            font-weight: 300;
+                        }
                     }
 
                     &-text {
@@ -49,6 +85,17 @@
                         color: $grey-2;
                         margin-bottom: 39px;
                         transition: $animation;
+
+                        @include max(lg) {
+                            font-size: 24px;
+                            font-weight: 300;
+                        }
+
+                        @include max(xs) {
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 24px;
+                        }
                     }
 
                     &-img {
@@ -70,6 +117,10 @@
                     padding: 72px 0px 72px 0;
                 }
 
+                @include max(md) {
+                    padding: 0;
+                    padding-top: 42px;
+                }
             }
 
             &__slide {
@@ -80,6 +131,15 @@
                     display: flex;
                     justify-content: center;
                     position: relative;
+
+                    @include max(md) {
+                        max-width: 500px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-flow: row wrap;
+                    }
                 }
 
                 &-item {
@@ -97,8 +157,35 @@
                         align-items: center;
                     }
 
+                    @include max(md) {
+                        margin-right: 0;
+                        padding-right: 0;
+                        margin-bottom: 42px;
+                    }
+
+                    &:nth-child(2n - 1) {
+                        @include max(md) {
+                            padding-right: 46px;
+                            margin-right: 46px;
+                        }
+
+                        @include max(sm) {
+                            padding-right: 37px;
+                            margin-right: 37px;
+                        }
+
+                    }
+
+                    &:nth-child(2n) {
+                        @include max(md) {
+                            border-right: none !important;
+
+                        }
+                    }
+
                     &:last-child {
                         margin-right: 0;
+                        padding-right: 0;
                     }
                 }
 
@@ -144,6 +231,12 @@
                         max-width: 140px;
 
                     }
+
+                    @include max(sm) {
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 135%;
+                    }
                 }
 
                 &-text {
@@ -157,6 +250,12 @@
                         font-size: 14px;
                         line-height: 150%;
                         text-align: center;
+                    }
+
+                    @include max(sm) {
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 150%;
                     }
                 }
             }
@@ -320,6 +419,15 @@
         background: #F8F8F8;
         padding-top: 56px;
         padding-bottom: 85px;
+        overflow: visible;
+
+        @include max(lg) {
+            overflow-x: scroll;
+            width: 100vw;
+            justify-content: flex-start;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
 
         .options--tabsControls {
             position: relative;
@@ -331,6 +439,11 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+
+            @include max(lg) {
+                overflow-x: scroll;
+                justify-content: flex-start;
+            }
 
             .options--tabControl {
 
@@ -345,6 +458,7 @@
                 padding: 0 10px;
                 margin: 0 30px;
                 transition: all .5s;
+                white-space: nowrap;
 
                 &.active {
                     transition: all .5s;
@@ -392,6 +506,11 @@
             align-items: flex-start;
             padding-top: 72px;
 
+            @include max(lg) {
+                overflow-x: scroll;
+                min-width: 1090px;
+            }
+
             &--title {
 
                 font-style: normal;
@@ -405,6 +524,10 @@
 
             &.active {
                 display: flex;
+            }
+
+            &--item {
+                @include max(lg) {}
             }
         }
     }
@@ -618,6 +741,25 @@
             padding-bottom: 96px;
         }
 
+        @include max(sm) {
+            padding-bottom: 56px;
+        }
+
+        .property--button {
+            display: none;
+            margin-top: 0;
+            width: 100%;
+
+            @include max(sm) {
+
+                display: inline-flex;
+            }
+        }
+
+        @include max(lg) {
+            padding-bottom: 96px;
+        }
+
         &__container {
             max-width: 1920px;
             width: 100%;
@@ -643,8 +785,35 @@
                 border-top: 1px solid $grey-1;
             }
 
+            &--one {
+                @include max(lg) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @include max(sm) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+            }
+
             &-two {
                 grid-template-columns: repeat(2, 1fr);
+
+                @include max(sm) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            &--three {
+                @include max(lg) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .property__item {
+                    @include max(lg) {
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -658,6 +827,35 @@
             cursor: pointer;
             transition: $animation;
 
+            @include max(xs) {
+                padding: 20px;
+                min-height: 190px;
+            }
+
+            &.property__item--mob {
+                display: none;
+
+                @include max(lg) {
+                    display: flex;
+                }
+
+                @include max(sm) {
+                    display: none;
+                }
+            }
+
+            &.property__item--desc {
+                display: flex;
+
+                @include max(lg) {
+                    display: none;
+                }
+
+                @include max(sm) {
+                    display: flex;
+                }
+            }
+
             &:hover {
                 background-color: $black;
 
@@ -665,6 +863,14 @@
                     background-color: $white;
 
                     svg {
+                        circle {
+                            fill: $white;
+                        }
+
+                        path {
+                            fill: $black;
+                        }
+
                         fill: $black;
                     }
                 }
@@ -703,6 +909,13 @@
                 color: $black;
                 margin-bottom: 13px;
                 transition: $animation;
+
+                @include max(xs) {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 135%;
+                }
             }
 
             &-subtitle {
@@ -720,6 +933,13 @@
                 line-height: 150%;
                 color: $grey-7;
                 transition: $animation;
+
+                @include max(xs) {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 135%;
+                }
             }
 
             &-li {
@@ -744,5 +964,7 @@
                 }
             }
         }
+
+
     }
 }
