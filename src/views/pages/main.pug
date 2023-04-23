@@ -7,7 +7,7 @@ block variables
 
 block content
 	include ../../blocks/modules/header/header
-	include ../../blocks/modules/breakpoints/breakpoints
+	//- include ../../blocks/modules/breakpoints/breakpoints
 	
 	.main-page
 
@@ -398,7 +398,200 @@ block content
 
 			.options--tabs-content(data-tab-content="4") Как купить
 			.options--tabs-content(data-tab-content="5") Гарантия и сервис
-				
+		section.options--mob
+			.container
+				.accordions
+					.accordion
+						.accordion__intro
+							p Комплектация
+							.accordion__intro__img
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1.24268L6.65685 6.89953L12.3137 1.24268" stroke="#1F2120"/>
+								</svg>
+						.accordion__content
+							section.options-equipment
+								.options-equipment--table
+									.options-equipment--row
+										.options-equipment--col
+											!="Сливной рукав композитный термостойкий"
+										.options-equipment--col
+											!="-"
+										.options-equipment--col
+											!="1 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Быстроразъемные соединения типа Camlock или аналог на сливном рукаве"
+										.options-equipment--col
+											!="-"
+										.options-equipment--col
+											!="-"
+									.options-equipment--row
+										.options-equipment--col
+											!="Алюминиевый пенал для сливного рукава"
+										.options-equipment--col
+											!="-"
+										.options-equipment--col
+											!="1 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Ящик для песка"
+										.options-equipment--col
+											.makers
+												.options-maker
+													p 
+														!="Daken"
+													img(src="img/svg/make--Italy.svg", alt="")
+												.options-maker
+													p 
+														!="Parlock"
+													img(src="img/svg/maker-Finland.svg", alt="")
+												.options-maker
+													p 
+														!="Lago"
+													img(src="img/svg/make--Italy.svg", alt="")
+										.options-equipment--col
+											!="1 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Ящик для огнетушителя"
+										.options-equipment--col
+											.makers
+												.options-maker
+													p 
+														!="Daken"
+													img(src="img/svg/make--Italy.svg", alt="")
+												.options-maker
+													p 
+														!="Parlock"
+													img(src="img/svg/maker-Finland.svg", alt="")
+												.options-maker
+													p 
+														!="Lago"
+													img(src="img/svg/make--Italy.svg", alt="")
+										.options-equipment--col
+											!="2 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Огнетушитель"
+										.options-equipment--col -
+										.options-equipment--col
+											!="1 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Бак для воды с краном и дозатором под жидкое мыло"
+										.options-equipment--col
+											.makers
+												.options-maker
+													p 
+														!="Lokhen"
+													img(src="img/svg/make--Italy.svg", alt="")
+												.options-maker
+													p 
+														!="Parlock"
+													img(src="img/svg/maker-Finland.svg", alt="")
+												.options-maker
+													p 
+														!="Lago"
+													img(src="img/svg/make--Italy.svg", alt="")
+										.options-equipment--col
+											!="1 штука"
+									.options-equipment--row
+										.options-equipment--col
+											!="Контурная светоотражающая маркировка лентой премиального качества;"
+										.options-equipment--col -
+										.options-equipment--col
+											!="-"
+									.options-equipment--row
+										.options-equipment--col
+											!="Табличка с указанием типа груза"
+										.options-equipment--col
+											.makers
+												.options-maker
+													p 
+														!="Bicma"
+													img(src="img/svg/make--Italy.svg", alt="")
+												.options-maker
+													p 
+														!="Parlock"
+													img(src="img/svg/maker-Finland.svg", alt="")
+												.options-maker
+													p 
+														!="Lago"
+													img(src="img/svg/make--Italy.svg", alt="")
+										.options-equipment--col
+											!="1 штука"
+
+					.accordion
+						.accordion__intro
+							p Конструкция цистерны 
+							.accordion__intro__img
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1.24268L6.65685 6.89953L12.3137 1.24268" stroke="#1F2120"/>
+								</svg>
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque sunt consequatur incidunt ullam, temporibus non nihil ad qui laboriosam, maxime perspiciatis omnis tempore. Saepe exercitationem reprehenderit laborum ratione? Suscipit voluptatem nobis quidem ex cupiditate iusto debitis. Qui adipisci culpa quibusdam, labore quidem veritatis sed facilis unde consequatur. Eveniet, quo expedita.
+					.accordion
+						.accordion__intro
+							p Дополнительные опции
+							.accordion__intro__img
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1.24268L6.65685 6.89953L12.3137 1.24268" stroke="#1F2120"/>
+								</svg>
+						.accordion__content
+							section.options-additional
+								.options-additional--title.options--tabs-content--title Дополнительные опции
+								.options-additional--subtitle Подбираются исходя из Ваших пожеланий и специфики Вашего бизнеса
+								.options-additional--table
+									.options-additional--row.options--header
+										.options-additional--col.options--header
+											!="Улучшение эргономики ППЦ"
+										.options-additional--col.options--header
+											!="Шасси и подвеска ППЦ"
+									.options-additional--row.content
+										.options-additional--col.content
+											ul.options-additional--list
+												li Дополнительное запасное колесо Continental 385/65 R22,5 диском AKO/Hartung
+												li Установка магистралей для подогрева паром на полуприцеп с термоизоляцией
+												li Увеличение или уменьшение высоты ССУ (стандартная высота ССУ - 1150 ММ, 1 250 мм)
+												li Комплект сумки ADR (на одного человека)
+										.options-additional--col.content
+											ul.options-additional--list
+												li Оси BPW ECO-PLUS 2 (3-х осЫЙ агрегат с дисковыми тормозами)
+												li Оси SAF INTRA (3-х осный агрегат с дисковыми тормозами)
+												li Установка резины Michelin 385/65 R22,5 с дисками АКО/Hartung (6 колес +1 запасное)
+												li Установка внедорожной резиныKAMA-126 156G 425/85 R21 с дискамиЧКП3 (6 колес + 1 запасное)
+									.options-additional--row.options--header
+										.options-additional--col.options--header
+											!="Улучшение эргономики ППЦ"
+										.options-additional--col.options--header
+											!="Шасси и подвеска ППЦ"
+									.options-additional--row.content
+										.options-additional--col.content
+											ul.options-additional--list
+												li Окраска полуприцепа согласно макету заказчика
+												li Любые другие дополнительные опции по согласованию с заказчиком
+										.options-additional--col.content
+											ul.options-additional--list
+												li Установка механизма подъема передней оси на оси BPW/SAF
+					.accordion
+						.accordion__intro
+							p Как купить
+							.accordion__intro__img
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1.24268L6.65685 6.89953L12.3137 1.24268" stroke="#1F2120"/>
+								</svg>
+						.accordion__content
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo rem eius qui praesentium, optio sapiente, perferendis animi sint ratione dolore soluta non quidem et harum quos eos consequatur maxime voluptates.
+					.accordion
+						.accordion__intro
+							p Гарантия и сервис
+							.accordion__intro__img
+								<svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1.24268L6.65685 6.89953L12.3137 1.24268" stroke="#1F2120"/>
+								</svg>
+						.accordion__content
+							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo rem eius qui praesentium, optio sapiente, perferendis animi sint ratione dolore soluta non quidem et harum quos eos consequatur maxime voluptates.
+
 		section.video-content
 			.container
 				.company__wrapper

@@ -14,6 +14,8 @@
         }
     }
 
+
+
     //скрытие блоков без адаптивности
 
 
@@ -422,11 +424,16 @@
         overflow: visible;
 
         @include max(lg) {
-            overflow-x: scroll;
-            width: 100vw;
+            // overflow-x: scroll;
+            // width: 100vw;
             justify-content: flex-start;
             padding-left: 30px;
             padding-right: 30px;
+            overflow: hidden;
+        }
+
+        @include max(sm) {
+            display: none;
         }
 
         .options--tabsControls {
@@ -442,7 +449,9 @@
 
             @include max(lg) {
                 overflow-x: scroll;
+                width: 100vw;
                 justify-content: flex-start;
+                padding-right: 30px;
             }
 
             .options--tabControl {
@@ -508,7 +517,8 @@
 
             @include max(lg) {
                 overflow-x: scroll;
-                min-width: 1090px;
+                width: 100vw;
+                justify-content: flex-start;
             }
 
             &--title {
@@ -527,10 +537,15 @@
             }
 
             &--item {
-                @include max(lg) {}
+                @include max(lg) {
+                    min-width: 1090px;
+                    margin-right: 60px;
+                }
             }
         }
     }
+
+
 
     .options-additional {
         position: relative;
@@ -582,6 +597,10 @@
             font-weight: 400;
             font-size: 15px;
             line-height: 170%;
+
+            // @include max(sm) {
+            //     flex-flow: column nowrap;
+            // }
 
             &.options--header {
                 font-style: normal;
@@ -860,11 +879,11 @@
                 background-color: $black;
 
                 .property__item-icon {
-                    background-color: $white;
+                    background-color: #fff;
 
                     svg {
                         circle {
-                            fill: $white;
+                            fill: #fff;
                         }
 
                         path {
@@ -878,11 +897,11 @@
                 .property__item-title,
                 .property__item-subtitle,
                 .property__item-text {
-                    color: $white;
+                    color: #fff;
                 }
 
                 .property__item-li::before {
-                    background-color: $white;
+                    background-color: #fff;
                 }
             }
 
@@ -898,7 +917,7 @@
                 transition: $animation;
 
                 svg {
-                    fill: $white;
+                    fill: #fff;
                     transition: $animation;
                 }
             }
@@ -965,6 +984,174 @@
             }
         }
 
+
+    }
+}
+
+.options--mob {
+    position: relative;
+    width: 100%;
+    background: #F8F8F8;
+    padding-top: 16px;
+    padding-bottom: 48px;
+}
+
+.accordions {
+    display: none;
+
+    @include max(sm) {
+        display: block;
+    }
+
+    .accordion {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 0px;
+        display: block;
+
+        &__intro {
+            position: relative;
+            cursor: pointer;
+            font-style: normal;
+            display: flex;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 135%;
+            border-bottom: 1px solid #E3E3E3;
+            display: flex;
+            align-items: center;
+            color: #1F2120;
+            padding: 22px 20px;
+            background: transparent;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+                transition: all 0.1s;
+            }
+
+            &__img {
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                animation-name: rotationCloseMenuSidebar;
+                animation-duration: .2s;
+                animation-iteration-count: 1;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+
+                &:hover {
+                    background: transparent;
+                }
+            }
+
+            a {
+                padding-left: 20px;
+                position: relative;
+                cursor: pointer;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 135%;
+                color: #1F2120;
+                padding: 8px 20px;
+                padding-right: 0;
+                background: transparent;
+                flex-flow: row nowrap;
+                width: 100%;
+                transition: all 0.1s;
+
+                &:hover {
+                    transition: all 0.1s;
+                }
+            }
+        }
+
+        &__content {
+            max-height: 0;
+            overflow: hidden;
+            will-change: max-height;
+            transition: all 0.25s ease-out;
+            opacity: 0;
+            position: relative;
+            font-weight: 600;
+            background: transparent;
+            max-width: 100%;
+            transition: all 0.1s;
+            cursor: pointer;
+            color: #1F2120;
+            font-style: normal;
+            font-size: 14px;
+            line-height: 120%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-flow: column;
+
+        }
+
+        &__active {
+            .accordion__intro {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 135%;
+                color: #1F2120;
+                transition: all 0.1s;
+                border-bottom: none;
+
+                .accordion__intro__img {
+                    animation-name: rotationOpenMenuSidebar;
+                    animation-duration: .2s;
+                    animation-iteration-count: 1;
+                    animation-timing-function: linear;
+                    animation-fill-mode: forwards;
+                }
+
+            }
+
+            .accordion__content {
+                background: transparent;
+                opacity: 1;
+                width: 100%;
+                transition: all 0.1s;
+
+            }
+
+
+        }
+
+
+    }
+
+    @keyframes rotationOpenMenuSidebar {
+        0% {
+            transform-origin: 45% 35%;
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform-origin: 45% 35%;
+            transform: rotate(180deg);
+        }
+
+    }
+
+    @keyframes rotationCloseMenuSidebar {
+        0% {
+            transform-origin: 45% 35%;
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform-origin: 45% 35%;
+            transform: rotate(0deg);
+        }
 
     }
 }
