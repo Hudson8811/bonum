@@ -1,7 +1,7 @@
 .main-page {
 
     //скрытие блоков без адаптивности
-    .gallery,
+    /*.gallery,
     .feedback {
         @include max(xl2) {
             display: none !important;
@@ -12,7 +12,7 @@
         @include max(xl2) {
             display: none !important;
         }
-    }
+    }*/
 
 
 

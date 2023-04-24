@@ -114,9 +114,9 @@ if (document.querySelector('.js-advantages-slider')) {
 
 if (document.querySelector('.js-leasing-slider')) {
 	const swiperLeasing = new Swiper('.js-leasing-slider', {
-		slidesPerView: 2,
-		slidesPerGroup: 2,
-		spaceBetween: 30,
+		slidesPerView: 1,
+		spaceBetween: 10,
+		slidesPerGroup: 1,
 		pagination: {
 			el: '.leasing__nav-extended .nav-extended__pagi',
 			clickable: true,
@@ -127,15 +127,27 @@ if (document.querySelector('.js-leasing-slider')) {
 			}
 		},
 		navigation: {
-			prevEl: '.leasing__nav-extended .swiper-btn--prev',
-			nextEl: '.leasing__nav-extended .swiper-btn--next'
+			prevEl: '.leasing__top .swiper-btn--prev',
+			nextEl: '.leasing__top .swiper-btn--next'
 		},
+		breakpoints: {
+			700: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+				slidesPerGroup: 2,
+				navigation: {
+					prevEl: '.leasing__slider .swiper-btn--prev',
+					nextEl: '.leasing__slider .swiper-btn--next'
+				}
+			}
+		}
 	});
 }
 
 if (document.querySelector('.js-news-slider')) {
 	const swiperNews = new Swiper('.js-news-slider', {
 		slidesPerView: 1,
+		spaceBetween: 10,
 		pagination: {
 			el: '.news__nav-extended .nav-extended__pagi',
 			clickable: true,
@@ -146,13 +158,17 @@ if (document.querySelector('.js-news-slider')) {
 			}
 		},
 		navigation: {
-			prevEl: '.news__nav-extended .swiper-btn--prev',
-			nextEl: '.news__nav-extended .swiper-btn--next'
+			prevEl: '.news__top-mobile .swiper-btn--prev',
+			nextEl: '.news__top-mobile .swiper-btn--next'
 		},
 		breakpoints: {
 			700: {
 				slidesPerView: 2,
-				spaceBetween: 24
+				spaceBetween: 24,
+				navigation: {
+					prevEl: '.news__slider .swiper-btn--prev',
+					nextEl: '.news__slider .swiper-btn--next'
+				}
 			},
 			1280: {
 				slidesPerView: 3,

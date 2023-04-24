@@ -7,11 +7,18 @@
 
 	&__group {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		gap: 67px;
 
 		@include max(lg) {
 			gap: 85px;
+		}
+
+		@include max(sm) {
+			width: 100%;
+			gap: 15px;
+			justify-content: space-between;
 		}
 	}
 
@@ -21,6 +28,11 @@
 
 		@include max(lg) {
 			gap: 32px;
+		}
+
+		@include max(sm) {
+			width: auto !important;
+			gap: 10px 25px;
 		}
 	}
 
@@ -32,6 +44,10 @@
 
 		@include max(lg) {
 			font-size: 14px;
+		}
+
+		@include max(sm) {
+			font-size: 13px;
 		}
 	}
 
@@ -46,15 +62,36 @@
 		@include max(lg) {
 			font-size: 14px;
 		}
+
+		@include max(sm) {
+			font-size: 13px;
+			white-space: normal;
+		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
 		gap: 32px;
+
+		@include max(sm) {
+			gap: 23px;
+		}
 	}
 
 	.swiper-btn {
+		@include max(sm) {
+			width: 24px;
+			height: 39px;
+		}
+
+		svg {
+			@include max(sm) {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
 		&.swiper-button-disabled svg path {
 			&:first-child {
 				stroke: $grey-4;

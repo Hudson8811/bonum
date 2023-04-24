@@ -3,6 +3,10 @@
 
 	display: flex;
 
+	@include max(sm) {
+		flex-direction: column;
+	}
+
 	&__image,
 	&__outer {
 		width: 50%;
@@ -13,6 +17,10 @@
 			width: 51%;
 		}
 
+		@include max(sm) {
+			display: none;
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -21,8 +29,14 @@
 	}
 
 	&__outer {
+		background-color: $grey-5;
+
 		@include max(lg) {
 			width: 49%;
+		}
+
+		@include max(sm) {
+			width: 100%;
 		}
 	}
 
@@ -34,6 +48,10 @@
 		@include max(lg) {
 			padding: 50px 110px 68px 46px;
 		}
+
+		@include max(sm) {
+			padding: 46px 40px 64px 39px;
+		}
 	}
 
 	&__title {
@@ -43,6 +61,10 @@
 			line-height: 170%;
 			margin-bottom: 34px;
 		}
+
+		@include max(sm) {
+			margin-bottom: 26px;
+		}
 	}
 
 	&__field {
@@ -51,6 +73,10 @@
 
 			@include max(lg) {
 				margin-top: 22px;
+			}
+
+			@include max(sm) {
+				margin-top: 25px;
 			}
 		}
 	}
@@ -62,6 +88,10 @@
 			min-width: 184px;
 			padding: 11px 15px;
 			margin-top: 38px;
+		}
+
+		@include max(sm) {
+			width: 100%;
 		}
 	}
 }
