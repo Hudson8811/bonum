@@ -254,7 +254,7 @@ block content
 							.options-equipment--col
 								!="-"
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Быстроразъемные соединения типа Camlock или аналог на сливном рукаве"
@@ -268,7 +268,7 @@ block content
 							.options-equipment--col
 								!="-"
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Ящик для песка"
@@ -287,7 +287,7 @@ block content
 											!="Lago"
 										img(src="img/svg/make--Italy.svg", alt="")
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Ящик для огнетушителя"
@@ -306,13 +306,13 @@ block content
 											!="Lago"
 										img(src="img/svg/make--Italy.svg", alt="")
 							.options-equipment--col
-								!="2 штука"
+								!="2 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Огнетушитель"
 							.options-equipment--col -
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Бак для воды с краном и дозатором под жидкое мыло"
@@ -331,7 +331,7 @@ block content
 											!="Lago"
 										img(src="img/svg/make--Italy.svg", alt="")
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 						.options-equipment--row
 							.options-equipment--col
 								!="Контурная светоотражающая маркировка лентой премиального качества;"
@@ -356,7 +356,7 @@ block content
 											!="Lago"
 										img(src="img/svg/make--Italy.svg", alt="")
 							.options-equipment--col
-								!="1 штука"
+								!="1 <span>шт</span><b>штука</b>"
 
 			.options--tabs-content(data-tab-content="2") Конструкция цистерны
 			.options--tabs-content(data-tab-content="3") 
@@ -417,7 +417,7 @@ block content
 										.options-equipment--col
 											!="-"
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Быстроразъемные соединения типа Camlock или аналог на сливном рукаве"
@@ -431,10 +431,20 @@ block content
 										.options-equipment--col
 											!="-"
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Ящик для песка"
+											.makers--mob
+												.options-maker
+													p 
+														!="Daken(it) /"
+												.options-maker
+													p 
+														!="Parlok (fin) /"
+												.options-maker
+													p 
+														!="Lago (it)"
 										.options-equipment--col
 											.makers
 												.options-maker
@@ -450,10 +460,20 @@ block content
 														!="Lago"
 													img(src="img/svg/make--Italy.svg", alt="")
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Ящик для огнетушителя"
+											.makers--mob
+												.options-maker
+													p 
+														!="Daken(it) /"
+												.options-maker
+													p 
+														!="Parlok (fin) /"
+												.options-maker
+													p 
+														!="Lago (it)"
 										.options-equipment--col
 											.makers
 												.options-maker
@@ -469,13 +489,13 @@ block content
 														!="Lago"
 													img(src="img/svg/make--Italy.svg", alt="")
 										.options-equipment--col
-											!="2 штука"
+											!="2 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Огнетушитель"
 										.options-equipment--col -
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Бак для воды с краном и дозатором под жидкое мыло"
@@ -494,7 +514,7 @@ block content
 														!="Lago"
 													img(src="img/svg/make--Italy.svg", alt="")
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 									.options-equipment--row
 										.options-equipment--col
 											!="Контурная светоотражающая маркировка лентой премиального качества;"
@@ -519,7 +539,7 @@ block content
 														!="Lago"
 													img(src="img/svg/make--Italy.svg", alt="")
 										.options-equipment--col
-											!="1 штука"
+											!="1 <span>шт</span><b>штука</b>"
 
 					.accordion
 						.accordion__intro
@@ -539,37 +559,34 @@ block content
 								</svg>
 						.accordion__content
 							section.options-additional
-								.options-additional--title.options--tabs-content--title Дополнительные опции
 								.options-additional--subtitle Подбираются исходя из Ваших пожеланий и специфики Вашего бизнеса
 								.options-additional--table
-									.options-additional--row.options--header
-										.options-additional--col.options--header
-											!="Улучшение эргономики ППЦ"
-										.options-additional--col.options--header
-											!="Шасси и подвеска ППЦ"
 									.options-additional--row.content
+										.options-additional--col.options--header
+												!="Улучшение эргономики ППЦ"
 										.options-additional--col.content
 											ul.options-additional--list
 												li Дополнительное запасное колесо Continental 385/65 R22,5 диском AKO/Hartung
 												li Установка магистралей для подогрева паром на полуприцеп с термоизоляцией
 												li Увеличение или уменьшение высоты ССУ (стандартная высота ССУ - 1150 ММ, 1 250 мм)
 												li Комплект сумки ADR (на одного человека)
+										.options-additional--col.options--header
+											!="Шасси и подвеска ППЦ"
 										.options-additional--col.content
 											ul.options-additional--list
 												li Оси BPW ECO-PLUS 2 (3-х осЫЙ агрегат с дисковыми тормозами)
 												li Оси SAF INTRA (3-х осный агрегат с дисковыми тормозами)
 												li Установка резины Michelin 385/65 R22,5 с дисками АКО/Hartung (6 колес +1 запасное)
 												li Установка внедорожной резиныKAMA-126 156G 425/85 R21 с дискамиЧКП3 (6 колес + 1 запасное)
-									.options-additional--row.options--header
-										.options-additional--col.options--header
-											!="Улучшение эргономики ППЦ"
-										.options-additional--col.options--header
-											!="Шасси и подвеска ППЦ"
 									.options-additional--row.content
+										.options-additional--col.options--header
+											!="Улучшение эргономики ППЦ"									
 										.options-additional--col.content
 											ul.options-additional--list
 												li Окраска полуприцепа согласно макету заказчика
 												li Любые другие дополнительные опции по согласованию с заказчиком
+										.options-additional--col.options--header
+											!="Шасси и подвеска ППЦ"										
 										.options-additional--col.content
 											ul.options-additional--list
 												li Установка механизма подъема передней оси на оси BPW/SAF
