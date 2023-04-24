@@ -394,19 +394,106 @@
             padding-bottom: 96px;
         }
 
+        @include max(sm) {
+            padding-top: 56px;
+            padding-bottom: 40px;
+        }
+
+        .company__wrapper {
+            @include max(sm) {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
         .company__col {
             &:first-child {
                 margin-right: 142px;
                 width: 50%;
 
+                @include max(lg) {
+                    margin-right: 42px;
+                    padding-top: 35px;
+                    padding-bottom: 35px;
+                }
+
+                @include max(sm) {
+                    width: 100%;
+                    padding-top: 0;
+                    padding-bottom: 32px;
+                }
+
+                .h1 {
+                    @include max(lg) {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 32px;
+                        line-height: 150%;
+                        color: #1F2120;
+                    }
+
+                    @include max(sm) {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 20px;
+                        line-height: 150%;
+                        margin-left: 0;
+                    }
+
+                }
+
                 .company__text {
                     width: 100%;
                     max-width: 100%;
+
+                    @include max(lg) {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 170%;
+                        color: #4C4E4D;
+                        margin-top: 12px;
+                    }
+
+                    @include max(sm) {
+                        display: none;
+                    }
+
                 }
+
+
             }
 
             &:last-child {
                 width: 50%;
+
+                @include max(sm) {
+                    display: block;
+                    width: 100%;
+                }
+
+                .company__mob {
+                    display: none;
+
+                    @include max(sm) {
+                        display: inline-block;
+                        font-family: 'Zona Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 170%;
+                        color: #4C4E4D;
+                        margin-top: 32px;
+                    }
+                }
+            }
+        }
+
+        .company__video {
+            @include max(sm) {
+                margin-top: 0;
             }
         }
     }

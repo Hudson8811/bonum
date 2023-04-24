@@ -2730,6 +2730,10 @@ a {
   width: 50%;
 }
 
+.main-page .video-content .company__col:last-child .company__mob {
+  display: none;
+}
+
 .main-page .options {
   position: relative;
   display: flex;
@@ -6280,6 +6284,29 @@ section.leasing {
     padding-bottom: 96px;
   }
 
+  .main-page .video-content .company__col:first-child {
+    margin-right: 42px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .main-page .video-content .company__col:first-child .h1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 150%;
+    color: #1F2120;
+  }
+
+  .main-page .video-content .company__col:first-child .company__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    color: #4C4E4D;
+    margin-top: 12px;
+  }
+
   .main-page .options {
     justify-content: flex-start;
     padding-left: 30px;
@@ -8547,6 +8574,56 @@ section.leasing {
     font-weight: 400;
     font-size: 13px;
     line-height: 150%;
+  }
+
+  .main-page .video-content {
+    padding-top: 56px;
+    padding-bottom: 40px;
+  }
+
+  .main-page .video-content .company__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .main-page .video-content .company__col:first-child {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  .main-page .video-content .company__col:first-child .h1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    margin-left: 0;
+  }
+
+  .main-page .video-content .company__col:first-child .company__text {
+    display: none;
+  }
+
+  .main-page .video-content .company__col:last-child {
+    display: block;
+    width: 100%;
+  }
+
+  .main-page .video-content .company__col:last-child .company__mob {
+    display: inline-block;
+    font-family: "Zona Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 170%;
+    color: #4C4E4D;
+    margin-top: 32px;
+  }
+
+  .main-page .video-content .company__video {
+    margin-top: 0;
   }
 
   .main-page .options {
