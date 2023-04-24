@@ -11,6 +11,10 @@
 			gap: 10px;
 		}
 
+		@include max(sm) {
+			gap: 16px;
+		}
+
 		&:hover b {
 			border-color: $black !important;
 		}
@@ -21,10 +25,15 @@
 		padding: 20px 0;
 		border: 0;
 		border-bottom: 1px solid $grey-4;
+		background-color: transparent;
 		transition: $animation;
 
 		@include max(lg) {
 			padding: 18px 0;
+		}
+
+		@include max(sm) {
+			padding: 16px 0;
 		}
 
 		&:focus,
@@ -69,6 +78,10 @@
 			@include max(lg) {
 				font-size: 12px;
 			}
+
+			@include max(sm) {
+				font-size: 10px;
+			}
 		}
 
 		& + b {
@@ -77,6 +90,7 @@
 			max-width: 24px;
 			height: 24px;
 			border: 1px solid $grey-6;
+			background-color: $white;
 			position: relative;
 			transition: $animation;
 

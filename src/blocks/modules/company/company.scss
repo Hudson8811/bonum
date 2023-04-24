@@ -6,12 +6,20 @@
 		padding: 98px 0 77px;
 	}
 
+	@include max(sm) {
+		padding: 50px 0 48px;
+	}
+
 	&__accordion {
 		margin-top: 72px;
 		border-bottom: 1px solid $grey-1;
 
 		@include max(lg) {
 			margin-top: 64px;
+		}
+
+		@include max(sm) {
+			margin-top: 34px;
 		}
 	}
 
@@ -31,6 +39,12 @@
 			padding-top: 33px;
 			padding-bottom: 33px;
 		}
+
+		@include max(sm) {
+			gap: 20px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
 	}
 
 	&__name {
@@ -45,6 +59,10 @@
 			@include max(lg) {
 				font-size: 16px;
 			}
+
+			@include max(sm) {
+				line-height: 135%;
+			}
 		}
 	}
 
@@ -52,16 +70,25 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 48px;
+		min-width: 48px;
+		max-width: 48px;
 		height: 48px;
 		border-radius: 50%;
 		background-color: $grey-4;
 		margin-right: 32px;
 
 		@include max(lg) {
-			width: 40px;
+			min-width: 40px;
+			max-width: 40px;
 			height: 40px;
 			margin-right: 27px;
+		}
+
+		@include max(sm) {
+			min-width: 32px;
+			max-width: 32px;
+			height: 32px;
+			margin-right: 15px;
 		}
 
 		img {
@@ -73,9 +100,17 @@
 	}
 
 	&__dots {
+		@include max(sm) {
+			transform: rotate(90deg);
+		}
+
 		img {
 			@include max(lg) {
 				width: 30px;
+			}
+
+			@include max(sm) {
+				width: 24px;
 			}
 		}
 	}
@@ -102,6 +137,11 @@
 				padding: 56px 0 50px;
 			}
 
+			@include max(sm) {
+				width: 100%;
+				padding: 40px 0 50px;
+			}
+
 			.h1 {
 				align-self: flex-start;
 			}
@@ -112,6 +152,10 @@
 
 			@include max(lg) {
 				width: 53.6%;
+			}
+
+			@include max(sm) {
+				display: none;
 			}
 		}
 	}
@@ -134,6 +178,12 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+
+		@include max(sm) {
+			height: 0;
+			padding-top: 68%;
+			margin-top: 15px;
+		}
 	}
 
 	&__preview {
@@ -151,6 +201,11 @@
 
 		@include max(lg) {
 			margin-top: 63px;
+		}
+
+		@include max(sm) {
+			width: 100%;
+			margin-top: 28px;
 		}
 	}
 }

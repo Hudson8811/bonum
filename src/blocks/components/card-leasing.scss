@@ -9,6 +9,10 @@
 		padding: 30px;
 	}
 
+	@include max(sm) {
+		padding: 30px 30px 20px;
+	}
+
 	&--colored {
 		background-color: $yellow;
 	}
@@ -28,6 +32,11 @@
 			padding-bottom: 0;
 			margin-bottom: 27px;
 		}
+
+		@include max(sm) {
+			font-size: 13px;
+			padding-bottom: 6px;
+		}
 	}
 
 	&__title {
@@ -39,6 +48,11 @@
 			font-size: 16px;
 			margin-bottom: 22px;
 		}
+
+		@include max(sm) {
+			line-height: 150%;
+			margin-bottom: 37px;
+		}
 	}
 
 	&__image {
@@ -46,6 +60,11 @@
 
 		@include max(lg) {
 			margin-bottom: 23px;
+		}
+
+		@include max(sm) {
+			padding: 0 20px;
+			margin-bottom: 51px;
 		}
 
 		img {
@@ -67,6 +86,10 @@
 
 		@include max(lg) {
 			align-items: flex-end;
+		}
+
+		@include max(sm) {
+			align-items: center;
 		}
 
 		img {
@@ -91,6 +114,10 @@
 				line-height: 135%;
 				margin-top: 4px;
 			}
+
+			@include max(sm) {
+				font-size: 13px;
+			}
 		}
 	}
 
@@ -101,6 +128,10 @@
 
 		@include max(lg) {
 			font-size: 40px;
+		}
+
+		@include max(sm) {
+			font-size: 28px;
 		}
 
 		span {
