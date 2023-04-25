@@ -2536,11 +2536,32 @@ a {
   margin-right: 64px;
 }
 
+.main-page .slider .slider-top--nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 50%;
+}
+
+.main-page .slider .slider-top--nav .slider-top--next {
+  transform: rotate(180deg);
+}
+
+.main-page .slider .slider-top--nav .slider-top--next,
+.main-page .slider .slider-top--nav .slider-top--prev {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
 .main-page .slider .slider-top__top .slider-top__slide {
   width: 100%;
   transition: all 0.3s ease;
   padding-top: 68px;
   padding-bottom: 48px;
+  position: relative;
 }
 
 .main-page .slider .slider-top__top .slider-top__slide-title {
@@ -5825,6 +5846,10 @@ section.leasing {
   margin-bottom: 48px;
 }
 
+.catalog-page .catalog__item:last-child {
+  margin-bottom: 0;
+}
+
 .catalog-page .catalog__item--picture {
   position: relative;
   width: 52%;
@@ -5911,6 +5936,42 @@ section.leasing {
 
 .catalog-page .catalog__item--buttons .button--small {
   margin-top: 0;
+}
+
+.catalog-page .video-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  flex-flow: column nowrap;
+}
+
+.catalog-page .video-content .container {
+  flex-flow: column nowrap;
+}
+
+.catalog-page .video-content--title {
+  margin-bottom: 48px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1F2120;
+}
+
+.catalog-page .video-content .company__video {
+  width: 100%;
+  margin-bottom: 96px;
+  position: relative;
+  padding-bottom: 75%;
+}
+
+.catalog-page .video-content .company__video .company__preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .layout-one {
@@ -6259,33 +6320,6 @@ section.leasing {
     transform-origin: 50% 50%;
     transform: rotate(0deg);
   }
-}
-
-.video-content {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  flex-flow: column nowrap;
-}
-
-.video-content .container {
-  flex-flow: column nowrap;
-}
-
-.video-content--title {
-  margin-bottom: 48px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 150%;
-  color: #1F2120;
-}
-
-.video-content .company__video {
-  min-height: 580px;
-  width: 100%;
-  margin-bottom: 96px;
 }
 
 @media (max-width: 1919px) {
@@ -6823,6 +6857,10 @@ section.leasing {
     padding: 32px 26px;
   }
 
+  .main-page .container {
+    max-width: 100%;
+  }
+
   .main-page .slider .slider-top--buttons__order {
     margin-right: 58px;
   }
@@ -6956,11 +6994,14 @@ section.leasing {
   }
 
   .catalog-page .catalog__item--title {
+    position: relative;
+    display: inline-block;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     margin-bottom: 24px;
+    max-width: 90%;
   }
 
   .catalog-page .catalog__item--desc--title {
@@ -7494,33 +7535,9 @@ section.leasing {
     display: flex;
   }
 
-  .main-page .slider .slider-info .container {
-    padding: 0;
-    padding-top: 42px;
-  }
-
-  .main-page .slider .slider-info__slide-wrap {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: flex-start;
-    flex-flow: row wrap;
-  }
-
   .main-page .slider .slider-info__slide-item {
-    margin-right: 0;
-    padding-right: 0;
-    margin-bottom: 42px;
-  }
-
-  .main-page .slider .slider-info__slide-item:nth-child(2n-1) {
-    padding-right: 46px;
-    margin-right: 46px;
-  }
-
-  .main-page .slider .slider-info__slide-item:nth-child(2n) {
-    border-right: none !important;
+    padding-right: 20px;
+    margin-right: 20px;
   }
 
   .layout-one--left {
@@ -8563,6 +8580,7 @@ section.leasing {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+    margin-bottom: 24px;
   }
 
   .text-15 {
@@ -9264,9 +9282,44 @@ section.leasing {
     margin-top: 0;
   }
 
+  .main-page .slider .slider-top--nav .slider-top--next svg,
+  .main-page .slider .slider-top--nav .slider-top--prev svg {
+    width: 50%;
+    height: auto;
+  }
+
+  .main-page .slider .slider-info .container {
+    padding: 0;
+    padding-top: 42px;
+  }
+
+  .main-page .slider .slider-info__slide-wrap {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  .main-page .slider .slider-info__slide-item {
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 42px;
+  }
+
+  .main-page .slider .slider-info__slide-item:nth-child(2n-1) {
+    padding-right: 46px;
+    margin-right: 46px;
+  }
+
   .main-page .slider .slider-info__slide-item:nth-child(2n-1) {
     padding-right: 37px;
     margin-right: 37px;
+  }
+
+  .main-page .slider .slider-info__slide-item:nth-child(2n) {
+    border-right: none !important;
   }
 
   .main-page .slider .slider-info__slide-title {
@@ -9492,8 +9545,51 @@ section.leasing {
     margin-bottom: 32px;
   }
 
-  .video-content .company__video {
+  .catalog-page .video-content--title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
     margin-bottom: 32px;
+  }
+
+  .catalog-page .video-content .company__video {
+    padding-top: 0;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .catalog-page .video-content .company__video {
+    margin-bottom: 32px;
+  }
+
+  .questions--title {
+    margin-bottom: 32px;
+  }
+
+  .questions .accordions .accordion__intro {
+    padding: 24px;
+  }
+
+  .questions .accordions .accordion__intro p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+  }
+
+  .questions .accordions .accordion__intro .accordion__intro__img {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    min-height: auto;
+  }
+
+  .questions .accordions .accordion.accordion__active .accordion__content p {
+    padding: 24px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
   }
 }
 
@@ -9555,6 +9651,20 @@ section.leasing {
   }
 }
 
+@media (max-width: 576px) {
+  .catalog-page .catalog {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalog-page .catalog__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0px;
+  }
+}
+
 @media (max-width: 500px) {
   .nums-about-page__column {
     max-width: 230px;
@@ -9562,6 +9672,10 @@ section.leasing {
 }
 
 @media only screen and (max-width: 499px) {
+  .main-page .slider .slider-top--nav {
+    top: 45%;
+  }
+
   .main-page .slider .slider-top__top .slider-top__slide-title {
     font-size: 20px;
     line-height: 16px;
