@@ -37,6 +37,8 @@
 
 	&__title {
 		top: 33px;
+		background-color: $black;
+		z-index: 2;
 
 		@include max(lg) {
 			top: 14px;
@@ -83,6 +85,10 @@
 		display: flex;
 		align-items: center;
 		bottom: 30px;
+		cursor: pointer;
+		z-index: 2;
+		user-select: none;
+		transition: $animation;
 
 		@include max(lg) {
 			bottom: 10px;
@@ -90,6 +96,10 @@
 
 		@include max(sm) {
 			display: none;
+		}
+
+		&:hover {
+			opacity: 0.7;
 		}
 
 		img {
@@ -107,8 +117,14 @@
 	&__slider {
 		position: relative;
 		margin-left: 20px;
+		height: 611px;
+
+		@include max(lg) {
+			height: 455px;
+		}
 
 		@include max(sm) {
+			height: 600px;
 			margin-left: 60px;
 			margin-right: -16px;
 		}
@@ -116,7 +132,7 @@
 
 	&__image {
 		width: 75.6%;
-		height: 0;
+		height: 100%;
 		padding-top: 47.2%;
 		margin-left: auto;
 		position: relative;
@@ -135,9 +151,9 @@
 
 		img {
 			@include adaptive-image;
-			height: 180px;
 
 			@include max(sm) {
+				height: 180px;
 				position: relative;
 				inset: unset;
 			}

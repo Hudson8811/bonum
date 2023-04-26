@@ -69,8 +69,11 @@
 		padding: 10px 42px;
 		background-color: rgba($black, 0.55);
 		position: relative;
+		cursor: pointer;
+		transition: $animation;
 
-		&.active {
+		&.active,
+		&:hover {
 			background-color: rgba($black, 0.2);
 
 			#{$parent}__toggle-icon {
@@ -122,6 +125,17 @@
 	&__content {
 		position: absolute;
 		inset: 0;
+	}
+
+	&__content-item {
+		opacity: 0;
+		pointer-events: none;
+		transition: $animation;
+
+		&.show {
+			opacity: 1;
+			pointer-events: auto;
+		}
 	}
 
 	&__toggle-icon {
