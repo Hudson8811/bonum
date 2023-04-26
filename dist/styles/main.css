@@ -1774,13 +1774,17 @@ a {
   padding: 10px 42px;
   background-color: rgba(31, 33, 32, 0.55);
   position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.catalog-block__tabs-item.active {
+.catalog-block__tabs-item.active,
+.catalog-block__tabs-item:hover {
   background-color: rgba(31, 33, 32, 0.2);
 }
 
-.catalog-block__tabs-item.active .catalog-block__toggle-icon {
+.catalog-block__tabs-item.active .catalog-block__toggle-icon,
+.catalog-block__tabs-item:hover .catalog-block__toggle-icon {
   width: 23px;
   height: 23px;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='5.84326' y='6.55029' width='1' height='15' transform='rotate(-45 5.84326 6.55029)' fill='white'/%3e%3crect x='16.4497' y='5.84314' width='1' height='15' transform='rotate(45 16.4497 5.84314)' fill='white'/%3e%3c/svg%3e ");
@@ -1818,6 +1822,17 @@ a {
 .catalog-block__content {
   position: absolute;
   inset: 0;
+}
+
+.catalog-block__content-item {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.catalog-block__content-item.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .catalog-block__toggle-icon {
@@ -1928,6 +1943,8 @@ a {
 
 .advantages__title {
   top: 33px;
+  background-color: #1f2120;
+  z-index: 2;
 }
 
 .advantages__text {
@@ -1944,6 +1961,14 @@ a {
   display: flex;
   align-items: center;
   bottom: 30px;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.advantages__skip:hover {
+  opacity: 0.7;
 }
 
 .advantages__skip img {
@@ -1960,11 +1985,12 @@ a {
 .advantages__slider {
   position: relative;
   margin-left: 20px;
+  height: 611px;
 }
 
 .advantages__image {
   width: 75.6%;
-  height: 0;
+  height: 100%;
   padding-top: 47.2%;
   margin-left: auto;
   position: relative;
@@ -1976,7 +2002,6 @@ a {
   object-fit: cover;
   position: absolute;
   inset: 0;
-  height: 180px;
 }
 
 .advantages__image span {
@@ -6640,6 +6665,10 @@ section.leasing {
     bottom: 10px;
   }
 
+  .advantages__slider {
+    height: 455px;
+  }
+
   .advantages__image {
     width: 67%;
     padding-top: 58%;
@@ -8967,6 +8996,7 @@ section.leasing {
   }
 
   .advantages__slider {
+    height: 600px;
     margin-left: 60px;
     margin-right: -16px;
   }
@@ -8979,6 +9009,7 @@ section.leasing {
   }
 
   .advantages__image img {
+    height: 180px;
     position: relative;
     inset: unset;
   }

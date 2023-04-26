@@ -97,10 +97,8 @@ if (document.querySelector('.js-advantages-slider')) {
 	const swiperAdvantages = new Swiper('.js-advantages-slider', {
 		loop: true,
 		slidesPerView: 1,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
+		spaceBetween: 5,
+		direction: 'vertical',
 		pagination: {
 			el: '.advantages__pagination',
 			type: 'bullets'
@@ -109,7 +107,19 @@ if (document.querySelector('.js-advantages-slider')) {
 			prevEl: '.advantages__nav .swiper-btn--prev',
 			nextEl: '.advantages__nav .swiper-btn--next',
 		},
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false
+		}
 	});
+
+	const skipBtn = $('.advantages__skip');
+
+	if (skipBtn) {
+		skipBtn.on('click', function () {
+			swiperAdvantages.slideNext();
+		});
+	}
 }
 
 if (document.querySelector('.js-leasing-slider')) {
@@ -238,5 +248,18 @@ if (accordions !== null) {
 				openAccordion(accordion);
 			}
 		};
+	});
+}
+
+const catalogTabs = $('.catalog-block__tabs-item');
+const contentItems = $('.catalog-block__content-item');
+
+if (catalogTabs && catalogTabs.length > 0) {
+	catalogTabs.on('mouseenter', function () {
+		if (!$(this).hasClass('active')) {
+			catalogTabs.removeClass('active');
+			$(this).addClass('active');
+			contentItems.removeClass('show').eq($(this).index()).addClass('show');
+		}
 	});
 }

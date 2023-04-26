@@ -101,10 +101,8 @@ if (document.querySelector('.js-advantages-slider')) {
   var swiperAdvantages = new Swiper('.js-advantages-slider', {
     loop: true,
     slidesPerView: 1,
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
+    spaceBetween: 5,
+    direction: 'vertical',
     pagination: {
       el: '.advantages__pagination',
       type: 'bullets'
@@ -112,8 +110,18 @@ if (document.querySelector('.js-advantages-slider')) {
     navigation: {
       prevEl: '.advantages__nav .swiper-btn--prev',
       nextEl: '.advantages__nav .swiper-btn--next'
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
     }
   });
+  var skipBtn = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.advantages__skip');
+  if (skipBtn) {
+    skipBtn.on('click', function () {
+      swiperAdvantages.slideNext();
+    });
+  }
 }
 if (document.querySelector('.js-leasing-slider')) {
   var swiperLeasing = new Swiper('.js-leasing-slider', {
@@ -228,6 +236,17 @@ if (accordions !== null) {
         openAccordion(accordion);
       }
     };
+  });
+}
+var catalogTabs = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-block__tabs-item');
+var contentItems = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-block__content-item');
+if (catalogTabs && catalogTabs.length > 0) {
+  catalogTabs.on('mouseenter', function () {
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
+      catalogTabs.removeClass('active');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+      contentItems.removeClass('show').eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).addClass('show');
+    }
   });
 }
 
