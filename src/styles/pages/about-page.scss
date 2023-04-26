@@ -246,7 +246,7 @@
 		@media (max-width: 992px){
 			background: none;
 			color: #1F2120;
-			padding: 56px 0 40px;
+			padding: 0;
 		}
 	}
 	&__row {
@@ -293,6 +293,10 @@
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 160%;
+			@media (max-width: 768px){
+				margin-top: 0px;
+				font-size: 15px;
+			}
 		}
 	}
 	&__num {
@@ -300,17 +304,24 @@
 		font-size: 64px;
 		line-height: 150%;
 		text-transform: uppercase;
+		@media (max-width: 768px){
+			font-size: 48px;
+		}
 	}
 
 
 	&__swiper {
 		overflow: visible;
 		margin: 0 -15px;
+		@media (max-width: 768px){
+			margin: 0 -7.5px;
+			padding-bottom: 75px;
+		}
 		&-container {
 			position: relative;
 			margin-top: 130px;
 			@media (max-width: 992px){
-				margin-top: 56px;
+				margin-top: 40px;
 			}
 			.swiper-btn {
 				position: absolute;
@@ -327,11 +338,33 @@
 				@media (max-width: 1919px){
 					width: 150px;
 				}
+				@media (max-width: 768px){
+					background-color: transparent;
+					top: auto;
+					bottom: 0;
+					width: 24px;
+					height: 32px;
+				}
+				svg {
+					@media (max-width: 768px){
+						width: 100%;
+						height: 100%;
+					}
+					path {
+						@media (max-width: 768px){
+							stroke: #000000;
+						}
+					}
+				}
 				&--prev {
 					right: 100%;
 					@media (max-width: 1600px){
 						left: 0;
 						right: auto;
+					}
+					@media (max-width: 768px){
+						left: auto;
+						right: 48px;
 					}
 				}
 				&--next {
@@ -340,18 +373,29 @@
 						left: auto;
 						right: 0;
 					}
+					@media (max-width: 768px){
+						right: 0;
+					}
 				}
 				&.swiper-button-disabled {
 					opacity: 0;
+					@media (max-width: 768px){
+						opacity: 0.5;
+					}
 				}
 			}
 		}
 	}
 	&__slide {
+		min-height: 722px;
 		flex-shrink: 0;
 		width: auto;
 		padding: 0 15px;
 		height: auto;
+		@media (max-width: 768px){
+			padding: 0 7.5px;
+			min-height: 233px;
+		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -359,12 +403,50 @@
 	}
 	&__img {
 		min-height: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&-inner {
+			flex: 1 1 auto;
+			min-height: 100%;
+			position: relative;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 		&--double {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			img {
-				flex: 0 1 50%;
+			width: 360px;
+			@media (max-width: 768px){
+				width: 131px;
+			}
+			.team-about-page__img-inner {
+				margin-top: 30px;
+				@media (max-width: 768px){
+					margin-top: 15px;
+				}
+				&:first-child{
+					margin: 0;
+				}
+			}
+		}
+		&--wide {
+			width: 722px;
+			@media (max-width: 768px){
+				width: 266px;
+			}
+		}
+		&--narrow {
+			width: 432px;
+			@media (max-width: 768px){
+				width: 210px;
 			}
 		}
 	}

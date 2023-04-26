@@ -1,0 +1,138 @@
+.blogs {
+	margin-bottom: 130px;
+	@media (max-width: 768px){
+		margin-bottom: 56px;
+	}
+	section {
+		margin-top: 130px;
+		@media (max-width: 1200px){
+			margin-top: 70px;
+		}
+		&:first-child {
+			margin: 0;
+		}
+	}
+	.container {
+		max-width: 1346px!important;
+	}
+	.resp-desk {
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+	.resp-mob {
+		display: none;
+		@media (max-width: 768px){
+			display: block;
+		}
+	}
+	.h1 {
+		@media (max-width: 390px){
+			font-size: 20px;
+		}
+	}
+	.title {
+		@media (max-width: 390px){
+			font-size: 13px;
+		}
+	}
+
+
+	.breakpoints {
+		&__container {
+			padding: 25px 0;
+			@media (max-width: 768px){
+				padding: 16px 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+.blogs-header {
+	position: relative;
+	z-index: 2;
+	margin-top: 24px;
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 1100px){
+			display: block;
+		}
+	}
+	&__buttons {
+		margin: 0 -40px;
+		@media (max-width: 1100px){
+			margin: 40px -16px 0;
+		}
+		.swiper-slide {
+			padding: 0 40px;
+			width: auto;
+			@media (max-width: 1100px){
+				padding: 0 16px;
+			}
+		}
+	}
+	&__button {
+		a {
+			display: inline-block;
+			padding: 50px 0;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 200%;
+			text-align: right;
+			color: #1F2120;
+			position: relative;
+			@media (max-width: 768px){
+				padding: 24px 0;
+				font-size: 13px;
+			}
+			&::before{
+				content:'';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0;
+				height: 2px;
+				background-color: #1F2120;
+				transition: all 0.3s ease 0s;
+			}
+			&.js-active  {
+				&::before{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.blogs {
+	&__items {
+		margin: -40px -15px 0;
+		&-h {
+			margin-top: 72px;
+			@media (max-width: 768px){
+				margin-top: 40px;
+			}
+		}
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 48px;
+		@media (max-width: 768px){
+			margin-top: 32px;
+		}
+	}
+	&__item {
+		flex: 0 1 50%;
+		padding: 40px 15px 0;
+		@media (max-width: 500px){
+			flex: 1 1 100%;
+		}
+	}
+}

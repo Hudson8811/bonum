@@ -17,7 +17,11 @@
 
 
     //скрытие блоков без адаптивности
-
+    .container {
+        @include max(lg) {
+            max-width: 100%;
+        }
+    }
 
     .slider {
         .slider-top {
@@ -54,12 +58,45 @@
                 }
             }
 
+            &--nav {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                top: 50%;
+
+                @include max(xs) {
+                    top: 45%;
+                }
+
+                .slider-top--next {
+                    transform: rotate(180deg);
+                }
+
+                .slider-top--next,
+                .slider-top--prev {
+                    position: relative;
+                    display: flex;
+                    align-items: flex-start;
+
+                    svg {
+                        @include max(sm) {
+                            width: 50%;
+                            height: auto;
+                        }
+
+                    }
+                }
+            }
+
             &__top {
                 .slider-top__slide {
                     width: 100%;
                     transition: $animation;
                     padding-top: 68px;
                     padding-bottom: 48px;
+                    position: relative;
 
                     @include max(lg) {
                         padding-top: 56px;
@@ -119,7 +156,7 @@
                     padding: 72px 0px 72px 0;
                 }
 
-                @include max(md) {
+                @include max(sm) {
                     padding: 0;
                     padding-top: 42px;
                 }
@@ -134,7 +171,7 @@
                     justify-content: center;
                     position: relative;
 
-                    @include max(md) {
+                    @include max(sm) {
                         max-width: 500px;
                         margin-left: auto;
                         margin-right: auto;
@@ -160,13 +197,18 @@
                     }
 
                     @include max(md) {
+                        padding-right: 20px;
+                        margin-right: 20px;
+                    }
+
+                    @include max(sm) {
                         margin-right: 0;
                         padding-right: 0;
                         margin-bottom: 42px;
                     }
 
                     &:nth-child(2n - 1) {
-                        @include max(md) {
+                        @include max(sm) {
                             padding-right: 46px;
                             margin-right: 46px;
                         }
@@ -179,7 +221,7 @@
                     }
 
                     &:nth-child(2n) {
-                        @include max(md) {
+                        @include max(sm) {
                             border-right: none !important;
 
                         }

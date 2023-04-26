@@ -1,4 +1,4 @@
-
+import $, {event, type} from "jquery";
 
 if (document.querySelector('.team-about-page__swiper')) {
 	const swiperTeamAboutPage = new Swiper('.team-about-page__swiper', {
@@ -69,8 +69,33 @@ var swiper2 = new Swiper(".history-about-page__swiper", {
 	},
 });
 
+var swiper1 = new Swiper(".blogs-header__swiper", {
+	slidesPerView: 'auto',
+});
 
+var ww = $( window ).width();
+if (ww < 993) {
+	$(document).ready(function() {
+		$('.contact-us-sidebar__link').click(function(event) {
+			$(this).toggleClass('js-active').next().slideToggle(300);
+		});
+	}); 
+}
 
 Fancybox.bind('.my-fancy-video', {
 	type: "video"
+});
+var blockVacancyCards = new Swiper(".block-vacancy-cards", {
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+var swiperVacancy = new Swiper(".block-vacancy__swiper", {
+	initialSlide : 0,
+	navigation: {
+		nextEl: ".block-vacancy__swiper .swiper-btn--next",
+		prevEl: ".block-vacancy__swiper .swiper-btn--prev",
+	},
+	thumbs: {
+		swiper: blockVacancyCards,
+	},
 });

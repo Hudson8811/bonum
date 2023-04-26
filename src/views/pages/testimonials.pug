@@ -1,0 +1,54 @@
+extends ../layouts/default.pug 
+include ../helpers/mixins.pug 
+
+block variables 
+	- const title = "page"; 
+
+block content 
+	include ../../blocks/modules/header/header 
+	
+	.testimonials 
+		.container
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Акции и лизинг
+						li.breakpoints__item
+							span.breakpoints__text Новость
+			.testimonials__content 
+				.title Партнеры 
+				.h1 Мы работаем с лучшими 
+				.testimonials__items 
+					.testimonials__row 
+						.testimonials__item.item-testimonials 
+							.item-testimonials__column 
+								.item-testimonials__date 2020 г
+								.item-testimonials__img-wrapper
+									.item-testimonials__img 
+										img(src="img/testimonials/1.jpg", alt="alt")
+								.item-testimonials__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ...
+						.testimonials__item.item-testimonials 
+							.item-testimonials__column 
+								.item-testimonials__date 2020 г
+								.item-testimonials__img-wrapper
+									.item-testimonials__img 
+										img(src="img/testimonials/1.jpg", alt="alt")
+								.item-testimonials__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ...
+						.testimonials__item.item-testimonials 
+							.item-testimonials__column 
+								.item-testimonials__date 2020 г
+								.item-testimonials__img-wrapper
+									.item-testimonials__img 
+										img(src="img/testimonials/1.jpg", alt="alt")
+								.item-testimonials__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ...
+						
+	include ../../blocks/modules/footer/footer 
+
+
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")
