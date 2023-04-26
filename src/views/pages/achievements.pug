@@ -1,0 +1,61 @@
+extends ../layouts/default.pug 
+include ../helpers/mixins.pug 
+
+block variables 
+	- const title = "page"; 
+
+block content 
+	include ../../blocks/modules/header/header 
+	
+	.achievements 
+		.container
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Акции и лизинг
+						li.breakpoints__item
+							span.breakpoints__text Новость
+			.achievements__content 
+				.title Награды 
+				.h1 ЗАВОД BONUM - ПОБЕДИТЕЛЬ МНОГОЧИСЛЕННЫХ ФЕДЕРАЛЬНЫХ И РЕГИОНАЛЬНЫХ КОНКУРСОВ 
+				.achievements__items 
+					.achievements__row 
+						.achievements__item.item-achievements 
+							.item-achievements__column 
+								.item-achievements__title 
+									.item-achievements__icon 
+										img(src="img/achievements/1.svg", alt="alt")
+									span 100 лучших товаров 2016
+								.item-achievements__text Всероссийский конкурс «100 лучших товаров России» стимулирует предприятия и организации к повышению качества и конкурентоспособности российской продукции и услуг.
+						.achievements__item.item-achievements 
+							.item-achievements__column 
+								.item-achievements__title 
+									.item-achievements__icon 
+										img(src="img/achievements/2.svg", alt="alt")
+									span 100 лучших товаров 2017
+								.item-achievements__text В 2017 завод БОНУМ вновь получает диплом победителя конкурса «100 лучших товаровРоссии»
+						.achievements__item.item-achievements 
+							.item-achievements__column 
+								.item-achievements__title 
+									.item-achievements__icon 
+										img(src="img/achievements/3.svg", alt="alt")
+									span Лучшие товары Дона
+								.item-achievements__text Региональный конкурс «Лучшие товары Дона» проводится федеральным государственным учреждением «Ростовский центр стандартизации, метрологии и сертификации» (ФГУ«Ростовский ЦСМ») совместно с Правительством Ростовской области.
+						.achievements__item.item-achievements 
+							.item-achievements__column 
+								.item-achievements__title 
+									.item-achievements__icon 
+										img(src="img/achievements/4.svg", alt="alt")
+									span Сделано на дону
+								.item-achievements__text Знаком «Сделано на Дону» отмечается продукция донских производителей, которые доказали строгое соблюдение российских и международных стандартов качества.
+
+	include ../../blocks/modules/footer/footer 
+
+
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")

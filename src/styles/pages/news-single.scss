@@ -1,0 +1,259 @@
+.news-single {
+	margin-bottom: 130px;
+	@media (max-width: 768px) {
+		margin-bottom: 56px;
+	}
+	.team-about-page__swiper-container {
+		overflow: hidden;
+	}
+	section {
+		margin-top: 130px;
+		@media (max-width: 1200px) {
+			margin-top: 70px;
+		}
+		&:first-child {
+			margin: 0;
+		}
+	}
+	.container {
+		max-width: 1346px!important;
+	}
+	.resp-desk {
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+	.resp-mob {
+		display: none;
+		@media (max-width: 768px){
+			display: block;
+		}
+	}
+	.h1 {
+		@media (max-width: 390px){
+			font-size: 20px;
+		}
+	}
+	.title {
+		@media (max-width: 390px){
+			font-size: 13px;
+		}
+	}
+
+
+	.breakpoints {
+		&__container {
+			padding: 25px 0;
+			@media (max-width: 768px){
+				padding: 16px 0;
+			}
+		}
+	}
+
+	.header-news-page {
+		border-bottom: 1px solid #E3E3E3;
+	}
+
+	.items-news-page {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0;
+		.container {
+			position: relative;
+		}
+		&__row {
+			margin: 48px -15px 0;
+		}
+		&__paginations {
+			margin-top: 64px;
+			position: static;
+			width: 100%;
+			padding: 0;
+			ul {
+				margin: 0;
+			}
+			&-show-more {
+				display: inline-block;
+				margin-left: 64px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 200%;
+				display: flex;
+				align-items: center;
+				color: #1F2120;
+				opacity: 1;
+				flex: 1 1 auto;
+			}
+		}
+		&__arrows {
+			position: absolute;
+			bottom: 0;
+			right: 16px;
+			width: 90px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transform: translate(0, 50%);
+			@media (max-width: 768px){
+				top: 0;
+				bottom: auto;
+				transform: translate(0, -50%);
+			}
+			&-mob {
+				display: none;
+				@media (max-width: 768px){
+					display: flex;
+				}
+			}
+			&-desk {
+				@media (max-width: 768px){
+					display: none;
+				}
+			}
+		}
+		&__arrow {
+			position: static;
+		}
+		&__arrow-prev {
+			
+		}
+		&__arrow-next {
+		}
+	}
+}
+
+
+
+.content-news-single {
+	margin-top: 64px;
+	&__container {
+		position: relative;
+		padding-left: 112px;
+		max-width: 866px;
+		@media (max-width: 768px){
+			padding: 0;
+		}
+	}
+	&__back {
+		position: absolute;
+		top: 56px;
+		left: 0;
+		width: 24px;
+		height: 48px;
+		@media (max-width: 768px){
+			display: none;
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	h1 {
+		font-weight: 300;
+		font-size: 48px;
+		line-height: 150%;
+		color: #1F2120;
+	}
+	h3 {
+		margin-top: 56px;
+		margin-bottom: 32px;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
+		color: #1F2120;
+		@media (max-width: 768px){
+			margin-top: 40px;
+			margin-bottom: 24px;
+			font-size: 16px;
+		}
+	}
+	p {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 170%;
+		color: #4C4E4D;
+	}
+	ul {
+		list-style: inside;
+	}
+	&__tags {
+		padding: 32px 0;
+		ul{
+			display: flex;
+			list-style: none;
+			li{
+				a{
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 135%;
+					display: flex;
+					align-items: center;
+					color: #8F9190;
+				}
+			}
+		}
+	} 
+	&__img {
+		padding-top: 54.5%;
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	} 
+	&__banner {
+		margin-top: 56px;
+		background: #8F9190;
+		padding: 50px 60px 50px 70px;
+		@media (max-width: 768px){
+			margin-top: 40px;
+			padding: 40px;
+		}
+		p {
+			padding-left: 30px;
+			border-left: 1px solid #FFFFFF;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 170%;
+			color: #FFFFFF;
+		}
+	} 
+
+	&__share {
+		margin-top: 64px;
+		display: flex;
+		align-items: center;
+		@media (max-width: 768px){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		>h3 {
+			margin: 0;
+			margin-right: 70px;
+		}
+	}
+	&__socials {
+		display: flex;
+		align-items: center;
+		a {
+			margin-right: 15px;
+			width: 48px;
+			height: 48px;
+			display: inline-block;
+			@media (max-width: 768px){
+				width: 40px;
+				height: 40px;
+				margin-top: 12px;
+			}
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}

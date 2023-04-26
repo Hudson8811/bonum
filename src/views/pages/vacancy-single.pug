@@ -1,0 +1,160 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "page";
+
+block content
+	include ../../blocks/modules/header/header
+	
+	.vacancy-single
+		section.vacancy-single-top
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Главная
+						li.breakpoints__item
+							span.breakpoints__text О заводе
+			.container
+				.vacancy-single-top__body 
+					.h1 Слесарь-сборщик
+						.vacancy-single-top__back
+							<svg width="26" height="50" viewBox="0 0 26 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M25 1L1 25L25 49" stroke="#1F2120"/>
+							</svg>
+
+		section.vacancy-single-content 
+			.container 
+				.vacancy-single-content__row 
+					.vacancy-single-content__left 
+						.vacancy-single-card 
+							.vacancy-single-card__price
+								span от 46 000 ₽ до 72 000 ₽
+								<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="28" cy="28" r="28" fill="white"/>
+								<g clip-path="url(#clip0_195_1083)">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M39.7201 32.682C39.4571 38.9639 34.2833 43.9765 27.9367 43.9765C21.4219 43.9765 16.1406 38.5177 16.1406 32.1804C16.1406 31.3334 16.1254 29.6405 17.3955 26.7843C18.1556 25.075 18.6324 24.0012 18.9014 23.0196C19.0492 22.4801 19.3367 21.623 20.1563 23.0196C20.6396 23.8431 20.6583 25.0275 20.6583 25.0275C20.6583 25.0275 22.4563 23.6477 23.67 21.0118C25.4494 17.1476 24.0297 14.8377 23.5446 13.2314C23.3766 12.6757 23.2712 11.6771 24.423 12.102C25.5966 12.535 28.6992 14.7069 30.321 16.9961C32.6357 20.2632 33.4583 23.3961 33.4583 23.3961C33.4583 23.3961 34.1994 22.4763 34.4622 21.5137C34.759 20.4269 34.7634 19.3504 35.717 20.51C36.6239 21.6126 37.9708 23.6849 38.7289 25.6549C40.1054 29.2325 39.7201 32.682 39.7201 32.682Z" fill="url(#paint0_linear_195_1083)"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M27.9381 43.9765C23.4331 43.9765 19.7812 40.3246 19.7812 35.8196C19.7812 33.1014 20.8767 31.451 23.1564 29.2131C24.6161 27.7801 25.9823 26.0201 26.563 24.8216C26.6773 24.5857 26.9375 23.3563 27.9405 24.7958C28.4667 25.5507 29.2915 26.8934 29.8205 28.0392C30.7323 30.0148 30.9499 31.9294 30.9499 31.9294C30.9499 31.9294 31.8435 31.4029 32.4558 30.0471C32.6532 29.6101 33.0522 27.9559 34.1678 29.6099C34.9864 30.8236 36.1109 33.0059 36.095 35.8196C36.095 40.3246 32.443 43.9765 27.9381 43.9765Z" fill="#FC9502"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M28.0635 35.0669C29.2243 35.0669 29.2243 37.2164 30.6988 40.0865C31.6807 41.9976 30.212 43.9767 28.0635 43.9767C25.915 43.9767 24.8008 42.235 24.8008 40.0865C24.8008 37.9381 26.9027 35.0669 28.0635 35.0669Z" fill="#FCE202"/>
+								</g>
+								<defs>
+								<linearGradient id="paint0_linear_195_1083" x1="27.9544" y1="44.0001" x2="27.9544" y2="12.0237" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FF4C0D"/>
+								<stop offset="1" stop-color="#FC9502"/>
+								</linearGradient>
+								<clipPath id="clip0_195_1083">
+								<rect width="32" height="32" fill="white" transform="translate(12 12)"/>
+								</clipPath>
+								</defs>
+								</svg>
+							.vacancy-single-card__loc 
+								<svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11.8611 23.8412L6.43946 17.4561C6.43939 17.456 6.43933 17.456 6.43926 17.4559C5.38635 16.2148 4.75 14.6137 4.75 12.8611C4.75 8.93377 7.93377 5.75 11.8611 5.75C15.7885 5.75 18.9722 8.93378 18.972 12.8608V12.8609C18.972 14.6137 18.3355 16.215 17.2826 17.4559L11.8611 23.8412Z" fill="#8F9190" stroke="#8F9190" stroke-width="1.5"/>
+								<circle cx="11.6871" cy="12.6871" r="1.6871" fill="white"/>
+								</svg>
+								span Адрес: ул. Малиновского, 3. территория ГПЗ-10
+							.vacancy-single-card__bottom 
+								.vacancy-single-card__bottom-experience 
+									span 
+										b Опыт работы:
+									span Не имеет значения
+								.vacancy-single-card__bottom-schedule 
+									span 
+										b График работы:
+									span понедельник- пятница с 9:00 до 18:00
+						.vacancy-single-content__desc 
+							h3 Обязанности
+							p Сборка полуприцепов.
+							h3 Требования:
+							ul 
+								li Опыт работы не обязателен, всему научим;
+								li Желание работать и зарабатывать.
+							h3 Условия:
+							ul 
+								li Работа в современной, стабильной компании;
+								li Оформление по ТК РФ, полный соц. пакет;
+								li Оплачиваемые отпуска;
+								li Своевременная выплата «белой» заработной платы: от 46 до 72 т.р.;
+								li Карьерный рост;
+								li Наличие постоянных объемов работ;
+								li Комфортное место работы в цеху;
+								li Выдача спецодежды и СИЗ;
+								li Сменный график работы;
+								li Компенсация мед. комиссии;
+								li Корпоративные подарки за результат и стаж работы.
+							h3 Место работы:
+							p М-4 Дон, 1084 км, 1 (Рядом с Аксайской птицефабрикой).
+							h3 Доставка служебным транспортом
+							p из Батайска, Ростова-на-Дону, Самарского (Песчаного).
+							h3 Контактная информация:
+							p 
+								b Ольга Бакутел
+							a(href="") 
+								b тел.: +7 (928) 164-09-27
+							a(href="") 
+								b e-mail: o.baku@bonum-trailer.ru
+							h3 Адрес:
+							p Трасса М-4 Дон, 1082-км (рядом с Аксайской птицефабрикой).
+					
+					.vacancy-single-content__right 
+						.vacancy-single-content__form.resp-desk 
+							.title Откликнуться на вакансию 
+							form(action="" method="method")
+								.my-new-form__item
+									input.my-new-form__input(type='text' name='name' placeholder='Имя')
+								.my-new-form__item
+									input.my-new-form__input(type='tel' name='name' placeholder='Телефон')
+								.my-new-form__item
+									input.my-new-form__input(type='email' name='name' placeholder='Email')
+								.my-new-form-file
+									input#my-new-file.my-new-form-file__input(type='file' name='file')
+									label.my-new-form-file__label(for='my-new-file')
+										<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.4343 2.13672C15.3479 -0.0455721 11.9642 -0.0455721 9.87784 2.13672L1.21523 11.085C-0.405076 12.7788 -0.405076 15.5358 1.21523 17.2296C2.83554 18.9235 5.47232 18.9235 7.09203 17.2296L15.7546 8.28076C16.9142 7.06859 16.9142 5.10416 15.7546 3.89198C14.5951 2.68043 12.7153 2.68043 11.5569 3.89198L5.04483 10.6995C4.81268 10.9428 4.81268 11.3345 5.04483 11.5778C5.27698 11.8205 5.65222 11.8205 5.88437 11.5778L12.3971 4.76961C13.0917 4.04405 14.221 4.04405 14.9157 4.76961C15.6104 5.4958 15.6104 6.67694 14.9157 7.40313L6.25308 16.3514C5.09351 17.5636 3.21493 17.5636 2.05537 16.3514C0.895799 15.1398 0.895799 13.1748 2.05537 11.9632L10.6331 3.10186C12.2563 1.40494 14.889 1.40494 16.5099 3.10186C18.1343 4.79941 18.1343 7.54899 16.5111 9.24591L10.0833 15.9659C9.84993 16.2092 9.84993 16.6009 10.0833 16.8436C10.3154 17.0869 10.6907 17.0869 10.9228 16.8436L17.4343 10.036C19.5219 7.85498 19.5219 4.31776 17.4343 2.13672Z" fill="#8F9190"/>
+										</svg>
+										span
+											|Прикрепить резюме
+								.my-new-form-checkbox
+									input#my-new-formAgreement.my-new-form-checkbox__input(checked='' type='checkbox' name='agreement')
+									label.my-new-form-checkbox__label(for='my-new-formAgreement')
+										span
+											| Даю согласие на обработку моих персональных данных
+								button.my-new-form__right-button(type='submit') откликнуться
+
+
+
+		.vacancy-single-content__form.resp-mob 
+			.title Заказать технику в лизинг
+			form(action="" method="method")
+				.my-new-form__item
+					input.my-new-form__input(type='text' name='name' placeholder='Имя')
+				.my-new-form__item
+					input.my-new-form__input(type='tel' name='name' placeholder='Телефон')
+				.my-new-form__item
+					input.my-new-form__input(type='email' name='name' placeholder='Email')
+				.my-new-form-file
+					input#my-new-file.my-new-form-file__input(type='file' name='file')
+					label.my-new-form-file__label(for='my-new-file')
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M17.4343 2.13672C15.3479 -0.0455721 11.9642 -0.0455721 9.87784 2.13672L1.21523 11.085C-0.405076 12.7788 -0.405076 15.5358 1.21523 17.2296C2.83554 18.9235 5.47232 18.9235 7.09203 17.2296L15.7546 8.28076C16.9142 7.06859 16.9142 5.10416 15.7546 3.89198C14.5951 2.68043 12.7153 2.68043 11.5569 3.89198L5.04483 10.6995C4.81268 10.9428 4.81268 11.3345 5.04483 11.5778C5.27698 11.8205 5.65222 11.8205 5.88437 11.5778L12.3971 4.76961C13.0917 4.04405 14.221 4.04405 14.9157 4.76961C15.6104 5.4958 15.6104 6.67694 14.9157 7.40313L6.25308 16.3514C5.09351 17.5636 3.21493 17.5636 2.05537 16.3514C0.895799 15.1398 0.895799 13.1748 2.05537 11.9632L10.6331 3.10186C12.2563 1.40494 14.889 1.40494 16.5099 3.10186C18.1343 4.79941 18.1343 7.54899 16.5111 9.24591L10.0833 15.9659C9.84993 16.2092 9.84993 16.6009 10.0833 16.8436C10.3154 17.0869 10.6907 17.0869 10.9228 16.8436L17.4343 10.036C19.5219 7.85498 19.5219 4.31776 17.4343 2.13672Z" fill="#8F9190"/>
+						</svg>
+						span
+							|Прикрепить резюме
+				.my-new-form-checkbox
+					input#my-new-formAgreement.my-new-form-checkbox__input(checked='' type='checkbox' name='agreement')
+					label.my-new-form-checkbox__label(for='my-new-formAgreement')
+						span
+							| Даю согласие на обработку моих персональных данных
+				button.my-new-form__right-button(type='submit') откликнуться
+
+
+		include ../../blocks/modules/footer/footer
+
+
+
+
+block scripts
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")
