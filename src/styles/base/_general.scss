@@ -29,6 +29,74 @@ h1,
 	}
 }
 
+.block--text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	flex-flow: column nowrap;
+	margin-bottom: 56px;
+	max-width: 754px;
+
+	@include max(sm) {
+		margin-bottom: 24px;
+	}
+}
+
+.text-list {
+	list-style-type: disc;
+	padding-left: 15px;
+
+	li {
+		margin-bottom: 20px;
+	}
+}
+
+.h3 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	margin-bottom: 32px;
+	color: #4C4E4D;
+
+	@include max(lg) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
+	}
+
+	@include max(sm) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		margin-bottom: 24px;
+	}
+}
+
+.text-15 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 170%;
+
+	@include max(lg) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 170%;
+	}
+
+	@include max(sm) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 170%;
+	}
+}
+
 .title {
 	font-size: 20px;
 	line-height: 150%;

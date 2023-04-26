@@ -5,11 +5,25 @@
 		padding: 98px 0 50px;
 	}
 
+	@include max(sm) {
+		padding: 52px 0 50px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	&__slider {
 		margin-top: 56px;
 
 		@include max(lg) {
 			margin-top: 46px;
+		}
+
+		@include max(sm) {
+			margin-top: 26px;
 		}
 	}
 
@@ -18,6 +32,10 @@
 
 		@include max(lg) {
 			margin-top: 40px;
+		}
+
+		@include max(sm) {
+			margin-top: 34px;
 		}
 	}
 }

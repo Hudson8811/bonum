@@ -45,7 +45,7 @@ img {
 .d-none-mobile {
 	display: block !important;
 
-	@include max(md) {
+	@include max(sm) {
 		display: none !important;
 	}
 }
@@ -53,7 +53,7 @@ img {
 .d-none-desktop {
 	display: none !important;
 
-	@include max(md) {
+	@include max(sm) {
 		display: block !important;
 	}
 }
@@ -61,7 +61,7 @@ img {
 .d-none-flex-mobile {
 	display: flex !important;
 
-	@include max(md) {
+	@include max(sm) {
 		display: none !important;
 	}
 }
@@ -69,7 +69,7 @@ img {
 .d-none-flex-desktop {
 	display: none !important;
 
-	@include max(md) {
+	@include max(sm) {
 		display: flex !important;
 	}
 }

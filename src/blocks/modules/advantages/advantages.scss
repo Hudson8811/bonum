@@ -12,6 +12,11 @@
 			padding-top: 92px;
 			padding-bottom: 93px;
 		}
+
+		@include max(sm) {
+			padding-top: 48px;
+			padding-bottom: 45px;
+		}
 	}
 
 	&__title,
@@ -22,6 +27,11 @@
 
 		@include max(lg) {
 			left: 40px;
+		}
+
+		@include max(sm) {
+			position: relative;
+			left: 0;
 		}
 	}
 
@@ -35,6 +45,13 @@
 
 		@include max(md) {
 			max-width: 174px;
+		}
+
+		@include max(sm) {
+			max-width: 100%;
+			top: 0;
+			margin-bottom: 37px;
+			padding-right: 16px;
 		}
 	}
 
@@ -52,6 +69,14 @@
 			top: 45%;
 			font-size: 40px;
 		}
+
+		@include max(sm) {
+			height: 60px;
+			top: unset;
+			left: 0;
+			transform: none;
+			padding-right: 16px;
+		}
 	}
 
 	&__skip {
@@ -61,6 +86,10 @@
 
 		@include max(lg) {
 			bottom: 10px;
+		}
+
+		@include max(sm) {
+			display: none;
 		}
 
 		img {
@@ -78,6 +107,11 @@
 	&__slider {
 		position: relative;
 		margin-left: 20px;
+
+		@include max(sm) {
+			margin-left: 60px;
+			margin-right: -16px;
+		}
 	}
 
 	&__image {
@@ -92,11 +126,25 @@
 			padding-top: 58%;
 		}
 
+		@include max(sm) {
+			width: 100%;
+			height: auto;
+			padding-top: 0;
+			margin-top: 23px;
+		}
+
 		img {
 			@include adaptive-image;
+			height: 180px;
+
+			@include max(sm) {
+				position: relative;
+				inset: unset;
+			}
 		}
 
 		span {
+			display: block;
 			max-width: 445px;
 			background-color: $white;
 			padding: 45px 40px;
@@ -113,6 +161,15 @@
 				padding: 27px;
 				font-size: 13px;
 				line-height: 200%;
+			}
+
+			@include max(sm) {
+				max-width: 100%;
+				position: relative;
+				right: unset;
+				bottom: unset;
+				line-height: 180%;
+				padding: 25px 22px;
 			}
 		}
 	}
@@ -185,6 +242,12 @@
 			left: 36%;
 		}
 
+		@include max(sm) {
+			height: 300px;
+			padding: 160px 0 0;
+			left: 10%;
+		}
+
 		.swiper-btn {
 			transform: rotate(90deg);
 
@@ -196,6 +259,10 @@
 
 				@include max(md) {
 					width: 24px;
+				}
+
+				@include max(sm) {
+					height: 36px;
 				}
 			}
 		}

@@ -5,8 +5,25 @@
 		padding: 42px 0 35px;
 	}
 
+	@include max(sm) {
+		padding: 32px 0 35px;
+	}
+
+	&__top-mobile-container {
+		@include max(sm) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+		}
+	}
+
 	&__top {
 		border-bottom: 1px solid $grey-1;
+
+		@include max(sm) {
+			margin-top: 27px;
+		}
 	}
 
 	&__container-top {
@@ -26,11 +43,16 @@
 			font-size: 16px;
 			padding-bottom: 15px;
 		}
+
+		@include max(sm) {
+			padding-bottom: 0;
+		}
 	}
 
 	&__categories {
 		display: flex;
 		gap: 15px 0;
+		overflow-x: auto;
 	}
 
 	&__categories-item {
@@ -46,6 +68,12 @@
 			font-size: 14px;
 			padding-bottom: 37px;
 			margin: 0 31px;
+		}
+
+		@include max(sm) {
+			font-size: 13px;
+			padding-bottom: 13px;
+			margin: 0 17px;
 		}
 
 		&:hover {
@@ -67,6 +95,10 @@
 		@include max(lg) {
 			margin-top: 39px;
 		}
+
+		@include max(sm) {
+			margin-top: 25px;
+		}
 	}
 
 	&__nav-extended {
@@ -74,6 +106,10 @@
 
 		@include max(lg) {
 			margin-top: 35px;
+		}
+
+		@include max(sm) {
+			margin-top: 28px;
 		}
 
 		.nav-extended__group {
