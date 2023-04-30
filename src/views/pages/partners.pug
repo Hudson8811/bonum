@@ -1,13 +1,13 @@
-extends ../layouts/default.pug 
-include ../helpers/mixins.pug 
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
 
-block variables 
-	- const title = "page"; 
+block variables
+	- const title = "page";
 
-block content 
-	include ../../blocks/modules/header/header 
-	
-	.partners 
+block content
+	include ../../blocks/modules/header/header
+
+	.partners
 		.container
 			.breakpoints
 				.breakpoints__container
@@ -16,45 +16,45 @@ block content
 							a(href='#').breakpoints__text Акции и лизинг
 						li.breakpoints__item
 							span.breakpoints__text Новость
-			.partners__content 
-				.title Партнеры 
-				.h1 Мы работаем с лучшими 
-				.partners__items 
-					.partners__row 
-						.partners__item.item-partners 
-							.item-partners__column 
+			.partners__content
+				.title Партнеры
+				.h1 Мы работаем с лучшими
+				.partners__items
+					.partners__row
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title SAF Holland
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/1.svg", alt="alt")
 								.item-partners__text Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus
-						.partners__item.item-partners 
-							.item-partners__column 
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title Normec
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/2.svg", alt="alt")
-								.item-partners__text Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. 
-						.partners__item.item-partners 
-							.item-partners__column 
+								.item-partners__text Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst.
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title Wabco
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/3.svg", alt="alt")
 								.item-partners__text Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate.
-						.partners__item.item-partners 
-							.item-partners__column 
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title Lokhen
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/4.svg", alt="alt")
 								.item-partners__text Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue
-						.partners__item.item-partners 
-							.item-partners__column 
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title Good Year
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/5.svg", alt="alt")
-								.item-partners__text Ut a libero vulputate, vehicula nulla feugiat vulputate at sit amet lorem quis, dolor et lectus placerat, eget  eleifend tortor. 
-						.partners__item.item-partners 
-							.item-partners__column 
+								.item-partners__text Ut a libero vulputate, vehicula nulla feugiat vulputate at sit amet lorem quis, dolor et lectus placerat, eget  eleifend tortor.
+						.partners__item.item-partners
+							.item-partners__column
 								.item-partners__title Jost
-								.item-partners__icon 
+								.item-partners__icon
 									img(src="img/partners/6.svg", alt="alt")
 								.item-partners__text Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida.
 		section.feedback
@@ -74,12 +74,10 @@ block content
 					)(required='true')
 					+button('отправить', 'button--outline-inverse feedback__button')(type='submit')
 
-	include ../../blocks/modules/footer/footer 
+	include ../../blocks/modules/footer/footer
 
 
 
-block scripts
-	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
-	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
-	script(src="js/vendor.js")
-	script(src="js/main.js")
+	//block scripts
+		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")

@@ -1,4 +1,3 @@
-import $, {event, type} from "jquery";
 
 $(document).ready(function () {
 	const burger = $('.header__burger');

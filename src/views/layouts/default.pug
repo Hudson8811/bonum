@@ -7,9 +7,14 @@ html(lang="ru")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		title #{title}
 		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-		link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css")
-		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
+		//link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css")
+		//link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
 		link(rel="stylesheet" href="styles/main.css")
 	body
 		block content
 		block scripts
+			// перенесено в main.js
+				script(src="/js/libs/fancybox5.umd.js")
+				script(src="js/swiper-bundle.min.js")
+		block globalScripts
+			script(src="js/main.js")

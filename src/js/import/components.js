@@ -1,4 +1,3 @@
-import $, { event, type } from "jquery";
 
 $(document).ready(function () {
 	var video = $('.company__video');

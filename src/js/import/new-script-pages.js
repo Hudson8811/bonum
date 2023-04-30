@@ -1,4 +1,3 @@
-import $, {event, type} from "jquery";
 
 if (document.querySelector('.team-about-page__swiper')) {
 	const swiperTeamAboutPage = new Swiper('.team-about-page__swiper', {
@@ -79,7 +78,7 @@ if (ww < 993) {
 		$('.contact-us-sidebar__link').click(function(event) {
 			$(this).toggleClass('js-active').next().slideToggle(300);
 		});
-	}); 
+	});
 }
 
 Fancybox.bind('.my-fancy-video', {
