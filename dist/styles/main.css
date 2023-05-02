@@ -4261,6 +4261,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 42.6%;
+  padding: 80px 0 64px;
 }
 
 .company__col:first-child .h1 {
