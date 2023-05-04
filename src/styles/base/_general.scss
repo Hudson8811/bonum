@@ -97,6 +97,115 @@ h1,
 	}
 }
 
+
+.normal-text-editor {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	flex-flow: column nowrap;
+	margin-bottom: 56px;
+
+	img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin-top: 20px;
+		&+img,&+p,&+ul,&+ol{
+			margin-top: 20px;
+		}
+	}
+
+	@include max(sm) {
+		margin-bottom: 24px;
+	}
+
+	&--width--like-catalog-section {
+		max-width: 754px;
+
+	}
+
+	ul {
+		list-style-type: disc;
+		padding-left: 15px;
+
+		li+li {
+			margin-top: 20px;
+		}
+		&+img,&+p,&+ul,&+ol{
+			margin-top: 20px;
+		}
+	}
+
+	h3 {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 150%;
+		color: #4C4E4D;
+
+		margin-top: 56px;
+
+		&+* {
+			margin-top: 32px;
+
+			@include max(sm) {
+				margin-top: 24px;
+			}
+		}
+
+		@include max(lg) {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 150%;
+		}
+
+		@include max(sm) {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 150%;
+			margin-top: 24px;
+
+
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+
+	}
+
+	p {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 170%;
+
+		&+img,&+ul,&+ol{
+			margin-top: 20px;
+		}
+
+		@include max(lg) {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 170%;
+		}
+
+		@include max(sm) {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 170%;
+		}
+	}
+}
+
+
+
+
 .title {
 	font-size: 20px;
 	line-height: 150%;
