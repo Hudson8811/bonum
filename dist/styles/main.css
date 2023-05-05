@@ -8431,6 +8431,18 @@ section.leasing {
   padding: 64px 15px 0;
 }
 
+.news-pagi-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.items-news-page--static {
+  margin: 0;
+  margin-top: 64px;
+  position: static;
+  padding: 0;
+}
+
 .news-single {
   margin-bottom: 130px;
 }
@@ -13547,6 +13559,10 @@ section.leasing {
 
   .items-news-page__item {
     padding: 40px 15px 0;
+  }
+
+  .news-pagi-wrap {
+    justify-content: center;
   }
 
   .news-single {

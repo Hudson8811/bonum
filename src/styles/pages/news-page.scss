@@ -353,3 +353,18 @@
 		}
 	}
 }
+
+.news-pagi-wrap{
+	display: flex;
+	justify-content: flex-end;
+	@media (max-width: 768px){
+		justify-content: center;
+	}
+}
+
+.items-news-page--static{
+	margin: 0;
+	margin-top: 64px;
+	position: static;
+	padding: 0;
+}
