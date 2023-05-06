@@ -24,7 +24,7 @@ block content
 							.swiper-wrapper
 								.swiper-slide
 									.blogs__button
-										a(href='') Все
+										a(href='').js-active Все
 								.swiper-slide
 									.blogs__button
 										a(href='') Магистральная техника
@@ -144,6 +144,25 @@ block content
 										span.card-item__date-year 2023
 							.card-item__tag # Бензовозы
 							.card-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
+			.blogs__items.blogs__items-h
+				.blogs__item.card-item.card-item-h
+					.card-item__column
+						.card-item__date
+							span.card-item__date-day 18
+							.card-item__date-right
+								span.card-item__date-month февраля
+								br
+								span.card-item__date-year 2023
+						.card-item__img
+							img(src="img/blogs/1.jpg", alt="alt")
+						.card-item__text
+							.card-item__tag # Бензовозы
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
+						a(href='').card-item__btn
+							<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="28" cy="28" r="27.5" fill="white" stroke="#E3E3E3"/>
+							<path d="M27.6562 24L31.8989 28.2426L27.6562 32.4853" stroke="#1F2120" stroke-width="1.5"/>
+							</svg>
 
 	include ../../blocks/modules/footer/footer
 

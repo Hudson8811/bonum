@@ -23,13 +23,23 @@
 		}
 	}
 	.h1 {
-		@media (max-width: 390px){
+		text-transform: uppercase;
+		@media (max-width: 391px){
 			font-size: 20px;
 		}
 	}
 	.title {
-		@media (max-width: 390px){
+		@media (max-width: 391px){
 			font-size: 13px;
+		}
+	}
+	p, li {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 170%;
+		@media (max-width: 768px){
+			font-size: 13px;
+			line-height: 150%;
 		}
 	}
 }
@@ -50,7 +60,7 @@
 	&__body {
 		flex: 0 1 50%;
 		padding-top: 25px;
-		padding-right: 130px;
+		padding-right: 85px;
 		padding-bottom: 99px;
 		@media (max-width: 1200px){
 			padding: 20px 40px 40px 16px;
@@ -60,13 +70,15 @@
 			padding: 0px 16px 40px;
 		}
 		&-inner {
-			max-width: 545px;
+			max-width: 590px;
 			margin-left: auto;
 			padding-left: 16px;
 			@media (max-width: 1200px){
 				padding: 0;
 			}
 			@media (max-width: 768px){
+				display: flex;
+				flex-direction: column;
 				max-width: 100%;
 			}
 		}
@@ -171,11 +183,12 @@
 		&-mob  {
 			display: none;
 			@media (max-width: 768px){
-				margin-top: 40px;
+				margin-top: 0px;
 				margin-left: -16px;
 				display: block;
 				padding-top: 82%;
 				width: calc(100% + 32px);
+				order: -1;
 			}
 		}
 	}
@@ -211,6 +224,7 @@
 
 .stocks-mult-benefits {
 	&__items {
+		margin-top: 32px;
 	}
 	&__row {
 		display: flex;

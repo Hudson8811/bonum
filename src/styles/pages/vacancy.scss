@@ -23,16 +23,26 @@
 		}
 	}
 	.h1 {
-		@media (max-width: 390px){
+		@media (max-width: 391px){
 			font-size: 20px;
 		}
 	}
 	.title {
-		@media (max-width: 390px){
+		@media (max-width: 391px){
 			font-size: 13px;
 		}
 	}
-	.icon-hot {}
+	.icon-hot {
+		svg {
+			display: block;
+			width: 56px;
+			height: 56px;
+			@media (max-width: 768px){
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
 }
 .hero-vacancy {
 	background: #F8F8F8;
@@ -61,7 +71,7 @@
 		@media (max-width: 768px){
 			flex: 1 1 100%;
 			padding: 0 0 40px;
-			max-width: 250px;
+			max-width: 100%;
 		}
 		>* {
 			@media (max-width: 768px){
@@ -253,12 +263,12 @@
 		&-title {
 			display: flex;
 			justify-content: space-between;
-			align-items: center;
 			font-weight: 600;
 			font-size: 32px;
 			line-height: 135%;
 			color: #FFFFFF;
 			@media (max-width: 768px){
+
 				font-size: 20px;
 			}
 		}

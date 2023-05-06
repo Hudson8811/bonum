@@ -30,6 +30,9 @@
             background-color: $grey-4;
             border-radius: 50%;
         }
+		  a {
+			color: #4C4E4D;
+		  }
     }
 
     &__text {
@@ -37,5 +40,9 @@
         font-size: 14px;
         line-height: 16px;
         color: $grey-3;
+		  @media (max-width: 768px){
+			font-size: 11px;
+			line-height: 13px;
+		  }
     }
 }

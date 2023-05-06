@@ -25,7 +25,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 70%;
+		width: 100%;
 
 		@include max(1600) {
 			width: auto;

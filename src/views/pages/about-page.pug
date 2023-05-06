@@ -16,17 +16,18 @@ block content
 							a(href='#').breakpoints__text Главная
 						li.breakpoints__item
 							span.breakpoints__text О заводе
-			.hero-about-page__row
-				.hero-about-page__body
-					.hero-about-page__body-inner
-						.title О заводе BONUM
-						.hero-about-page__image.hero-about-page__image-mob
+			.container
+				.hero-about-page__row
+					.hero-about-page__body
+						.hero-about-page__body-inner
+							.title О заводе BONUM
+							.hero-about-page__image.hero-about-page__image-mob
+								img(src="img/about-page/hero.jpg", alt="alt")
+							.h1 Lorem ipsum dolor sit amet, consect
+							p Завод BONUM производит полуприцепы и спецтехнику различного назначения: шторные, шторно-бортовые полуприцепы, контейнеровозы, полуприцепы-цистерны, зерновозы и спецтехнику для сельского хозяйства.
+					.hero-about-page__image-wrapper.hero-about-page__image-desk
+						.hero-about-page__image
 							img(src="img/about-page/hero.jpg", alt="alt")
-						.h1 Lorem ipsum dolor sit amet, consect
-						p Завод BONUM производит полуприцепы и спецтехнику различного назначения: шторные, шторно-бортовые полуприцепы, контейнеровозы, полуприцепы-цистерны, зерновозы и спецтехнику для сельского хозяйства.
-				.hero-about-page__image-wrapper.hero-about-page__image-desk
-					.hero-about-page__image
-						img(src="img/about-page/hero.jpg", alt="alt")
 		section.mission-about-page
 			.container
 				.mission-about-page__row
@@ -36,7 +37,7 @@ block content
 						.title наша миссия
 						.mission-about-page__img.resp-mob
 							img(src="img/about-page/mission.jpg", alt="alt")
-						ul
+						ul.list-marker
 							li Обеспечить рынок качественной полуприцепной техникой для безопасной и эффективной перевозки грузов и спецтехникой для сельского хозяйства.
 							li Мы считаем, что коммерческий транспорт должен быть не только функциональным и эффективным, но и красивым.
 							li Поэтому техника BONUM не только работает на благо вашего бизнеса, но и создают живую рекламу на дорогах.
@@ -105,11 +106,14 @@ block content
 					.container
 						.company__wrapper
 							.company__col
-								.h1 тщательный контроль
+								.h1.h1--uppercase тщательный контроль
+								a.company__video.d-none-desktop(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
 								+button('о компании', 'button--small button--outline-inverse company__button', '#')
 							.company__col
-								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+								a.company__video.d-none-mobile(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
 									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
 									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 				.company__toggle.js-toggle
@@ -124,11 +128,14 @@ block content
 					.container
 						.company__wrapper
 							.company__col
-								.h1 тщательный контроль
+								.h1.h1--uppercase тщательный контроль
+								a.company__video.d-none-desktop(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
 								+button('о компании', 'button--small button--outline-inverse company__button', '#')
 							.company__col
-								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+								a.company__video.d-none-mobile(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
 									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
 									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 				.company__toggle.js-toggle
@@ -143,11 +150,14 @@ block content
 					.container
 						.company__wrapper
 							.company__col
-								.h1 тщательный контроль
+								.h1.h1--uppercase тщательный контроль
+								a.company__video.d-none-desktop(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
 								+button('о компании', 'button--small button--outline-inverse company__button', '#')
 							.company__col
-								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+								a.company__video.d-none-mobile(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
 									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
 									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 				.company__toggle.js-toggle
@@ -162,13 +172,17 @@ block content
 					.container
 						.company__wrapper
 							.company__col
-								.h1 Забота о клиентах
+								.h1.h1--uppercase Забота о клиентах
+								a.company__video.d-none-desktop(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
+									img.company__play(src='./img/svg/i-play-2.svg', alt="")
 								.company__text Контроль всех производственных процессов, отбор лучших комплектующих, внимание к деталям
 								+button('о компании', 'button--small button--outline-inverse company__button', '#')
 							.company__col
-								a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
+								a.company__video.d-none-mobile(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
 									img.company__preview(src='./img/picture/video.jpg', srcset='./img/picture/video@2x.jpg 2x', alt='')
 									img.company__play(src='./img/svg/i-play-2.svg', alt="")
+
 		section.nums-about-page
 			.container
 				.nums-about-page__header
