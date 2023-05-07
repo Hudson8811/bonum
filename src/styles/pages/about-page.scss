@@ -236,7 +236,7 @@
 	}
 }
 
-.team-about-page {
+.photogalary {
 	overflow: hidden;
 	&__container {
 		background: url('../img/about-page/team.jpg') center / cover no-repeat;
@@ -409,6 +409,7 @@
 			flex: 1 1 auto;
 			min-height: 100%;
 			position: relative;
+			cursor: pointer;
 			img {
 				position: absolute;
 				top: 0;
@@ -416,6 +417,29 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+			&:hover {
+				&::before {
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: linear-gradient(0deg, rgba(31, 33, 32, 0.5), rgba(31, 33, 32, 0.5));
+				}
+	
+				&::after {
+					content: '';
+					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: url(../img/svg/i-search-zoom-in.svg) center center no-repeat;
+				}
 			}
 		}
 		&--double {
@@ -426,7 +450,7 @@
 			@media (max-width: 768px){
 				width: 131px;
 			}
-			.team-about-page__img-inner {
+			.photogalary__img-inner {
 				margin-top: 30px;
 				@media (max-width: 768px){
 					margin-top: 15px;
@@ -448,6 +472,7 @@
 				width: 210px;
 			}
 		}
+
 	}
 }
 

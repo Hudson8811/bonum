@@ -102,6 +102,7 @@ ul.list-marker {
 
             &--nav {
                 position: absolute;
+					 z-index: 9;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
@@ -251,6 +252,12 @@ ul.list-marker {
                         margin-bottom: 42px;
                         max-width: 49%;
                     }
+						  @media (max-width: 389px){
+								width: 100%;
+								margin-right: 0!important;
+								padding-right: 0!important;
+								border: none!important;
+						  }
 
                     &:nth-child(2n - 1) {
                         @include max(sm) {
@@ -349,11 +356,20 @@ ul.list-marker {
 
     .gallery {
         overflow: hidden;
-
+		.photogalary__swiper {
+			margin-top: 80px;
+			@media (max-width: 768px){
+				margin-top: 40px;
+				.swiper-btn {
+					bottom: auto;
+					top: -50px;
+				}
+			}
+		}
         &__container {
             max-width: 1920px;
             width: 100%;
-            padding: 130px 303px 0;
+            padding: 130px 0 0;
             margin: 0 auto;
         }
 

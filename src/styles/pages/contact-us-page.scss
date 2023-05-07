@@ -74,6 +74,7 @@
 	&__row  {
 		margin-top: 48px;
 		display: flex;
+		justify-content: space-between;
 		@media (max-width: 992px){
 			flex-wrap: wrap;
 		}
@@ -85,8 +86,8 @@
 		}
 	}
 	&__right {
-		flex: 1 1 auto;
-		padding-left: 52px;
+		flex: 0 1 340px;
+		padding-left: 15px;
 		@media (max-width: 992px){
 			padding: 0;
 			margin-top: 40px;
@@ -177,9 +178,7 @@
 .cards-contact-us {
 	display: none;
 	&.js-active {
-		@media (max-width: 992px){
-			display: block;
-		}
+		display: block;
 	}
 	@media (max-width: 992px){
 		padding-top: 16px;

@@ -20,11 +20,13 @@ block content
 				.centers__header 
 					.title Сервисные центры 
 					.centers__switcher.switcher-buttons
-						.switcher-buttons__button.switcher-buttons__button-active Карта
-						.switcher-buttons__button Список
-				.centers__localities.localities-centers 
-					#localities-centers__select(name="").localities-centers__select 
-						span Выберите населенный пункт
+						span#switcher-buttons-map.switcher-buttons__button.js-active Карта
+						span#switcher-buttons-list.switcher-buttons__button Список
+				.centers__localities.localities-centers#switcher-content-map 
+					select#localities-centers__select(name="").localities-centers__select 
+						option 
+						option Саратов
+						option Москва
 						.localities-centers__select-arrow
 							<svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 1.5L13 13.5L25 1.5" stroke="#4C4E4D" stroke-width="1.5"/>
@@ -130,7 +132,7 @@ block content
 							p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
 							br
 							p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
-
+				.centers__localities.localities-centers#switcher-content-list
 	include ../../blocks/modules/footer/footer 
 
 

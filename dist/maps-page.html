@@ -254,13 +254,10 @@
         <div class="maps-page__content"> 
           <div class="maps-page__header"> 
             <div class="title">Представительства </div>
-            <div class="maps-page__switcher switcher-buttons">
-              <div class="switcher-buttons__button switcher-buttons__button-active">Карта</div>
-              <div class="switcher-buttons__button">Список</div>
-            </div>
+            <div class="centers__switcher switcher-buttons"><span class="switcher-buttons__button" id="switcher-buttons-map">Карта</span><span class="switcher-buttons__button js-active" id="switcher-buttons-list">Список</span></div>
           </div>
           <div class="maps-page__localities localities-maps-page"> 
-            <div class="localities-maps-page__items" id="maps-page-list"> 
+            <div class="localities-maps-page__items" id="switcher-content-list"> 
               <div class="blogs-header__buttons">
                 <div class="blogs-header__swiper swiper">
                   <div class="swiper-wrapper">
@@ -352,7 +349,7 @@
                 <div class="localities-maps-page__item-map">	<img src="img/maps-page/map1.jpg" alt="alt"></div>
               </div>
             </div>
-            <div class="localities-maps-page__item-dark" id="maps-page-map"> 
+            <div class="localities-maps-page__item-dark" id="switcher-content-map"> 
               <div class="localities-maps-page__item">
                 <div class="localities-maps-page__item-body"> 
                   <div class="localities-maps-page__item-title">Балтранс</div>
