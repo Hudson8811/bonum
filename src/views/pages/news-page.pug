@@ -30,7 +30,7 @@ block content
 							a(href='') Публикации
 
 			.items-news-page
-				.items-news-page__paginations
+				//.items-news-page__paginations
 					.items-news-page__arrow.items-news-page__arrow-prev
 						svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
 							path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
@@ -180,6 +180,23 @@ block content
 										span.card-item__date-year 2023
 							.card-item__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
 
+			.news-pagi-wrap
+				.items-news-page__paginations.items-news-page--static
+					.items-news-page__arrow.items-news-page__arrow-prev
+						svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+							path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
+					ul
+						li
+							a(href="").js-active 01
+						li
+							a(href="") 02
+						li
+							a(href="") 03
+					.items-news-page__arrow.items-news-page__arrow-next
+						svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#000000' stroke-width='2')
+							path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#000000')
 
 	include ../../blocks/modules/footer/footer
 

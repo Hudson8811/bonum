@@ -98,4 +98,13 @@ jQuery(function() {
 			swiper: blockVacancyCards,
 		},
 	});
+
+
+
+
+	$('.js-mob-show-all-prop-lists').on('click',function(e){
+		e.preventDefault();
+		$('.property-list-new__hidemob').slideDown(500);
+		$(this).fadeOut(300);
+	});
 });
