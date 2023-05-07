@@ -1,3 +1,9 @@
+.container--breakpoints{
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
 .breakpoints {
     border-bottom: 1px solid $grey-1;
 
@@ -7,7 +13,7 @@
         padding: 25px 303px;
         margin: 0 auto;
     }
-    
+
     &__list {
         display: flex;
         flex-wrap: wrap;

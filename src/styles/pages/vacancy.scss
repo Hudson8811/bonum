@@ -180,7 +180,9 @@
 				bottom: 0;
 				width: 100%;
 				img {
-					object-fit: fill;
+					//object-fit: fill;
+					object-fit: cover;
+					object-position: top left;
 				}
 			}
 		}
@@ -405,7 +407,7 @@
 		@media (max-width: 768px){
 			padding: 24px;
 		}
-		
+
 	}
 	&__title {
 		font-weight: 600;
