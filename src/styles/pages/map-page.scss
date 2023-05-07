@@ -1,0 +1,28 @@
+.map-page {
+	.localities-centers__item-dark {
+		.localities-centers__item-body {
+			background: #5B5B5B;
+			* {
+				color: #ffffff;
+			}
+			span {
+				color: #8F9190;
+			}
+			p, a {
+				font-weight: 300;
+			}
+			.localities-centers__item-title {
+				font-weight: 260;
+			}
+			.localities-centers__item-subtitle {
+				font-weight: 260;
+			}
+		}
+		.localities-centers__item-map {
+			@media (max-width: 768px){
+				padding-top: 76%;
+				order: -1;
+			}
+		}
+	}
+}

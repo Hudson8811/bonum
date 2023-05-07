@@ -1,0 +1,54 @@
+extends ../layouts/default.pug 
+include ../helpers/mixins.pug 
+
+block variables 
+	- const title = "page"; 
+
+block content 
+	include ../../blocks/modules/header/header 
+	
+	.maps-page.map-page 
+		.container
+			.breakpoints
+				.breakpoints__container
+					ul.breakpoints__list
+						li.breakpoints__item
+							a(href='#').breakpoints__text Контакты
+						li.breakpoints__item
+							span.breakpoints__text Представительства
+			.maps-page__content 
+				.maps-page__header 
+					.title Представительства 
+					.maps-page__switcher.switcher-buttons
+						.switcher-buttons__button.switcher-buttons__button-active Карта
+						.switcher-buttons__button Список
+				.maps-page__localities.localities-maps-page 
+					.localities-centers__item-dark 
+						.localities-centers__item
+							.localities-centers__item-body 
+								.localities-centers__item-title Ростовская обл.
+								.localities-centers__item-subtitle ЗАВОД BONUM   
+								.localities-centers__item-loc 
+									span адрес:
+									p 344091,  г. Саратов, п. Бартоломей, д. 1
+								.localities-centers__item-contact 
+									span контакты:
+									a(href="tel:8452799993") 8 8452 79 99 93
+									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+								.localities-centers__item-contact 
+									span отдел продаж
+									a(href="tel:8005500161 ") 8 800 550-01-61 
+									a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+							.localities-centers__item-map 	
+								img(src="img/centers/map1.jpg", alt="alt")
+
+	include ../../blocks/modules/footer/footer 
+
+
+
+block scripts
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
+	script(src="js/vendor.js")
+	script(src="js/main.js")
