@@ -79,30 +79,6 @@
 	}
 }
 
-.switcher-buttons {
-	display: flex;
-	@media (max-width: 500px){
-		margin-top: 24px;
-	}
-	&__button {
-		cursor: pointer;
-		margin-left: 25px;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 200%;
-		text-align: right;
-		color: #1F2120;
-		padding-bottom: 56px;
-		@media (max-width: 500px){
-			margin: 0;
-			margin-right: 56px;
-			padding-bottom: 16px;
-		}
-		&-active {
-			border-bottom: 3px solid #1F2120;
-		}
-	}
-}
 .localities-maps-page {
 	margin-top: 64px;
 	@media (max-width: 768px){

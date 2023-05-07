@@ -254,18 +254,18 @@
         <div class="centers__content"> 
           <div class="centers__header"> 
             <div class="title">Сервисные центры </div>
-            <div class="centers__switcher switcher-buttons">
-              <div class="switcher-buttons__button switcher-buttons__button-active">Карта</div>
-              <div class="switcher-buttons__button">Список</div>
-            </div>
+            <div class="centers__switcher switcher-buttons"><span class="switcher-buttons__button js-active" id="switcher-buttons-map">Карта</span><span class="switcher-buttons__button" id="switcher-buttons-list">Список</span></div>
           </div>
-          <div class="centers__localities localities-centers"> 
-            <div class="localities-centers__select" id="localities-centers__select" name=""> <span>Выберите населенный пункт</span>
+          <div class="centers__localities localities-centers" id="switcher-content-map"> 
+            <select class="localities-centers__select" id="localities-centers__select" name=""> 
+              <option> </option>
+              <option>Саратов</option>
+              <option>Москва</option>
               <div class="localities-centers__select-arrow"><svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1.5L13 13.5L25 1.5" stroke="#4C4E4D" stroke-width="1.5"/>
 </svg>
               </div>
-            </div>
+            </select>
             <div class="localities-centers__buttons"> 
               <div class="localities-centers__button localities-centers__button-active"> <span>Все</span></div>
               <div class="localities-centers__button"> <span>BONUM</span></div>
@@ -350,6 +350,7 @@
               </div>
             </div>
           </div>
+          <div class="centers__localities localities-centers" id="switcher-content-list"></div>
         </div>
       </div>
     </div>

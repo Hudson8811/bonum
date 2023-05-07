@@ -1,10 +1,10 @@
 jQuery(function() {
-	if (document.querySelector('.team-about-page__swiper')) {
-		const swiperTeamAboutPage = new Swiper('.team-about-page__swiper', {
+	if (document.querySelector('.photogalary__swiper')) {
+		const swiperTeamAboutPage = new Swiper('.photogalary__swiper', {
 			slidesPerView: 'auto',
 			navigation: {
-				prevEl: '.team-about-page__swiper .swiper-btn--prev',
-				nextEl: '.team-about-page__swiper .swiper-btn--next'
+				prevEl: '.photogalary__swiper .swiper-btn--prev',
+				nextEl: '.photogalary__swiper .swiper-btn--next'
 			},
 		});
 	}
@@ -72,14 +72,11 @@ jQuery(function() {
 		slidesPerView: 'auto',
 	});
 
-	var ww = $( window ).width();
-	if (ww < 993) {
-		$(document).ready(function() {
-			$('.contact-us-sidebar__link').click(function(event) {
-				$(this).toggleClass('js-active').next().slideToggle(300);
-			});
+	$(document).ready(function() {
+		$('.contact-us-sidebar__link').click(function(event) {
+			$(this).toggleClass('js-active').next().slideToggle(300);
 		});
-	}
+	});
 
 	Fancybox.bind('.my-fancy-video', {
 		type: "video"
@@ -98,8 +95,24 @@ jQuery(function() {
 			swiper: blockVacancyCards,
 		},
 	});
-
-
+	$("#localities-centers__select").select2({
+		placeholder: "Выберите населенный пункт",
+		allowClear: true
+	});
+	$(function() {
+		$('.switcher-buttons span').click(function() {
+			$('.switcher-buttons span').removeClass('js-active');
+			$(this).addClass('js-active');
+		});
+		$('.switcher-buttons #switcher-buttons-map').click(function() {
+			$('#switcher-content-map').slideDown();
+			$('#switcher-content-list').slideUp();
+		});
+		$('.switcher-buttons #switcher-buttons-list').click(function() {
+			$('#switcher-content-list').slideDown();
+			$('#switcher-content-map').slideUp();
+		});
+	});
 
 
 	$('.js-mob-show-all-prop-lists').on('click',function(e){

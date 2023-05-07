@@ -19,11 +19,11 @@ block content
 			.maps-page__content 
 				.maps-page__header 
 					.title Представительства 
-					.maps-page__switcher.switcher-buttons
-						.switcher-buttons__button.switcher-buttons__button-active Карта
-						.switcher-buttons__button Список
+					.centers__switcher.switcher-buttons
+						span#switcher-buttons-map.switcher-buttons__button Карта
+						span#switcher-buttons-list.switcher-buttons__button.js-active Список
 				.maps-page__localities.localities-maps-page 
-					#maps-page-list.localities-maps-page__items 
+					#switcher-content-list.localities-maps-page__items 
 						.blogs-header__buttons
 							.blogs-header__swiper.swiper
 								.swiper-wrapper
@@ -123,7 +123,7 @@ block content
 									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
 							.localities-maps-page__item-map 	
 								img(src="img/maps-page/map1.jpg", alt="alt")
-					#maps-page-map.localities-maps-page__item-dark 
+					#switcher-content-map.localities-maps-page__item-dark 
 						.localities-maps-page__item
 							.localities-maps-page__item-body 
 								.localities-maps-page__item-title Балтранс
