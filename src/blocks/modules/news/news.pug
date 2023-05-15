@@ -16,34 +16,34 @@ section.news
 		.container.news__container-top
 			.title.news__title.d-none-mobile Новости
 			.news__categories
-				a.news__categories-item(href='#', target='_blank') Все
-				a.news__categories-item(href='#', target='_blank') Новости
-				a.news__categories-item(href='#', target='_blank') События
-				a.news__categories-item(href='#', target='_blank') Публикации
+				.news__categories-item.news__categories-item--active.js-swiper-filter(data-filter="all") Все
+				.news__categories-item.js-swiper-filter(data-filter="1") Новости
+				.news__categories-item.js-swiper-filter(data-filter="2") События
+				.news__categories-item.js-swiper-filter(data-filter="3") Публикации
 	.container.news__container-slider
 		.news__slider.swiper.js-news-slider
 			.swiper-wrapper
-				.card-news.swiper-slide
+				.card-news.swiper-slide(data-filter="1")
 					.card-news__image
 						img(src='./img/picture/news/1.jpg', srcset='./img/picture/news/1@2x.jpg 2x', alt='')
 						time(datetime='2023-02-18') 18 <span>февраля <br> 2023</span>
 					.card-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
-				.card-news.swiper-slide
+				.card-news.swiper-slide(data-filter="1")
 					.card-news__image
 						img(src='./img/picture/news/2.jpg', srcset='./img/picture/news/2@2x.jpg 2x', alt='')
 						time(datetime='2023-02-18') 15 <span>февраля <br> 2023</span>
 					.card-news__text Fusce et quam velit. In ex ex, tempor a tincidunt nec, gravida et turpis
-				.card-news.swiper-slide
+				.card-news.swiper-slide(data-filter="2")
 					.card-news__image
 						img(src='./img/picture/news/3.jpg', srcset='./img/picture/news/3@2x.jpg 2x', alt='')
 						time(datetime='2023-02-18') 12 <span>февраля <br> 2023</span>
 					.card-news__text Suspendisse eget diam rutrum, semper orci scelerisque, euismod mauris
-				.card-news.swiper-slide
+				.card-news.swiper-slide(data-filter="3")
 					.card-news__image
 						img(src='./img/picture/news/1.jpg', srcset='./img/picture/news/1@2x.jpg 2x', alt='')
 						time(datetime='2023-02-18') 18 <span>февраля <br> 2023</span>
 					.card-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
-				.card-news.swiper-slide
+				.card-news.swiper-slide(data-filter="3")
 					.card-news__image
 						img(src='./img/picture/news/2.jpg', srcset='./img/picture/news/2@2x.jpg 2x', alt='')
 						time(datetime='2023-02-18') 15 <span>февраля <br> 2023</span>

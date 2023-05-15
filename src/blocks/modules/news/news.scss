@@ -76,7 +76,7 @@
 			margin: 0 17px;
 		}
 
-		&:hover {
+		&:hover, &--active {
 			border-bottom-color: $black;
 		}
 
@@ -117,5 +117,10 @@
 				gap: 35px;
 			}
 		}
+	}
+
+	.swiper-button-lock{
+		display: block;
+		opacity: 0;
 	}
 }

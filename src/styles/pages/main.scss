@@ -18,7 +18,7 @@ p, li {
 		line-height: 150%;
 	}
 }
-ul.list-marker {
+ul.list-marker, .styled-ul-in-this-block>ul {
 	li {
 		list-style: none;
 		position: relative;

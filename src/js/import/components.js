@@ -121,69 +121,193 @@ jQuery(function () {
 	}
 
 	if (document.querySelector('.js-leasing-slider')) {
-		const swiperLeasing = new Swiper('.js-leasing-slider', {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			slidesPerGroup: 1,
-			pagination: {
-				el: '.leasing__nav-extended .nav-extended__pagi',
-				clickable: true,
-				bulletActiveClass: 'nav-extended__fraction-active',
-				bulletClass: 'nav-extended__fraction',
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
-				}
-			},
-			navigation: {
-				prevEl: '.leasing__top .swiper-btn--prev',
-				nextEl: '.leasing__top .swiper-btn--next'
-			},
-			breakpoints: {
-				700: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-					slidesPerGroup: 2,
-					navigation: {
-						prevEl: '.leasing__slider .swiper-btn--prev',
-						nextEl: '.leasing__slider .swiper-btn--next'
+		$('.js-leasing-slider').each(function () {
+			var $this = $(this);
+			var wrap = $(this).closest('.leasing');
+
+			const swiperLeasing = new Swiper($this[0
+			], {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				slidesPerGroup: 1,
+				pagination: {
+					el: wrap.find('.leasing__nav-extended .nav-extended__pagi')[0],
+					clickable: true,
+					bulletActiveClass: 'nav-extended__fraction-active',
+					bulletClass: 'nav-extended__fraction',
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
+					}
+				},
+				navigation: {
+					prevEl: '.leasing__slider .swiper-btn--prev',
+					nextEl: '.leasing__slider .swiper-btn--next'
+				},
+				breakpoints: {
+					700: {
+						slidesPerView: 2,
+						spaceBetween: 24,
+						slidesPerGroup: 2,
 					}
 				}
+
+			});
+
+			var mobPrev=wrap.find('.leasing__top .swiper-btn--prev');
+			var mobNext=wrap.find('.leasing__top .swiper-btn--next');
+			var desktopPrev=wrap.find('.leasing__slider .swiper-btn--prev');
+			var desktopNext=wrap.find('.leasing__slider .swiper-btn--next');
+			var disabledClass='swiper-button-disabled';
+
+			mobPrev.on('click',function(){
+				desktopPrev.trigger('click');
+			});
+			mobNext.on('click', function(){
+				desktopNext.trigger('click');
+			});
+
+			function refreshMobBtnsState() {
+				if(desktopPrev.hasClass(disabledClass)){
+					mobPrev.addClass(disabledClass);
+				}
+				else{
+					mobPrev.removeClass(disabledClass);
+				}
+
+				if(desktopNext.hasClass(disabledClass)){
+					mobNext.addClass(disabledClass);
+				}
+				else{
+					mobNext.removeClass(disabledClass);
+				}
 			}
+
+			swiperLeasing.on('slideChange', refreshMobBtnsState);
+			refreshMobBtnsState();
+
 		});
 	}
 
 	if (document.querySelector('.js-news-slider')) {
-		const swiperNews = new Swiper('.js-news-slider', {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			pagination: {
-				el: '.news__nav-extended .nav-extended__pagi',
-				clickable: true,
-				bulletActiveClass: 'nav-extended__fraction-active',
-				bulletClass: 'nav-extended__fraction',
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
-				}
-			},
-			navigation: {
-				prevEl: '.news__top-mobile .swiper-btn--prev',
-				nextEl: '.news__top-mobile .swiper-btn--next'
-			},
-			breakpoints: {
-				700: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-					navigation: {
-						prevEl: '.news__slider .swiper-btn--prev',
-						nextEl: '.news__slider .swiper-btn--next'
+		$('.js-news-slider').each(function () {
+			var $this = $(this);
+			var wrap = $(this).closest('.news');
+
+			const swiperNews = new Swiper($this[0
+			], {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: wrap.find('.news__nav-extended .nav-extended__pagi')[0],
+					clickable: true,
+					bulletActiveClass: 'nav-extended__fraction-active',
+					bulletClass: 'nav-extended__fraction',
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
 					}
 				},
-				1280: {
-					slidesPerView: 3,
-					spaceBetween: 30
+				navigation: {
+					prevEl: wrap.find('.news__slider .swiper-btn--prev')[0],
+					nextEl: wrap.find('.news__slider .swiper-btn--next')[0]
+				},
+				breakpoints: {
+					700: {
+						slidesPerView: 2,
+						spaceBetween: 24
+					},
+					1280: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					}
+				}
+			});
+
+			var mobPrev = wrap.find('.news__top-mobile .swiper-btn--prev');
+			var mobNext = wrap.find('.news__top-mobile .swiper-btn--next');
+			var desktopPrev = wrap.find('.news__slider .swiper-btn--prev');
+			var desktopNext = wrap.find('.news__slider .swiper-btn--next');
+			var disabledClass = 'swiper-button-disabled';
+
+			mobPrev.on('click', function () {
+				desktopPrev.trigger('click');
+			});
+			mobNext.on('click', function () {
+				desktopNext.trigger('click');
+			});
+
+			function refreshMobBtnsState() {
+				if (desktopPrev.hasClass(disabledClass)) {
+					mobPrev.addClass(disabledClass);
+				}
+				else {
+					mobPrev.removeClass(disabledClass);
+				}
+
+				if (desktopNext.hasClass(disabledClass)) {
+					mobNext.addClass(disabledClass);
+				}
+				else {
+					mobNext.removeClass(disabledClass);
 				}
 			}
+
+			swiperNews.on('update resize slideChange', refreshMobBtnsState);
+			refreshMobBtnsState();
+
+
+
+			wrap.find('.js-swiper-filter').on( 'click', function() {
+				var filter = $(this).attr('data-filter');
+
+				if(filter==='all'){
+					wrap.find('.swiper-slide').css('display', '');
+				}
+				else{
+					wrap.find('.swiper-slide').css('display', 'none');
+					wrap.find('.swiper-slide[data-filter="' + filter+'"').css('display', '');
+
+				}
+				wrap.find('.js-swiper-filter').removeClass( 'news__categories-item--active' );
+				$( this ).addClass('news__categories-item--active' );
+
+				swiperNews.updateSize();
+				swiperNews.updateSlides();
+				swiperNews.updateProgress();
+				swiperNews.updateSlidesClasses();
+				swiperNews.slideTo(0);
+				swiperNews.scrollbar.updateSize();
+				refreshMobBtnsState();
+
+				return false;
+			});
+
+
+
+
+			/*wrap.on('click','.news__top-mobile .swiper-btn--prev', function(){
+				wrap.find('.news__slider .swiper-btn--prev').trigger('click');
+			});
+			wrap.on('click','.news__top-mobile .swiper-btn--next', function(){
+				wrap.find('.news__slider .swiper-btn--next').trigger('click');
+			});
+
+			swiperNews.on('slideChange', function () {
+				if(wrap.find('.news__slider .swiper-btn--prev').hasClass('swiper-button-disabled')){
+					wrap.find('.news__top-mobile .swiper-btn--prev').addClass('swiper-button-disabled');
+				}
+				else{
+					wrap.find('.news__top-mobile .swiper-btn--prev').removeClass('swiper-button-disabled');
+				}
+
+				if(wrap.find('.news__slider .swiper-btn--next').hasClass('swiper-button-disabled')){
+					wrap.find('.news__top-mobile .swiper-btn--next').addClass('swiper-button-disabled');
+				}
+				else{
+					wrap.find('.news__top-mobile .swiper-btn--next').removeClass('swiper-button-disabled');
+				}
+			});*/
 		});
+
 	}
 
 

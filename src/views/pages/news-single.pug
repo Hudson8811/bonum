@@ -28,23 +28,29 @@ block content
 						</svg>
 					h1.h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					.content-news-single__tags
-						ul
-							li
-								a(href="") 18 февраля 2023
-							li
-								a(href="") #новости
-					.content-news-single__img
+						.cns-tags-ul
+							.cns-tags-li
+								.cns-tags-item 18 февраля 2023
+							.cns-tags-li
+								a.cns-tags-item(href="") #новости
+
+					.content-news-single__text-block.styled-ul-in-this-block
 						img(src="img/news-page/1.jpg", alt="alt")
-					h3 Nulla quis egestas velit. Nunc sed feugiat ante. Proin euismod, tellus sit amet efficitur commodo, massa eros finibus augue,
-					p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.
-					h3 Proin euismod, tellus sit amet
-					ul.list-marker
-						li Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum
-						li Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat metus
-						li Curabitur est neque, tincidunt eu placerat et, commodo a massa.
-						li Suspendisse eget diam rutrum, semper orci scelerisque, euismod mauris volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta.
-					.content-news-single__banner
-						p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis
+						h2 Nulla quis egestas velit. Nunc sed feugiat ante. Proin euismod, tellus sit amet efficitur commodo, massa eros finibus augue,
+						p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.
+						p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.
+						img(src="img/news-page/1.jpg", alt="alt")
+						p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.
+
+						h2 Proin euismod, tellus sit amet
+						ul
+							li Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum
+							li Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat metus
+							li Curabitur est neque, tincidunt eu placerat et, commodo a massa.
+							li Suspendisse eget diam rutrum, semper orci scelerisque, euismod mauris volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta.
+
+						.content-news-single__banner
+							p Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis
 
 		.photogalary__swiper-container
 			.container
@@ -82,8 +88,9 @@ block content
 		.content-news-single
 			.container
 				.content-news-single__container
-					h3 Temporibus autem quibusdam
-					p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+					.content-news-single__text-block.styled-ul-in-this-block
+						h2 Temporibus autem quibusdam
+						p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
 				.content-news-single__share
 					h3 Поделиться:
 					.content-news-single__socials
@@ -125,7 +132,87 @@ block content
 							.my-new-form__right
 								button.my-new-form__right-button(type='submit') отправить
 
-		.header-news-page
+
+
+
+		section.news
+			.news__top-mobile.d-none-desktop
+				.container.news__top-mobile-container
+					.title.news__title Новости
+					.nav-extended
+						.nav-extended__nav.d-none-flex-desktop
+							.swiper-btn.swiper-btn--prev
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#8F9190' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#8F9190')
+							.swiper-btn.swiper-btn--next
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#1F2120' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#1F2120')
+			.news__top
+				.container.news__container-top
+					.title.news__title.d-none-mobile другие новости
+					.news__categories
+						.news__categories-item.news__categories-item--active.js-swiper-filter(data-filter="all") Все
+						.news__categories-item.js-swiper-filter(data-filter="1") Новости
+						.news__categories-item.js-swiper-filter(data-filter="2") События
+						.news__categories-item.js-swiper-filter(data-filter="3") Публикации
+			.container.news__container-slider
+				.news__slider.swiper.js-news-slider
+					.swiper-wrapper
+						.card-news.swiper-slide(data-filter="1")
+							.card-news__image
+								img(src='./img/picture/news/1.jpg', srcset='./img/picture/news/1@2x.jpg 2x', alt='')
+								time(datetime='2023-02-18') 18 <span>февраля <br> 2023</span>
+							.card-news__tag
+								a(href="") # Бензовозы
+							.card-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
+						.card-news.swiper-slide(data-filter="1")
+							.card-news__image
+								img(src='./img/picture/news/2.jpg', srcset='./img/picture/news/2@2x.jpg 2x', alt='')
+								time(datetime='2023-02-18') 15 <span>февраля <br> 2023</span>
+							.card-news__tag
+								a(href="") # Бензовозы
+							.card-news__text Fusce et quam velit. In ex ex, tempor a tincidunt nec, gravida et turpis
+						.card-news.swiper-slide(data-filter="2")
+							.card-news__image
+								img(src='./img/picture/news/3.jpg', srcset='./img/picture/news/3@2x.jpg 2x', alt='')
+								time(datetime='2023-02-18') 12 <span>февраля <br> 2023</span>
+							.card-news__tag
+								a(href="") # Бензовозы
+							.card-news__text Suspendisse eget diam rutrum, semper orci scelerisque, euismod mauris
+						.card-news.swiper-slide(data-filter="3")
+							.card-news__image
+								img(src='./img/picture/news/1.jpg', srcset='./img/picture/news/1@2x.jpg 2x', alt='')
+								time(datetime='2023-02-18') 18 <span>февраля <br> 2023</span>
+							.card-news__tag
+								a(href="") # Бензовозы
+							.card-news__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis in velit suscipit convallis.
+						.card-news.swiper-slide(data-filter="3")
+							.card-news__image
+								img(src='./img/picture/news/2.jpg', srcset='./img/picture/news/2@2x.jpg 2x', alt='')
+								time(datetime='2023-02-18') 15 <span>февраля <br> 2023</span>
+							.card-news__tag
+								a(href="") # Бензовозы
+							.card-news__text Fusce et quam velit. In ex ex, tempor a tincidunt nec, gravida et turpis
+					.news__nav-extended.nav-extended
+						.nav-extended__group
+							.nav-extended__pagi
+							a.nav-extended__link(href='#', target='_blank') Посмотреть все
+						.nav-extended__nav.d-none-flex-mobile
+							.swiper-btn.swiper-btn--prev
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#8F9190' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#8F9190')
+							.swiper-btn.swiper-btn--next
+								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
+									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#1F2120' stroke-width='1.5')
+									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#1F2120')
+
+
+
+
+		//.header-news-page
 			.container
 				.header-news-page__row
 					.items-news-page__arrows.items-news-page__arrows-mob
@@ -149,7 +236,7 @@ block content
 						li.header-news-page__button
 							a(href='') Публикации
 
-		.items-news-page
+		//.items-news-page
 			.container
 				.items-news-page__row
 					.items-news-page__item.card-item
