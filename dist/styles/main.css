@@ -5387,6 +5387,33 @@ a {
   color: #4c4e4d;
 }
 
+.footer__logo svg {
+  height: auto;
+}
+
+.pagination-item--backend-disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.pagination-active-item--backend-disabled {
+  pointer-events: none;
+}
+
+.property-list-new__hidemob {
+  margin-top: -1px;
+}
+
+.detailed-page-arrow-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.photogalary__swiper-container--no-margin {
+  margin: 0;
+  margin-left: -15px;
+}
+
 .h1 {
   text-transform: uppercase;
 }
@@ -12426,6 +12453,10 @@ section.leasing {
 }
 
 @media only screen and (min-width: 1280px) {
+  .company__col:first-child {
+    padding: 80px 0 64px;
+  }
+
   .main-page .container--options-tabs-content {
     max-width: 100%;
     width: 100%;
@@ -12984,6 +13015,10 @@ section.leasing {
 
   .guaranty__item {
     padding: 32px 26px;
+  }
+
+  .main-page .gallery__container {
+    padding-top: 96px;
   }
 
   .main-page .container {
