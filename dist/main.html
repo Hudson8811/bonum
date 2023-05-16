@@ -311,51 +311,79 @@
           </div>
         </div>
       </section>
-      <section class="photogalary gallery">
-        <div class="photogalary__swiper-container">
+      <section class="gallery">
+        <div class="gallery__container">
           <div class="container">
-            <div class="title">Фотогалерея</div>
-            <div class="photogalary__swiper swiper">
-              <div class="swiper-btn swiper-btn--prev">
-                <svg width="44" height="88" viewBox="0 0 44 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#FFFFFF" stroke-width="2"></path>
-                  <path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#FFFFFF"></path>
-                </svg>
-              </div>
-              <div class="swiper-btn swiper-btn--next">
-                <svg width="44" height="88" viewBox="0 0 44 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#FFFFFF" stroke-width="2"></path>
-                  <path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#FFFFFF"></path>
-                </svg>
-              </div>
-              <div class="swiper-wrapper">
-                <div class="photogalary__slide swiper-slide">
-                  <div class="photogalary__img photogalary__img--wide">
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-1.jpg" alt="alt"></div>
+            <h2 class="gallery__title">Фотогалерея</h2>
+          </div>
+          <div class="photogalary__swiper-container photogalary__swiper-container--no-margin">
+            <div class="container">
+              <div class="photogalary__swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="photogalary__slide swiper-slide">
+                    <div class="photogalary__img photogalary__img--wide"><a class="photogalary__img-inner" href="img/picture/gallery-slider-1.jpg" data-fancybox="gallery3376"><img src="img/picture/gallery-slider-1.jpg" srcset="img/picture/gallery-slider-1.jpg 2x" alt=""></a></div>
+                  </div>
+                  <div class="photogalary__slide swiper-slide">
+                    <div class="photogalary__img photogalary__img--double"><a class="photogalary__img-inner" href="img/picture/gallery-slider-1.jpg" data-fancybox="gallery3376"><img src="img/picture/gallery-slider-1.jpg" srcset="img/picture/gallery-slider-1.jpg 2x" alt=""></a><a class="photogalary__img-inner" href="img/picture/gallery-slider-1.jpg" data-fancybox="gallery3376"><img src="img/picture/gallery-slider-1.jpg" srcset="img/picture/gallery-slider-1.jpg 2x" alt=""></a></div>
+                  </div>
+                  <div class="photogalary__slide swiper-slide">
+                    <div class="photogalary__img photogalary__img--narrow"><a class="photogalary__img-inner" href="img/picture/gallery-slider-1.jpg" data-fancybox="gallery3376"><img src="img/picture/gallery-slider-1.jpg" srcset="img/picture/gallery-slider-1.jpg 2x" alt=""></a></div>
                   </div>
                 </div>
-                <div class="photogalary__slide swiper-slide">
-                  <div class="photogalary__img photogalary__img--double">
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-1.jpg" alt="alt"></div>
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-3.jpg" alt="alt"></div>
-                  </div>
+                <div class="swiper-btn swiper-btn--prev">
+                  <svg width="44" height="88" viewBox="0 0 44 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#FFFFFF"></path>
+                  </svg>
                 </div>
-                <div class="photogalary__slide swiper-slide">
-                  <div class="photogalary__img photogalary__img--narrow">
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-4.jpg" alt="alt"></div>
-                  </div>
-                </div>
-                <div class="photogalary__slide swiper-slide">
-                  <div class="photogalary__img photogalary__img--double">
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-1.jpg" alt="alt"></div>
-                    <div class="photogalary__img-inner"><img src="./img/picture/gallery-slider-1.jpg" alt="alt"></div>
-                  </div>
+                <div class="swiper-btn swiper-btn--next">
+                  <svg width="44" height="88" viewBox="0 0 44 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#FFFFFF"></path>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!--section.photogalary.gallery
+      .photogalary__swiper-container
+      	.container
+      		.title Фотогалерея
+      		.photogalary__swiper.swiper
+      			.swiper-btn.swiper-btn--prev
+      				svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+      					path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+      					path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+      			.swiper-btn.swiper-btn--next
+      				svg(width='44' height='88' viewBox='0 0 44 88' fill='none' xmlns='http://www.w3.org/2000/svg')
+      					path(d='M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592' stroke='#FFFFFF' stroke-width='2')
+      					path(d='M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z' fill='#FFFFFF')
+      			.swiper-wrapper
+      				.photogalary__slide.swiper-slide
+      					.photogalary__img.photogalary__img--wide
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-1.jpg", alt="alt")
+      				.photogalary__slide.swiper-slide
+      					.photogalary__img.photogalary__img--double
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-1.jpg", alt="alt")
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-3.jpg", alt="alt")
+      				.photogalary__slide.swiper-slide
+      					.photogalary__img.photogalary__img--narrow
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-4.jpg", alt="alt")
+      				.photogalary__slide.swiper-slide
+      					.photogalary__img.photogalary__img--double
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-1.jpg", alt="alt")
+      						.photogalary__img-inner
+      							img(src="./img/picture/gallery-slider-1.jpg", alt="alt")
+      
+      
+      -->
       <section class="property">
         <div class="container">
           <h2 class="property__title">Технические характеристики</h2>
@@ -819,7 +847,12 @@
               </div>
             </section>
           </div>
-          <div class="options--tabs-content" data-tab-content="2">Конструкция цистерны</div>
+          <div class="options--tabs-content" data-tab-content="2">
+            <div class="options-equipment">
+              <div class="options-equipment--title options--tabs-content--title">Конструкция цистерны</div>
+              <div class="normal-text-editor">Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.</div>
+            </div>
+          </div>
           <div class="options--tabs-content" data-tab-content="3">
             <section class="options-additional options--tabs-content--item">
               <div class="options-additional--title options--tabs-content--title">Дополнительные опции</div>
@@ -900,8 +933,18 @@
               -->
             </section>
           </div>
-          <div class="options--tabs-content" data-tab-content="4">Как купить</div>
-          <div class="options--tabs-content" data-tab-content="5">Гарантия и сервис</div>
+          <div class="options--tabs-content" data-tab-content="4">
+            <div class="options-equipment">
+              <div class="options-equipment--title options--tabs-content--title">Как купить</div>
+              <div class="normal-text-editor">Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.</div>
+            </div>
+          </div>
+          <div class="options--tabs-content" data-tab-content="5">
+            <div class="options-equipment">
+              <div class="options-equipment--title options--tabs-content--title">Гарантия и сервис</div>
+              <div class="normal-text-editor">Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.</div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="options--mob">
