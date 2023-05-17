@@ -9768,6 +9768,26 @@ section.leasing {
 
 .content-blog {
   margin-top: 64px;
+  /*
+  h3 {
+  	margin-top: 56px;
+  	margin-bottom: 32px;
+  	font-weight: 400;
+  	font-size: 24px;
+  	line-height: 150%;
+  	color: #1F2120;
+  	@media (max-width: 768px){
+  		margin-top: 40px;
+  		margin-bottom: 24px;
+  		font-size: 16px;
+  	}
+  }
+  p {
+  	font-weight: 400;
+  	font-size: 15px;
+  	line-height: 170%;
+  	color: #4C4E4D;
+  }*/
 }
 
 .content-blog__container {
@@ -9840,20 +9860,60 @@ section.leasing {
   color: #1F2120;
 }
 
-.content-blog h3 {
+.content-blog__text-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.content-blog__text-block h2 {
   margin-top: 56px;
-  margin-bottom: 32px;
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
   color: #1F2120;
 }
 
-.content-blog p {
+.content-blog__text-block h2 + * {
+  margin-top: 32px;
+}
+
+.content-blog__text-block p {
   font-weight: 400;
   font-size: 15px;
   line-height: 170%;
   color: #4C4E4D;
+}
+
+.content-blog__text-block ul {
+  list-style: inside;
+}
+
+.content-blog__text-block ul li {
+  margin-top: 15px;
+}
+
+.content-blog__text-block ul li:first-child {
+  margin: 0;
+}
+
+.content-blog__text-block p + p,
+.content-blog__text-block p + ul,
+.content-blog__text-block p + ol,
+.content-blog__text-block p + img,
+.content-blog__text-block img + p,
+.content-blog__text-block img + ul,
+.content-blog__text-block img + ol,
+.content-blog__text-block img + img,
+.content-blog__text-block ul + p,
+.content-blog__text-block ul + ul,
+.content-blog__text-block ul + ol,
+.content-blog__text-block ul + img,
+.content-blog__text-block ol + p,
+.content-blog__text-block ol + ul,
+.content-blog__text-block ol + ol,
+.content-blog__text-block ol + img {
+  margin-top: 25px;
 }
 
 .content-blog ul {
@@ -15506,10 +15566,40 @@ section.leasing {
     display: none;
   }
 
-  .content-blog h3 {
+  .content-blog__text-block h2 {
     margin-top: 40px;
-    margin-bottom: 24px;
     font-size: 16px;
+  }
+
+  .content-blog__text-block h2 + * {
+    margin-top: 24px;
+  }
+
+  .content-blog__text-block p {
+    font-size: 13px;
+  }
+
+  .content-blog__text-block ul li {
+    font-size: 13px;
+  }
+
+  .content-blog__text-block p + p,
+  .content-blog__text-block p + ul,
+  .content-blog__text-block p + ol,
+  .content-blog__text-block p + img,
+  .content-blog__text-block img + p,
+  .content-blog__text-block img + ul,
+  .content-blog__text-block img + ol,
+  .content-blog__text-block img + img,
+  .content-blog__text-block ul + p,
+  .content-blog__text-block ul + ul,
+  .content-blog__text-block ul + ol,
+  .content-blog__text-block ul + img,
+  .content-blog__text-block ol + p,
+  .content-blog__text-block ol + ul,
+  .content-blog__text-block ol + ol,
+  .content-blog__text-block ol + img {
+    margin-top: 22px;
   }
 
   .content-blog__banner {
