@@ -67,6 +67,36 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
     .slider {
         .slider-top {
+            position: relative;
+            width: 100%;
+            display: block;
+            overflow: hidden;                    
+            &--left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(-50%, 60%) scale(0.8);
+                filter: blur(5px);
+                @media (max-width: 1400px)  {
+                    transform: translate(-50%, 43%) scale(0.5);
+                }                
+                @media (max-width: 1023px)  {
+                    display: none;
+                }                
+            }
+            &--right {
+                position: absolute;
+                top: 0;
+                right:0;
+                transform: translate(50%, 60%) scale(0.8);
+                filter: blur(5px);
+                @media (max-width: 1400px)  {
+                    transform: translate(50%, 43%) scale(0.5);
+                }  
+                @media (max-width: 1023px)  {
+                    display: none;
+                }                 
+            }
             &--buttons {
                 position: relative;
                 display: flex;
@@ -92,23 +122,22 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     }
                 }
 
-                .company__button {
+                .button {
+                    min-height: 53px;
                     @include max(sm) {
-                        width: 100%;
-                        margin-top: 0;
+                        min-height: 41px;
                     }
                 }
             }
 
             &--nav {
                 position: absolute;
-					 z-index: 9;
+				z-index: 9;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                top: 50%;
-
+                top: 52%;
                 @include max(xs) {
                     top: 45%;
                 }
@@ -125,7 +154,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
                     svg {
                         @include max(sm) {
-                            width: 50%;
+                            width: 40%;
                             height: auto;
                         }
 
@@ -141,7 +170,15 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     padding-bottom: 48px;
                     position: relative;
 
-                    @include max(lg) {
+                    @media (max-width: 1919px) {
+                        max-width: 866px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    @media (max-width: 1400px) {
+                        max-width: 664px;
+                        margin-left: auto;
+                        margin-right: auto;
                         padding-top: 56px;
                         padding-bottom: 40px;
                     }
@@ -152,7 +189,10 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         text-align: center;
                         color: $black;
                         transition: $animation;
-
+                        @media (max-width: 1400px) {
+                            font-size: 40px;
+                            line-height: 60px;
+                        }
                         @include max(xs) {
                             font-size: 20px;
                             line-height: 16px;
@@ -177,6 +217,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                             font-size: 16px;
                             font-weight: 300;
                             line-height: 24px;
+                            margin-bottom: 30px;
                         }
                     }
 
@@ -184,6 +225,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         max-width: 866px;
                         width: 100%;
                         margin: 0 auto;
+
                     }
                 }
             }
@@ -230,8 +272,8 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     display: flex;
                     align-items: flex-start;
                     width: auto;
-                    padding-right: 74px;
-                    margin-right: 74px;
+                    padding-right: 64px;
+                    margin-right: 64px;
 
                     @media (max-width: 1440px) {
                         flex-flow: column nowrap;
@@ -252,12 +294,12 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         margin-bottom: 42px;
                         max-width: 49%;
                     }
-						  @media (max-width: 389px){
-								width: 100%;
-								margin-right: 0!important;
-								padding-right: 0!important;
-								border: none!important;
-						  }
+                    // @media (max-width: 389px){
+                    //     width: 100%;
+                    //     margin-right: 0!important;
+                    //     padding-right: 0!important;
+                    //     border: none!important;
+                    // }
 
                     &:nth-child(2n - 1) {
                         @include max(sm) {
@@ -302,6 +344,10 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
                     @media (max-width: 1440px) {
                         margin-right: 0;
+                    }
+                    @include max(lg) {
+                        width: 48px;
+                        height: 48px;
                     }
                 }
 
@@ -507,11 +553,15 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             }
         }
 
-        .company__col {
+        .company__wrapper .company__col {
             &:first-child {
                 margin-right: 142px;
-                width: 50%;
-
+                width: 45%;
+                padding-top: 35px;
+                padding-bottom: 15px;
+                .h1 {
+                    text-transform: none;
+                }
                 @include max(lg) {
                     margin-right: 42px;
                     padding-top: 35px;
@@ -566,7 +616,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             }
 
             &:last-child {
-                width: 50%;
+                width: 55%;
 
                 @include max(sm) {
                     display: block;
@@ -717,7 +767,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 line-height: 150%;
                 text-transform: uppercase;
                 color: #1F2120;
-                margin-bottom: 56px;
+                margin-bottom: 46px;
             }
 
             &.active {
@@ -1361,10 +1411,15 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 border-radius: 50%;
                 margin-bottom: 32px;
                 transition: $animation;
-
+                @include max(sm) {
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 16px;
+                }
                 svg {
                     fill: #fff;
                     transition: $animation;
+
                 }
             }
 
@@ -1636,3 +1691,81 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
     }
 }
+//правки от 16.05.23
+.main-page.main-page-loc {
+    .photogalary__swiper-container {
+        margin-top: 0;
+    }
+    .spare__banner {
+        @include max(sm) {
+            padding-top: 0;
+            padding-bottom: 80px;
+        }
+        .banner__title {
+            text-transform: none;
+        }
+    }
+    .gallery__container{
+        @include max(sm) {
+            padding-top: 52px;
+         }
+    }
+    .property__title {
+        margin-bottom: 40px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #1F2120;
+    }
+}
+
+.gallery.gallery--main {
+    .gallery__title {
+        @include max(lg) {
+            margin-bottom: 0;
+        }
+    }
+    .photogalary__slide {
+        min-height: 630px;
+        @include max(lg) {
+            min-height: 384px;
+        }
+        @media (max-width: 768px) {
+            min-height: 200px;
+        }
+        .photogalary__img--wide {
+            width: 866px;
+            @include max(lg) {
+                width: 528px;
+            }
+            @media (max-width: 768px) {
+                width: 265px;
+            }
+        }
+        .photogalary__img--double {
+            width: 418px;
+            @include max(lg) {
+                width: 252px;
+            }
+            @media (max-width: 768px) {
+                width: 122px;
+            }
+        }
+    }
+    .photogalary__swiper {
+        @include max(xl) {
+            margin-left: auto;
+            margin-right: auto;           
+        }
+        @include max(lg) {
+           margin-top: 52px;
+        }
+        @include max(sm) {
+            padding-bottom: 0px !important;
+         }
+    }
+
+}
+//правки от 16.05.23

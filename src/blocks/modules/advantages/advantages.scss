@@ -124,7 +124,8 @@
 		}
 
 		@include max(sm) {
-			height: 600px;
+			// height: 600px;
+			height: 480px;
 			margin-left: 60px;
 			margin-right: -16px;
 		}
