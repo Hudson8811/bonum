@@ -3382,10 +3382,6 @@ body {
   color: #1f2120;
 }
 
-*::-webkit-scrollbar {
-  display: none;
-}
-
 * {
   box-sizing: border-box;
 }
