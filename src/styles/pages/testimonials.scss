@@ -26,14 +26,35 @@
 			display: block;
 		}
 	}
-	.h1 {
-		@media (max-width: 391px){
-			font-size: 20px;
+	.testimonials--subtitle.h1 {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 48px;
+		line-height: 150%;
+		color: #1F2120;
+		margin-bottom: 40px;
+		margin-top: 0;
+
+		@include max(sm) {
+				font-weight: 300;
+				font-size: 20px;
+				line-height: 150%;
+				margin-bottom: 32px;
+				margin-top: 0;
 		}
 	}
-	.title {
-		@media (max-width: 391px){
-			font-size: 13px;
+	.title.testimonials--title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: #1F2120;
+		margin-bottom: 64px;
+		@include max(sm) {
+				font-size: 13px;
+				line-height: 150%;
+				margin-bottom: 36px;
 		}
 	}
 	h3 {

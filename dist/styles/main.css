@@ -3389,7 +3389,6 @@ body {
 * {
   box-sizing: border-box;
   -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 a {
@@ -11176,6 +11175,25 @@ section.leasing {
   display: none;
 }
 
+.partners .partners__content--subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 150%;
+  color: #1F2120;
+  margin-bottom: 70px;
+}
+
+.partners .partners__content--title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1F2120;
+  margin-bottom: 64px;
+}
+
 .partners h3 {
   font-weight: 400;
   font-size: 24px;
@@ -11202,7 +11220,6 @@ section.leasing {
 }
 
 .partners__row {
-  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -11369,6 +11386,26 @@ section.leasing {
   display: none;
 }
 
+.testimonials .testimonials--subtitle.h1 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 150%;
+  color: #1F2120;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.testimonials .title.testimonials--title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1F2120;
+  margin-bottom: 64px;
+}
+
 .testimonials h3 {
   font-weight: 400;
   font-size: 24px;
@@ -11471,6 +11508,10 @@ section.leasing {
   padding-bottom: 136px;
 }
 
+.catalog-page .spare__banner .banner__title {
+  text-transform: none;
+}
+
 .catalog-page--title {
   font-style: normal;
   font-weight: 600;
@@ -11487,7 +11528,7 @@ section.leasing {
   font-size: 48px;
   line-height: 150%;
   color: #1F2120;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
 }
 
 .catalog-page .catalog {
@@ -11537,6 +11578,7 @@ section.leasing {
   align-items: flex-start;
   flex-flow: column nowrap;
   width: 48%;
+  padding-bottom: 18px;
 }
 
 .catalog-page .catalog__item--title {
@@ -11545,7 +11587,8 @@ section.leasing {
   font-size: 24px;
   line-height: 150%;
   color: #1F2120;
-  margin-bottom: 48px;
+  padding-top: 10px;
+  margin-bottom: 38px;
 }
 
 .catalog-page .catalog__item--desc {
@@ -11596,7 +11639,7 @@ section.leasing {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  margin-top: 48px;
+  margin-top: 30px;
 }
 
 .catalog-page .catalog__item--buttons .button--order {
@@ -11760,6 +11803,10 @@ section.leasing {
   animation-fill-mode: forwards;
 }
 
+.side-bar .accordions .accordion__content {
+  padding-left: 32px;
+}
+
 .side-bar .accordions .accordion__content a {
   position: relative;
   display: inline-block;
@@ -11770,10 +11817,17 @@ section.leasing {
   font-size: 15px;
   line-height: 150%;
   color: #4C4E4D;
+  min-height: 40px;
+  transition: all 0.3s;
+}
+
+.side-bar .accordions .accordion__content a:hover {
+  transition: all 0.3s;
+  color: #1F2120;
 }
 
 .side-bar .accordions .accordion__content a:last-child {
-  padding-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .side-bar .accordions .accordion.accordion__active .accordion__intro .accordion__intro__img {
@@ -11785,7 +11839,7 @@ section.leasing {
 }
 
 .side-bar .accordions .accordion.accordion__active .accordion__content {
-  padding-top: 6px;
+  margin-top: -15px;
   padding-left: 32px;
   border-bottom: 1px solid #E3E3E3;
 }
@@ -13350,6 +13404,7 @@ section.leasing {
     flex: 0 0 50%;
     max-width: calc(50% - 24px);
     margin-left: 24px;
+    justify-content: space-between;
   }
 
   .catalog-page .catalog__item--picture {
@@ -14073,7 +14128,7 @@ section.leasing {
   }
 
   .side-bar .accordions .accordion__content a:last-child {
-    padding-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .side-bar .accordions .accordion.accordion__active .accordion__content {
@@ -16062,10 +16117,6 @@ section.leasing {
     margin: -16px -8px 0;
   }
 
-  .partners__row {
-    margin-top: 32px;
-  }
-
   .partners .item-partners__column {
     padding: 32px;
   }
@@ -17416,15 +17467,47 @@ section.leasing {
     padding: 50px 0 54px;
   }
 
+  .partners .partners__content--subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 25px;
+  }
+
+  .partners .partners__content--title {
+    font-size: 13px;
+    line-height: 150%;
+    margin-bottom: 36px;
+  }
+
+  .testimonials .testimonials--subtitle.h1 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
+
+  .testimonials .title.testimonials--title {
+    font-size: 13px;
+    line-height: 150%;
+    margin-bottom: 36px;
+  }
+
   .catalog-page {
     padding-top: 24px;
     padding-bottom: 56px;
   }
 
+  .catalog-page .spare__banner {
+    padding-top: 0;
+    padding-bottom: 80px;
+  }
+
   .catalog-page--title {
     font-size: 13px;
     line-height: 150%;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 
   .catalog-page--subtitle {
@@ -17432,6 +17515,14 @@ section.leasing {
     font-size: 20px;
     line-height: 150%;
     margin-bottom: 32px;
+  }
+
+  .catalog-page .catalog__item--picture {
+    margin-bottom: 22px;
+  }
+
+  .catalog-page .catalog__item--buttons {
+    margin-top: 22px;
   }
 
   .catalog-page .video-content--title {
@@ -17788,27 +17879,11 @@ section.leasing {
     font-size: 13px;
   }
 
-  .partners .h1 {
-    font-size: 20px;
-  }
-
-  .partners .title {
-    font-size: 13px;
-  }
-
   .achievements .h1 {
     font-size: 20px;
   }
 
   .achievements .title {
-    font-size: 13px;
-  }
-
-  .testimonials .h1 {
-    font-size: 20px;
-  }
-
-  .testimonials .title {
     font-size: 13px;
   }
 }
