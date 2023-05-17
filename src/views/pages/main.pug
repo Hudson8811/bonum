@@ -9,19 +9,24 @@ block content
 	include ../../blocks/modules/header/header
 	//- include ../../blocks/modules/breakpoints/breakpoints
 
-	.main-page
+	.main-page.main-page-loc
 
 		section.slider
 			.slider-top
+				.slider-top--left 
+					img(src="./img/picture/slider-top-1.png", alt="").slider-top__slide-img
+				.slider-top--right
+					img(src="./img/picture/slider-top-1.png", alt="").slider-top__slide-img
 				.container
 					.slider-top__top
 						.slider-top__slide
 							.slider-top__slide-title Бензовоз 30 м<sup>3
 							.slider-top__slide-text 914210
 							img(src="./img/picture/slider-top-1.png", alt="").slider-top__slide-img
+
 							.slider-top--buttons
-								+button('заказать', 'button--small button--inverse company__button slider-top--buttons__order', '#')
-								+button('получить прайс', 'button--small button--outline-inverse company__button', '#')
+								+button('заказать', 'button--small button--inverse  slider-top--buttons__order', '#')
+								+button('получить прайс', 'button--small button--outline-inverse ', '#')
 							.slider-top--nav
 								.slider-top--prev
 									<svg width="44" height="88" viewBox="0 0 44 88" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,6 +38,7 @@ block content
 									<path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#1F2120" stroke-width="2"/>
 									<path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#1F2120"/>
 									</svg>
+
 			.slider-info
 				.container
 					ul.slider-info__slide-wrap
@@ -69,7 +75,7 @@ block content
 								.slider-info__slide-title Снаряженная масса
 								.slider-info__slide-text от 7 100 кг
 
-		section.gallery
+		section.gallery.gallery--main
 			.gallery__container
 				.container
 					h2.gallery__title Фотогалерея
@@ -80,6 +86,17 @@ block content
 								.photogalary__slide.swiper-slide
 									.photogalary__img.photogalary__img--wide
 										a.photogalary__img-inner(href='img/picture/gallery-slider-1.jpg' data-fancybox='gallery3376')
+											img(src='img/picture/gallery-slider-1.jpg' srcset='img/picture/gallery-slider-1.jpg 2x' alt='')
+								.photogalary__slide.swiper-slide
+									.photogalary__img.photogalary__img--double
+										a.photogalary__img-inner(href='img/picture/gallery-slider-1.jpg' data-fancybox='gallery3376')
+											img(src='img/picture/gallery-slider-1.jpg' srcset='img/picture/gallery-slider-1.jpg 2x' alt='')
+										a.photogalary__img-inner(href='img/picture/gallery-slider-1.jpg' data-fancybox='gallery3376')
+											img(src='img/picture/gallery-slider-1.jpg' srcset='img/picture/gallery-slider-1.jpg 2x' alt='')
+								.photogalary__slide.swiper-slide
+									.photogalary__img.photogalary__img--narrow
+										a.photogalary__img-inner(href='img/picture/gallery-slider-1.jpg' data-fancybox='gallery3376')
+											img(src='img/picture/gallery-slider-1.jpg' srcset='img/picture/gallery-slider-1.jpg 2x' alt='')
 											img(src='img/picture/gallery-slider-1.jpg' srcset='img/picture/gallery-slider-1.jpg 2x' alt='')
 								.photogalary__slide.swiper-slide
 									.photogalary__img.photogalary__img--double
@@ -147,9 +164,11 @@ block content
 					ul.property-list-new.property-list-new--4-in-row
 						li.property__item
 							.property__item-icon
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M20.922 7.615C20.871 7.493 20.797 7.383 20.705 7.292L16.706 3.293C16.52 3.105 16.266 3 16 3H4C3.87 3 3.74 3.026 3.618 3.077C3.373 3.178 3.178 3.373 3.077 3.618C3.026 3.74 3 3.87 3 4V16C3 16.266 3.105 16.52 3.293 16.707L7.292 20.706C7.384 20.798 7.493 20.872 7.615 20.923C7.736 20.973 7.866 21 8 21H20C20.553 21 21 20.553 21 20V8C21 7.866 20.973 7.736 20.922 7.615ZM17.586 7H8.414L6.414 5H15.586L17.586 7ZM5 6.414L7 8.414V17.586L5 15.586V6.414Z"/>
+								<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="24" cy="24" r="24" fill="#1F2120"/>
+								<path d="M32.922 19.615C32.871 19.493 32.797 19.383 32.705 19.292L28.706 15.293C28.52 15.105 28.266 15 28 15H16C15.87 15 15.74 15.026 15.618 15.077C15.373 15.178 15.178 15.373 15.077 15.618C15.026 15.74 15 15.87 15 16V28C15 28.266 15.105 28.52 15.293 28.707L19.292 32.706C19.384 32.798 19.493 32.872 19.615 32.923C19.736 32.973 19.866 33 20 33H32C32.553 33 33 32.553 33 32V20C33 19.866 32.973 19.736 32.922 19.615ZM29.586 19H20.414L18.414 17H27.586L29.586 19ZM17 18.414L19 20.414V29.586L17 27.586V18.414Z" fill="white"/>
 								</svg>
+
 							h4.property__item-title Объем цистерны
 							p.property__item-text 30м3
 						li.property__item
@@ -865,7 +884,7 @@ block content
 			.container
 				.company__wrapper
 					.company__col
-						.h1.h1--uppercase Полуприцеп битумовоз 31 куб.м. от производителя
+						.h1 Полуприцеп битумовоз 31 куб.м. от производителя
 						.company__text Pellentesque volutpat mi non urna maximus maximus eu tristique risus. Praesent nec mauris quis nulla feugiat vulputate at sit amet odio. Quisque pretium dolor et lectus placerat, eget elementum eros porta. Aenean luctus erat a metus congue, ut venenatis elit dictum. In hac habitasse platea dictumst. Ut a libero vulputate, vehicula lorem quis, eleifend tortor. Curabitur est neque, tincidunt eu placerat et, commodo a massa. Morbi facilisis felis nec arcu aliquam, ut iaculis diam gravida. Morbi hendrerit elit sed interdum elementum. In sodales at velit quis tincidunt.
 					.company__col
 						a.company__video(href='https://www.youtube.com/watch?v=tEPB7uzKuh4&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0')
@@ -875,93 +894,15 @@ block content
 
 		include ../../blocks/modules/contacts/contacts.pug
 
-		section.leasing
-			.container
-				.title акции и лизинг
-				.leasing__slider.swiper.js-leasing-slider
-					.swiper-wrapper
-						.card-leasing.card-leasing--colored.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-						.card-leasing.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-						.card-leasing.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-						.card-leasing.card-leasing--colored.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-						.card-leasing.card-leasing--colored.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от « Росагролизинг» <br> на сельхоз технику BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/1.png', srcset='./img/picture/leasing/1@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-						.card-leasing.swiper-slide
-							.card-leasing__subtitle Лизинг
-							.card-leasing__title Выгодный лизинг от «Росагролизинг» <br> на зерновозы BONUM
-							.card-leasing__image
-								img(src='./img/picture/leasing/2.png', srcset='./img/picture/leasing/2@2x.png 2x', alt='')
-							.card-leasing__bottom
-								.card-leasing__offer
-									.card-leasing__from от 0<span>%</span>
-									span на первый <br> взнос
-								img(src='./img/svg/i-arrow-link.svg', alt="")
-					.leasing__nav-extended.nav-extended
-						.nav-extended__group
-							.nav-extended__pagi
-							a.nav-extended__link(href='#', target='_blank') Посмотреть все
-						.nav-extended__nav
-							.swiper-btn.swiper-btn--prev
-								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
-									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#8F9190' stroke-width='1.5')
-									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#8F9190')
-							.swiper-btn.swiper-btn--next
-								svg(width='30' height='49' viewBox='0 0 30 49' fill='none' xmlns='http://www.w3.org/2000/svg')
-									path(d='M13 1C22.2894 4.23354 29 13.5327 29 24.5C29 35.4673 22.2894 44.7665 13 48' stroke='#1F2120' stroke-width='1.5')
-									path(d='M0 25L7.5 29.3301L7.5 20.6699L0 25ZM16 24.25L6.75 24.25L6.75 25.75L16 25.75L16 24.25Z' fill='#1F2120')
-
+		include ../../blocks/modules/leasing/leasing.pug
 		section.banner.spare__banner
 			.container.banner__container
 				.banner__wrapper
 					.banner__bg
 						img(src='./img/picture/banner.jpg', srcset='./img/picture/banner@2x.jpg 2x', alt='')
 					.banner__content
-						.h1.h1--uppercase.banner__title Ознакомьтесь с нашим каталогом полуприцепов
-						+button('в каталог', 'button--big banner__button', '#')
+						.h1.h1--uppercase.banner__title Более 320 компаний выбрали технику BONUM
+						+button('посмотреть отзывы', 'button--big banner__button', '#')
 
 
 		section.feedback

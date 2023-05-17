@@ -279,7 +279,7 @@
             width: 100%;
             margin-bottom: 96px;
             position: relative;
-            padding-bottom: 75%;
+            padding-bottom: 56.25%;
 
             @include max(sm) {
                 padding-top: 0;
@@ -616,7 +616,6 @@
                 padding: 24px;
             }
 
-
             p {
                 font-family: 'ZonaPro';
                 font-style: normal;
@@ -672,8 +671,28 @@
         }
 
         .accordion__content {
-            width: 100%;
+            p {
+                position: relative;
+                display: inline-block;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 170%;
+                text-align: left;
+                color: #1F2120;
+                padding-top: 42px;
+                padding-bottom: 42px;
+                padding-right: 142px;
+                padding-left: 64px;
 
+                @include max(sm) {
+                    padding: 24px;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 150%;
+                }
+            }
             a {
                 position: relative;
                 display: inline-block;
