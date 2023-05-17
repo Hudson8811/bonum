@@ -17724,6 +17724,14 @@ section.leasing {
 }
 
 @media (max-width: 390px) {
+  .main-page .slider .slider-top--buttons {
+    margin-top: -10px;
+  }
+
+  .main-page .slider .slider-top--nav {
+    top: 42%;
+  }
+
   .centers .h1 {
     font-size: 20px;
   }

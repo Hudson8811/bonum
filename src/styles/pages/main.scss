@@ -108,6 +108,9 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     margin-left: auto;
                     margin-right: auto;
                 }
+                @media (max-width: 390px){
+                    margin-top: -10px;
+                }
 
                 &__order {
                     margin-right: 64px;
@@ -140,6 +143,9 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 top: 52%;
                 @include max(xs) {
                     top: 45%;
+                }
+                @media (max-width: 390px){
+                    top: 42%;
                 }
 
                 .slider-top--next {
