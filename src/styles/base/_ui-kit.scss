@@ -102,7 +102,31 @@ a {
 		}
 	}
 }
+// .container {
+// 	box-sizing: border-box;
+// 	width: 1346px;
+// 	max-width: 95%;
+// 	// max-width: calc(100% - 32px * 2);
+// 	margin: 0 auto;
 
+// 	@include max(lg) {
+// 		//1024
+// 		width: 1168px;
+// 		max-width: calc(100% - 110px * 2);
+// 	}
+// 	@media (max-width: 1023) {
+// 		max-width: calc(100% - 20px * 2);
+// 	}
+// 	@include max(md) {
+// 		//640
+// 		max-width: calc(100% - 20px * 2);
+// 	}
+
+// 	@include max(sm) {
+// 		//375
+// 		max-width: calc(100% - 16px * 2);
+// 	}
+// }
 /* Swiper */
 .swiper-btn {
 	cursor: pointer;

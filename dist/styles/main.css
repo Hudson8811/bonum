@@ -11281,6 +11281,26 @@ section.leasing {
   display: none;
 }
 
+.achievements--subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 150%;
+  color: #1F2120;
+  margin-bottom: 60px;
+  margin-top: 0;
+}
+
+.achievements--title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #1F2120;
+  margin-bottom: 64px;
+}
+
 .achievements h3 {
   font-weight: 400;
   font-size: 24px;
@@ -11310,11 +11330,27 @@ section.leasing {
   margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .achievements__item {
   flex: 0 1 50%;
   padding: 30px 15px 0;
+  display: flex;
+  transition: all 0.3s;
+}
+
+.achievements__item .item-achievements__icon {
+  filter: grayscale(1);
+}
+
+.achievements__item:hover {
+  transition: all 0.3s;
+}
+
+.achievements__item:hover .item-achievements__icon {
+  transition: all 0.3s;
+  filter: grayscale(0);
 }
 
 .achievements .item-achievements__column {
@@ -11322,7 +11358,8 @@ section.leasing {
   background: #F8F8F8;
   display: flex;
   flex-direction: column;
-  padding: 40px 48px;
+  padding: 48px;
+  min-height: 340px;
 }
 
 .achievements .item-achievements__title {
@@ -11352,8 +11389,8 @@ section.leasing {
 }
 
 .achievements .item-achievements__text {
-  margin-top: 24px;
-  padding-top: 24px;
+  margin-top: 39px;
+  padding-top: 32px;
   border-top: 1px solid #E3E3E3;
   font-weight: 400;
   font-size: 15px;
@@ -11387,7 +11424,7 @@ section.leasing {
   font-size: 48px;
   line-height: 150%;
   color: #1F2120;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   margin-top: 0;
 }
 
@@ -11427,7 +11464,6 @@ section.leasing {
 }
 
 .testimonials__row {
-  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -11447,10 +11483,12 @@ section.leasing {
 }
 
 .testimonials .item-testimonials__date {
+  font-family: "ZonaPro";
+  font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 150%;
-  color: #1F2120;
+  color: #565B59;
 }
 
 .testimonials .item-testimonials__img {
@@ -16159,6 +16197,11 @@ section.leasing {
 
   .achievements__row {
     margin-top: 32px;
+    align-items: flex-start;
+  }
+
+  .achievements__item .item-achievements__icon {
+    filter: grayscale(0);
   }
 
   .achievements__item {
@@ -16167,6 +16210,8 @@ section.leasing {
 
   .achievements .item-achievements__column {
     padding: 32px;
+    min-height: auto;
+    width: 100%;
   }
 
   .achievements .item-achievements__title {
@@ -16214,21 +16259,19 @@ section.leasing {
     margin: -16px -8px 0;
   }
 
-  .testimonials__row {
-    margin-top: 32px;
-  }
-
   .testimonials .item-testimonials__column {
-    padding: 32px;
+    padding: 32px 41px;
   }
 
   .testimonials .item-testimonials__date {
-    font-size: 15px;
+    font-size: 13px;
+    line-height: 150%;
+    color: #565B59;
   }
 
   .testimonials .item-testimonials__text {
-    margin-top: 16px;
-    padding-top: 16px;
+    margin-top: 24px;
+    padding-top: 10px;
     font-size: 12px;
   }
 
@@ -17475,11 +17518,25 @@ section.leasing {
     margin-bottom: 36px;
   }
 
+  .achievements--subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+
+  .achievements--title {
+    font-size: 13px;
+    line-height: 150%;
+    margin-bottom: 36px;
+  }
+
   .testimonials .testimonials--subtitle.h1 {
     font-weight: 300;
     font-size: 20px;
     line-height: 150%;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     margin-top: 0;
   }
 
@@ -17871,14 +17928,6 @@ section.leasing {
   }
 
   .vacancy-single .title {
-    font-size: 13px;
-  }
-
-  .achievements .h1 {
-    font-size: 20px;
-  }
-
-  .achievements .title {
     font-size: 13px;
   }
 }
