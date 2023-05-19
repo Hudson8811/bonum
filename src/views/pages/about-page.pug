@@ -7,15 +7,17 @@ block variables
 block content
 	include ../../blocks/modules/header/header
 
+
+	.breakpoints
+		.breakpoints__container.container-new
+			ul.breakpoints__list
+				li.breakpoints__item
+					a(href='#').breakpoints__text Главная
+				li.breakpoints__item
+					span.breakpoints__text О заводе
+
 	.about-page
 		section.hero-about-page
-			.breakpoints
-				.breakpoints__container
-					ul.breakpoints__list
-						li.breakpoints__item
-							a(href='#').breakpoints__text Главная
-						li.breakpoints__item
-							span.breakpoints__text О заводе
 			.container
 				.hero-about-page__row
 					.hero-about-page__body

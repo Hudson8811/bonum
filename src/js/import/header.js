@@ -16,6 +16,13 @@ $(document).ready(function () {
 	let lengthScrolled = 0;
 
 	$('body').css('padding-top', headerHeight + 'px');
+
+	$(window).on('resize',function(){
+		headerHeight = header.outerHeight();
+		$('body').css('padding-top', headerHeight + 'px');
+
+	});
+
 	megaMenu.css('height', `calc(100vh - ${headerHeight}px`);
 	megaMenu.find('.mega-menu__wrapper').css('min-height', `calc(100vh - ${headerHeight}px`);
 

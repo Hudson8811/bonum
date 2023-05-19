@@ -1,144 +1,147 @@
-extends ../layouts/default.pug 
-include ../helpers/mixins.pug 
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
 
-block variables 
-	- const title = "page"; 
+block variables
+	- const title = "page";
 
-block content 
-	include ../../blocks/modules/header/header 
-	
-	.centers 
+block content
+	include ../../blocks/modules/header/header
+
+
+	.breakpoints
+		.breakpoints__container.container-new
+			ul.breakpoints__list
+				li.breakpoints__item
+					a(href='#').breakpoints__text Контакты
+				li.breakpoints__item
+					span.breakpoints__text Представительства
+
+
+	.centers
 		.container
-			.breakpoints
-				.breakpoints__container
-					ul.breakpoints__list
-						li.breakpoints__item
-							a(href='#').breakpoints__text Контакты
-						li.breakpoints__item
-							span.breakpoints__text Представительства
-			.centers__content 
-				.centers__header 
-					.title Сервисные центры 
+			.centers__content
+				.centers__header
+					.title Сервисные центры
 					.centers__switcher.switcher-buttons
 						span#switcher-buttons-map.switcher-buttons__button.js-active Карта
 						span#switcher-buttons-list.switcher-buttons__button Список
-				.centers__localities.localities-centers#switcher-content-map 
-					select#localities-centers__select(name="").localities-centers__select 
-						option 
+				.centers__localities.localities-centers#switcher-content-map
+					select#localities-centers__select(name="").localities-centers__select
+						option
 						option Саратов
 						option Москва
 						.localities-centers__select-arrow
 							<svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 1.5L13 13.5L25 1.5" stroke="#4C4E4D" stroke-width="1.5"/>
 							</svg>
-					.localities-centers__buttons 
-						.localities-centers__button.localities-centers__button-active 
+					.localities-centers__buttons
+						.localities-centers__button.localities-centers__button-active
 							span Все
-						.localities-centers__button 
+						.localities-centers__button
 							span BONUM
-						.localities-centers__button 
+						.localities-centers__button
 							span WABCO
-						.localities-centers__button 
+						.localities-centers__button
 							span BPW
-						.localities-centers__button 
+						.localities-centers__button
 							span SAF
-					.localities-centers__items 
-						.localities-centers__item 
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW 
-								.localities-centers__item-loc 
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14 
-								.localities-centers__item-contact 
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map 	
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item 
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW 
-								.localities-centers__item-loc 
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14 
-								.localities-centers__item-contact 
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map 	
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item 
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW 
-								.localities-centers__item-loc 
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14 
-								.localities-centers__item-contact 
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map 	
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item 
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW 
-								.localities-centers__item-loc 
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14 
-								.localities-centers__item-contact 
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map 	
-								img(src="img/centers/map1.jpg", alt="alt")
-					.localities-centers__item-dark 
+					.localities-centers__items
 						.localities-centers__item
-							.localities-centers__item-body 
+							.localities-centers__item-body
+								.localities-centers__item-title Серпри Авто
+								.localities-centers__item-subtitle Сервисный центр BPW
+								.localities-centers__item-loc
+									span адрес:
+									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+								.localities-centers__item-contact
+									span контакты:
+									a(href="tel:8005500161") 8 800 550-01-61
+									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+							.localities-centers__item-map
+								img(src="img/centers/map1.jpg", alt="alt")
+						.localities-centers__item
+							.localities-centers__item-body
+								.localities-centers__item-title Серпри Авто
+								.localities-centers__item-subtitle Сервисный центр BPW
+								.localities-centers__item-loc
+									span адрес:
+									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+								.localities-centers__item-contact
+									span контакты:
+									a(href="tel:8005500161") 8 800 550-01-61
+									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+							.localities-centers__item-map
+								img(src="img/centers/map1.jpg", alt="alt")
+						.localities-centers__item
+							.localities-centers__item-body
+								.localities-centers__item-title Серпри Авто
+								.localities-centers__item-subtitle Сервисный центр BPW
+								.localities-centers__item-loc
+									span адрес:
+									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+								.localities-centers__item-contact
+									span контакты:
+									a(href="tel:8005500161") 8 800 550-01-61
+									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+							.localities-centers__item-map
+								img(src="img/centers/map1.jpg", alt="alt")
+						.localities-centers__item
+							.localities-centers__item-body
+								.localities-centers__item-title Серпри Авто
+								.localities-centers__item-subtitle Сервисный центр BPW
+								.localities-centers__item-loc
+									span адрес:
+									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+								.localities-centers__item-contact
+									span контакты:
+									a(href="tel:8005500161") 8 800 550-01-61
+									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+							.localities-centers__item-map
+								img(src="img/centers/map1.jpg", alt="alt")
+					.localities-centers__item-dark
+						.localities-centers__item
+							.localities-centers__item-body
 								.localities-centers__item-title Балтранс
-								.localities-centers__item-subtitle Сервисный центр WABCO  
-								.localities-centers__item-loc 
+								.localities-centers__item-subtitle Сервисный центр WABCO
+								.localities-centers__item-loc
 									span адрес:
 									p 344091,  г. Саратов, п. Бартоломей, д. 1
-								.localities-centers__item-contact 
+								.localities-centers__item-contact
 									span контакты:
 									a(href="tel:8452799993") 8 8452 79 99 93
 									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-								.localities-centers__item-contact 
+								.localities-centers__item-contact
 									span отдел продаж
-									a(href="tel:8005500161 ") 8 800 550-01-61 
+									a(href="tel:8005500161 ") 8 800 550-01-61
 									a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
-								.localities-centers__item-contact 
+								.localities-centers__item-contact
 									span отдел снабжения
 									a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
-							.localities-centers__item-map 	
+							.localities-centers__item-map
 								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item-text 
+						.localities-centers__item-text
 							p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
 							br
 							p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
 							br
 							p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
-					.localities-centers__item-onlymap 
+					.localities-centers__item-onlymap
 						.localities-centers__item
-							.localities-centers__item-map 	
+							.localities-centers__item-map
 								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item-text 
+						.localities-centers__item-text
 							p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
 							br
 							p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
 							br
 							p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
 				.centers__localities.localities-centers#switcher-content-list
-	include ../../blocks/modules/footer/footer 
+	include ../../blocks/modules/footer/footer
 
 
 
 block scripts
-	script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+	script(src="https://code.jquery.com/jquery-3.6.1.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
 	script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")
 	script(src="js/vendor.js")

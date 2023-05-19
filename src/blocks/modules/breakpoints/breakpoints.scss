@@ -4,14 +4,18 @@
 
 }
 
+
 .breakpoints {
+
+    background-color: #ffffff;
     border-bottom: 1px solid $grey-1;
 
     &__container {
-        max-width: 1920px;
+     /*   max-width: 1920px;
         width: 100%;
-        padding: 25px 303px;
         margin: 0 auto;
+        */
+        padding: 25px 0;
     }
 
     &__list {

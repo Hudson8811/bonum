@@ -32,17 +32,13 @@
 			font-size: 13px;
 		}
 	}
-	
+
 
 }
 .hero-about-page {
 	background: #F8F8F8;
 	overflow: hidden;
-	.breakpoints__container {
-		padding: 25px 16px;
-		max-width: 1346px !important;
-		margin: 0 auto;
-	}	
+
 	&__row {
 		display: flex;
 		@media (max-width: 768px){
@@ -67,7 +63,7 @@
 			@media (max-width: 768px){
 				max-width: 100%;
 			}
-		}
+		}/*
 		.breakpoints {
 			border-bottom: none;
 			padding: 16px;
@@ -76,9 +72,7 @@
 				background-color: #ffffff;
 			}
 		}
-		.breakpoints__container {
-			padding: 0;
-		}
+*/
 		.title {
 			padding-top: 64px;
 			@media (max-width: 1200px){
@@ -429,7 +423,7 @@
 					bottom: 0;
 					background: linear-gradient(0deg, rgba(31, 33, 32, 0.5), rgba(31, 33, 32, 0.5));
 				}
-	
+
 				&::after {
 					content: '';
 					position: absolute;
@@ -574,7 +568,7 @@
 			align-items: center;
 			flex-direction: column;
 		}
-		.achievements-about-page__big, 
+		.achievements-about-page__big,
 		.achievements-about-page__small {
 			margin-top: 15px;
 			margin-left: 15px;
@@ -1056,7 +1050,7 @@
 		}
 	}
 
-	
+
 	@media (max-width: 768px){
 		&__nav-mob	{
 			margin-top: 32px;
@@ -1083,7 +1077,7 @@
 				}
 			}
 			div.swiper-btns {
-					
+
 				display: flex;
 				align-items: center;
 			}
@@ -1097,7 +1091,7 @@
 				}
 			}
 		}
-		
+
 		&__swiper-pagination {
 		}
 	}
@@ -1123,7 +1117,7 @@
 		@media (max-width: 1100px){
 			max-width: calc(100% - 16px);
 			margin: 0;
-			
+
 		}
 		@media (max-width: 768px){
 			position: relative;
@@ -1143,7 +1137,7 @@
 						height: 100%;
 					}
 					&--alongnext {
-						
+
 					}
 				}
 			}
@@ -1311,7 +1305,7 @@
 		.swiper-wrapper {
 			position: relative;
 			@media (max-width: 768px){
-				
+
 			}
 			.swiper-slide {
 				@media (max-width: 1100px){

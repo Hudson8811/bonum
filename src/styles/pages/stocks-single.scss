@@ -33,12 +33,12 @@
 		}
 	}
 }
-.stocks-single-top {
+.stocks-single-top {/*
 	.breakpoints__container {
 		padding: 25px 16px;
 		max-width: 1346px !important;
 		margin: 0 auto;
-	}
+	}*/
 	&__row {
 		display: flex;
 		@media (max-width: 768px){
@@ -47,7 +47,7 @@
 	}
 	&__body {
 		flex: 0 1 calc(50% + 100px);
-		
+
 		@media (max-width: 900px){
 			flex: 1 1 100%;
 			padding: 0px;
@@ -59,7 +59,7 @@
 			@media (max-width: 768px){
 				max-width: 100%;
 			}
-		}
+		}/*
 		.breakpoints {
 			border-bottom: none;
 			padding: 16px;
@@ -70,7 +70,7 @@
 		}
 		.breakpoints__container {
 			padding: 0;
-		}
+		}*/
 		.title {
 			padding-top: 90px;
 			@media (max-width: 1200px){

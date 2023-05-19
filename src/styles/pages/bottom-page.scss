@@ -74,7 +74,7 @@
 			@media (max-width: 768px){
 				max-width: 100%;
 			}
-		}
+		}/*
 		.breakpoints {
 			border-bottom: none;
 			padding: 16px;
@@ -85,7 +85,7 @@
 		}
 		.breakpoints__container {
 			padding: 0;
-		}
+		}*/
 		.title {
 			padding-top: 70px;
 			@media (max-width: 1200px){
@@ -658,7 +658,7 @@
 		@media (max-width: 768px){
 			flex: 1 1 100%;
 		}
-		ul{ 
+		ul{
 			margin-bottom: 45px;
 			li {
 				margin-top: 45px;
@@ -696,8 +696,8 @@
 		}
 	}
 	&__num {
-		
-	} 
+
+	}
 	&__items {
 		.sec8-bottom-page__row {
 			&:nth-child(odd){

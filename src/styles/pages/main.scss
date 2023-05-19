@@ -70,7 +70,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             position: relative;
             width: 100%;
             display: block;
-            overflow: hidden;                    
+            overflow: hidden;
             &--left {
                 position: absolute;
                 top: 0;
@@ -79,10 +79,10 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 filter: blur(5px);
                 @media (max-width: 1400px)  {
                     transform: translate(-50%, 43%) scale(0.5);
-                }                
+                }
                 @media (max-width: 1023px)  {
                     display: none;
-                }                
+                }
             }
             &--right {
                 position: absolute;
@@ -92,10 +92,10 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 filter: blur(5px);
                 @media (max-width: 1400px)  {
                     transform: translate(50%, 43%) scale(0.5);
-                }  
+                }
                 @media (max-width: 1023px)  {
                     display: none;
-                }                 
+                }
             }
             &--buttons {
                 position: relative;
@@ -1763,7 +1763,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
     .photogalary__swiper {
         @include max(xl) {
             margin-left: auto;
-            margin-right: auto;           
+            margin-right: auto;
         }
         @include max(lg) {
            margin-top: 52px;
@@ -1775,3 +1775,21 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
 }
 //правки от 16.05.23
+
+
+
+
+
+.container-new{
+    width: 1314px;
+    max-width: 95%;
+    max-width: calc(100% - 110px - 110px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    @media screen and (max-width: 1020px) {
+        max-width: calc(100% - 16px - 16px);
+
+    }
+
+}
