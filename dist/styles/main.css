@@ -9336,9 +9336,17 @@ section.leasing {
   flex-wrap: wrap;
 }
 
+.items-news-page__row--news {
+  margin-bottom: -65px;
+}
+
 .items-news-page__item {
   flex: 0 1 33.333%;
   padding: 0px 15px 0;
+}
+
+.items-news-page__item--news {
+  margin-bottom: 65px;
 }
 
 .news-pagi-wrap {
@@ -9499,7 +9507,7 @@ section.leasing {
 
 .content-news-single__text-block img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -9935,7 +9943,7 @@ section.leasing {
 
 .content-blog__text-block img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -14406,8 +14414,16 @@ section.leasing {
     max-width: 600px;
   }
 
+  .items-news-page__row--news {
+    margin-bottom: -40px;
+  }
+
   .items-news-page__item {
     flex: 0 1 50%;
+  }
+
+  .items-news-page__item--news {
+    margin-bottom: 40px;
   }
 
   .vacancy-single-content__row {
