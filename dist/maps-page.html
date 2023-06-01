@@ -249,123 +249,299 @@
     <div class="maps-page">
       <div class="container">
         <div class="maps-page__content">
-          <div class="maps-page__header">
+          <div class="centers__header">
             <div class="title">Представительства</div>
-            <div class="centers__switcher switcher-buttons"><span class="switcher-buttons__button" id="switcher-buttons-map">Карта</span><span class="switcher-buttons__button js-active" id="switcher-buttons-list">Список</span></div>
+            <div class="centers__switcher switcher-buttons"><span class="js-centers-tabs-switcher switcher-buttons__button js-active">Карта</span><span class="js-centers-tabs-switcher switcher-buttons__button">Список</span></div>
           </div>
-          <div class="maps-page__localities localities-maps-page">
-            <div class="localities-maps-page__items" id="switcher-content-list">
-              <div class="blogs-header__buttons">
-                <div class="blogs-header__swiper swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a class="js-active" href="">Ростов-на-Дону</a></div>
+          <div class="maps-page__localities localities-maps-page localities-centers">
+            <div class="centers-tabs">
+              <div class="centers-tabs__tab" style="display:block;">
+                <div class="centers-map-block localities-centers__item-dark">
+                  <div class="cmb-info">
+                    <div class="cmb-info__item" id="cmb-info__item">
+                      <!--.cmb-info__item--active-->
+                      <div class="localities-centers__item-body">
+                        <div class="localities-centers__item-title js-title"></div>
+                        <div class="localities-centers__item-subtitle js-type"></div>
+                        <div class="localities-centers__item-loc"><span>адрес:</span>
+                          <p class="js-address"></p>
+                        </div>
+                        <div class="localities-centers__item-contact js-contacts-main"><span>контакты:</span></div>
+                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Москва</a></div>
+                    <!--	.localities-centers__item-body
+                    .localities-centers__item-title.js-title
+                    .localities-centers__item-subtitle.js-type Сервисный центр WABCO
+                    .localities-centers__item-loc
+                    	span адрес:
+                    	p.js-address 344091,  г. Саратов, п. Бартоломей, д. 1
+                    .localities-centers__item-contact.js-contacts-main
+                    	span контакты:
+                    	a(href="tel:8452799993") 8 8452 79 99 93
+                    	a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+                    .localities-centers__item-contact.js-contacts-other
+                    	span отдел продаж
+                    	a(href="tel:8005500161 ") 8 800 550-01-61
+                    	a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+                    .localities-centers__item-contact.js-contacts-other
+                    	span отдел снабжения
+                    	a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+                    
+                    
+                    
+                    
+                    -->
+                  </div>
+                  <div class="cmb__map" id="predstva-map"></div>
+                  <!--.localities-centers__item
+                  .localities-centers__item-body
+                  	.localities-centers__item-title Балтранс
+                  	.localities-centers__item-subtitle Сервисный центр WABCO
+                  	.localities-centers__item-loc
+                  		span адрес:
+                  		p 344091,  г. Саратов, п. Бартоломей, д. 1
+                  	.localities-centers__item-contact
+                  		span контакты:
+                  		a(href="tel:8452799993") 8 8452 79 99 93
+                  		a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+                  	.localities-centers__item-contact
+                  		span отдел продаж
+                  		a(href="tel:8005500161 ") 8 800 550-01-61
+                  		a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+                  	.localities-centers__item-contact
+                  		span отдел снабжения
+                  		a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+                  .localities-centers__item-map
+                  	img(src="img/centers/map1.jpg", alt="alt")
+                  -->
+                </div>
+                <!--.localities-centers__item-text
+                p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
+                br
+                p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
+                br
+                p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
+                
+                -->
+              </div>
+              <div class="centers-tabs__tab">
+                <div class="blogs-header__buttons">
+                  <div class="blogs-header__swiper swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll js-active" href="#city-1">Ростов-на-Дону</a></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll" href="#city-2">Москва</a></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll" href="#city-3">Казань</a></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll" href="#city-4">Воронеж</a></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll" href="#city-5">Тюмень</a></div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="blogs__button"><a class="js-smooth-scroll" href="#city-6">Новосибирск</a></div>
+                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Казань</a></div>
+                  </div>
+                </div>
+                <div class="localities-centers__items" id="maps-list">
+                  <div class="localities-maps-page__item" id="city-1">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Ростов-на-Дону</div>
+                      <div class="localities-maps-page__item-subtitle">Завод BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>344091, Ростовская область, г. Ростов-на-Дону, ул. Пескова, д. 1</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Воронеж</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Тюмень</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Новосибирск</a></div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Ростов-на-Дону</div>
-                  <div class="localities-maps-page__item-subtitle">Завод BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>344091, Ростовская область, г. Ростов-на-Дону, ул. Пескова, д. 1</p>
+                  <div class="localities-maps-page__item">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Ростовская обл.</div>
+                      <div class="localities-maps-page__item-subtitle">ЗАВОД BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>420095, Казань, Московский район, ул. Восстания, 100 к5130, оф. 403</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+                      <div class="localities-maps-page__item-contact"><span>отдел продаж</span><a href="tel:8005500161 ">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
+                      <div class="localities-maps-page__item-contact"><span>отдел снабжения</span><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
+                    </div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
+                    </div>
                   </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Ростовская обл.</div>
-                  <div class="localities-maps-page__item-subtitle">ЗАВОД BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>420095, Казань, Московский район, ул. Восстания, 100 к5130, оф. 403</p>
+                  <div class="localities-maps-page__item" id="city-2">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Москва</div>
+                      <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+                    </div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
+                    </div>
                   </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Москва</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14</p>
+                  <div class="localities-maps-page__item" id="city-3">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Казань</div>
+                      <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>420095, Казань, Московский район,ул. Восстания, 100 к5130, оф. 403</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+                    </div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
+                    </div>
                   </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Казань</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>420095, Казань, Московский район,ул. Восстания, 100 к5130, оф. 403</p>
+                  <div class="localities-maps-page__item" id="city-4">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Воронеж</div>
+                      <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>394030 г. Воронеж, пер. Бакунинский, 11, оф. 416</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+                    </div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
+                    </div>
                   </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Воронеж</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>394030 г. Воронеж, пер. Бакунинский, 11, оф. 416</p>
+                  <div class="localities-maps-page__item" id="city-5">
+                    <div class="localities-maps-page__item-body">
+                      <div class="localities-maps-page__item-title">Тюмень</div>
+                      <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
+                      <div class="localities-maps-page__item-loc"><span>адрес:</span>
+                        <p>625013, Тюмень ул. Пермякова 3Б, БЦ Старк, офис 206</p>
+                      </div>
+                      <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+                    </div>
+                    <div class="localities-maps-page__item-map">
+                      <div class="simple-map-container js-simple-point-map" data-coords="55.53239056920628,37.57343799999998"></div>
+                    </div>
                   </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
                 </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Тюмень</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>625013, Тюмень ул. Пермякова 3Б, БЦ Старк, офис 206</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
               </div>
             </div>
-            <div class="localities-maps-page__item-dark" id="switcher-content-map">
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Балтранс</div>
-                  <div class="localities-maps-page__item-subtitle">Сервисный центр WABCO</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>344091,  г. Саратов, п. Бартоломей, д. 1</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8452799993">8 8452 79 99 93</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                  <div class="localities-maps-page__item-contact"><span>отдел продаж</span><a href="tel:8005500161 ">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
-                  <div class="localities-maps-page__item-contact"><span>отдел снабжения</span><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item-text">
-                <p>Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.</p><br>
-                <p>Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.</p><br>
-                <p>Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).</p>
-              </div>
-            </div>
+            <!--#switcher-content-list.localities-maps-page__items
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Ростов-на-Дону
+            		.localities-maps-page__item-subtitle Завод BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 344091, Ростовская область, г. Ростов-на-Дону, ул. Пескова, д. 1
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Ростовская обл.
+            		.localities-maps-page__item-subtitle ЗАВОД BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 420095, Казань, Московский район, ул. Восстания, 100 к5130, оф. 403
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Москва
+            		.localities-maps-page__item-subtitle филиал BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Казань
+            		.localities-maps-page__item-subtitle филиал BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 420095, Казань, Московский район,ул. Восстания, 100 к5130, оф. 403
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Воронеж
+            		.localities-maps-page__item-subtitle филиал BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 394030 г. Воронеж, пер. Бакунинский, 11, оф. 416
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Тюмень
+            		.localities-maps-page__item-subtitle филиал BONUM
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 625013, Тюмень ул. Пермякова 3Б, БЦ Старк, офис 206
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8005500161") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            -->
+            <!--#switcher-content-map.localities-maps-page__item-dark
+            .localities-maps-page__item
+            	.localities-maps-page__item-body
+            		.localities-maps-page__item-title Балтранс
+            		.localities-maps-page__item-subtitle Сервисный центр WABCO
+            		.localities-maps-page__item-loc
+            			span адрес:
+            			p 344091,  г. Саратов, п. Бартоломей, д. 1
+            		.localities-maps-page__item-contact
+            			span контакты:
+            			a(href="tel:8452799993") 8 8452 79 99 93
+            			a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+            		.localities-maps-page__item-contact
+            			span отдел продаж
+            			a(href="tel:8005500161 ") 8 800 550-01-61
+            			a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+            		.localities-maps-page__item-contact
+            			span отдел снабжения
+            			a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+            	.localities-maps-page__item-map
+            		.simple-map-container.js-simple-point-map(data-coords="55.53239056920628,37.57343799999998")
+            .localities-maps-page__item-text
+            	p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
+            	br
+            	p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
+            	br
+            	p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
+            
+            -->
           </div>
         </div>
       </div>
@@ -469,6 +645,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+    <script async src="https://api-maps.yandex.ru/2.1/?apikey=836eadca-bd0f-4ad6-acb9-f8521d8866e1&amp;load=package.full&amp;lang=ru-RU&amp;onload=getYaMap" type="text/javascript"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

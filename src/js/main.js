@@ -8,3 +8,5 @@
 @@include("./import/modules.js")
 @@include("./import/components.js")
 @@include("./import/new-script-pages.js")
+
+@@include("./import/maps.js")

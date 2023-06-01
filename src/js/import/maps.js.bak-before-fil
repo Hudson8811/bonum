@@ -1,0 +1,457 @@
+/*
+
+var $json = {
+	"type": "FeatureCollection",
+	"features": [
+		{ "type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [55.831903, 37.411961] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 1, "geometry": { "type": "Point", "coordinates": [55.763338, 37.565466] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 2, "geometry": { "type": "Point", "coordinates": [55.763338, 37.565466] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 3, "geometry": { "type": "Point", "coordinates": [55.744522, 37.616378] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 4, "geometry": { "type": "Point", "coordinates": [55.780898, 37.642889] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 5, "geometry": { "type": "Point", "coordinates": [55.793559, 37.435983] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 6, "geometry": { "type": "Point", "coordinates": [55.800584, 37.675638] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 7, "geometry": { "type": "Point", "coordinates": [55.716733, 37.589988] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 8, "geometry": { "type": "Point", "coordinates": [55.775724, 37.56084] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 9, "geometry": { "type": "Point", "coordinates": [55.822144, 37.433781] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "BONUM", "iconCaption": "BONUM" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 10, "geometry": { "type": "Point", "coordinates": [55.87417, 37.669838] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 11, "geometry": { "type": "Point", "coordinates": [55.71677, 37.482338] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 12, "geometry": { "type": "Point", "coordinates": [55.78085, 37.75021] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 13, "geometry": { "type": "Point", "coordinates": [55.810906, 37.654142] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 14, "geometry": { "type": "Point", "coordinates": [55.865386, 37.713329] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 15, "geometry": { "type": "Point", "coordinates": [55.847121, 37.525797] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 16, "geometry": { "type": "Point", "coordinates": [55.778655, 37.710743] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 17, "geometry": { "type": "Point", "coordinates": [55.623415, 37.717934] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 18, "geometry": { "type": "Point", "coordinates": [55.863193, 37.737] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 19, "geometry": { "type": "Point", "coordinates": [55.86677, 37.760113] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "WABCO", "iconCaption": "WABCO" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 20, "geometry": { "type": "Point", "coordinates": [55.698261, 37.730838] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 21, "geometry": { "type": "Point", "coordinates": [55.6338, 37.564769] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 22, "geometry": { "type": "Point", "coordinates": [55.639996, 37.5394] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 23, "geometry": { "type": "Point", "coordinates": [55.69023, 37.405853] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 24, "geometry": { "type": "Point", "coordinates": [55.77597, 37.5129] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 25, "geometry": { "type": "Point", "coordinates": [55.775777, 37.44218] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 26, "geometry": { "type": "Point", "coordinates": [55.811814, 37.440448] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 27, "geometry": { "type": "Point", "coordinates": [55.751841, 37.404853] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 28, "geometry": { "type": "Point", "coordinates": [55.627303, 37.728976] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 29, "geometry": { "type": "Point", "coordinates": [55.816515, 37.597163] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "SAF", "iconCaption": "SAF" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 30, "geometry": { "type": "Point", "coordinates": [55.664352, 37.689397] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 31, "geometry": { "type": "Point", "coordinates": [55.679195, 37.600961] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 32, "geometry": { "type": "Point", "coordinates": [55.673873, 37.658425] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 33, "geometry": { "type": "Point", "coordinates": [55.681006, 37.605126] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 34, "geometry": { "type": "Point", "coordinates": [55.876327, 37.431744] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 35, "geometry": { "type": "Point", "coordinates": [55.843363, 37.778445] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 36, "geometry": { "type": "Point", "coordinates": [55.875445, 37.549348] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 37, "geometry": { "type": "Point", "coordinates": [55.662903, 37.702087] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 38, "geometry": { "type": "Point", "coordinates": [55.746099, 37.434113] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 39, "geometry": { "type": "Point", "coordinates": [55.83866, 37.712326] }, "properties": { "balloonContent": "Магазин", "clusterCaption": "Магазин", "hintContent": "Магазин", "iconCaption": "Магазин" }, "options": { "preset": "islands#yellowCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 40, "geometry": { "type": "Point", "coordinates": [55.774838, 37.415725] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 41, "geometry": { "type": "Point", "coordinates": [55.871539, 37.630223] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 42, "geometry": { "type": "Point", "coordinates": [55.657037, 37.571271] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 43, "geometry": { "type": "Point", "coordinates": [55.691046, 37.711026] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 44, "geometry": { "type": "Point", "coordinates": [55.803972, 37.65961] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 45, "geometry": { "type": "Point", "coordinates": [55.616448, 37.452759] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 46, "geometry": { "type": "Point", "coordinates": [55.781329, 37.442781] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 47, "geometry": { "type": "Point", "coordinates": [55.844708, 37.74887] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 48, "geometry": { "type": "Point", "coordinates": [55.723123, 37.406067] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } },
+		{ "type": "Feature", "id": 49, "geometry": { "type": "Point", "coordinates": [55.858585, 37.48498] }, "properties": { "balloonContent": "Бар", "clusterCaption": "Бар", "hintContent": "Бар", "iconCaption": "Бар" }, "options": { "preset": "islands#violetCircleDotIconWithCaption" } }
+	]
+};
+*/
+/*
+var $json = {
+	"type": "FeatureCollection",
+	"features": [
+		{ "type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [55.831903, 37.411961] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "", "iconCaption": "" }, "options": { "preset": "islands#blueCircleDotIconWithCaption" } },
+
+		{ "type": "Feature", "id": 10, "geometry": { "type": "Point", "coordinates": [55.87417, 37.669838] }, "properties": { "balloonContent": "", "clusterCaption": "WABCO", "hintContent": "", "iconCaption": "" }, "options": { "preset": "islands#greenCircleDotIconWithCaption" } },
+
+		{ "type": "Feature", "id": 20, "geometry": { "type": "Point", "coordinates": [55.698261, 37.730838] }, "properties": { "balloonContent": "", "clusterCaption": "SAF", "hintContent": "", "iconCaption": "" }, "options": { "preset": "islands#blackCircleDotIconWithCaption" } }
+
+	]
+};*/
+/*
+var $json = {
+	"type": "FeatureCollection",
+	"features": [
+		{ "type": "Feature", "id": 0, "geometry": { "type": "Point", "coordinates": [55.831903, 37.411961] }, "properties": { "balloonContent": "BONUM", "clusterCaption": "BONUM", "hintContent": "", "iconCaption": "", "custom_f_brand":"BONUM",  "custom_f_city":"Саратов"  }, "options": { "iconLayout": 'default#image',
+		"iconImageHref": "/img/icons_map/bonum.svg",
+		"iconImageSize": [48, 48],
+		"iconImageOffset": [-24, -24],
+		"openBalloonOnClick": false
+	 } },
+
+		{ "type": "Feature", "id": 10, "geometry": { "type": "Point", "coordinates": [55.87417, 37.669838] }, "properties": { "balloonContent": "WABCO", "clusterCaption": "WABCO", "hintContent": "", "iconCaption": "" }, "options": { "iconLayout": 'default#image',
+		"iconImageHref": "/img/icons_map/wabco.svg",
+		"iconImageSize": [48, 48],
+		"iconImageOffset": [-24, -24],
+		"openBalloonOnClick": false } },
+
+		{ "type": "Feature", "id": 20, "geometry": { "type": "Point", "coordinates": [55.698261, 37.730838] }, "properties": { "balloonContent": "SAF", "clusterCaption": "SAF", "hintContent": "", "iconCaption": "" }, "options": {"iconLayout": 'default#image',
+		"iconImageHref": "/img/icons_map/saf.svg",
+		"iconImageSize": [48, 48],
+		"iconImageOffset": [-24, -24],
+		"openBalloonOnClick": false } }
+
+	]
+};
+*/
+
+
+function getYaMap() {
+	/*
+		var myMap = new ymaps.Map("map",{center: [30.325,59.935],zoom: 13});
+		ymaps.geocode("Санкт-Петербург, ул. Невский проспект, 28").then(function (res) {
+			var coord = res.geoObjects.get(0).geometry.getCoordinates();
+			var myPlacemark = new ymaps.Placemark(coord);
+			myMap.geoObjects.add(myPlacemark);
+			myMap.setCenter(coord);
+		});*/
+	$(function () {
+		if ($('#centers-map').length > 0) {
+
+			ymaps.ready(function () {
+
+				console.log(1);
+				var myMap1;
+				var myPlacemark1;
+
+				$.ajax({
+					url: '/jsons/map.json?v=2',
+					type: 'get',
+					success: function (response) {
+						//var yyy = JSON.parse(response).main;
+						console.log(response);
+						//var yyy = $.parseJSON(response);;
+						var yyy = response;
+						console.log(yyy);
+						myMap1 = new ymaps.Map("centers-map", {
+							center: [60.12833253, 82.72110322],
+							zoom: 3,
+							controls: ['zoomControl'/*, 'typeSelector', 'fullscreenControl'*/]
+
+
+
+						}, {
+							searchControlProvider: 'yandex#search'
+						}
+							/**
+			 * Создадим кластеризатор, вызвав функцию-конструктор.
+			 * Список всех опций доступен в документации.
+			 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Clusterer.xml#constructor-summary
+			 */
+							, clusterer = new ymaps.Clusterer({
+
+								hasBalloon: false,
+
+								//gridSize: -1000,
+
+								clusterIcons: [
+									{
+										href: '/img/icons_map/cluster.svg',
+										size: [48, 48],
+										offset: [-24, -24]
+									}],
+
+
+								clusterIconContentLayout: ymaps.templateLayoutFactory.createClass(
+									'<span style="color: #FFFFFF;  font-weight: 400;	font-size: 16px; line-height: 150%;     font-family: "ZonaPro", sans-serif; display:inline-block;margin-bottom:-2px;">$[properties.geoObjects.length]</span>'),
+								//	color: #FFFFFF;
+
+								/**
+								 * Через кластеризатор можно указать только стили кластеров,
+								 * стили для меток нужно назначать каждой метке отдельно.
+								 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/option.presetStorage.xml
+								 */
+								//preset: 'islands#invertedVioletClusterIcons',
+								/**
+								 * Ставим true, если хотим кластеризовать только точки с одинаковыми координатами.
+								 */
+								groupByCoordinates: false,
+								/**
+								 * Опции кластеров указываем в кластеризаторе с префиксом "cluster".
+								 * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/ClusterPlacemark.xml
+								 */
+								clusterDisableClickZoom: true,
+								clusterHideIconOnBalloonOpen: false,
+								geoObjectHideIconOnBalloonOpen: false
+							})
+
+
+
+
+						/*,objectManager = new ymaps.ObjectManager({
+							// Чтобы метки начали кластеризоваться, выставляем опцию.
+							clusterize: true,
+							// ObjectManager принимает те же опции, что и кластеризатор.
+							gridSize: 64,
+							// Макет метки кластера pieChart.
+							clusterIconLayout: "default#pieChart"
+						})*/);
+
+						//myMap1.geoObjects.add(objectManager);
+
+						$.each(yyy, function (key, value) {
+							var typeSW, titleSW, typeSWActive;
+							if (value.type == 43) {
+								typeSW = 'other.svg';
+								typeSWActive = 'other_act.svg';
+								titleSW = 'Гарантийные сервисные центры BPW';
+							} else
+								if (value.type == 47) {
+									typeSW = 'other.svg';
+									typeSWActive = 'other_act.svg';
+									titleSW = 'Собственный сервисный центр';
+								} else
+									if (value.type == 51) {
+										typeSW = 'wabco.svg';
+										typeSWActive = 'wabco_act.svg';
+										titleSW = 'Авторизированные Магазины Wabco';
+									} else
+										if (value.type == 52) {
+											typeSW = 'wabco.svg';
+											typeSWActive = 'wabco_act.svg';
+											titleSW = 'Сервисные центры Wabco с поддержкой гарантии';
+										} else
+											if (value.type == 53) {
+												typeSW = 'wabco.svg';
+												typeSWActive = 'wabco_act.svg';
+												titleSW = 'Сервисные центры Wabco без поддержки  гарантии';
+											} else
+												if (value.type == 54) {
+													typeSW = 'bpw.svg';
+													typeSWActive = 'bpw_act.svg';
+													titleSW = 'Сервисные центры BPW';
+												} else
+													if (value.type == 55) {
+														typeSW = 'saf.svg';
+														typeSWActive = 'saf_act.svg';
+														titleSW = 'Сервисные станции SAF';
+													} else
+														if (value.type == 56) {
+															typeSW = 'bonum.svg';
+															typeSWActive = 'bonum_act.svg';
+															titleSW = 'Сервисный центр рекомендованный BONUM';
+														} else {
+
+															typeSW = 'other.svg';
+															typeSWActive = 'other_act.svg';
+															titleSW = 'Иное';
+														}
+							var a = value.coords;
+							var xy = a.split(',');
+							var x = parseFloat(xy[0]);
+							var y = parseFloat(xy[1]);
+
+							myPlacemark1 = new ymaps.Placemark([x, y], {
+								content: value.title,
+								id:value.id,
+								/*balloonContent: '<table border="0" style="padding:10px" cellpadding="0" cellspacing="0"><tr><td style="padding-right:5px;" valign="top" align="left"><img src="/assets/img/centres-type/' + typeSW + '" height="48" border="0"></td></tr><tr><td valign="top"  style="padding-left:5px;padding-right:5px; font-size:14px;font-family:Tahoma;color:black;" valign="top"><b>' + value.title + '</b><br>' + titleSW + '<br></td></tr></table>'*/
+
+
+								defaultOptions: {
+									iconLayout: 'default#image',
+									iconImageHref: '/img/icons_map/' + typeSW,
+									"iconImageSize": [48, 48],
+									"iconImageOffset": [-24, -24],
+									"openBalloonOnClick": false
+
+								},
+
+								activeOptions: {
+									iconLayout: 'default#image',
+									iconImageHref: '/img/icons_map/' + typeSWActive,
+									"iconImageSize": [48, 48],
+									"iconImageOffset": [-24, -24],
+									"openBalloonOnClick": false
+
+								}
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: '/img/icons_map/' + typeSW,
+								"iconImageSize": [48, 48],
+								"iconImageOffset": [-24, -24],
+								"openBalloonOnClick": false
+
+							});
+							//myMap1.geoObjects.add(myPlacemark1);
+							clusterer.add(myPlacemark1);
+
+							//objectManager.add(myPlacemark1);
+						});
+
+						/*clusterer.options.set({
+							gridSize: 80,
+							clusterDisableClickZoom: true
+						});*/
+
+						myMap1.geoObjects.add(clusterer);
+
+						window.clusterer = clusterer;
+						clusterer.events.add('click', function (e) {
+
+							// placemark на который кликнули
+
+							var activeGeoObject = e.get('target');
+
+							// Выставляем ему опции типа "active"
+
+							activeGeoObject.options.set(activeGeoObject.properties.get('activeOptions'));
+							/*console.log(activeGeoObject);
+							window.active=activeGeoObject;*/
+							var active_item_id=parseInt(activeGeoObject.properties.get('id'));
+
+							// остальным выставляем опции типа default
+
+
+							clusterer.getGeoObjects().forEach(function (geoObject) {
+
+								if (geoObject !== activeGeoObject) {
+
+									geoObject.options.set(geoObject.properties.get('defaultOptions'));
+
+								}
+
+								//objectManager.add(myPlacemark1);
+							});
+							/*
+							clusterer._objects.forEach(function (geoObject){
+
+								if (geoObject !== activeGeoObject) {
+
+									geoObject.options.set(geoObject.properties.get('defaultOptions'));
+
+								}
+
+								//objectManager.add(myPlacemark1);
+							});*/
+						});
+
+
+					}
+				}).fail(function (jqXHR, textStatus, errorThrown) {
+						console.log("error");
+						console.log(jqXHR);
+						console.log(textStatus);
+						console.log(errorThrown);
+					});
+
+
+
+
+				function getFullData() {
+					var resFD = {};
+					$.ajax({
+						url: '/jsons/mapFullData.json',
+						type: 'get',
+						async: false,
+						dataType:'json',
+						success: function(response) {
+							resFD = response;
+						}
+					});
+
+					return resFD;
+				}
+
+				const centres = getFullData();
+
+
+
+
+
+				/*	var myMap = new ymaps.Map('centers-map', {
+						center: [55.76, 37.64],
+						zoom: 10,
+						controls: []
+
+					}, {
+						searchControlProvider: 'yandex#search',
+						yandexMapDisablePoiInteractivity: true
+					}),
+						objectManager = new ymaps.ObjectManager({
+							// Чтобы метки начали кластеризоваться, выставляем опцию.
+							//clusterize: true,
+							// ObjectManager принимает те же опции, что и кластеризатор.
+							gridSize: 64,
+							// Макет метки кластера pieChart.
+							clusterIconLayout: "default#pieChart"
+						});
+					myMap.geoObjects.add(objectManager);
+
+					// Создадим 5 пунктов выпадающего списка.
+
+					var listBoxItems = ['WABCO', 'BONUM', 'Магазин', 'SAF', 'Бар']
+						.map(function (title) {
+							return new ymaps.control.ListBoxItem({
+								data: {
+									content: title
+								},
+								state: {
+									selected: true
+								}
+							})
+						}),
+						reducer = function (filters, filter) {
+							filters[filter.data.get('content')] = filter.isSelected();
+							return filters;
+						},
+						// Теперь создадим список, содержащий 5 пунктов.
+						listBoxControl = new ymaps.control.ListBox({
+							data: {
+								content: 'Фильтр',
+								title: 'Фильтр'
+							},
+							items: listBoxItems,
+							state: {
+								// Признак, развернут ли список.
+								expanded: true,
+								filters: listBoxItems.reduce(reducer, {})
+							}
+						});
+					myMap.controls.add(listBoxControl);
+
+					// Добавим отслеживание изменения признака, выбран ли пункт списка.
+					listBoxControl.events.add(['select', 'deselect'], function (e) {
+						var listBoxItem = e.get('target');
+						var filters = ymaps.util.extend({}, listBoxControl.state.get('filters'));
+						filters[listBoxItem.data.get('content')] = listBoxItem.isSelected();
+						listBoxControl.state.set('filters', filters);
+					});
+
+					var filterMonitor = new ymaps.Monitor(listBoxControl.state);
+					filterMonitor.add('filters', function (filters) {
+						// Применим фильтр.
+						objectManager.setFilter(getFilterFunction(filters));
+					});
+
+					function getFilterFunction(categories) {
+						return function (obj) {
+							console.log(obj);
+							console.log(obj.properties);
+							var content = obj.properties.balloonContent;
+							return categories[content]
+						}
+					}
+
+					//	$.ajax({
+					//		url: "data.json"
+					//	}).done(function (data) {
+					//		objectManager.add(data);
+					//	});
+
+					//objectManager.add($json);
+
+	*/
+			});
+		}
+
+
+	});
+};
+
+$(function () {
+	$('.js-centers-tabs-switcher').on('click', function () {
+		$(this).addClass('js-active').siblings().removeClass('js-active');
+		$('.centers-tabs__tab').eq($(this).index()).slideDown(400).siblings().slideUp(400);
+	});
+
+});

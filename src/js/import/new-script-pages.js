@@ -1,5 +1,5 @@
 jQuery(function() {
-	if (document.querySelector('.photogalary__swiper')) {
+	/*if (document.querySelector('.photogalary__swiper')) {
 		const swiperTeamAboutPage = new Swiper('.photogalary__swiper', {
 			slidesPerView: 'auto',
 			navigation: {
@@ -7,7 +7,24 @@ jQuery(function() {
 				nextEl: '.photogalary__swiper .swiper-btn--next'
 			},
 		});
-	}
+	}*/
+
+
+
+	$('.photogalary__swiper').each(function(){
+		var sliderGal=$(this);
+		var wrap=sliderGal.closest('.photogalary__swiper-container');
+
+
+		const swiperTeamAboutPage = new Swiper(sliderGal[0], {
+			slidesPerView: 'auto',
+			navigation: {
+				prevEl: wrap.find('.swiper-btn--prev')[0],
+				nextEl: wrap.find('.swiper-btn--next')[0]
+			},
+		});
+	});
+
 
 
 	if (document.querySelector('.journal-about-page__swiper-pagination')) {

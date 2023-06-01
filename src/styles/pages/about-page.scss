@@ -348,9 +348,16 @@
 							stroke: #000000;
 						}
 					}
+					path+path {
+						@media (max-width: 768px) {
+							fill: #000;
+						}
+					}
+
+
 				}
 				&--prev {
-					right: 100%;
+					left: 0;
 					@media (max-width: 1600px){
 						left: 0;
 						right: auto;
@@ -361,7 +368,7 @@
 					}
 				}
 				&--next {
-					left: 100%;
+					right: 0;
 					@media (max-width: 1600px){
 						left: auto;
 						right: 0;
@@ -380,7 +387,7 @@
 		}
 	}
 	&__slide {
-		min-height: 722px;
+		min-height: 700px;
 		flex-shrink: 0;
 		width: auto;
 		padding: 0 15px;
@@ -440,7 +447,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-			width: 360px;
+			width: 335px;
 			@media (max-width: 768px){
 				width: 131px;
 			}
@@ -455,7 +462,7 @@
 			}
 		}
 		&--wide {
-			width: 722px;
+			width: 700px;
 			@media (max-width: 768px){
 				width: 266px;
 			}

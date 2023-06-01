@@ -1,46 +1,57 @@
 .h1 {
-	text-transform: uppercase;
-	@media (max-width: 391px){
-		font-size: 20px;
-	}
+    text-transform: uppercase;
+
+    @media (max-width: 391px) {
+        font-size: 20px;
+    }
 }
+
 .title {
-	@media (max-width: 391px){
-		font-size: 13px;
-	}
+    @media (max-width: 391px) {
+        font-size: 13px;
+    }
 }
-p, li {
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 170%;
-	@media (max-width: 768px){
-		font-size: 13px;
-		line-height: 150%;
-	}
+
+p,
+li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 170%;
+
+    @media (max-width: 768px) {
+        font-size: 13px;
+        line-height: 150%;
+    }
 }
-ul.list-marker, .styled-ul-in-this-block>ul {
-	li {
-		list-style: none;
-		position: relative;
-		padding-left: 24px;
-		@media (max-width: 768px){
-			padding-left: 14px;
-		}
-		&::before{
-			content:'';
-			position: absolute;
-			top: 10px;
-			left: 0;
-			width: 5px;
-			height: 5px;
-			background-color: #4C4E4D;
-			border-radius: 50%;
-			@media (max-width: 768px){
-				top: 8px;
-			}
-		}
-	}
+
+ul.list-marker,
+.styled-ul-in-this-block>ul {
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 24px;
+
+        @media (max-width: 768px) {
+            padding-left: 14px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: #4C4E4D;
+            border-radius: 50%;
+
+            @media (max-width: 768px) {
+                top: 8px;
+            }
+        }
+    }
 }
+
 .main-page {
     //скрытие блоков без адаптивности
     /*.gallery,
@@ -71,32 +82,39 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             width: 100%;
             display: block;
             overflow: hidden;
+
             &--left {
                 position: absolute;
                 top: 0;
                 left: 0;
                 transform: translate(-50%, 60%) scale(0.8);
                 filter: blur(5px);
-                @media (max-width: 1400px)  {
+
+                @media (max-width: 1400px) {
                     transform: translate(-50%, 43%) scale(0.5);
                 }
-                @media (max-width: 1023px)  {
+
+                @media (max-width: 1023px) {
                     display: none;
                 }
             }
+
             &--right {
                 position: absolute;
                 top: 0;
-                right:0;
+                right: 0;
                 transform: translate(50%, 60%) scale(0.8);
                 filter: blur(5px);
-                @media (max-width: 1400px)  {
+
+                @media (max-width: 1400px) {
                     transform: translate(50%, 43%) scale(0.5);
                 }
-                @media (max-width: 1023px)  {
+
+                @media (max-width: 1023px) {
                     display: none;
                 }
             }
+
             &--buttons {
                 position: relative;
                 display: flex;
@@ -108,7 +126,8 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     margin-left: auto;
                     margin-right: auto;
                 }
-                @media (max-width: 390px){
+
+                @media (max-width: 390px) {
                     margin-top: -10px;
                 }
 
@@ -127,6 +146,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
                 .button {
                     min-height: 53px;
+
                     @include max(sm) {
                         min-height: 41px;
                     }
@@ -135,16 +155,18 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
             &--nav {
                 position: absolute;
-				z-index: 9;
+                z-index: 9;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 top: 52%;
+
                 @include max(xs) {
                     top: 45%;
                 }
-                @media (max-width: 390px){
+
+                @media (max-width: 390px) {
                     top: 42%;
                 }
 
@@ -181,6 +203,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         margin-left: auto;
                         margin-right: auto;
                     }
+
                     @media (max-width: 1400px) {
                         max-width: 664px;
                         margin-left: auto;
@@ -195,10 +218,12 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         text-align: center;
                         color: $black;
                         transition: $animation;
+
                         @media (max-width: 1400px) {
                             font-size: 40px;
                             line-height: 60px;
                         }
+
                         @include max(xs) {
                             font-size: 20px;
                             line-height: 16px;
@@ -300,6 +325,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                         margin-bottom: 42px;
                         max-width: 49%;
                     }
+
                     // @media (max-width: 389px){
                     //     width: 100%;
                     //     margin-right: 0!important;
@@ -351,6 +377,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     @media (max-width: 1440px) {
                         margin-right: 0;
                     }
+
                     @include max(lg) {
                         width: 48px;
                         height: 48px;
@@ -408,22 +435,58 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
     .gallery {
         overflow: hidden;
-		.photogalary__swiper {
-			margin-top: 80px;
-			@media (max-width: 768px){
-				margin-top: 40px;
-				.swiper-btn {
-					bottom: auto;
-					top: -50px;
-				}
-			}
-		}
+
+        .photogalary__swiper {
+            margin-top: 80px;
+
+            @media (max-width: 768px) {
+                margin-top: 40px;
+
+                .swiper-btn {
+                    bottom: auto;
+                    top: -50px;
+                }
+            }
+        }
+
         &__container {
+            /*
             max-width: 1920px;
             width: 100%;
             padding: 130px 0 0;
-            margin: 0 auto;
+            margin: 0 auto;*/
         }
+
+        .swiper-btn {
+            width: 272px;
+
+            @media (max-width: 1919px) {
+                width: 150px;
+            }
+
+            @media (max-width: 768px) {
+                top: -39px;
+                bottom: auto;
+                width: 24px;
+
+            }
+
+            &--prev {
+                @media (max-width: 768px) {
+                    right: 64px;
+                }
+            }
+
+            &--next {
+                @media (max-width: 768px) {
+                    right: 16px;
+                }
+            }
+
+
+
+        }
+
 
         &__title {
             font-weight: 600;
@@ -443,7 +506,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             width: 100%;
             cursor: pointer;
 
-            & img {
+            img {
                 width: 100%;
                 max-height: 630px;
                 object-fit: cover;
@@ -565,9 +628,11 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 width: 45%;
                 padding-top: 35px;
                 padding-bottom: 15px;
+
                 .h1 {
                     text-transform: none;
                 }
+
                 @include max(lg) {
                     margin-right: 42px;
                     padding-top: 35px;
@@ -760,7 +825,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
             @include max(lg) {
                 overflow: hidden;
-               /* overflow-x: scroll;
+                /* overflow-x: scroll;
                 width: 100vw;
                 justify-content: flex-start;*/
             }
@@ -973,7 +1038,8 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
         }
 
-        &--list,  &--list ul {
+        &--list,
+        &--list ul {
             position: relative;
             display: block;
             list-style-type: disc;
@@ -997,6 +1063,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 }
             }
         }
+
         &--list ul {
             padding-left: 0;
         }
@@ -1194,46 +1261,50 @@ ul.list-marker, .styled-ul-in-this-block>ul {
             }
         }
     }
-    .property-lists-new{
+
+    .property-lists-new {
         display: block;
         width: 100%;
 
     }
-    .property-list-new{
+
+    .property-list-new {
         display: flex;
         flex-wrap: wrap;
 
         border-left: 1px solid $grey-1;
 
         border-top: 1px solid $grey-1;
-        &+.property-list-new{
+
+        &+.property-list-new {
             margin-top: -1px;
         }
 
-        &--4-in-row .property__item{
+        &--4-in-row .property__item {
             width: 25%;
+
             @include max(lg) {
                 width: 50%;
 
             }
 
-            @include max(sm) {
-
-            }
+            @include max(sm) {}
         }
-        &--2-in-row .property__item{
-            width: 50%;
-            @include max(lg) {
 
-            }
+        &--2-in-row .property__item {
+            width: 50%;
+
+            @include max(lg) {}
 
             @include max(sm) {
                 width: 100%;
 
             }
         }
-        &--3-in-row .property__item{
+
+        &--3-in-row .property__item {
             width: 33.33%;
+
             @include max(lg) {
 
                 flex-grow: 1;
@@ -1244,7 +1315,8 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
             }
         }
-        &__hidemob{
+
+        &__hidemob {
             @include max(sm) {
                 display: none;
             }
@@ -1417,11 +1489,13 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                 border-radius: 50%;
                 margin-bottom: 32px;
                 transition: $animation;
+
                 @include max(sm) {
                     width: 32px;
                     height: 32px;
                     margin-bottom: 16px;
                 }
+
                 svg {
                     fill: #fff;
                     transition: $animation;
@@ -1466,6 +1540,7 @@ ul.list-marker, .styled-ul-in-this-block>ul {
                     font-size: 13px;
                     line-height: 135%;
                 }
+
                 p {
 
                     margin-bottom: 12px;
@@ -1697,25 +1772,30 @@ ul.list-marker, .styled-ul-in-this-block>ul {
 
     }
 }
+
 //правки от 16.05.23
 .main-page.main-page-loc {
     .photogalary__swiper-container {
         margin-top: 0;
     }
+
     .spare__banner {
         @include max(sm) {
             padding-top: 0;
             padding-bottom: 80px;
         }
+
         .banner__title {
             text-transform: none;
         }
     }
-    .gallery__container{
+
+    .gallery__container {
         @include max(sm) {
             padding-top: 52px;
-         }
+        }
     }
+
     .property__title {
         margin-bottom: 40px;
         font-style: normal;
@@ -1732,61 +1812,83 @@ ul.list-marker, .styled-ul-in-this-block>ul {
         @include max(lg) {
             margin-bottom: 0;
         }
+
+
+        @media (max-width: 768px) {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 150%;
+        }
+
     }
+
     .photogalary__slide {
         min-height: 630px;
+
         @include max(lg) {
             min-height: 384px;
         }
+
         @media (max-width: 768px) {
             min-height: 200px;
         }
+
         .photogalary__img--wide {
             width: 866px;
+
             @include max(lg) {
                 width: 528px;
             }
+
             @media (max-width: 768px) {
                 width: 265px;
             }
         }
+
         .photogalary__img--double {
             width: 418px;
+
             @include max(lg) {
                 width: 252px;
             }
+
             @media (max-width: 768px) {
                 width: 122px;
             }
         }
     }
+
     .photogalary__swiper {
         @include max(xl) {
             margin-left: auto;
             margin-right: auto;
         }
+
         @include max(lg) {
-           margin-top: 52px;
+            margin-top: 52px;
         }
+
         @include max(sm) {
             padding-bottom: 0px !important;
-         }
+        }
     }
 
 }
+
 //правки от 16.05.23
 
 
 
 
 
-.container-new{
+.container-new {
     width: 1314px;
     max-width: 95%;
     max-width: calc(100% - 110px - 110px);
     margin-left: auto;
     margin-right: auto;
     display: block;
+
     @media screen and (max-width: 1020px) {
         max-width: calc(100% - 16px - 16px);
 

@@ -23,119 +23,964 @@ block content
 				.centers__header
 					.title Сервисные центры
 					.centers__switcher.switcher-buttons
-						span#switcher-buttons-map.switcher-buttons__button.js-active Карта
-						span#switcher-buttons-list.switcher-buttons__button Список
+						span.js-centers-tabs-switcher.switcher-buttons__button.js-active Карта
+						span.js-centers-tabs-switcher.switcher-buttons__button Список
 				.centers__localities.localities-centers#switcher-content-map
 					select#localities-centers__select(name="").localities-centers__select
-						option
-						option Саратов
-						option Москва
+						option(value="false" selected) Выберите населенный пункт
 						.localities-centers__select-arrow
 							<svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1 1.5L13 13.5L25 1.5" stroke="#4C4E4D" stroke-width="1.5"/>
 							</svg>
 					.localities-centers__buttons
-						.localities-centers__button.localities-centers__button-active
+						.localities-centers__button.localities-centers__button-active.js-map-filter-brand(data-filter='false')
 							span Все
-						.localities-centers__button
+						.localities-centers__button.js-map-filter-brand(data-filter='56')
 							span BONUM
-						.localities-centers__button
+						.localities-centers__button.js-map-filter-brand(data-filter='52')
 							span WABCO
-						.localities-centers__button
+						.localities-centers__button.js-map-filter-brand(data-filter='54')
 							span BPW
-						.localities-centers__button
+						.localities-centers__button.js-map-filter-brand(data-filter='55')
 							span SAF
-					.localities-centers__items
-						.localities-centers__item
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW
-								.localities-centers__item-loc
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
-								.localities-centers__item-contact
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW
-								.localities-centers__item-loc
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
-								.localities-centers__item-contact
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW
-								.localities-centers__item-loc
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
-								.localities-centers__item-contact
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item
-							.localities-centers__item-body
-								.localities-centers__item-title Серпри Авто
-								.localities-centers__item-subtitle Сервисный центр BPW
-								.localities-centers__item-loc
-									span адрес:
-									p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
-								.localities-centers__item-contact
-									span контакты:
-									a(href="tel:8005500161") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-					.localities-centers__item-dark
-						.localities-centers__item
-							.localities-centers__item-body
-								.localities-centers__item-title Балтранс
-								.localities-centers__item-subtitle Сервисный центр WABCO
-								.localities-centers__item-loc
-									span адрес:
-									p 344091,  г. Саратов, п. Бартоломей, д. 1
-								.localities-centers__item-contact
-									span контакты:
-									a(href="tel:8452799993") 8 8452 79 99 93
-									a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
-								.localities-centers__item-contact
-									span отдел продаж
-									a(href="tel:8005500161 ") 8 800 550-01-61
-									a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
-								.localities-centers__item-contact
-									span отдел снабжения
-									a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item-text
-							p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
-							br
-							p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
-							br
-							p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
-					.localities-centers__item-onlymap
-						.localities-centers__item
-							.localities-centers__item-map
-								img(src="img/centers/map1.jpg", alt="alt")
-						.localities-centers__item-text
-							p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
-							br
-							p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
-							br
-							p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
+
+
+					.centers-tabs
+						.centers-tabs__tab(style="display:block;")
+
+							.centers-map-block.localities-centers__item-dark
+								.cmb-info
+									.cmb-info__item#cmb-info__item
+										//.cmb-info__item--active
+										.localities-centers__item-body
+											.localities-centers__item-title.js-title
+											.localities-centers__item-subtitle.js-type
+											.localities-centers__item-loc
+												span адрес:
+												p.js-address
+
+											.localities-centers__item-contact.js-contacts-main
+												span контакты:
+
+
+
+									//	.localities-centers__item-body
+											.localities-centers__item-title.js-title
+											.localities-centers__item-subtitle.js-type Сервисный центр WABCO
+											.localities-centers__item-loc
+												span адрес:
+												p.js-address 344091,  г. Саратов, п. Бартоломей, д. 1
+											.localities-centers__item-contact.js-contacts-main
+												span контакты:
+												a(href="tel:8452799993") 8 8452 79 99 93
+												a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+											.localities-centers__item-contact.js-contacts-other
+												span отдел продаж
+												a(href="tel:8005500161 ") 8 800 550-01-61
+												a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+											.localities-centers__item-contact.js-contacts-other
+												span отдел снабжения
+												a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+
+
+
+
+								.cmb__map#centers-map
+
+
+
+								//.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Балтранс
+										.localities-centers__item-subtitle Сервисный центр WABCO
+										.localities-centers__item-loc
+											span адрес:
+											p 344091,  г. Саратов, п. Бартоломей, д. 1
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8452799993") 8 8452 79 99 93
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+										.localities-centers__item-contact
+											span отдел продаж
+											a(href="tel:8005500161 ") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+										.localities-centers__item-contact
+											span отдел снабжения
+											a(href="mailto:info@bonum-trailer.ru") sales@bonum-traile.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")
+							.localities-centers__item-text
+								p Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.
+								br
+								p Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.
+								br
+								p Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).
+
+						.centers-tabs__tab
+							.localities-centers__items#maps-list
+
+							//	.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Серпри Авто
+										.localities-centers__item-subtitle Сервисный центр BPW
+										.localities-centers__item-loc
+											span адрес:
+											p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8005500161") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")
+
+
+
+
+							//	.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title.js-title
+										.localities-centers__item-subtitle.js-type
+										.localities-centers__item-loc
+											span адрес:
+											p.js-address
+										.localities-centers__item-contact.js-contacts-main
+											span контакты:
+
+									.localities-centers__item-map
+										.simple-map-container.js-place-map-here
+										//img(src="img/centers/map1.jpg", alt="alt")
+
+
+
+
+
+							//
+								.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Серпри Авто
+										.localities-centers__item-subtitle Сервисный центр BPW
+										.localities-centers__item-loc
+											span адрес:
+											p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8005500161") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")	.localities-centers__item
+
+								.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Серпри Авто
+										.localities-centers__item-subtitle Сервисный центр BPW
+										.localities-centers__item-loc
+											span адрес:
+											p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8005500161") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")
+								.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Серпри Авто
+										.localities-centers__item-subtitle Сервисный центр BPW
+										.localities-centers__item-loc
+											span адрес:
+											p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8005500161") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")
+								.localities-centers__item
+									.localities-centers__item-body
+										.localities-centers__item-title Серпри Авто
+										.localities-centers__item-subtitle Сервисный центр BPW
+										.localities-centers__item-loc
+											span адрес:
+											p 141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14
+										.localities-centers__item-contact
+											span контакты:
+											a(href="tel:8005500161") 8 800 550-01-61
+											a(href="mailto:info@bonum-trailer.ru") info@bonum-trailer.ru
+									.localities-centers__item-map
+										img(src="img/centers/map1.jpg", alt="alt")
+
 				.centers__localities.localities-centers#switcher-content-list
+
+
+
+
+
+	script.
+		const cities = [
+			{
+				"CityID": "2",
+				"Name": "Ростов-на-Дону",
+				"Name_EN": "Rostov-on-Don"
+			},
+			{
+				"CityID": "3",
+				"Name": "Москва",
+				"Name_EN": "Moscow"
+			},
+			{
+				"CityID": "4",
+				"Name": "Краснодар",
+				"Name_EN": "Krasnodar"
+			},
+			{
+				"CityID": "21",
+				"Name": "Санкт-Петербург",
+				"Name_EN": "St. Petersburg"
+			},
+			{
+				"CityID": "28",
+				"Name": "Гамбург (Германия)",
+				"Name_EN": "Hamburg"
+			},
+			{
+				"CityID": "38",
+				"Name": "Тюмень",
+				"Name_EN": "Tyumen"
+			},
+			{
+				"CityID": "39",
+				"Name": "Казань",
+				"Name_EN": "Kazan"
+			},
+			{
+				"CityID": "40",
+				"Name": "Великий Новгород",
+				"Name_EN": "Veliky Novgorod"
+			},
+			{
+				"CityID": "41",
+				"Name": "Петрозаводск",
+				"Name_EN": "Petrozavodsk"
+			},
+			{
+				"CityID": "42",
+				"Name": "Выборг",
+				"Name_EN": "Vyborg"
+			},
+			{
+				"CityID": "43",
+				"Name": "Екатеринбург",
+				"Name_EN": "Yekaterinburg"
+			},
+			{
+				"CityID": "44",
+				"Name": "Аксай",
+				"Name_EN": "Aksay"
+			},
+			{
+				"CityID": "45",
+				"Name": "Вологда",
+				"Name_EN": "Vologda"
+			},
+			{
+				"CityID": "46",
+				"Name": "Солнечногорск",
+				"Name_EN": "Solnechnogorsk"
+			},
+			{
+				"CityID": "47",
+				"Name": "Набережные Челны",
+				"Name_EN": "Naberezhnye Chelny"
+			},
+			{
+				"CityID": "48",
+				"Name": "Волгоград",
+				"Name_EN": "Volgograd"
+			},
+			{
+				"CityID": "49",
+				"Name": "Минеральные воды",
+				"Name_EN": "Mineralnye Vody"
+			},
+			{
+				"CityID": "50",
+				"Name": "Ярославль",
+				"Name_EN": "Yaroslavl"
+			},
+			{
+				"CityID": "51",
+				"Name": "Дзержинск",
+				"Name_EN": "Dzerzhinsk"
+			},
+			{
+				"CityID": "52",
+				"Name": "Рязань",
+				"Name_EN": "Ryazan"
+			},
+			{
+				"CityID": "53",
+				"Name": "Самара",
+				"Name_EN": "Samara"
+			},
+			{
+				"CityID": "54",
+				"Name": "Новосибирск",
+				"Name_EN": "Novosibirsk"
+			},
+			{
+				"CityID": "55",
+				"Name": "Омск",
+				"Name_EN": "Omsk"
+			},
+			{
+				"CityID": "56",
+				"Name": "Голицино",
+				"Name_EN": "Golitsyno"
+			},
+			{
+				"CityID": "57",
+				"Name": "Сочи",
+				"Name_EN": "Sochi"
+			},
+			{
+				"CityID": "58",
+				"Name": "Домодедово",
+				"Name_EN": "Domodedovo"
+			},
+			{
+				"CityID": "59",
+				"Name": "Люберцы",
+				"Name_EN": "Lyubertsy"
+			},
+			{
+				"CityID": "61",
+				"Name": "Красноярск",
+				"Name_EN": "Krasnoyarsk"
+			},
+			{
+				"CityID": "62",
+				"Name": "Нижний Новгород",
+				"Name_EN": "Nizhny Novgorod"
+			},
+			{
+				"CityID": "63",
+				"Name": "Хабаровск",
+				"Name_EN": "Khabarovsk"
+			},
+			{
+				"CityID": "64",
+				"Name": "Уфа",
+				"Name_EN": "Ufa"
+			},
+			{
+				"CityID": "65",
+				"Name": "Белово",
+				"Name_EN": "Belovo"
+			},
+			{
+				"CityID": "66",
+				"Name": "Братск",
+				"Name_EN": "Bratsk"
+			},
+			{
+				"CityID": "68",
+				"Name": "Липецк",
+				"Name_EN": "Lipetsk"
+			},
+			{
+				"CityID": "69",
+				"Name": "Губкин",
+				"Name_EN": "Gubkin"
+			},
+			{
+				"CityID": "70",
+				"Name": "Чувашия",
+				"Name_EN": "Chuvashia"
+			},
+			{
+				"CityID": "71",
+				"Name": "Калининград",
+				"Name_EN": "Kaliningrad"
+			},
+			{
+				"CityID": "72",
+				"Name": "Химки",
+				"Name_EN": "Khimki"
+			},
+			{
+				"CityID": "73",
+				"Name": "Тверь",
+				"Name_EN": "Tver"
+			},
+			{
+				"CityID": "74",
+				"Name": "Киров",
+				"Name_EN": "Kirov"
+			},
+			{
+				"CityID": "75",
+				"Name": "Павловский Посад",
+				"Name_EN": "Pavlovsky Posad"
+			},
+			{
+				"CityID": "76",
+				"Name": "Сургут",
+				"Name_EN": "Surgut"
+			},
+			{
+				"CityID": "77",
+				"Name": "Барнаул",
+				"Name_EN": "Barnaul"
+			},
+			{
+				"CityID": "78",
+				"Name": "Челябинск",
+				"Name_EN": "Chelyabinsk"
+			},
+			{
+				"CityID": "79",
+				"Name": "Архангельск",
+				"Name_EN": "Arkhangelsk"
+			},
+			{
+				"CityID": "80",
+				"Name": "Пермь",
+				"Name_EN": "Perm"
+			},
+			{
+				"CityID": "81",
+				"Name": "Великие Луки",
+				"Name_EN": "Velikiye Luki"
+			},
+			{
+				"CityID": "82",
+				"Name": "Боровичи",
+				"Name_EN": "Borovichi"
+			},
+			{
+				"CityID": "83",
+				"Name": "Владивосток",
+				"Name_EN": "Vladivostok"
+			},
+			{
+				"CityID": "84",
+				"Name": "Оренбург",
+				"Name_EN": "Orenburg"
+			},
+			{
+				"CityID": "85",
+				"Name": "Орел",
+				"Name_EN": "Orel"
+			},
+			{
+				"CityID": "86",
+				"Name": "Зеленоград",
+				"Name_EN": "Zelenograd"
+			},
+			{
+				"CityID": "88",
+				"Name": "Котельники",
+				"Name_EN": "Kotelniki"
+			},
+			{
+				"CityID": "89",
+				"Name": "Мытищи",
+				"Name_EN": "Mytishchi"
+			},
+			{
+				"CityID": "90",
+				"Name": "Иркутск",
+				"Name_EN": "Irkutsk"
+			},
+			{
+				"CityID": "91",
+				"Name": "Артем",
+				"Name_EN": "Artyom"
+			},
+			{
+				"CityID": "92",
+				"Name": "Киев",
+				"Name_EN": "Kiev"
+			},
+			{
+				"CityID": "93",
+				"Name": "Одесса",
+				"Name_EN": "Odessa"
+			},
+			{
+				"CityID": "94",
+				"Name": "Харьков",
+				"Name_EN": "Kharkiv"
+			},
+			{
+				"CityID": "95",
+				"Name": "Минск",
+				"Name_EN": "Minsk"
+			},
+			{
+				"CityID": "96",
+				"Name": "Алматы",
+				"Name_EN": "Almaty"
+			},
+			{
+				"CityID": "97",
+				"Name": "Кишинев",
+				"Name_EN": "Chisinau"
+			},
+			{
+				"CityID": "98",
+				"Name": "Балашиха",
+				"Name_EN": "Balashikha"
+			},
+			{
+				"CityID": "99",
+				"Name": "Голицино",
+				"Name_EN": "Golitsyno"
+			},
+			{
+				"CityID": "101",
+				"Name": "Белгород",
+				"Name_EN": "Belgorod"
+			},
+			{
+				"CityID": "102",
+				"Name": "Брянск",
+				"Name_EN": "Bryansk"
+			},
+			{
+				"CityID": "103",
+				"Name": "Кострома",
+				"Name_EN": "Kostroma"
+			},
+			{
+				"CityID": "104",
+				"Name": "Курск",
+				"Name_EN": "Kursk"
+			},
+			{
+				"CityID": "105",
+				"Name": "Тула",
+				"Name_EN": "Tula"
+			},
+			{
+				"CityID": "106",
+				"Name": "Ясногорск",
+				"Name_EN": "Yasnogorsk"
+			},
+			{
+				"CityID": "107",
+				"Name": "Сыктывкар",
+				"Name_EN": "Syktyvkar"
+			},
+			{
+				"CityID": "108",
+				"Name": "Черняховск",
+				"Name_EN": "Chernyakhovsk"
+			},
+			{
+				"CityID": "109",
+				"Name": "Каменск-Шахтинск",
+				"Name_EN": "Kamensk-Shakhtinsk"
+			},
+			{
+				"CityID": "110",
+				"Name": "Белореченск",
+				"Name_EN": "Belorechensk"
+			},
+			{
+				"CityID": "111",
+				"Name": "Черкеск",
+				"Name_EN": "Cherkessk"
+			},
+			{
+				"CityID": "112",
+				"Name": "Волжский",
+				"Name_EN": "Volzhsky"
+			},
+			{
+				"CityID": "113",
+				"Name": "Саратов",
+				"Name_EN": "Saratov"
+			},
+			{
+				"CityID": "114",
+				"Name": "Тольятти",
+				"Name_EN": "Tolyatti"
+			},
+			{
+				"CityID": "115",
+				"Name": "Волжск",
+				"Name_EN": "Volzhsk"
+			},
+			{
+				"CityID": "116",
+				"Name": "Юрюзань",
+				"Name_EN": "Yuryuzan"
+			},
+			{
+				"CityID": "117",
+				"Name": "Абакан",
+				"Name_EN": "Abakan"
+			},
+			{
+				"CityID": "118",
+				"Name": "Бийск",
+				"Name_EN": "Biysk"
+			},
+			{
+				"CityID": "119",
+				"Name": "Новокузнецк",
+				"Name_EN": "Novokuznetsk"
+			},
+			{
+				"CityID": "120",
+				"Name": "Комсомольск-на-Амуре",
+				"Name_EN": "Komsomolsk-on-Amur"
+			},
+			{
+				"CityID": "121",
+				"Name": "Симферополь",
+				"Name_EN": "Simferopol"
+			},
+			{
+				"CityID": "122",
+				"Name": "Днепропетровск",
+				"Name_EN": "Dnipropetrovsk"
+			},
+			{
+				"CityID": "123",
+				"Name": "Георгиевск",
+				"Name_EN": "Georgiyevsk"
+			},
+			{
+				"CityID": "124",
+				"Name": "Чебоксары",
+				"Name_EN": "Cheboksary"
+			},
+			{
+				"CityID": "125",
+				"Name": "Готсомель",
+				"Name_EN": "Gotsomel"
+			},
+			{
+				"CityID": "126",
+				"Name": "Николаев",
+				"Name_EN": "Nikolaev"
+			},
+			{
+				"CityID": "127",
+				"Name": "Лиски",
+				"Name_EN": "Liski"
+			},
+			{
+				"CityID": "128",
+				"Name": "Пушкин",
+				"Name_EN": "Pushkin"
+			},
+			{
+				"CityID": "129",
+				"Name": "Сертолово",
+				"Name_EN": "Sertolovo"
+			},
+			{
+				"CityID": "130",
+				"Name": "Смоленск",
+				"Name_EN": "Smolensk"
+			},
+			{
+				"CityID": "131",
+				"Name": "Кемерово",
+				"Name_EN": "Kemerovo"
+			},
+			{
+				"CityID": "132",
+				"Name": "Псков",
+				"Name_EN": "Pskov"
+			},
+			{
+				"CityID": "133",
+				"Name": "Старый Оскол",
+				"Name_EN": "Stariy Oskol"
+			},
+			{
+				"CityID": "134",
+				"Name": "Ставрополь",
+				"Name_EN": "Stavropol"
+			},
+			{
+				"CityID": "135",
+				"Name": "Шушары",
+				"Name_EN": "Shushary"
+			},
+			{
+				"CityID": "136",
+				"Name": "Березовский",
+				"Name_EN": "Berezovsky"
+			},
+			{
+				"CityID": "137",
+				"Name": "Горячий Ключ",
+				"Name_EN": "Goryachiy Klyuch"
+			},
+			{
+				"CityID": "138",
+				"Name": "Воронеж",
+				"Name_EN": "Voronezh"
+			},
+			{
+				"CityID": "139",
+				"Name": "Ульяновск",
+				"Name_EN": "Ulyanovsk"
+			},
+			{
+				"CityID": "140",
+				"Name": "Долгопрудный",
+				"Name_EN": "Dolgoprudny"
+			},
+			{
+				"CityID": "141",
+				"Name": "Кола",
+				"Name_EN": "Kola"
+			},
+			{
+				"CityID": "142",
+				"Name": "Орехово-Зуево",
+				"Name_EN": "Orekhovo-Zuyevo"
+			},
+			{
+				"CityID": "143",
+				"Name": "Истра",
+				"Name_EN": "Istra"
+			},
+			{
+				"CityID": "144",
+				"Name": "Благовещенск",
+				"Name_EN": "Blagoveshchensk"
+			},
+			{
+				"CityID": "145",
+				"Name": "Пенза",
+				"Name_EN": "Penza"
+			},
+			{
+				"CityID": "146",
+				"Name": "Улан-Удэ",
+				"Name_EN": "Ulan-Ude"
+			},
+			{
+				"CityID": "147",
+				"Name": "Курган",
+				"Name_EN": "Kurgan"
+			},
+			{
+				"CityID": "148",
+				"Name": "Ижевск",
+				"Name_EN": "Izhevsk"
+			},
+			{
+				"CityID": "149",
+				"Name": "Котлас",
+				"Name_EN": "Kotlas"
+			},
+			{
+				"CityID": "150",
+				"Name": "Наро-Фоминск",
+				"Name_EN": "Naro-Fominsk"
+			},
+			{
+				"CityID": "151",
+				"Name": "Кипарисово",
+				"Name_EN": "Kiparisovo"
+			},
+			{
+				"CityID": "152",
+				"Name": "Елабуга",
+				"Name_EN": "Elabuga"
+			},
+			{
+				"CityID": "153",
+				"Name": "Волжский",
+				"Name_EN": "Volzhsky"
+			},
+			{
+				"CityID": "154",
+				"Name": "Новый Уренгой",
+				"Name_EN": "New Urengoy"
+			},
+			{
+				"CityID": "155",
+				"Name": "Владимир",
+				"Name_EN": "Vladimir"
+			},
+			{
+				"CityID": "156",
+				"Name": "Магадан",
+				"Name_EN": "Magadan"
+			},
+			{
+				"CityID": "157",
+				"Name": "Батайск",
+				"Name_EN": "Bataysk"
+			},
+			{
+				"CityID": "158",
+				"Name": "Калуга",
+				"Name_EN": "kaluga"
+			},
+			{
+				"CityID": "159",
+				"Name": "Чита",
+				"Name_EN": "Chita"
+			}
+			,
+			{
+				"CityID": "160",
+				"Name": "Чулково",
+				"Name_EN": "Chulkovo"
+			},
+			{
+				"CityID": "161",
+				"Name": "Красногорск",
+				"Name_EN": "Krasnogorsk"
+			},
+			{
+				"CityID": "162",
+				"Name": "Мурманск",
+				"Name_EN": "Murmansk"
+			},
+			{
+				"CityID": "163",
+				"Name": "Нефтекамск",
+				"Name_EN": "Neftekamsk"
+			},
+			{
+				"CityID": "164",
+				"Name": "Бурятия",
+				"Name_EN": "Buryatia"
+			},
+			{
+				"CityID": "165",
+				"Name": "Томск",
+				"Name_EN": "Tomsk"
+			},
+			{
+				"CityID": "166",
+				"Name": "Южно-Сахалинск",
+				"Name_EN": "Yzhno-Sahalinsk"
+			},
+			{
+				"CityID": "167",
+				"Name": "Якутск",
+				"Name_EN": "Yakutsk"
+			},
+			{
+				"CityID": "168",
+				"Name": "Адлер",
+				"Name_EN": "Adler"
+			},
+			{
+				"CityID": "169",
+				"Name": "Черноморский",
+				"Name_EN": "Chernomorskiy"
+			},
+			{
+				"CityID": "170",
+				"Name": "Алексеевка",
+				"Name_EN": "Alekseevka"
+			},
+			{
+				"CityID": "171",
+				"Name": "Федоровское",
+				"Name_EN": "Fedorovskoe"
+			},
+			{
+				"CityID": "172",
+				"Name": "Кстово",
+				"Name_EN": "Kstovo"
+			},
+			{
+				"CityID": "173",
+				"Name": "Подольск",
+				"Name_EN": "Podolsk"
+			},
+			{
+				"CityID": "174",
+				"Name": "Дружнино",
+				"Name_EN": "Druzhnino"
+			},
+			{
+				"CityID": "175",
+				"Name": "Чигири",
+				"Name_EN": "Chigiri"
+			},
+			{
+				"CityID": "176",
+				"Name": "Верхнеблаговещенское",
+				"Name_EN": "Verhblag"
+			},
+			{
+				"CityID": "177",
+				"Name": "Новониколаевка",
+				"Name_EN": "Novonikolaevka"
+			},
+			{
+				"CityID": "178",
+				"Name": "Ногинск",
+				"Name_EN": "Noginsk"
+			},
+			{
+				"CityID": "179",
+				"Name": "Ленсоветский",
+				"Name_EN": "Lensovetskiy"
+			},
+			{
+				"CityID": "180",
+				"Name": "Парнас",
+				"Name_EN": "Parnas"
+			},
+			{
+				"CityID": "181",
+				"Name": "Песочный",
+				"Name_EN": "Pesochniy"
+			},
+			{
+				"CityID": "182",
+				"Name": "Свердловск",
+				"Name_EN": "Sverdlovsk"
+			},
+			{
+				"CityID": "183",
+				"Name": "Башкортостан",
+				"Name_EN": "Bashkortostan"
+			},
+			{
+				"CityID": "184",
+				"Name": "Угловое",
+				"Name_EN": "Uglovoe"
+			}
+		].sort(function (a, b) {
+			if (a["Name"] < b["Name"]) {
+				return -1;
+			}
+			if (a["Name"] > b["Name"]) {
+				return 1;
+			}
+			return 0;
+		});
+
+		const citySelectEl = document.getElementById('localities-centers__select');
+
+		if(citySelectEl){
+			cities.forEach(city => {
+						citySelectEl.insertAdjacentHTML('beforeend', `
+						<option value="${city.CityID}">${city.Name}</option>
+					`)
+					});
+		}
+
+
+
+
 	include ../../blocks/modules/footer/footer
 
 

@@ -1,0 +1,27 @@
+[
+	{
+		"id": "1",
+		"title": "Завод 1",
+		"type_title": "ЗАВОД BONUM",
+		"type": "0",
+		"city_desc": "Ростовская обл.",
+		"city": "3",
+		"address": "420095, Казань, Московский район, ул. Восстания, 100 к5130, оф. 403",
+		"phone": "8 800 550-01-61",
+		"site": "info@bonum-trailer.ru",
+		"coords": "55.53239056920628,37.57343799999998",
+		"additional_contacts": "<div class=\"localities-maps-page__item-contact js-contacts-other\"><span>отдел продаж</span><a href=\"tel:8005500161 \">8 800 550-01-61</a><a href=\"mailto:info@bonum-trailer.ru\">sales@bonum-traile.ru</a></div><div class=\"localities-maps-page__item-contact js-contacts-other\"><span>отдел снабжения</span><a href=\"mailto:info@bonum-trailer.ru\">sales@bonum-traile.ru</a></div>"
+	},
+	{
+		"id": "2",
+		"title": "Завод 2",
+		"type_title": "ЗАВОД BONUM",
+		"type": "0",
+		"city_desc": "Ростов-на-Дону",
+		"city": "3",
+		"address": "420095, Рязань, Московский район, ул. Восстания, 100 к5130, оф. 403",
+		"phone": "8 800 550-22-32",
+		"site": "info@bonum-trailer.ru",
+		"coords": "55.03239056920628,37.57343799999998"
+	}
+]
