@@ -10329,6 +10329,10 @@ section.leasing {
   display: none;
 }
 
+.contact-us .h1 {
+  text-transform: none;
+}
+
 .contact-us h3 {
   font-weight: 400;
   font-size: 24px;
@@ -10357,16 +10361,16 @@ section.leasing {
 }
 
 .contact-us__left {
-  flex: 0 1 926px;
+  width: calc(100% - 340px - 51px);
 }
 
 .contact-us__right {
-  flex: 0 1 340px;
-  padding-left: 15px;
+  width: 340px;
+  flex-shrink: 0;
 }
 
 .headquarters-contact-us__img {
-  padding-top: 61%;
+  padding-top: 61.9%;
   position: relative;
 }
 
@@ -10388,29 +10392,36 @@ section.leasing {
   color: #1F2120;
 }
 
+.headquarters-contact-us__title + .headquarters-contact-us__text-item {
+  margin-top: 18px;
+}
+
 .headquarters-contact-us__text {
   background: #F8F8F8;
-  padding: 40px 44px;
+  padding: 42px 44px 37px;
 }
 
 .headquarters-contact-us__text-item {
-  text-transform: uppercase;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   color: #1F2120;
-  margin-top: 24px;
+  margin-top: 20px;
 }
 
-.headquarters-contact-us__text-item span {
+.headquarters-contact-us__text-item p {
   display: block;
-  margin-bottom: 8px;
 }
 
-.headquarters-contact-us__text-item b {
+.headquarters-contact-us__text-item p + p {
+  margin-top: 7px;
+}
+
+.headquarters-contact-us__text-item p b {
   margin-right: 8px;
   font-size: 12px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .sales-contact-us {
@@ -10459,14 +10470,20 @@ section.leasing {
 
 .card-contact-us__info {
   border-top: 1px solid #E0E0E0;
-  margin-top: 40px;
+  margin-top: 39px;
   padding-top: 18px;
 }
 
 .card-contact-us__info a {
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 9px;
+}
+
+.card-contact-us__info a img {
+  width: 20px;
+  height: auto;
+  display: block;
 }
 
 .card-contact-us__info a:first-child {
@@ -10503,8 +10520,19 @@ section.leasing {
   flex: 0 1 50%;
 }
 
+.contact-us-sidebar {
+  position: sticky;
+  top: 10px;
+}
+
+.contact-us-sidebar__body {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 94px);
+}
+
 .contact-us-sidebar__list {
-  border: 0.5px solid #E3E3E3;
+  border-top: 1px solid #E3E3E3;
 }
 
 .contact-us-sidebar__link {
@@ -10514,10 +10542,11 @@ section.leasing {
   display: flex;
   align-items: center;
   color: #1F2120;
-  padding: 20px 24px;
+  padding: 21px 24px 17px 23px;
   display: flex;
   justify-content: space-between;
-  border: 0.5px solid #E3E3E3;
+  border: 1px solid #E3E3E3;
+  border-top: none;
 }
 
 .contact-us-sidebar__link span {
@@ -10534,8 +10563,22 @@ section.leasing {
 
 .contact-us-sidebar__link.js-active {
   background: #8F9190;
-  border: 1px solid #E3E3E3;
   color: #FFFFFF;
+  padding: 23px 27px 23px 23px;
+}
+
+.contact-us-sidebar__link.js-active svg {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.contact-us-sidebar__link.js-active span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .contact-us-sidebar__link.js-active .contact-us-sidebar__arrow {
@@ -10813,7 +10856,7 @@ section.leasing {
   margin: -30px -15px 0;
 }
 
-.block-vacancy-cards__row.swiper-wrapper {
+.block-vacancy-cards__row {
   display: flex;
   flex-wrap: wrap;
   margin-top: 64px;
@@ -12888,6 +12931,12 @@ section.leasing {
   font-weight: 260;
 }
 
+@media (min-width: 1201px) {
+  .sales-contact-us-head__icon {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 1280px) {
   .company__col:first-child {
     padding: 80px 0 64px;
@@ -14093,8 +14142,177 @@ section.leasing {
     margin-top: 70px;
   }
 
+  .contact-us {
+    margin-bottom: 56px;
+  }
+
   .contact-us section {
     margin-top: 70px;
+  }
+
+  .contact-us .resp-desk {
+    display: none;
+  }
+
+  .contact-us .resp-mob {
+    display: block;
+  }
+
+  .contact-us h3 {
+    font-size: 15px;
+  }
+
+  .contact-us .breakpoints__container {
+    padding: 16px 0;
+  }
+
+  .contact-us__content {
+    margin-top: 24px;
+  }
+
+  .contact-us__content .h1 {
+    margin-top: 32px;
+  }
+
+  .contact-us__row {
+    flex-wrap: wrap;
+    margin-top: 39px;
+  }
+
+  .contact-us__left {
+    width: 100%;
+  }
+
+  .contact-us__right {
+    padding: 0;
+    margin-top: 40px;
+    display: none;
+  }
+
+  .headquarters-contact-us__title {
+    font-size: 16px;
+  }
+
+  .headquarters-contact-us__title + .headquarters-contact-us__text-item {
+    margin-top: 13px;
+  }
+
+  .headquarters-contact-us__text {
+    padding: 34px 32px 30px;
+  }
+
+  .headquarters-contact-us__text br {
+    display: none;
+  }
+
+  .headquarters-contact-us__text-item {
+    font-size: 13px;
+    margin-top: 17px;
+  }
+
+  .headquarters-contact-us__text-item p + p {
+    margin-top: 3px;
+  }
+
+  .contacts-sections {
+    margin-top: 40px;
+  }
+
+  .sales-contact-us {
+    margin-top: 0;
+  }
+
+  .sales-contact-us__items {
+    margin-top: 0;
+    display: none;
+  }
+
+  .sales-contact-us__row {
+    margin-top: 0;
+  }
+
+  .sales-contact-us__item {
+    padding-top: 8px;
+  }
+
+  .sales-contact-us__item + .sales-contact-us__item {
+    padding-top: 8px;
+  }
+
+  .sales-contact-us-head {
+    display: block;
+    padding: 17px 24px;
+    border-top: 1px solid #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sales-contact-us-head--first {
+    border-top: none;
+  }
+
+  .sales-contact-us-head .h1 {
+    font-weight: 300;
+    font-size: 16px !important;
+    line-height: 150%;
+    margin-top: 0;
+  }
+
+  .sales-contact-us-head__icon {
+    display: block;
+    width: 24px;
+    min-width: 24px;
+    margin-left: 10px;
+    height: auto;
+    margin-top: 3px;
+    margin-bottom: -3px;
+  }
+
+  .sales-contact-us-head__icon svg {
+    transition: all 0.3s ease 0s;
+  }
+
+  .sales-contact-us-head--active .sales-contact-us-head__icon svg {
+    transform: rotate(180deg);
+  }
+
+  .cards-contact-us {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .cards-contact-us .card-contact-us {
+    margin-top: 8px;
+  }
+
+  .card-contact-us__column {
+    padding: 24px;
+  }
+
+  .card-contact-us__text {
+    font-size: 13px;
+  }
+
+  .card-contact-us__info {
+    margin-top: 28px;
+    padding-top: 12px;
+  }
+
+  .card-contact-us__info a img {
+    width: 15px;
+  }
+
+  .card-contact-us__info a span {
+    font-size: 13px;
+  }
+
+  .hr-contact-us__item {
+    flex: 1 1 100%;
+  }
+
+  .contact-us-sidebar__link.js-active {
+    border-bottom: none;
   }
 
   .vacancy section {
@@ -14458,79 +14676,6 @@ section.leasing {
     display: none;
   }
 
-  .contact-us h3 {
-    font-size: 16px;
-  }
-
-  .contact-us__row {
-    flex-wrap: wrap;
-  }
-
-  .contact-us__left {
-    flex: 1 1 100%;
-  }
-
-  .contact-us__right {
-    padding: 0;
-    margin-top: 40px;
-  }
-
-  .contact-us__sales {
-    display: none;
-  }
-
-  .contact-us__hr {
-    display: none;
-  }
-
-  .sales-contact-us__item {
-    flex: 1 1 100%;
-  }
-
-  .cards-contact-us {
-    padding-top: 16px;
-    padding-bottom: 24px;
-  }
-
-  .cards-contact-us .card-contact-us {
-    margin-top: 8px;
-  }
-
-  .card-contact-us__column {
-    padding: 24px;
-  }
-
-  .card-contact-us__text {
-    font-size: 13px;
-  }
-
-  .card-contact-us__info {
-    margin-top: 32px;
-    padding-top: 10px;
-  }
-
-  .card-contact-us__info a span {
-    font-size: 13px;
-  }
-
-  .hr-contact-us__item {
-    flex: 1 1 100%;
-  }
-
-  .contact-us-sidebar__list {
-    border: 0px solid #E3E3E3;
-  }
-
-  .contact-us-sidebar__link {
-    border: 0px solid #E3E3E3;
-    border-top: 0.5px solid #E3E3E3;
-    border-bottom: 0.5px solid #E3E3E3;
-  }
-
-  .contact-us-sidebar__link.js-active {
-    border-bottom: none;
-  }
-
   .block-vacancy__slide-row {
     flex-direction: column;
   }
@@ -14638,6 +14783,12 @@ section.leasing {
 
   .items-news-page__item--news {
     margin-bottom: 40px;
+  }
+
+  .sales-contact-us__item {
+    padding-top: 16px;
+    flex: 1 1 100%;
+    width: 100%;
   }
 
   .vacancy-single-content__row {
@@ -16108,38 +16259,6 @@ section.leasing {
     height: 40px;
   }
 
-  .contact-us {
-    margin-bottom: 56px;
-  }
-
-  .contact-us .resp-desk {
-    display: none;
-  }
-
-  .contact-us .resp-mob {
-    display: block;
-  }
-
-  .contact-us .breakpoints__container {
-    padding: 16px 0;
-  }
-
-  .contact-us__content {
-    margin-top: 24px;
-  }
-
-  .contact-us__content .h1 {
-    margin-top: 32px;
-  }
-
-  .headquarters-contact-us__title {
-    font-size: 16px;
-  }
-
-  .headquarters-contact-us__text-item {
-    font-size: 13px;
-  }
-
   .vacancy .resp-desk {
     display: none;
   }
@@ -16237,7 +16356,7 @@ section.leasing {
     padding: 12px 24px;
   }
 
-  .block-vacancy-cards__row.swiper-wrapper {
+  .block-vacancy-cards__row {
     margin-top: 56px;
   }
 
@@ -18215,6 +18334,16 @@ section.leasing {
 
   .content-blog__arrows {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 901px) {
+  .sales-contact-us__item {
+    padding-top: 30px;
+  }
+
+  .sales-contact-us__item + .sales-contact-us__item {
+    padding-top: 30px;
   }
 }
 

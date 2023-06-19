@@ -60,7 +60,8 @@ $(document).ready(function () {
 		}
 	});
 
-	catalogBtn.click(function () {
+	catalogBtn.on('click', function (event) {
+		event.preventDefault();
 		if (!megaMenu.hasClass('open')) {
 			megaMenu.addClass('open');
 			$('body').addClass('no-scroll');

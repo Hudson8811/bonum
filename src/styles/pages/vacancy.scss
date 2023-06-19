@@ -369,14 +369,14 @@
 .block-vacancy-cards {
 	margin: -30px -15px 0;
 	&__row {
-		&.swiper-wrapper {
-			display: flex;
-			flex-wrap: wrap;
-			margin-top: 64px;
-			@media (max-width: 768px){
-				margin-top: 56px;
-			}
+
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 64px;
+		@media (max-width: 768px){
+			margin-top: 56px;
 		}
+
 	}
 	&__card {
 		display: block;

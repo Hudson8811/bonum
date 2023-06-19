@@ -595,27 +595,33 @@ jQuery(function() {
 	});
 
 	$(document).ready(function() {
+		/*
 		$('.contact-us-sidebar__link').click(function(event) {
 			$(this).toggleClass('js-active').next().slideToggle(300);
+		});*/
+
+		$('.js-mob-accordeons-opener').click(function(event) {
+			$(this).toggleClass('sales-contact-us-head--active').next().slideToggle(300);
 		});
 	});
 
 	Fancybox.bind('.my-fancy-video', {
 		type: "video"
 	});
+	/*
 	var blockVacancyCards = new Swiper(".block-vacancy-cards", {
 		freeMode: true,
 		watchSlidesProgress: true,
-	});
+	});*/
 	var swiperVacancy = new Swiper(".block-vacancy__swiper", {
 		initialSlide : 0,
 		navigation: {
 			nextEl: ".block-vacancy__swiper .swiper-btn--next",
 			prevEl: ".block-vacancy__swiper .swiper-btn--prev",
 		},
-		thumbs: {
+		/*thumbs: {
 			swiper: blockVacancyCards,
-		},
+		},*/
 	});
 	$("#localities-centers__select").select2({
 		placeholder: "Выберите населенный пункт",
@@ -1455,11 +1461,12 @@ $(function () {
 		$('.centers-tabs__tab').eq($(this).index()).slideDown(400).siblings().slideUp(400);
 	});
 
+	/*
 	$(document).on('click', 'a.js-smooth-scroll[href^="#"]', function (event) {
 		event.preventDefault();
-		$('html, body').animate({
+		$('html, body').stop().animate({
 			scrollTop: $($.attr(this, 'href')).offset().top-10
 		}, 500);
-	});
+	});*/
 });
 

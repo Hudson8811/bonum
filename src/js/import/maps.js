@@ -1,3 +1,4 @@
+
 function getYaMap() {
 
 	$(function () {
@@ -35,7 +36,32 @@ function getYaMap() {
 						mainLinks+='<a href="tel:'+elClean+'">'+el+'</a>';
 					});
 				}
+				if(obj.phone.trim().length>0){
+					phones.forEach(function(el){
+						el=el.trim();
+						//var elClean=el.replace(/\(.*?\)/,'');
+						//уберём доб номера в скобках
+						//нельзя. часть номеров содержит скобки
+						var elClean=el.replace(/\D/g,'');
+						//уберём всё кроме цифр
+						mainLinks+='<a href="tel:'+elClean+'">'+el+'</a>';
+					});
+				}
 
+				var sites=obj.site.split(/[|,]+/);
+
+				if(obj.site.trim().length>0){
+					sites.forEach(function(el){
+						el=el.trim();
+						if(el.indexOf("@") >= 0){
+							mainLinks+='<a href="mailto:'+el.trim()+'">'+el.trim()+'</a>';
+						}
+						else{
+							mainLinks+='<a target="_blank" href="'+el.trim()+'">'+el.trim()+'</a>';
+						}
+					});
+				}
+				/*
 				if(obj.site.trim().length>0){
 
 					if(obj.site.indexOf("@") >= 0){
@@ -44,7 +70,7 @@ function getYaMap() {
 					else{
 						mainLinks+='<a target="_blank" href="'+obj.site.trim()+'">'+obj.site.trim()+'</a>';
 					}
-				}
+				}*/
 				item.find('.js-contacts-main').append(mainLinks);
 
 
@@ -489,6 +515,20 @@ function getYaMap() {
 					});
 				}
 
+				var sites=obj.site.split(/[|,]+/);
+
+				if(obj.site.trim().length>0){
+					sites.forEach(function(el){
+						el=el.trim();
+						if(el.indexOf("@") >= 0){
+							mainLinks+='<a href="mailto:'+el.trim()+'">'+el.trim()+'</a>';
+						}
+						else{
+							mainLinks+='<a target="_blank" href="'+el.trim()+'">'+el.trim()+'</a>';
+						}
+					});
+				}
+				/*
 				if(obj.site.trim().length>0){
 
 					if(obj.site.indexOf("@") >= 0){
@@ -497,7 +537,7 @@ function getYaMap() {
 					else{
 						mainLinks+='<a target="_blank" href="'+obj.site.trim()+'">'+obj.site.trim()+'</a>';
 					}
-				}
+				}*/
 				item.find('.js-contacts-main').append(mainLinks);
 
 
@@ -521,10 +561,11 @@ function getYaMap() {
 				var myMap1;
 				var myPlacemark1;
 
-				$.ajax({
+				/*$.ajax({
 					url: '/jsons/predstva_map.json?v=2',
 					type: 'get',
-					success: function (response) {
+					success: function (response) {*/
+						response=window.predstva_map_array;
 						//var yyy = JSON.parse(response).main;
 						console.log(response);
 						//var yyy = $.parseJSON(response);;
@@ -734,7 +775,7 @@ function getYaMap() {
 
 
 
-					}
+					/*}
 
 
 				}).fail(function (jqXHR, textStatus, errorThrown) {
@@ -743,7 +784,7 @@ function getYaMap() {
 					console.log(textStatus);
 					console.log(errorThrown);
 				});
-
+*/
 
 
 				/*
@@ -809,11 +850,11 @@ $(function () {
 		$('.centers-tabs__tab').eq($(this).index()).slideDown(400).siblings().slideUp(400);
 	});
 
+	/*
 	$(document).on('click', 'a.js-smooth-scroll[href^="#"]', function (event) {
 		event.preventDefault();
-		$('html, body').animate({
+		$('html, body').stop().animate({
 			scrollTop: $($.attr(this, 'href')).offset().top-10
 		}, 500);
-	});
+	});*/
 });
-
