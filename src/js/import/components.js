@@ -80,6 +80,24 @@ jQuery(function () {
 	}
 
 	if (document.querySelector('.js-hero-slider')) {
+		function refreshArrowsColors(swiperHero) {
+			const index_currentSlide = swiperHero.realIndex;
+			const currentSlide = swiperHero.slides[index_currentSlide];
+			var elWrap = $(currentSlide).find('.hero__container');
+			var dataColor = elWrap.attr('data-color');
+			var defaultColor = '#1f2120';
+			var sliderWRap = elWrap.closest('.js-hero-slider');
+			var paths1 = sliderWRap.find('.swiper-btn svg path:nth-child(1)');
+			var paths2 = sliderWRap.find('.swiper-btn svg path:nth-child(2)');
+			var needleColor = typeof (dataColor) === 'string' && dataColor.length > 2 ? dataColor : defaultColor;
+
+			paths1.css('stroke', needleColor);
+			paths2.css('fill', needleColor);
+
+			console.log(elWrap);
+			console.log(dataColor);
+			console.log(needleColor);
+		}
 		const swiperHero = new Swiper('.js-hero-slider', {
 			loop: true,
 			slidesPerView: 1,
@@ -88,8 +106,20 @@ jQuery(function () {
 				prevEl: '.hero__nav .swiper-btn--prev',
 				nextEl: '.hero__nav .swiper-btn--next',
 			},
+			on: {
+				afterInit: function (swiper) {
+					refreshArrowsColors(swiper);
+				},
+				slideChange: function (swiper) {
+					refreshArrowsColors(swiper);
+
+				},
+			},
 		});
+
+
 	}
+
 
 	if (document.querySelector('.js-advantages-slider')) {
 		const swiperAdvantages = new Swiper('.js-advantages-slider', {
@@ -153,31 +183,31 @@ jQuery(function () {
 
 			});
 
-			var mobPrev=wrap.find('.leasing__top .swiper-btn--prev');
-			var mobNext=wrap.find('.leasing__top .swiper-btn--next');
-			var desktopPrev=wrap.find('.leasing__slider .swiper-btn--prev');
-			var desktopNext=wrap.find('.leasing__slider .swiper-btn--next');
-			var disabledClass='swiper-button-disabled';
+			var mobPrev = wrap.find('.leasing__top .swiper-btn--prev');
+			var mobNext = wrap.find('.leasing__top .swiper-btn--next');
+			var desktopPrev = wrap.find('.leasing__slider .swiper-btn--prev');
+			var desktopNext = wrap.find('.leasing__slider .swiper-btn--next');
+			var disabledClass = 'swiper-button-disabled';
 
-			mobPrev.on('click',function(){
+			mobPrev.on('click', function () {
 				desktopPrev.trigger('click');
 			});
-			mobNext.on('click', function(){
+			mobNext.on('click', function () {
 				desktopNext.trigger('click');
 			});
 
 			function refreshMobBtnsState() {
-				if(desktopPrev.hasClass(disabledClass)){
+				if (desktopPrev.hasClass(disabledClass)) {
 					mobPrev.addClass(disabledClass);
 				}
-				else{
+				else {
 					mobPrev.removeClass(disabledClass);
 				}
 
-				if(desktopNext.hasClass(disabledClass)){
+				if (desktopNext.hasClass(disabledClass)) {
 					mobNext.addClass(disabledClass);
 				}
-				else{
+				else {
 					mobNext.removeClass(disabledClass);
 				}
 			}
@@ -256,19 +286,19 @@ jQuery(function () {
 
 
 
-			wrap.find('.js-swiper-filter').on( 'click', function() {
+			wrap.find('.js-swiper-filter').on('click', function () {
 				var filter = $(this).attr('data-filter');
 
-				if(filter==='all'){
+				if (filter === 'all') {
 					wrap.find('.swiper-slide').css('display', '');
 				}
-				else{
+				else {
 					wrap.find('.swiper-slide').css('display', 'none');
-					wrap.find('.swiper-slide[data-filter="' + filter+'"').css('display', '');
+					wrap.find('.swiper-slide[data-filter="' + filter + '"').css('display', '');
 
 				}
-				wrap.find('.js-swiper-filter').removeClass( 'news__categories-item--active' );
-				$( this ).addClass('news__categories-item--active' );
+				wrap.find('.js-swiper-filter').removeClass('news__categories-item--active');
+				$(this).addClass('news__categories-item--active');
 
 				swiperNews.updateSize();
 				swiperNews.updateSlides();

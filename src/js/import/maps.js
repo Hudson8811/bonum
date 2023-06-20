@@ -848,7 +848,18 @@ $(function () {
 	$('.js-centers-tabs-switcher').on('click', function () {
 		$(this).addClass('js-active').siblings().removeClass('js-active');
 		$('.centers-tabs__tab').eq($(this).index()).slideDown(400).siblings().slideUp(400);
+		var anchor=$(this).attr('data-anchor');
+		if(anchor && anchor.length>0){
+			history.pushState({}, "", window.location.href.replace(/#.*/g, '')+'#'+anchor);
+		}
+		else{
+			history.pushState({}, "", window.location.href.replace(/#.*/g, ''));
+		}
 	});
+	var hash = $(location).attr('hash');
+	if(hash && hash.length>1){
+		$('.js-centers-tabs-switcher[data-anchor="'+hash.replace('#', '')+'"]').trigger('click');
+	}
 
 	/*
 	$(document).on('click', 'a.js-smooth-scroll[href^="#"]', function (event) {
