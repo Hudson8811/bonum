@@ -87,11 +87,17 @@
             width: 100%;
             margin-bottom: 48px;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
+			&:last-child {
+				@include min(lg) {
+					margin-bottom: 0;
+				}
+				@media (max-width: 576px) {
+					margin-bottom: 0;
+				}
+			}
 
-            @include max(lg) {
+
+			@include max(lg) {
                 flex-flow: column nowrap;
                 flex: 0 0 50%;
                 max-width: calc(50% - 24px);

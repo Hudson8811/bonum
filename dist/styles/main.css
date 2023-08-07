@@ -11720,10 +11720,6 @@ section.leasing {
   margin-bottom: 48px;
 }
 
-.catalog-page .catalog__item:last-child {
-  margin-bottom: 0;
-}
-
 .catalog-page .catalog__item--picture {
   position: relative;
   width: 52%;
@@ -12946,6 +12942,10 @@ section.leasing {
     max-width: 100%;
     width: 100%;
     padding: 0;
+  }
+
+  .catalog-page .catalog__item:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -18082,6 +18082,10 @@ section.leasing {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .catalog-page .catalog__item:last-child {
+    margin-bottom: 0;
   }
 
   .catalog-page .catalog__item {
