@@ -94,9 +94,11 @@
 }
 
 
-.our-team-item:not(.our-team-item--simple) {
-	@media screen and (min-width: 1161px) {
-		&:not(:nth-child(3n)) {
+@media screen and (min-width: 1161px) {
+
+	.our-team-item:not(.our-team-item--simple) {
+
+		&:not(:nth-child(3n)):not(.our-team-item--full-w) {
 			.our-team-item__text {
 				width: 50%;
 			}
@@ -124,7 +126,8 @@
 			}
 		}
 
-		&:nth-child(3n) {
+		&:nth-child(3n),
+		&.our-team-item--full-w {
 			width: calc(100% - 30px);
 			min-height: 637px;
 
