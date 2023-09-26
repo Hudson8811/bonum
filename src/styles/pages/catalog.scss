@@ -56,6 +56,10 @@
         }
     }
 
+	.layout-one{
+		padding-bottom: 56px;
+	}
+
     .catalog {
         position: relative;
         display: flex;
@@ -63,7 +67,7 @@
         align-items: stretch;
         width: 100%;
         flex-flow: column nowrap;
-        padding-bottom: 56px;
+
 
         @include max(lg) {
             width: calc(100% + 24px);
@@ -87,11 +91,17 @@
             width: 100%;
             margin-bottom: 48px;
 
-            &:last-child {
-                margin-bottom: 0;
-            }
+			&:last-child {
+				@include min(lg) {
+					margin-bottom: 0;
+				}
+				@media (max-width: 576px) {
+					margin-bottom: 0;
+				}
+			}
 
-            @include max(lg) {
+
+			@include max(lg) {
                 flex-flow: column nowrap;
                 flex: 0 0 50%;
                 max-width: calc(50% - 24px);
@@ -322,7 +332,6 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
     width: 100%;
 
     .container {
@@ -369,13 +378,14 @@
 }
 
 .side-bar {
-    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-flow: column nowrap;
     width: 100%;
     border: 1px solid #E3E3E3;
+	position: sticky;
+	top: 0;
 
     &--title {
         position: relative;
