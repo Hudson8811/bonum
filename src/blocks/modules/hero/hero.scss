@@ -138,3 +138,21 @@
 		}
 	}
 }
+
+
+.hero__slide--team{
+	.hero__container{
+		display: flex;
+		justify-content: center;
+		
+		padding-top: 13vh;
+		padding-bottom: 13vh;
+	}
+	.hero__title{
+		max-width: 625px;
+
+	}
+
+}
+
+

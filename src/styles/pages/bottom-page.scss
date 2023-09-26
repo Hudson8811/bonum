@@ -778,6 +778,12 @@
 				flex: 1 1 100%;
 			}
 		}
+		&--resp-mob {
+			display: none;
+			@media (max-width: 768px){
+				display: block;
+			}
+		}
 	}
 	&__body {
 		flex: 0 1 50%;
@@ -855,6 +861,7 @@
 			max-width: 657px;
 		}
 	}
+	
 }
 
 .sec10-bottom-page {

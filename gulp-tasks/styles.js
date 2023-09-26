@@ -23,7 +23,10 @@ gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({errLogToConsole: false})).on('error', function(err) {
+            console.log(err);
+            this.emit('end');
+        })
         .pipe(groupmedia())
         .pipe(gulpif(production, autoprefixer({
             cascade: false,

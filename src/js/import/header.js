@@ -9,7 +9,7 @@ $(document).ready(function () {
 	const closeMobileMenu = $('.header-m__close');
 	const megaMenu = $('.js-mega-menu');
 	const openMegaMenuBtn = $('.js-mega-menu-link');
-	const catalogBtn = $('.header__catalog');
+	const catalogBtn = $('.header__catalog .catalog__btn-text, .header__catalog .catalog__btn-svg');
 	const toggleBtn = $('.header-m__toggle');
 	let headerHeight = header.outerHeight();
 	let scroll = $(window).scrollTop();

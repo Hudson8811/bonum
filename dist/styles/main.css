@@ -4579,6 +4579,17 @@ a {
   transform: rotate(90deg);
 }
 
+.hero__slide--team .hero__container {
+  display: flex;
+  justify-content: center;
+  padding-top: 13vh;
+  padding-bottom: 13vh;
+}
+
+.hero__slide--team .hero__title {
+  max-width: 625px;
+}
+
 .catalog-block {
   padding: 107px 0 152px;
 }
@@ -5381,6 +5392,122 @@ a {
   font-size: 15px;
   line-height: 150%;
   color: #4c4e4d;
+}
+
+.our-team {
+  background: #fff;
+  margin-top: 128px;
+}
+
+.our-team + * {
+  margin-top: 128px;
+}
+
+.our-team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.our-team-item {
+  background: #F8F8F8;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: calc(50% - 30px);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.our-team-item__inner {
+  padding: 42px 56px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.our-team-item__pic {
+  max-width: 100%;
+  display: block;
+}
+
+.our-team-item__pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.our-team-item__title {
+  color: var(--main-dark, #1F2120);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 38.4px */
+  border-bottom: 1px solid #D7D8D8;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.our-team-item__center-wrap {
+  display: flex;
+  border-bottom: 1px solid #D7D8D8;
+  flex-grow: 1;
+}
+
+.our-team-item__text {
+  color: #4C4E4D;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 173%;
+  flex-grow: 1;
+  padding: 26px 0 22px;
+  padding-left: 23px;
+}
+
+.our-team-item__text p {
+  font: inherit;
+}
+
+.our-team-item__text p + p {
+  margin-top: 26px;
+}
+
+.our-team-item-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  transition-duration: 0.3s;
+}
+
+.our-team-item-btn:hover {
+  opacity: 0.7;
+}
+
+.our-team-item-btn__text {
+  color: var(--main-dark, #1F2120);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  /* 20.25px */
+}
+
+.our-team-item-btn__icon {
+  margin-left: 20px;
+  width: 46px;
+  min-width: 46px;
+  margin-right: -7px;
+}
+
+.our-team-item-btn__icon img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .footer__logo svg {
@@ -7078,6 +7205,10 @@ ul.list-marker li::before,
 .sec9-bottom-page__img-wrapper {
   flex: 0 1 50%;
   padding-left: 100px;
+}
+
+.sec9-bottom-page__img--resp-mob {
+  display: none;
 }
 
 .sec9-bottom-page__body {
@@ -12931,6 +13062,318 @@ section.leasing {
   font-weight: 260;
 }
 
+.hero__slider--internships .hero__container {
+  gap: 35px;
+}
+
+.hero__slider--internships--gap-54 .hero__container {
+  gap: 54px;
+}
+
+.tac {
+  text-align: center;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__row {
+  background: #f8f8f8;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__body {
+  padding-top: 138px;
+  padding-bottom: 134px;
+  flex-basis: auto;
+  width: calc(50% + 100px);
+  color: #4C4E4D;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  background: #f8f8f8;
+  line-height: 200%;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__body p {
+  color: inherit;
+  font: inherit;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__body .title {
+  margin-bottom: 47px;
+  color: #1F2120;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  /* 72px */
+  text-transform: uppercase;
+  max-width: 100%;
+  background: #f8f8f8;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__body-inner {
+  max-width: 757px;
+  padding-right: 40px;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__img-wrapper {
+  flex-basis: auto;
+  width: calc(50% - 100px);
+  padding-left: 0;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__img-wrapper img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.sec9-bottom-page--internships .sec9-bottom-page__body-text {
+  width: 628px;
+  max-width: 100%;
+}
+
+.partners--internships .partners__content {
+  margin-top: 133px;
+}
+
+.partners--internships .partners__content--subtitle {
+  margin-bottom: 46px;
+}
+
+.partners--internships .item-partners__icon {
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 81px;
+  min-height: unset;
+  margin: 39px 0 40px;
+  flex-grow: 0;
+}
+
+.partners--internships .item-partners__icon img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.partners--internships .item-partners__text {
+  flex-grow: 1;
+  padding-top: 16px;
+  text-align: left;
+}
+
+.partners__items--internships .partners__item {
+  width: 50%;
+  max-width: 50%;
+  flex-basis: auto;
+  text-align: center;
+}
+
+.open-modal-with-text {
+  text-decoration: underline;
+  display: block;
+  padding-bottom: 26px;
+  cursor: pointer;
+}
+
+.modal-part-internships {
+  width: 608px;
+  max-width: 100%;
+}
+
+.modal-part-internships__close {
+  width: 26px;
+  height: 26px;
+  background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L25 25M25 1L1 25' stroke='%231F2120' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-position: center center;
+  top: 32px;
+  right: 28px;
+  position: absolute;
+  display: block;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.modal-part-internships__close:hover {
+  opacity: 0.5;
+}
+
+.modal-part-internships__close::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+}
+
+.modal-part-internships__name {
+  color: #1F2120;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-weight: 600;
+  line-height: 160%;
+  padding-right: 45px;
+  /* 38.4px */
+}
+
+.modal-part-internships__position {
+  color: #1F2120;
+  font-size: 16px;
+  margin-top: 9px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 135%;
+  padding-right: 45px;
+  /* 20.25px */
+}
+
+.modal-part-internships__text {
+  color: #4C4E4D;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin-top: 24px;
+}
+
+.modal-part-internships__text p + p {
+  margin-top: 24px;
+}
+
+.advantages--internships .advantages__title {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.advantages-internships-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  text-transform: uppercase;
+  padding: 60px 0 73px;
+  padding-left: 53px;
+  padding-right: 16px;
+}
+
+.advantages-internships-text__inner {
+  width: 492px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1161px) {
+  .our-team-item:not(.our-team-item--simple):not(:nth-child(3n)) .our-team-item__text {
+    width: 50%;
+  }
+
+  .our-team-item:not(.our-team-item--simple):not(:nth-child(3n)) .our-team-item__pic {
+    margin: 28px 0;
+    position: relative;
+    width: 50%;
+    min-width: 50%;
+    height: auto;
+    align-self: start;
+  }
+
+  .our-team-item:not(.our-team-item--simple):not(:nth-child(3n)) .our-team-item__pic::before {
+    content: "";
+    display: block;
+    padding-top: 150.94%;
+  }
+
+  .our-team-item:not(.our-team-item--simple):not(:nth-child(3n)) .our-team-item__pic img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) {
+    width: calc(100% - 30px);
+    min-height: 637px;
+    justify-content: flex-end;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) .our-team-item__center-wrap {
+    align-items: center;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) .our-team-item__text {
+    padding-left: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    padding-right: 40px;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) .our-team-item__text sup {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) .our-team-item__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 425px;
+    height: 100%;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(3n) .our-team-item__inner {
+    width: calc(100% - 425px);
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(6n) {
+    justify-content: flex-start;
+  }
+
+  .our-team-item:not(.our-team-item--simple):nth-child(6n) .our-team-item__pic {
+    left: auto;
+    right: 0;
+  }
+
+  .our-team-item--simple .our-team-item__text {
+    width: 50%;
+  }
+
+  .our-team-item--simple .our-team-item__pic {
+    margin: 28px 0;
+    position: relative;
+    width: 50%;
+    min-width: 50%;
+    height: auto;
+    align-self: start;
+  }
+
+  .our-team-item--simple .our-team-item__pic::before {
+    content: "";
+    display: block;
+    padding-top: 150.94%;
+  }
+
+  .our-team-item--simple .our-team-item__pic img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
 @media (min-width: 1201px) {
   .sales-contact-us-head__icon {
     display: none;
@@ -13044,6 +13487,17 @@ section.leasing {
 
   .mega-menu__container {
     padding: 0 80px;
+  }
+}
+
+@media (max-width: 1520px) {
+  .sec9-bottom-page--internships .sec9-bottom-page__img-wrapper {
+    background: #000000;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img-wrapper img {
+    object-fit: contain;
+    object-position: center left;
   }
 }
 
@@ -13775,6 +14229,115 @@ section.leasing {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .our-team-item {
+    width: calc(100% - 30px);
+    /*min-height: 637px;
+
+    .our-team-item__center-wrap {
+    	align-items: center;
+    }
+
+    .our-team-item__text {
+    	padding-left: 0;
+
+    	font-size: 20px;
+    	font-style: normal;
+    	font-weight: 400;
+    	line-height: 170%;
+    	padding-right: 40px;
+
+    	sup {
+    		font-size: 15px;
+    		font-style: normal;
+    		font-weight: 400;
+    		line-height: 170%;
+    	}
+    }
+
+    .our-team-item__pic {
+    	position: absolute;
+    	left: 0;
+
+    	width: 30%;
+    	height: 100%;
+
+    	margin: 28px 0;
+    	width: 50%;
+    	min-width: 50%;
+
+    	&::before {
+    		content: '';
+    		display: block;
+    		padding-top: 150.94%;
+    	}
+
+    	img {
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+
+    	}
+    }
+    .our-team-item__inner {
+    	width: 70%;
+    }
+
+    justify-content: flex-end;
+
+
+    &:nth-child(2n) {
+    	justify-content: flex-start;
+
+    	.our-team-item__pic {
+    		left: auto;
+    		right: 0;
+    	}
+
+    }*/
+  }
+
+  .our-team-item .our-team-item__text {
+    width: 70%;
+  }
+
+  .our-team-item .our-team-item__text sup {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 170%;
+  }
+
+  .our-team-item .our-team-item__pic {
+    margin: 28px 0;
+    position: relative;
+    width: 30%;
+    min-width: 30%;
+    height: auto;
+    align-self: start;
+  }
+
+  .our-team-item .our-team-item__pic::before {
+    content: "";
+    display: block;
+    padding-top: 150.94%;
+  }
+
+  .our-team-item .our-team-item__pic img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .our-team-item:nth-child(2n) .our-team-item__center-wrap {
+    flex-direction: row-reverse;
+  }
+
+  .our-team-item:nth-child(2n) .our-team-item__text {
+    padding-left: 0;
+    padding-right: 23px;
+  }
+}
+
 @media (max-width: 1200px) {
   .bottom-page section {
     margin-top: 56px;
@@ -14400,6 +14963,25 @@ section.leasing {
     order: -1;
     padding-top: 65.64%;
   }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    font-size: 16px;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body .title {
+    font-size: 28px;
+    background: #f8f8f8;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body-inner {
+    max-width: 100%;
+  }
+
+  .partners--internships .partners__content {
+    margin-top: 64px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -14738,6 +15320,12 @@ section.leasing {
   }
 }
 
+@media screen and (max-width: 920px) {
+  .our-team-item .our-team-item__inner {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .stocks-mult-benefits__item {
     flex: 1 1 100%;
@@ -14832,6 +15420,14 @@ section.leasing {
   .breakpoints__text {
     font-size: 11px;
     line-height: 13px;
+  }
+
+  .our-team {
+    margin-top: 56px;
+  }
+
+  .our-team + * {
+    margin-top: 56px;
   }
 
   p,
@@ -15098,6 +15694,10 @@ section.leasing {
 
   .sec9-bottom-page__img-wrapper {
     flex: 1 1 100%;
+  }
+
+  .sec9-bottom-page__img--resp-mob {
+    display: block;
   }
 
   .sec9-bottom-page__body {
@@ -16828,6 +17428,51 @@ section.leasing {
     padding-top: 76%;
     order: -1;
   }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body {
+    width: 100%;
+    background: #f8f8f8;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body .title {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body-inner {
+    padding-right: 0;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img-wrapper {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img-wrapper img {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img-wrapper.resp-desk {
+    display: none;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img {
+    width: 100%;
+    height: auto;
+    padding-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__img img {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
 }
 
 @media only screen and (max-width: 699px) {
@@ -18009,6 +18654,21 @@ section.leasing {
     font-size: 12px;
     line-height: 150%;
   }
+
+  .advantages__slider--internships .advantages__nav {
+    display: none !important;
+  }
+
+  .advantages-internships-text {
+    padding: 0;
+    height: calc(100% - 180px - 100px);
+    font-size: 18px;
+    padding-right: 16px;
+  }
+
+  .advantages-internships-text__inner {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -18075,6 +18735,15 @@ section.leasing {
   .testimonials__item {
     flex: 1 1 100%;
   }
+
+  .partners--internships .item-partners__icon {
+    margin: 15px 0;
+  }
+
+  .partners__items--internships .partners__item {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -18113,6 +18782,27 @@ section.leasing {
   .localities-maps-page__button {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .our-team-item .our-team-item__center-wrap {
+    flex-direction: column !important;
+  }
+
+  .our-team-item .our-team-item__pic {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .our-team-item .our-team-item__text {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .our-team-item .our-team-item__inner {
+    padding: 20px 15px;
   }
 }
 
@@ -18192,6 +18882,20 @@ section.leasing {
 @media (max-width: 450px) {
   .structure-philosophy-page__img {
     flex: 0 1 233px;
+  }
+
+  .sec9-bottom-page--internships .sec9-bottom-page__body .title {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .advantages--internships .advantages__title {
+    font-size: 14px;
+  }
+
+  .advantages-internships-text {
+    font-size: 15px;
   }
 }
 

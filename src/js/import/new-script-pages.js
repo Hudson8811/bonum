@@ -65,7 +65,7 @@ jQuery(function() {
 		},
 	});
 	var swiper2 = new Swiper(".history-about-page__swiper", {
-		initialSlide : 1,
+		initialSlide : 0,
 		navigation: {
 			nextEl: ".history-about-page__swiper .swiper-btn--next",
 			prevEl: ".history-about-page__swiper .swiper-btn--prev",
@@ -143,4 +143,35 @@ jQuery(function() {
 		$('.property-list-new__hidemob').slideDown(500);
 		$(this).fadeOut(300);
 	});
+
+
+	
+	
+
+
+	
+	$( '.js-open-modal-with-text, a[href="#js-open-modal-with-text"]' ).off().on( 'click', function( e ){
+		e.preventDefault();
+		e.stopPropagation();
+		var btn = $( this );
+		var target=btn.siblings('.js-hidden-part-wrap');
+		if(target.length>0){
+			new Fancybox( [
+				{
+					src: target.children()[0],
+					type: "inline",
+					autoFocus: false,
+					placeFocusBack: false,
+					mainClass: 'internships-simple-modal',
+					tpl:{closeButton:'   '},
+					closeButton:false
+				},
+			] );
+	
+		}
+	
+
+	} );
+
+	
 });

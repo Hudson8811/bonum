@@ -1,0 +1,131 @@
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
+
+
+block variables
+	- const title = "Main";
+
+block content
+	include ../../blocks/modules/header/header
+	//- include ../../blocks/modules/breakpoints/breakpoints
+
+	.main-page.main-page-loc
+		include ../../blocks/modules/hero/hero-team.pug
+
+		section.our-team 
+			.container
+				.our-team-flex 
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title ОТДЕЛ СНАБЖЕНИЯ
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Для нас высокое качество комплектующих и оборудования — фундамент надежности и функциональности техники BONUM.
+									p Поэтому мы тщательно выбираем материалы, поддерживаем доверительные отношения с поставщиками и лично проверяем качество на их заводах. Это позволяет гарантировать долгую и исправную работу наших полуприцепов.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title Отдел маркетинга и рекламы
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Маркетинг в BONUM играет важную роль. Мы не только анализируем рынок и проводим обширные исследования, но и стремимся по-настоящему понять клиента, быть на его стороне. 
+									
+									p Наше подразделение — это островок неиссякаемого креатива, вдохновения и идей. И наша главная идея — это дать клиентам выгодные решения в выборе технике.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title Технологический отдел
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Чтобы обеспечить бесперебойный выпуск и высокое качество техники BONUM, наша команда постоянно совершенствует технологии производства. Каждый день для нас — возможность улучшить и оптимизировать внутренние процессы компании.
+									p 
+										sup Инженеры-технологи являются тем связующим звеном, которое позволяет воплотить чертежи в реальность и создать готовые красивые полуприцепы.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title Отдел продаж
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Нам нравится заботиться о клиентах и подбирать для них идеальные решения с учетом всех деталей. Мы ежедневно изучаем тенденции в мире грузовой техники и «матчасть». 
+									p Продажа техники BONUM — это не просто продажа. Это полное ведение и забота о клиентах и их бизнесе. А еще нам нравится быть лучшими в своем деле.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title Конструкторский отдел
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Каждый полуприцеп BONUM — произведение инженерного искусства, созданное нашими руками. Мы постоянно совершенствуем технику, уделяя внимание даже мельчайшим элементам. 
+									p Наша цель — объединить вместе функциональность и эстетику. Для этого мы непрерывно учимся, в том числе у ведущих мировых производителей, перенимаем их опыт и создаем технику BONUM — идеальное сочетание дизайна, качества и эффективности.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+					.our-team-item
+						.our-team-item__inner 
+							.our-team-item__title Отдел технического контроля
+							.our-team-item__center-wrap 
+								.our-team-item__pic 
+									img(src="img/hero-team.jpg", alt="")
+								.our-team-item__text 
+									p Мы контролируем каждый этап производственного процесса — до, во время и после. Нам нравится, что благодаря нам, клиенты BONUM получают безупречную во всех отношениях технику.
+									p
+										sup Мы перфекционисты, и наша работа полностью отвечает нашему внутреннему запросу делать мир лучше.
+
+							a.our-team-item-btn(href="")
+								.our-team-item-btn__text yandex@yandex.ru
+								.our-team-item-btn__icon 
+									img(src="img/icon-link.svg", alt="")
+
+	
+
+		section.feedback
+			.feedback__image
+				img(src='./img/picture/feedback.jpg', srcset='./img/picture/feedback@2x.jpg 2x', alt='')
+			.feedback__outer
+				form.feedback__form(action='', method='post')
+					.title.feedback__title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+					+field('text', 'firstName', 'Имя', 'feedback__field')(required='true')
+					+field('text', 'number', 'Телефон', 'feedback__field')(required='true')
+					+field('email', 'email', 'Email', 'feedback__field')
+					+field(
+						'checkbox',
+						'policy',
+						'Я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных',
+						'feedback__field'
+					)(required='true')
+					+button('отправить', 'button--outline-inverse feedback__button')(type='submit')
+
+
+
+
+	include ../../blocks/modules/footer/footer
+
+	//block scripts
+		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
