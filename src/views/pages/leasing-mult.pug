@@ -1,0 +1,100 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "page";
+
+block content
+	include ../../blocks/modules/header/header
+
+
+	.breakpoints.breakpoints--grey
+		.breakpoints__container.container-new
+			ul.breakpoints__list
+				li.breakpoints__item
+					a(href='#').breakpoints__text Главная
+				li.breakpoints__item
+					span.breakpoints__text О заводе
+
+
+
+	.leasing-mult
+		section.leasing-mult-hero
+			.leasing-mult-hero__row
+				.leasing-mult-hero__body
+					.leasing-mult-hero__body-inner
+						.leasing-mult-hero__image.leasing-mult-hero__image-mob
+						.h1 <span>Лизинг от партнёров</span> на выгодных условиях
+						a(href='').leasing-mult__btn.leasing-mult-hero__btn Узнать подробнее
+				.leasing-mult-hero__image-wrapper
+					.leasing-mult-hero__image
+						img(src="img/leasing-mult/hero.png" alt="alt")
+
+		section.leasing-mult-conditions
+			.container
+				.leasing-mult-conditions__wrapper
+					.leasing-mult-conditions__item.leasing-condition
+						.leasing-condition__image
+							img(src="img/leasing-mult/condition-1.svg" alt="alt")
+						.leasing-condition__info
+							.leasing-condition__title АВАНС ОТ 0%
+							.leasing-condition__text на все модели
+					.leasing-mult-conditions__item.leasing-condition
+						.leasing-condition__image
+							img(src="img/leasing-mult/condition-2.svg" alt="alt")
+						.leasing-condition__info
+							.leasing-condition__title ОНЛАЙН
+							.leasing-condition__text оформление лизинга				
+					.leasing-mult-condition__item.leasing-condition
+						.leasing-condition__image
+							img(src="img/leasing-mult/condition-3.svg" alt="alt")
+						.leasing-condition__info
+							.leasing-condition__title СЕЗОННЫЕ ПЛАТЕЖИ
+							.leasing-condition__text с учетом загрузки бизнеса
+
+		section.leasing-mult-entity
+			.container
+				.h2 Лизинг для юридических лиц и ип
+				.leasing-mult-entity__cards
+					.entity-card
+						.entity-card__title Цистерны
+						.entity-card__info
+							!= 'Аванс от 0%'
+							br
+							!= 'Сезонный график платежей'
+						a(href='').leasing-mult__btn.entity-card__btn Подробнее
+						.entity-card__img 
+							img(src="leasing-mult/entity-card-1.png" alt="alt")
+					.entity-card
+						.entity-card__title Магистральные
+						.entity-card__info
+							!= 'Аванс от 0%'
+							br
+							!= 'Сезонный график платежей'
+						a(href='').leasing-mult__btn.entity-card__btn Подробнее
+						.entity-card__img 
+							img(src="leasing-mult/entity-card-2.png" alt="alt")
+					.entity-card
+						.entity-card__title Сельхозтехника
+						.entity-card__info
+							!= 'Аванс от 0%'
+							br
+							!= 'Сезонный график платежей'
+						a(href='').leasing-mult__btn.entity-card__btn Подробнее
+						.entity-card__img 
+							img(src="leasing-mult/entity-card-3.png" alt="alt")
+					.entity-card
+						.entity-card__title Зерновозы
+						.entity-card__info
+							!= 'Аванс от 0%'
+							br
+							!= 'Сезонный график платежей'
+						a(href='').leasing-mult__btn.entity-card__btn Подробнее
+						.entity-card__img 
+							img(src="leasing-mult/entity-card-4.png" alt="alt")
+
+
+	include ../../blocks/modules/footer/footer
+
+	//block scripts
+		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
