@@ -113,7 +113,7 @@
 		gap: 30px;
 	}
 	&__item {
-		flex-basis: 30%;
+		flex: 1 1 30%;
 	}
 }
 
@@ -121,7 +121,7 @@
 	display: flex;
 	align-items: center;
 	gap: 16px;
-	max-width: 418px;
+	width: 418px;
 	padding: 48px 40px 48px 48px;
 	background-color: #F8F8F8;
 	&__image {
@@ -157,6 +157,128 @@
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		row-gap: 30px;
+		column-gap: 30px;
+		margin-top: 68px;
+	}
+}
 
+.entity-card {
+	position: relative;
+	padding: 40px 57px 43px;
+	background-color: #F6F7F9;
+	aspect-ratio: 1 / 0.64;
+	&__content {
+		position: relative;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 150%;
+	}
+	&__info {
+		margin-top: 9px;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+	}
+	&__btn {
+		margin-top: auto;
+	}
+	&__img {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 63.4%;
+		z-index: 1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.leasing-mult__leasing {
+	.leasing__slider {
+		margin-top: 64px;
+	}
+	.card-leasing {
+		padding: 31px 37px 20px;
+		background-color: #F6F7F9;
+		&--colored {
+			background-color: #E0E0E0;
+		}
+		&__subtitle {
+			font-size: 10.08px;
+			padding-bottom: 12px;
+			margin-bottom: 14px;
+		}
+		&__image {
+			margin-bottom: 27px;
+			max-height: 318px;
+			aspect-ratio: 1 / 0.9;
+		}
+		&__bottom {
+			gap: 0;
+			margin-top: 0;
+		}
+		&__from {
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 150%;
+			font-weight: 600;
+		}
+		&__offer > span {
+			text-transform: none;
+			font-size: 15px;
+			line-height: 150%;
+			font-weight: 400;
+			margin-top: -3px;
+		}
+	}
+}
+
+.partners.leasing-mult__advantages {
+	padding-top: 5px;
+	padding-bottom: 0;
+	.partners__content {
+		margin-top: 0;
+	}
+	.partners__items {
+		margin-top: 64px;
+	}
+	.partners__row {
+		flex-wrap: nowrap;
+	}
+	.item-partners {
+		padding-top: 0;
+		&__column {
+			padding: 40px 41px 28px;
+		}
+		&__title {
+			margin-left: -5px;
+			margin-right: -5px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		&__icon {
+			height: 165px;
+		}
+		&__text {
+			padding-top: 11px;
+		}
+	}
+}
+
+.leasing-mult__questions {
+	padding: 128px 0 108px;
+	.accordions {
+		margin-top: 50px;
 	}
 }

@@ -342,6 +342,74 @@ jQuery(function () {
 		});
 	}
 
+	if (document.querySelector('.js-leasing-mult-slider')) {
+		$('.js-leasing-mult-slider').each(function () {
+			var $this = $(this);
+			var wrap = $(this).closest('.leasing');
+
+			const swiperLeasing = new Swiper($this[0
+			], {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				slidesPerGroup: 1,
+				pagination: {
+					el: wrap.find('.leasing__nav-extended .nav-extended__pagi')[0],
+					clickable: true,
+					bulletActiveClass: 'nav-extended__fraction-active',
+					bulletClass: 'nav-extended__fraction',
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '">' + (index + 1).toString().padStart(2, '0') + "</span>";
+					}
+				},
+				navigation: {
+					prevEl: '.leasing__slider .swiper-btn--prev',
+					nextEl: '.leasing__slider .swiper-btn--next'
+				},
+				breakpoints: {
+					700: {
+						slidesPerView: 3,
+						spaceBetween: 16,
+						slidesPerGroup: 3,
+					}
+				}
+
+			});
+
+			var mobPrev = wrap.find('.leasing__top .swiper-btn--prev');
+			var mobNext = wrap.find('.leasing__top .swiper-btn--next');
+			var desktopPrev = wrap.find('.leasing__slider .swiper-btn--prev');
+			var desktopNext = wrap.find('.leasing__slider .swiper-btn--next');
+			var disabledClass = 'swiper-button-disabled';
+
+			mobPrev.on('click', function () {
+				desktopPrev.trigger('click');
+			});
+			mobNext.on('click', function () {
+				desktopNext.trigger('click');
+			});
+
+			function refreshMobBtnsState() {
+				if (desktopPrev.hasClass(disabledClass)) {
+					mobPrev.addClass(disabledClass);
+				}
+				else {
+					mobPrev.removeClass(disabledClass);
+				}
+
+				if (desktopNext.hasClass(disabledClass)) {
+					mobNext.addClass(disabledClass);
+				}
+				else {
+					mobNext.removeClass(disabledClass);
+				}
+			}
+
+			swiperLeasing.on('slideChange', refreshMobBtnsState);
+			refreshMobBtnsState();
+
+		});
+	}
+
 	if (document.querySelector('.js-news-slider')) {
 		$('.js-news-slider').each(function () {
 			var $this = $(this);

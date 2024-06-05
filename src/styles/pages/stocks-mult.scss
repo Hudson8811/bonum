@@ -215,11 +215,29 @@
 		@media (max-width: 1200px){
 			flex: 1 1 100%;
 		}
+
 		figure {
 			margin: 0;
 			padding: 0;
 		}
 	}
+}
+
+.stocks-mult-cards {
+	&--col3	&__item {
+		flex: 0 1 33.33%;
+		.card-leasing {
+			padding: 31px 37px 20px;
+		}
+		@media (max-width: 1200px){
+			flex: 1 1 100%;
+		}
+
+	}
+	&--col3 &__row {
+		justify-content: space-between;
+	}
+
 }
 
 .stocks-mult-benefits {
