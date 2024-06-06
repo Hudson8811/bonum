@@ -230,12 +230,28 @@
 			padding: 31px 37px 20px;
 		}
 		@media (max-width: 1200px){
+			flex: 1 1 50%;
+		}
+		@media (max-width: 768px){
 			flex: 1 1 100%;
 		}
 
 	}
 	&--col3 &__row {
 		justify-content: space-between;
+		.card-leasing__subtitle {
+			font-size: 10.08px;
+		}
+		.card-leasing__title {
+			font-size: 20px;
+    		line-height: 150%;
+		}
+		.card-leasing__from {
+			font-size: 20px;
+		}
+		.card-leasing__from span {
+			font-size: 14px;
+		}
 	}
 
 }

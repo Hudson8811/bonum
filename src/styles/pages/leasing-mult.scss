@@ -175,7 +175,6 @@
 		flex-direction: row;
 		padding: 44px;
 		width: 100%;
-		max-width: 418px;
 	}
 	@media (max-width: 400px){
 		padding: 20px;
@@ -307,6 +306,7 @@
 	.card-leasing {
 		padding: 31px 37px 20px;
 		background-color: #F6F7F9;
+		cursor: pointer;
 		@media (max-width: 699px){
 			padding: 20px;
 		}
@@ -315,7 +315,7 @@
 		}
 		&__subtitle {
 			font-size: 10.08px;
-			padding-bottom: 12px;
+			padding-bottom: 2px;
 			margin-bottom: 14px;
 		}
 		&__image {
@@ -326,6 +326,7 @@
 		&__bottom {
 			gap: 0;
 			margin-top: 0;
+			padding-top: 26px;
 		}
 		&__from {
 			text-transform: uppercase;

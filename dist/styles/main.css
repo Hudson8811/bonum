@@ -7631,6 +7631,23 @@ ul.list-marker li::before,
   justify-content: space-between;
 }
 
+.stocks-mult-cards--col3 .stocks-mult-cards__row .card-leasing__subtitle {
+  font-size: 10.08px;
+}
+
+.stocks-mult-cards--col3 .stocks-mult-cards__row .card-leasing__title {
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.stocks-mult-cards--col3 .stocks-mult-cards__row .card-leasing__from {
+  font-size: 20px;
+}
+
+.stocks-mult-cards--col3 .stocks-mult-cards__row .card-leasing__from span {
+  font-size: 14px;
+}
+
 .stocks-mult-benefits__items {
   margin-top: 32px;
 }
@@ -8120,6 +8137,7 @@ section.leasing {
 .leasing-mult__leasing .card-leasing {
   padding: 31px 37px 20px;
   background-color: #F6F7F9;
+  cursor: pointer;
 }
 
 .leasing-mult__leasing .card-leasing--colored {
@@ -8128,7 +8146,7 @@ section.leasing {
 
 .leasing-mult__leasing .card-leasing__subtitle {
   font-size: 10.08px;
-  padding-bottom: 12px;
+  padding-bottom: 2px;
   margin-bottom: 14px;
 }
 
@@ -8141,6 +8159,7 @@ section.leasing {
 .leasing-mult__leasing .card-leasing__bottom {
   gap: 0;
   margin-top: 0;
+  padding-top: 26px;
 }
 
 .leasing-mult__leasing .card-leasing__from {
@@ -14966,7 +14985,7 @@ section.leasing {
   }
 
   .stocks-mult-cards--col3 .stocks-mult-cards__item {
-    flex: 1 1 100%;
+    flex: 1 1 50%;
   }
 
   .stocks-mult-benefits__item--quarter {
@@ -16320,6 +16339,10 @@ section.leasing {
     padding-top: 82%;
     width: calc(100% + 32px);
     order: -1;
+  }
+
+  .stocks-mult-cards--col3 .stocks-mult-cards__item {
+    flex: 1 1 100%;
   }
 
   .stocks-single .resp-desk {
@@ -19268,7 +19291,6 @@ section.leasing {
     flex-direction: row;
     padding: 44px;
     width: 100%;
-    max-width: 418px;
   }
 
   .leasing-condition__image {
