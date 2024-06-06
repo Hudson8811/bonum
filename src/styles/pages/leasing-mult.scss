@@ -351,12 +351,33 @@
 	}
 	.partners__items {
 		margin-top: 64px;
+		@media (max-width: 1200px){
+			margin-top: 46px;
+		}
+		@media (max-width: 699px){
+			margin-top: 26px;
+		}
 	}
 	.partners__row {
 		flex-wrap: nowrap;
+		@media (max-width: 1345px){
+			flex-wrap: wrap;
+			margin-top: -30px;
+		}
+		@media (max-width: 600px){
+			margin-top: -20px;
+		}
 	}
 	.item-partners {
 		padding-top: 0;
+		@media (max-width: 1345px){
+			flex: 0 1 50%;
+			margin-top: 30px;
+		}
+		@media (max-width: 600px){
+			flex: 0 1 100%;
+			margin-top: 20px;
+		}
 		&__column {
 			padding: 40px 41px 28px;
 		}
@@ -384,13 +405,28 @@
 		margin-top: 64px;
 		row-gap: 14px;
 		column-gap: 14px;
+		@media (max-width: 1200px){
+			margin-top: 46px;
+			grid-template-columns: minmax(0, 1fr);
+		}
+		@media (max-width: 699px){
+			margin-top: 26px;
+		}
 	}
 }
 
 .steps-card {
-	position: relative;
-	aspect-ratio: 1 / 1.083;
+	min-height: 464px;
 	background-color: #F6F7F9;
+	position: relative;
+	@media (max-width: 1200px) {
+		min-height: auto;
+		aspect-ratio: 1 / 0.5;
+	}
+	@media (max-width: 768px) {
+		min-height: auto;
+		aspect-ratio: auto;
+	}
 	&__content {
 		position: relative;
 		height: 100%;
@@ -401,6 +437,9 @@
 	}
 	&__info {
 		padding: 28px 36px;
+		@media (max-width: 768px) {
+			padding: 20px;
+		}
 	}
 	&__title {
 		font-size: 20px;
@@ -414,6 +453,16 @@
 	}
 	&__img {
 		width: 100%;
+		@media (max-width: 1200px){
+			position: absolute;
+			width: 70%;
+			right: 0;
+			bottom: 0;
+		}
+		@media (max-width: 768px){
+			position: relative;
+			width: 100%;
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -429,12 +478,36 @@
 		color: #fff;
 		z-index: 1;
 		font-variant-numeric: lining-nums;
+		@media (max-width: 1200px) {
+			left: 15px;
+			bottom: 0;
+			line-height: 75%;
+		}
+		@media (max-width: 992px) {
+			font-size: 300px;
+		}
+		@media (max-width: 768px) {
+			font-size: 400px;
+		}
+		@media (max-width: 480px) {
+			font-size: 270px;
+			line-height: 100%;
+		}
 	}
 }
 
 .leasing-mult__questions {
 	padding: 128px 0 108px;
+	@media (max-width: 1200px) {
+		padding: 50px 0 60px;
+	}
 	.accordions {
 		margin-top: 50px;
+		@media (max-width: 1200px){
+			margin-top: 46px;
+		}
+		@media (max-width: 699px){
+			margin-top: 26px;
+		}
 	}
 }

@@ -8209,9 +8209,9 @@ section.leasing {
 }
 
 .steps-card {
-  position: relative;
-  aspect-ratio: 1/1.083;
+  min-height: 464px;
   background-color: #F6F7F9;
+  position: relative;
 }
 
 .steps-card__content {
@@ -13947,6 +13947,16 @@ section.leasing {
   .leasing-condition {
     padding: 35px;
   }
+
+  .partners.leasing-mult__advantages .partners__row {
+    flex-wrap: wrap;
+    margin-top: -30px;
+  }
+
+  .partners.leasing-mult__advantages .item-partners {
+    flex: 0 1 50%;
+    margin-top: 30px;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -14997,6 +15007,41 @@ section.leasing {
     margin-top: 46px;
   }
 
+  .partners.leasing-mult__advantages .partners__items {
+    margin-top: 46px;
+  }
+
+  .leasing-mult-steps__cards {
+    margin-top: 46px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .steps-card {
+    min-height: auto;
+    aspect-ratio: 1/0.5;
+  }
+
+  .steps-card__img {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .steps-card__number {
+    left: 15px;
+    bottom: 0;
+    line-height: 75%;
+  }
+
+  .leasing-mult__questions {
+    padding: 50px 0 60px;
+  }
+
+  .leasing-mult__questions .accordions {
+    margin-top: 46px;
+  }
+
   .about-page section {
     margin-top: 56px;
   }
@@ -15648,6 +15693,10 @@ section.leasing {
 @media (max-width: 992px) {
   .leasing-mult .h2 {
     font-size: 30px;
+  }
+
+  .steps-card__number {
+    font-size: 300px;
   }
 
   .photogalary__container {
@@ -16362,6 +16411,24 @@ section.leasing {
 
   .entity-card {
     padding: 30px 25px 30px;
+  }
+
+  .steps-card {
+    min-height: auto;
+    aspect-ratio: auto;
+  }
+
+  .steps-card__info {
+    padding: 20px;
+  }
+
+  .steps-card__img {
+    position: relative;
+    width: 100%;
+  }
+
+  .steps-card__number {
+    font-size: 400px;
   }
 
   .about-page .resp-desk {
@@ -19160,6 +19227,18 @@ section.leasing {
   .leasing-mult__leasing .card-leasing {
     padding: 20px;
   }
+
+  .partners.leasing-mult__advantages .partners__items {
+    margin-top: 26px;
+  }
+
+  .leasing-mult-steps__cards {
+    margin-top: 26px;
+  }
+
+  .leasing-mult__questions .accordions {
+    margin-top: 26px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -19199,6 +19278,15 @@ section.leasing {
 
   .leasing-condition__info {
     text-align: start;
+  }
+
+  .partners.leasing-mult__advantages .partners__row {
+    margin-top: -20px;
+  }
+
+  .partners.leasing-mult__advantages .item-partners {
+    flex: 0 1 100%;
+    margin-top: 20px;
   }
 
   .geography-about-page__btns {
@@ -19413,6 +19501,13 @@ section.leasing {
     font-weight: 400;
     font-size: 13px;
     line-height: 135%;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-card__number {
+    font-size: 270px;
+    line-height: 100%;
   }
 }
 
