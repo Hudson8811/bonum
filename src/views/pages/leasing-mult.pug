@@ -45,7 +45,7 @@ block content
 						.leasing-condition__info
 							.leasing-condition__title ОНЛАЙН
 							.leasing-condition__text оформление лизинга				
-					.leasing-mult-condition__item.leasing-condition
+					.leasing-mult-conditions__item.leasing-condition
 						.leasing-condition__image
 							img(src="img/leasing-mult/condition-3.svg" alt="alt")
 						.leasing-condition__info
@@ -218,28 +218,31 @@ block content
 				.leasing-mult-steps__cards
 					.steps-card
 						.steps-card__content
-							.steps-card__title оставьте заявку
 							.steps-card__info
-								!= 'Мы внимательно изучим ваш запрос и свяжемся с вами'
+								.steps-card__title оставьте заявку
+								.steps-card__text
+									!= 'Мы внимательно изучим ваш запрос и свяжемся с вами'
 							.steps-card__img 
-								img(src="img/leasing-mult/entity-card-1.png" alt="alt")
-						.entity-card__number 1
+								img(src="img/leasing-mult/leasing-step-1.png" alt="alt")
+						.steps-card__number 1
 					.steps-card
 						.steps-card__content
-							.steps-card__title согласуйте документы с лизингом
 							.steps-card__info
-								!= 'Это займёт несколько дней'
+								.steps-card__title согласуйте документы с лизингом
+								.steps-card__text
+									!= 'Это займёт несколько дней'
 							.steps-card__img 
-								img(src="img/leasing-mult/entity-card-1.png" alt="alt")
-						.entity-card__number 2
+								img(src="img/leasing-mult/leasing-step-2.png" alt="alt")
+						.steps-card__number 2
 					.steps-card
 						.steps-card__content
-							.steps-card__title Заберите технику
 							.steps-card__info
-								!= 'И начните зарабатывать'
+								.steps-card__title Заберите технику
+								.steps-card__text
+									!= 'И начните зарабатывать'
 							.steps-card__img 
-								img(src="img/leasing-mult/entity-card-1.png" alt="alt")
-						.entity-card__number 3
+								img(src="img/leasing-mult/leasing-step-3.png" alt="alt")
+						.steps-card__number 3
 
 
 		section.questions.leasing-mult__questions

@@ -3163,6 +3163,14 @@ swiper-container .swiper-notification {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "ZonaPro";
+  src: url("../fonts/ZonaPro-Black.woff2") format("woff2"), url("../fonts/ZonaPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background: #ffffff;
   font-family: "ZonaPro", sans-serif;
@@ -7916,10 +7924,6 @@ section.leasing {
   max-width: 1346px !important;
 }
 
-.leasing-mult .resp-mob {
-  display: none;
-}
-
 .leasing-mult .h1 {
   text-transform: uppercase;
   line-height: 123%;
@@ -7928,6 +7932,7 @@ section.leasing {
 .leasing-mult .h1 span {
   font-size: 50.56px;
   font-weight: 600;
+  display: block;
 }
 
 .leasing-mult .h2 {
@@ -7939,13 +7944,6 @@ section.leasing {
 
 .leasing-mult .h2--uppercase {
   text-transform: uppercase;
-}
-
-.leasing-mult p,
-.leasing-mult li {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 170%;
 }
 
 .leasing-mult__btn {
@@ -7977,8 +7975,7 @@ section.leasing {
   align-items: center;
   flex-basis: 50%;
   max-width: 50%;
-  padding-top: 25px;
-  padding-bottom: 105px;
+  padding: 25px 0 105px 16px;
 }
 
 .leasing-mult-hero__body-inner {
@@ -8009,7 +8006,7 @@ section.leasing {
 .leasing-mult-conditions__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
 }
 
@@ -8191,14 +8188,76 @@ section.leasing {
   margin-right: -5px;
   text-align: center;
   text-transform: uppercase;
+  min-height: 3em;
 }
 
 .partners.leasing-mult__advantages .item-partners__icon {
   height: 165px;
+  max-height: 165px;
 }
 
 .partners.leasing-mult__advantages .item-partners__text {
   padding-top: 11px;
+}
+
+.leasing-mult-steps__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 64px;
+  row-gap: 14px;
+  column-gap: 14px;
+}
+
+.steps-card {
+  position: relative;
+  aspect-ratio: 1/1.083;
+  background-color: #F6F7F9;
+}
+
+.steps-card__content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.steps-card__info {
+  padding: 28px 36px;
+}
+
+.steps-card__title {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.steps-card__text {
+  margin-top: 1.57px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.steps-card__img {
+  width: 100%;
+}
+
+.steps-card__img img {
+  width: 100%;
+  height: auto;
+}
+
+.steps-card__number {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  font-size: 400px;
+  font-weight: 900;
+  line-height: 100%;
+  color: #fff;
+  z-index: 1;
+  font-variant-numeric: lining-nums;
 }
 
 .leasing-mult__questions {
@@ -13884,6 +13943,12 @@ section.leasing {
   }
 }
 
+@media (max-width: 1345px) {
+  .leasing-condition {
+    padding: 35px;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .gallery.gallery--main .photogalary__swiper {
     margin-left: auto;
@@ -13894,6 +13959,16 @@ section.leasing {
 @media (max-width: 1300px) {
   .localities-maps-page__item-body {
     padding: 32px;
+  }
+}
+
+@media (max-width: 1299px) {
+  .leasing-mult .h1 {
+    font-size: 40px;
+  }
+
+  .leasing-mult .h1 span {
+    font-size: 40px;
   }
 }
 
@@ -14471,10 +14546,6 @@ section.leasing {
     width: calc(50% - 8px);
   }
 
-  .leasing-mult .h2 {
-    font-size: 40px;
-  }
-
   .catalog-page .container {
     max-width: 100%;
   }
@@ -14913,6 +14984,19 @@ section.leasing {
     margin-top: 30px;
   }
 
+  .leasing-mult .h2 {
+    font-size: 40px;
+  }
+
+  .leasing-mult-entity__cards {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 46px;
+  }
+
+  .leasing-mult__leasing .leasing__slider {
+    margin-top: 46px;
+  }
+
   .about-page section {
     margin-top: 56px;
   }
@@ -15314,6 +15398,19 @@ section.leasing {
   }
 }
 
+@media (max-width: 1199px) {
+  .leasing-condition {
+    flex-direction: column;
+    gap: 24px;
+    padding: 50px 30px;
+  }
+
+  .leasing-condition__info {
+    flex-basis: auto;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1100px) {
   .achievements-about-page__items {
     margin-top: 32px;
@@ -15549,6 +15646,10 @@ section.leasing {
 }
 
 @media (max-width: 992px) {
+  .leasing-mult .h2 {
+    font-size: 30px;
+  }
+
   .photogalary__container {
     background: none;
     color: #1F2120;
@@ -16217,18 +16318,50 @@ section.leasing {
     min-height: 40px;
   }
 
-  .leasing-mult .resp-desk {
-    display: none;
+  .leasing-mult .h2 {
+    font-size: 20px;
   }
 
-  .leasing-mult .resp-mob {
-    display: block;
+  .leasing-mult-hero__row {
+    flex-direction: column-reverse;
   }
 
-  .leasing-mult p,
-  .leasing-mult li {
-    font-size: 13px;
-    line-height: 150%;
+  .leasing-mult-hero__body {
+    flex-basis: auto;
+    max-width: 100%;
+    justify-content: flex-start;
+    padding: 25px 16px 45px 16px;
+  }
+
+  .leasing-mult-hero__image-wrapper {
+    flex-basis: auto;
+    max-width: 80%;
+  }
+
+  .leasing-mult-conditions {
+    padding-top: 50px;
+  }
+
+  .leasing-mult-conditions__wrapper {
+    gap: 15px;
+  }
+
+  .leasing-condition {
+    gap: 16px;
+    padding: 35px 15px;
+  }
+
+  .leasing-mult-entity {
+    padding-top: 50px;
+  }
+
+  .leasing-mult-entity__cards {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 26px;
+  }
+
+  .entity-card {
+    padding: 30px 25px 30px;
   }
 
   .about-page .resp-desk {
@@ -18872,10 +19005,6 @@ section.leasing {
     padding: 50px 0 54px;
   }
 
-  .leasing-mult .h2 {
-    font-size: 20px;
-  }
-
   .partners .partners__content--subtitle {
     font-weight: 300;
     font-size: 20px;
@@ -19019,7 +19148,59 @@ section.leasing {
   }
 }
 
+@media (max-width: 699px) {
+  .leasing-mult__leasing .leasing__slider {
+    margin-top: 26px;
+  }
+
+  .leasing-mult__leasing .leasing__slider .nav-extended__pagi {
+    gap: 10px 15px;
+  }
+
+  .leasing-mult__leasing .card-leasing {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 600px) {
+  .leasing-mult .h1 {
+    font-size: 30px;
+  }
+
+  .leasing-mult .h1 span {
+    font-size: 30px;
+  }
+
+  .leasing-mult__btn {
+    font-size: 11px;
+    padding: 13px 32px;
+  }
+
+  .leasing-mult-conditions__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leasing-mult-conditions__item {
+    flex: 1 1 auto;
+  }
+
+  .leasing-condition {
+    flex-direction: row;
+    padding: 44px;
+    width: 100%;
+    max-width: 418px;
+  }
+
+  .leasing-condition__image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .leasing-condition__info {
+    text-align: start;
+  }
+
   .geography-about-page__btns {
     flex-wrap: wrap;
     margin-top: 40px;
@@ -19113,6 +19294,10 @@ section.leasing {
 }
 
 @media (max-width: 550px) {
+  .entity-card {
+    aspect-ratio: 1/1;
+  }
+
   .items-news-page__item {
     flex: 1 1 100%;
   }
@@ -19241,6 +19426,26 @@ section.leasing {
   }
 }
 
+@media (max-width: 440px) {
+  .leasing-mult .h1 {
+    font-size: 24px;
+  }
+
+  .leasing-mult .h1 span {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .leasing-condition {
+    padding: 20px;
+  }
+
+  .entity-card {
+    aspect-ratio: 1/1.25;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .advantages--internships .advantages__title {
     font-size: 14px;
@@ -19282,10 +19487,6 @@ section.leasing {
 
   .stocks-single .title {
     font-size: 13px;
-  }
-
-  .leasing-mult .h1 {
-    font-size: 20px;
   }
 
   .leasing-mult .title {
@@ -19398,6 +19599,16 @@ section.leasing {
 
   .content-blog__arrows {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 359px) {
+  .leasing-mult .h1 {
+    font-size: 20px;
+  }
+
+  .leasing-mult .h1 span {
+    font-size: 20px;
   }
 }
 
