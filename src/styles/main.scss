@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // Переменные, миксины, функции
 @use 'sass:math';
 @import "helpers/variables";
@@ -43,3 +44,6 @@
 @import "pages/map-page";
 
 @import "pages/interships.scss";
+
+
+@import "pages/igor-changes.scss";

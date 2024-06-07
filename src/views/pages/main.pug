@@ -24,7 +24,15 @@ block content
 							.slider-top__slide-text 914210
 							img(src="./img/picture/slider-top-1.png", alt="").slider-top__slide-img
 
-							.slider-top--buttons
+
+							.slider-top--buttons.slider-top--buttons--v2.slider-top--buttons--v2--for-calc-btn
+								a.button.button--small.button--outline-inverse.button--calculator-customized.company__button.slider-top--button-v2(href='#js-calculator-1-modal')
+									| Рассчитать прибыль
+							.slider-top--buttons.slider-top--buttons--v2
+								a.button.button--small.button--outline-inverse.company__button.slider-top--button-v2(href='#js-main-modal' data-title='Укажите ваши контактные данные, мы свяжемся с вами и проконсультируем по стоимости техники') получить прайс
+								a.button.button--small.button--inverse.company__button.slider-top--buttons__order.slider-top--button-v2(href='#js-main-modal' data-title='Заказ товара Бункер-перегрузчик 40 м3 ') заказать
+
+							//.slider-top--buttons
 								+button('заказать', 'button--small button--inverse  slider-top--buttons__order', '#')
 								+button('получить прайс', 'button--small button--outline-inverse ', '#')
 							.slider-top--nav
@@ -38,6 +46,9 @@ block content
 									<path d="M12 1C29.9983 6.88637 43 23.8146 43 43.7796C43 63.7446 29.9983 80.6729 12 86.5592" stroke="#1F2120" stroke-width="2"/>
 									<path d="M0 43.7795L10 49.553V38.006L0 43.7795ZM24 42.7795H9V44.7795H24V42.7795Z" fill="#1F2120"/>
 									</svg>
+
+
+
 
 			.slider-info
 				.container
@@ -935,7 +946,187 @@ block content
 
 
 
+	div(style='display:none;')
+		#calculator-1-modal.mmodal.mmodal--calc
+			.mmodal-inner
+				section.calculator
+					.container
+						h1.title Калькулятор
+						.calculator-block
+							.calculator-left
+								.calculator-input__block
+									.calculator-input__title-block
+										.calculator-input__title-icon
+											img(src='./img/calc_svg/layers.svg' width='20px' height='20px')
+										.calculator-input__title
+											| Общая посевная площадь
+											span (введите данные)
+									.calculator-slider__container
+										#slider.calculator-slider
+											svg.range-tick__container(role='presentation' width='100%' height='10' xmlns='http://www.w3.org/2000/svg')
+												rect.range-tick(x='0%' y='1' width='1' height='8')
+												rect.range-tick(x='10%' y='1' width='1' height='8')
+												rect.range-tick(x='20%' y='1' width='1' height='8')
+												rect.range-tick(x='30%' y='1' width='1' height='8')
+												rect.range-tick(x='40%' y='1' width='1' height='8')
+												rect.range-tick(x='50%' y='1' width='1' height='8')
+												rect.range-tick(x='60%' y='1' width='1' height='8')
+												rect.range-tick(x='70%' y='1' width='1' height='8')
+												rect.range-tick(x='80%' y='1' width='1' height='8')
+												rect.range-tick(x='90%' y='1' width='1' height='8')
+											svg.range-point__container(role='presentation' width='100%' height='9' xmlns='http://www.w3.org/2000/svg')
+												text.range-point(x='0%' y='8' text-anchor='start') 1
+												text.range-point(x='10%' y='8' text-anchor='middle') 10
+												text.range-point(x='20%' y='8' text-anchor='middle') 20
+												text.range-point(x='30%' y='8' text-anchor='middle') 30
+												text.range-point(x='40%' y='8' text-anchor='middle') 40
+												text.range-point(x='50%' y='8' text-anchor='middle') 50
+												text.range-point(x='60%' y='8' text-anchor='middle') 60
+												text.range-point(x='70%' y='8' text-anchor='middle') 70
+												text.range-point(x='80%' y='8' text-anchor='middle') 80
+												text.range-point(x='90%' y='8' text-anchor='middle') 90
+												text.range-point.text(x='102%' y='8' text-anchor='middle') тыс
+										input.calculator-input.input_2.js-slider-input(type='number' name='left_1' value='25000')
+									.calculator-input_note ГА
+								.calculator-input__block
+									.calculator-input__title-block
+										.calculator-input__title-icon
+											img(src='./img/calc_svg/setings.svg' width='20px' height='20px')
+										.calculator-input__title
+											| Количество комбайнов
+											span (введите данные)
+									.calculator-input__num
+										input.calculator-input.input_2(type='number' name='left_2' value='10')
+										.calculator-input__num-buttons
+											button.calculator-input__minus(type='button') —
+											button.calculator-input__plus(type='button') +
+									.calculator-input_note шт
+								.calculator-input__block
+									.calculator-input__title-block
+										.calculator-input__title-icon
+											img(src='./img/calc_svg/fiber.svg' width='20px' height='20px')
+										.calculator-input__title
+											| Урожайность
+											span (введите данные)
+									input.calculator-input.input_2(type='number' name='left_3' value='60')
+									.calculator-input_note Ц/ГА
+								.calculator-input__block.left-1__block
+									.calculator-input__title-block
+										.calculator-input__title-icon
+											img(src='./img/calc_svg/coub.svg' width='20px' height='20px')
+										.calculator-input__title
+											| Убранная площадь на 1
+											br
+											|  комбайн за рабочий день
+											span (введите данные)
+									.calculator-slider__container
+										#slider2.calculator-slider
+											svg.range-tick__container(role='presentation' width='100%' height='10' xmlns='http://www.w3.org/2000/svg')
+												rect.range-tick(x='0%' y='1' width='1' height='8')
+												rect.range-tick(x='10%' y='1' width='1' height='8')
+												rect.range-tick(x='20%' y='1' width='1' height='8')
+												rect.range-tick(x='30%' y='1' width='1' height='8')
+												rect.range-tick(x='40%' y='1' width='1' height='8')
+												rect.range-tick(x='50%' y='1' width='1' height='8')
+												rect.range-tick(x='60%' y='1' width='1' height='8')
+												rect.range-tick(x='70%' y='1' width='1' height='8')
+												rect.range-tick(x='80%' y='1' width='1' height='8')
+												rect.range-tick(x='90%' y='1' width='1' height='8')
+											svg.range-point__container(role='presentation' width='100%' height='9' xmlns='http://www.w3.org/2000/svg')
+												text.range-point(x='0%' y='8' text-anchor='start') 1
+												text.range-point(x='10%' y='8' text-anchor='middle') 10
+												text.range-point(x='20%' y='8' text-anchor='middle') 20
+												text.range-point(x='30%' y='8' text-anchor='middle') 30
+												text.range-point(x='40%' y='8' text-anchor='middle') 40
+												text.range-point(x='50%' y='8' text-anchor='middle') 50
+												text.range-point(x='60%' y='8' text-anchor='middle') 60
+												text.range-point(x='70%' y='8' text-anchor='middle') 70
+												text.range-point(x='80%' y='8' text-anchor='middle') 80
+												text.range-point(x='90%' y='8' text-anchor='middle') 90
+										input.calculator-input.input_2.js-slider-input(type='number' name='left_4' value='50')
+									.calculator-input_note ГА
+								.calculator-border-box
+									.calculator-input__block
+										.calculator-input__title
+											| Средний показатель
+											br
+											| самоосыпаемости
+											span (введите данные)
+										.calculator-input__num
+											input.calculator-input.input_2.js_float(type='number' name='left_5' value='1' min='1')
+											.calculator-input__num-buttons
+												button.calculator-input__minus(type='button') —
+												button.calculator-input__plus(type='button') +
+										.calculator-input_note % в день
+									.calculator-input__block
+										.calculator-input__title
+											| Стоимость 1 Ц урожая
+											span (введите данные)
+										input.calculator-input.input_2(type='number' name='left_6' value='1200')
+										.calculator-input_note руб
+							.calculator-right
+								.calculator-input__block.right-1__block
+									.calculator-input__title
+										| Потенциальный урожай, без
+										br
+										|  потерь на осыпаемости
+									input.calculator-input.input_2(type='number' name='right_1' value='1500000' disabled)
+									.calculator-input_note Ц
+								.calculator-input__block.right-2__block
+									.calculator-input__title Количество дней уборки
+									input.calculator-input.input_2(type='number' name='right_2' value='45' disabled)
+									.calculator-input_note дней
+								.calculator-input__block.right-3__block
+									.calculator-input__title
+										| Потери на самоосыпаемости
+										br
+										|  без бункера-перегрузчика
+									input.calculator-input.input_2(type='number' name='right_3' value='675000' disabled)
+									.calculator-input_note Ц
+								.calculator-input__block.right-4__block
+									.calculator-input__title
+										| Урожай после потерь на
+										br
+										|  самоосыпаемости
+									.calculator-input__row
+										.calculator-input__col
+											label.calculator-input__label
+												| БЕЗ бункера-
+												br
+												| перегрузчика
+											input.calculator-input(type='number' name='right_4' value='825000' disabled)
+											.calculator-input_note Ц
+										.calculator-input__col.calculator-input__col-acent
+											label.calculator-input__label
+												| С бункером-
+												br
+												| перегрузчиком
+											input.calculator-input(type='number' name='right_5' value='1050000' disabled)
+											.calculator-input_note Ц
+								.calculator-sum__block
+									.calculator-sum__title
+										| Выгода от покупки
+										br
+										| бункера-перегрузчика
+									.calculator-sum__result 270 000 000 ₽
+						.calculator-text
+							| Узнайте подробности у специалиста отдела продаж BONUM по указанным контактам или оставьте заявку
+					.calculator-bottom
+						.container
+							a.calculator-bottom__block(href='#js-main-modal')
+								.calculator-bottom__button.button--inverse Оставить заявку
+							a.calculator-bottom__block(href='tel:88005500161')
+								.calculator-bottom__top-link 8 800 550-01-61
+								.calculator-bottom__bottom-link Заказать звонок
+							a.calculator-bottom__block(href='mailto:info@bonum-trailer.ru')
+								.calculator-bottom__top-link info@bonum-trailer.ru
+								.calculator-bottom__bottom-link Отправить запрос
+
+
 	include ../../blocks/modules/footer/footer
 
 	//block scripts
 		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+
+	block scriptsAfterMain
+		script(src="js/calculator.js")

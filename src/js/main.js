@@ -3,6 +3,7 @@
 @@include("./libs/fancybox5.umd.js")
 @@include("./libs/swiper-bundle.min.js")
 @@include("./libs/select2.min.js")
+@@include("./libs/jquery-ui.js")
 
 @@include("./import/header.js")
 @@include("./import/modules.js")

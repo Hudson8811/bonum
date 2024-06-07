@@ -505,137 +505,258 @@
     						a(href='#') Контейнеровозы
     		.header-m__col
     -->
+    <!--ДЛЯ РАБОТЫ НА ЛОКАЛХОСТЕ ПРОСТАВИЛ ПОЛНЫЙ ПУТЬ С УКАЗАНИЕМ ДОМЕНА-->
+    <script>const centers_types = {"56":{"ID":"56","UF_NAME_OF_FILTER_RU":"BONUM","UF_UF_NAME_OF_FILTER_EN":"BONUM","UF_NAME":"Сервисный центр рекомендованный BONUM","UF_NAME_EN":"Service center recommended by BONUM","UF_ACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/a19\/us2gwetek1crarom3a076iqd4t7yrrzn.svg","UF_INACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/ae4\/1qutlqm8v89ykqqogb2mamjle8zw1a2w.svg","UF_ORDER":"100","UF_XML_ID":"e8iSg61D","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},"52":{"ID":"52","UF_NAME_OF_FILTER_RU":"WABCO","UF_UF_NAME_OF_FILTER_EN":"WABCO","UF_NAME":"Сервисные центры Wabco с поддержкой гарантии","UF_NAME_EN":"Wabco service centers with warranty support","UF_ACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/bb4\/o58l0e53o1d0fwm6adrv8dhrxxzzsjvc.svg","UF_INACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/4fc\/uboca30f2yluso0svxf33wsmkhh28zpo.svg","UF_ORDER":"200","UF_XML_ID":"Ic73VPZS","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},"54":{"ID":"54","UF_NAME_OF_FILTER_RU":"BPW","UF_UF_NAME_OF_FILTER_EN":"BPW","UF_NAME":"Сервисные центры BPW","UF_NAME_EN":"BPW service centers","UF_ACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/75c\/z2pvlpfojl1qto6zfuw8p9572pu1688c.svg","UF_INACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/322\/fo73tt62qqsi00k3tt8nvoleee7v0pto.svg","UF_ORDER":"300","UF_XML_ID":"Y01gNSzf","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},"55":{"ID":"55","UF_NAME_OF_FILTER_RU":"SAF","UF_UF_NAME_OF_FILTER_EN":"SAF","UF_NAME":"Сервисные станции SAF","UF_NAME_EN":"SAF service stations","UF_ACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/e94\/293c4bb7kbfpvrg2clb44wn2zqb7wyjx.svg","UF_INACTIVE_ICON":"https:\/\/www.bonum-trailer.ru\/upload\/uf\/5a1\/nycusvta20d0541uc1n650fof9wo617j.svg","UF_ORDER":"400","UF_XML_ID":"WlpZ3Scu","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""}};</script>
+    <script>
+      const cities = [{"CityID":"2","Name":"Ростов-на-Дону","Name_EN":"Rostov-on-Don","UF_XML_ID":"0KnZczpR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"3","Name":"Москва","Name_EN":"Moscow","UF_XML_ID":"7RAEUK0m","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"4","Name":"Краснодар","Name_EN":"Krasnodar","UF_XML_ID":"cBpHiRCB","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"21","Name":"Санкт-Петербург","Name_EN":"St. Petersburg","UF_XML_ID":"3kx9N4kb","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"28","Name":"Гамбург (Германия)","Name_EN":"Hamburg","UF_XML_ID":"vNZLpdT5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"38","Name":"Тюмень","Name_EN":"Tyumen","UF_XML_ID":"hQ5ova0C","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"39","Name":"Казань","Name_EN":"Kazan","UF_XML_ID":"kM0dx1YR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"40","Name":"Великий Новгород","Name_EN":"Veliky Novgorod","UF_XML_ID":"tQwfw0jP","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"41","Name":"Петрозаводск","Name_EN":"Petrozavodsk","UF_XML_ID":"Fj9tByl1","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"42","Name":"Выборг","Name_EN":"Vyborg","UF_XML_ID":"z3ysE8wR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"43","Name":"Екатеринбург","Name_EN":"Yekaterinburg","UF_XML_ID":"FUK8iLCi","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"44","Name":"Аксай","Name_EN":"Aksay","UF_XML_ID":"Sk5LeAM0","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"45","Name":"Вологда","Name_EN":"Vologda","UF_XML_ID":"TPLzn3aV","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"46","Name":"Солнечногорск","Name_EN":"Solnechnogorsk","UF_XML_ID":"IqVxkotD","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"47","Name":"Набережные Челны","Name_EN":"Naberezhnye Chelny","UF_XML_ID":"ATVU7Amx","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"48","Name":"Волгоград","Name_EN":"Volgograd","UF_XML_ID":"WS5hmBVv","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"49","Name":"Минеральные воды","Name_EN":"Mineralnye Vody","UF_XML_ID":"l6GaWDjG","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"50","Name":"Ярославль","Name_EN":"Yaroslavl","UF_XML_ID":"WFLXcO8j","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"51","Name":"Дзержинск","Name_EN":"Dzerzhinsk","UF_XML_ID":"6lhqYvd5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"52","Name":"Рязань","Name_EN":"Ryazan","UF_XML_ID":"ERHOM0RM","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"53","Name":"Самара","Name_EN":"Samara","UF_XML_ID":"9alcCBcb","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"54","Name":"Новосибирск","Name_EN":"Novosibirsk","UF_XML_ID":"eM6JiBLK","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"55","Name":"Омск","Name_EN":"Omsk","UF_XML_ID":"MJP0Jpu1","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"56","Name":"Голицино","Name_EN":"Golitsyno","UF_XML_ID":"ql23zKEP","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"57","Name":"Сочи","Name_EN":"Sochi","UF_XML_ID":"QblN1zAy","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"58","Name":"Домодедово","Name_EN":"Domodedovo","UF_XML_ID":"0UCnbeI2","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"59","Name":"Люберцы","Name_EN":"Lyubertsy","UF_XML_ID":"sETBuceY","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"61","Name":"Красноярск","Name_EN":"Krasnoyarsk","UF_XML_ID":"me7lOto5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"62","Name":"Нижний Новгород","Name_EN":"Nizhny Novgorod","UF_XML_ID":"Jqzw3Q3h","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"63","Name":"Хабаровск","Name_EN":"Khabarovsk","UF_XML_ID":"yAB8aRgd","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"64","Name":"Уфа","Name_EN":"Ufa","UF_XML_ID":"he6l03CD","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"65","Name":"Белово","Name_EN":"Belovo","UF_XML_ID":"0Pu5xesG","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"66","Name":"Братск","Name_EN":"Bratsk","UF_XML_ID":"PvCTaNcA","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"68","Name":"Липецк","Name_EN":"Lipetsk","UF_XML_ID":"Cah0YaEM","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"69","Name":"Губкин","Name_EN":"Gubkin","UF_XML_ID":"dhoa7wqM","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"70","Name":"Чувашия","Name_EN":"Chuvashia","UF_XML_ID":"3A9aZ70b","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"71","Name":"Калининград","Name_EN":"Kaliningrad","UF_XML_ID":"Sx4KAhBt","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"72","Name":"Химки","Name_EN":"Khimki","UF_XML_ID":"4EPGZUea","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"73","Name":"Тверь","Name_EN":"Tver","UF_XML_ID":"ClZkiCAC","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"74","Name":"Киров","Name_EN":"Kirov","UF_XML_ID":"PPiROhyR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"75","Name":"Павловский Посад","Name_EN":"Pavlovsky Posad","UF_XML_ID":"skDrHNl7","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"76","Name":"Сургут","Name_EN":"Surgut","UF_XML_ID":"yHcuEICh","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"77","Name":"Барнаул","Name_EN":"Barnaul","UF_XML_ID":"HOJtIDEz","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"78","Name":"Челябинск","Name_EN":"Chelyabinsk","UF_XML_ID":"cs8Vy3RJ","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"79","Name":"Архангельск","Name_EN":"Arkhangelsk","UF_XML_ID":"J60xq2TE","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"80","Name":"Пермь","Name_EN":"Perm","UF_XML_ID":"aqjjsPEP","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"81","Name":"Великие Луки","Name_EN":"Velikiye Luki","UF_XML_ID":"sdGrJd80","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"82","Name":"Боровичи","Name_EN":"Borovichi","UF_XML_ID":"CH8rmvHn","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"83","Name":"Владивосток","Name_EN":"Vladivostok","UF_XML_ID":"H5GyB2Km","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"84","Name":"Оренбург","Name_EN":"Orenburg","UF_XML_ID":"nfAQNs1c","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"85","Name":"Орел","Name_EN":"Orel","UF_XML_ID":"yXXK0OhG","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"86","Name":"Зеленоград","Name_EN":"Zelenograd","UF_XML_ID":"O6G089gK","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"88","Name":"Котельники","Name_EN":"Kotelniki","UF_XML_ID":"7Vx6E1nw","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"89","Name":"Мытищи","Name_EN":"Mytishchi","UF_XML_ID":"5nZUmLGi","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"90","Name":"Иркутск","Name_EN":"Irkutsk","UF_XML_ID":"igjt4zq5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"91","Name":"Артем","Name_EN":"Artyom","UF_XML_ID":"2bC7Ulzh","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"92","Name":"Киев","Name_EN":"Kiev","UF_XML_ID":"Wi4O2APH","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"93","Name":"Одесса","Name_EN":"Odessa","UF_XML_ID":"J7QrMDoo","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"94","Name":"Харьков","Name_EN":"Kharkiv","UF_XML_ID":"sFbP3iME","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"95","Name":"Минск","Name_EN":"Minsk","UF_XML_ID":"TVecbipr","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"96","Name":"Алматы","Name_EN":"Almaty","UF_XML_ID":"Nnq2JwG4","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"97","Name":"Кишинев","Name_EN":"Chisinau","UF_XML_ID":"FqsAFU56","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"98","Name":"Балашиха","Name_EN":"Balashikha","UF_XML_ID":"8qpkPKn5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"99","Name":"Голицино","Name_EN":"Golitsyno","UF_XML_ID":"oijCbibU","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"101","Name":"Белгород","Name_EN":"Belgorod","UF_XML_ID":"W93XzB90","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"102","Name":"Брянск","Name_EN":"Bryansk","UF_XML_ID":"Kx6Q8X5I","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"103","Name":"Кострома","Name_EN":"Kostroma","UF_XML_ID":"OMrKZ9pB","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"104","Name":"Курск","Name_EN":"Kursk","UF_XML_ID":"mslMxw45","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"105","Name":"Тула","Name_EN":"Tula","UF_XML_ID":"r95StBmR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"106","Name":"Ясногорск","Name_EN":"Yasnogorsk","UF_XML_ID":"gzZwsB2s","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"107","Name":"Сыктывкар","Name_EN":"Syktyvkar","UF_XML_ID":"o25Pa6tO","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"108","Name":"Черняховск","Name_EN":"Chernyakhovsk","UF_XML_ID":"oY3YQ8Ru","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"109","Name":"Каменск-Шахтинск","Name_EN":"Kamensk-Shakhtinsk","UF_XML_ID":"PLU11C0C","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"110","Name":"Белореченск","Name_EN":"Belorechensk","UF_XML_ID":"95bME55g","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"111","Name":"Черкеск","Name_EN":"Cherkessk","UF_XML_ID":"fy9GoSNv","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"112","Name":"Волжский","Name_EN":"Volzhsky","UF_XML_ID":"S7KQXowm","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"113","Name":"Саратов","Name_EN":"Saratov","UF_XML_ID":"pkFRH5H6","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"114","Name":"Тольятти","Name_EN":"Tolyatti","UF_XML_ID":"58rb1ZfR","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"115","Name":"Волжск","Name_EN":"Volzhsk","UF_XML_ID":"nPBN7dYr","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"116","Name":"Юрюзань","Name_EN":"Yuryuzan","UF_XML_ID":"Zi9hfpDD","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"117","Name":"Абакан","Name_EN":"Abakan","UF_XML_ID":"akHnoyvY","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"118","Name":"Бийск","Name_EN":"Biysk","UF_XML_ID":"7mrnca5I","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"119","Name":"Новокузнецк","Name_EN":"Novokuznetsk","UF_XML_ID":"L6i5QL1n","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"120","Name":"Комсомольск-на-Амуре","Name_EN":"Komsomolsk-on-Amur","UF_XML_ID":"2G0wYtVn","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"121","Name":"Симферополь","Name_EN":"Simferopol","UF_XML_ID":"Bc4C1PhO","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"122","Name":"Днепропетровск","Name_EN":"Dnipropetrovsk","UF_XML_ID":"LQddolM0","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"123","Name":"Георгиевск","Name_EN":"Georgiyevsk","UF_XML_ID":"TrF2x2OU","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"124","Name":"Чебоксары","Name_EN":"Cheboksary","UF_XML_ID":"O4DmFBYY","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"125","Name":"Готсомель","Name_EN":"Gotsomel","UF_XML_ID":"RhZsKwpU","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"126","Name":"Николаев","Name_EN":"Nikolaev","UF_XML_ID":"XAzNeS1o","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"127","Name":"Лиски","Name_EN":"Liski","UF_XML_ID":"5Pur0cZl","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"128","Name":"Пушкин","Name_EN":"Pushkin","UF_XML_ID":"Qk1t3DTj","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"129","Name":"Сертолово","Name_EN":"Sertolovo","UF_XML_ID":"RCikwIt5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"130","Name":"Смоленск","Name_EN":"Smolensk","UF_XML_ID":"2fiWnjxy","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"131","Name":"Кемерово","Name_EN":"Kemerovo","UF_XML_ID":"ojLNdVay","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"132","Name":"Псков","Name_EN":"Pskov","UF_XML_ID":"KAKhw8ch","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"133","Name":"Старый Оскол","Name_EN":"Stariy Oskol","UF_XML_ID":"eEEGH9pi","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"134","Name":"Ставрополь","Name_EN":"Stavropol","UF_XML_ID":"X2V3netF","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"135","Name":"Шушары","Name_EN":"Shushary","UF_XML_ID":"A2MLLW1I","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"136","Name":"Березовский","Name_EN":"Berezovsky","UF_XML_ID":"VJvzbTpO","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"137","Name":"Горячий Ключ","Name_EN":"Goryachiy Klyuch","UF_XML_ID":"sQhUsMfH","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"138","Name":"Воронеж","Name_EN":"Voronezh","UF_XML_ID":"Oanf9PLn","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"139","Name":"Ульяновск","Name_EN":"Ulyanovsk","UF_XML_ID":"EfLdc1UD","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"140","Name":"Долгопрудный","Name_EN":"Dolgoprudny","UF_XML_ID":"GS4xB2Xm","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"141","Name":"Кола","Name_EN":"Kola","UF_XML_ID":"1m8NnM27","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"142","Name":"Орехово-Зуево","Name_EN":"Orekhovo-Zuyevo","UF_XML_ID":"qYUuyEbq","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"143","Name":"Истра","Name_EN":"Istra","UF_XML_ID":"LegoZtdH","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"144","Name":"Благовещенск","Name_EN":"Blagoveshchensk","UF_XML_ID":"xWyUsmp8","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"145","Name":"Пенза","Name_EN":"Penza","UF_XML_ID":"pHxS7Fr1","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"146","Name":"Улан-Удэ","Name_EN":"Ulan-Ude","UF_XML_ID":"jgVoTu55","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"147","Name":"Курган","Name_EN":"Kurgan","UF_XML_ID":"NtsKEvg8","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"148","Name":"Ижевск","Name_EN":"Izhevsk","UF_XML_ID":"teR6DT63","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"149","Name":"Котлас","Name_EN":"Kotlas","UF_XML_ID":"2iilc0nI","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"150","Name":"Наро-Фоминск","Name_EN":"Naro-Fominsk","UF_XML_ID":"8xbHhLAM","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"151","Name":"Кипарисово","Name_EN":"Kiparisovo","UF_XML_ID":"TyAhXhu4","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"152","Name":"Елабуга","Name_EN":"Elabuga","UF_XML_ID":"KNeBVId5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"153","Name":"Волжский","Name_EN":"Volzhsky","UF_XML_ID":"WDAF9K3v","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"154","Name":"Новый Уренгой","Name_EN":"New Urengoy","UF_XML_ID":"KW3cRHqP","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"155","Name":"Владимир","Name_EN":"Vladimir","UF_XML_ID":"20gAjeDf","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"156","Name":"Магадан","Name_EN":"Magadan","UF_XML_ID":"9ZzkGkL6","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"157","Name":"Батайск","Name_EN":"Bataysk","UF_XML_ID":"Yg1pp0ZY","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"158","Name":"Калуга","Name_EN":"kaluga","UF_XML_ID":"lXAmI3dm","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"159","Name":"Чита","Name_EN":"Chita","UF_XML_ID":"sSmfQXcH","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"160","Name":"Чулково","Name_EN":"Chulkovo","UF_XML_ID":"Ek3k2zMq","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"161","Name":"Красногорск","Name_EN":"Krasnogorsk","UF_XML_ID":"WkU6eied","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"162","Name":"Мурманск","Name_EN":"Murmansk","UF_XML_ID":"34IhsNFB","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"163","Name":"Нефтекамск","Name_EN":"Neftekamsk","UF_XML_ID":"Mw2rziAs","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"164","Name":"Бурятия","Name_EN":"Buryatia","UF_XML_ID":"dWRkCHqj","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"165","Name":"Томск","Name_EN":"Tomsk","UF_XML_ID":"EnFHMqej","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"166","Name":"Южно-Сахалинск","Name_EN":"Yzhno-Sahalinsk","UF_XML_ID":"xLtR3afX","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"167","Name":"Якутск","Name_EN":"Yakutsk","UF_XML_ID":"nnZz1d0K","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"168","Name":"Адлер","Name_EN":"Adler","UF_XML_ID":"GjAUtvt5","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"169","Name":"Черноморский","Name_EN":"Chernomorskiy","UF_XML_ID":"EIHqxUKn","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"170","Name":"Алексеевка","Name_EN":"Alekseevka","UF_XML_ID":"gXSgL9Ac","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"171","Name":"Федоровское","Name_EN":"Fedorovskoe","UF_XML_ID":"7tHJBzOH","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"172","Name":"Кстово","Name_EN":"Kstovo","UF_XML_ID":"cXlWj1Sc","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"173","Name":"Подольск","Name_EN":"Podolsk","UF_XML_ID":"eOJAOqi0","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"174","Name":"Дружнино","Name_EN":"Druzhnino","UF_XML_ID":"6KfYzLL0","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"175","Name":"Чигири","Name_EN":"Chigiri","UF_XML_ID":"bm0LsjRP","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"176","Name":"Верхнеблаговещенское","Name_EN":"Verhblag","UF_XML_ID":"2AunCRGq","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"177","Name":"Новониколаевка","Name_EN":"Novonikolaevka","UF_XML_ID":"n15gmiVv","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"178","Name":"Ногинск","Name_EN":"Noginsk","UF_XML_ID":"umDTFKsM","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"179","Name":"Ленсоветский","Name_EN":"Lensovetskiy","UF_XML_ID":"TZdcVFq4","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"180","Name":"Парнас","Name_EN":"Parnas","UF_XML_ID":"305h4Ctz","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"181","Name":"Песочный","Name_EN":"Pesochniy","UF_XML_ID":"LL9Toe4d","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"182","Name":"Свердловск","Name_EN":"Sverdlovsk","UF_XML_ID":"j48AdtEE","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"183","Name":"Башкортостан","Name_EN":"Bashkortostan","UF_XML_ID":"PqypRdkW","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""},{"CityID":"184","Name":"Угловое","Name_EN":"Uglovoe","UF_XML_ID":"ciMqqQdJ","UF_DESCRIPTION":"","UF_FULL_DESCRIPTION":""}].sort( function( a, b ){
+      	if( a["Name"] < b["Name"] ){
+      		return -1;
+      	}
+      	if( a["Name"] > b["Name"] ){
+      		return 1;
+      	}
+      	return 0;
+      } );
+      
+      const citySelectEl = document.getElementById( 'localities-centers__select' );
+      
+      if( citySelectEl ){
+      	cities.forEach( city => {
+      		citySelectEl.insertAdjacentHTML( 'beforeend', `
+      		<option value="${city.CityID}">${city.Name}</option>
+      	` )
+      	} );
+      }
+      
+      
+      
+    </script>
     <div class="breakpoints">
       <div class="breakpoints__container container-new">
         <ul class="breakpoints__list">
-          <li class="breakpoints__item"><a class="breakpoints__text" href="#">Контакты</a></li>
-          <li class="breakpoints__item"><span class="breakpoints__text">Представительства</span></li>
+          <li class="breakpoints__item"><a class="breakpoints__text" href="#">Главная</a></li>
+          <li class="breakpoints__item"><span class="breakpoints__text">Сервис и гарантии</span></li>
         </ul>
       </div>
     </div>
-    <div class="maps-page map-page">
-      <div class="container">
-        <div class="maps-page__content">
-          <div class="maps-page__header">
-            <div class="title">Представительства</div>
-            <div class="centers__switcher switcher-buttons"><span class="switcher-buttons__button" id="switcher-buttons-map">Карта</span><span class="switcher-buttons__button js-active" id="switcher-buttons-list">Список</span></div>
-          </div>
-          <div class="maps-page__localities localities-maps-page">
-            <div class="localities-maps-page__items" id="switcher-content-list">
-              <div class="blogs-header__buttons">
-                <div class="blogs-header__swiper swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a class="js-active" href="">Ростов-на-Дону</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Москва</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Казань</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Воронеж</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Тюмень</a></div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="blogs__button"><a href="">Новосибирск</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Ростов-на-Дону</div>
-                  <div class="localities-maps-page__item-subtitle">Завод BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>344091, Ростовская область, г. Ростов-на-Дону, ул. Пескова, д. 1</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Ростовская обл.</div>
-                  <div class="localities-maps-page__item-subtitle">ЗАВОД BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>420095, Казань, Московский район, ул. Восстания, 100 к5130, оф. 403</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Москва</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>141407, Московская область, Химки, Куркинское шоссе, стр. 2, помещение 1401, офис 14</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Казань</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>420095, Казань, Московский район,ул. Восстания, 100 к5130, оф. 403</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Воронеж</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>394030 г. Воронеж, пер. Бакунинский, 11, оф. 416</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Тюмень</div>
-                  <div class="localities-maps-page__item-subtitle">филиал BONUM</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>625013, Тюмень ул. Пермякова 3Б, БЦ Старк, офис 206</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
+    <div class="main-page main-page-loc main-page--service-new">
+      <section class="sec1-bottom-page">
+        <div class="sec1-bottom-page__row">
+          <div class="sec1-bottom-page__body sec1-bottom-page__body--service-new">
+            <div class="sec1-bottom-page__body-inner">
+              <div class="sec1-bottom-page__image sec1-bottom-page__image-mob"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/7ad/qouxr062emmvf7mjeqqb6qwupk71iqm1/1920_1920_1/DSC07008-1.webp" alt="СЕРВИС И ГАРАНТИЯ" title="СЕРВИС И ГАРАНТИЯ"></div>
+              <h1 class="h1">СЕРВИС И ГАРАНТИЯ</h1>
+              <p>Мы заботимся о том, чтобы использование нашей техники было для вас максимально комфортным.<br>	 При возникновении любых вопросов мы всегда готовы оказать вам квалифицированную поддержку.</p>
+              <p>Соблюдайте инструкции по эксплуатации, вовремя проходите техническое обслуживание — это поможет сохранить качество вашей техники на долгие годы.</p>
             </div>
-            <div class="localities-maps-page__item-dark" id="switcher-content-map">
-              <div class="localities-maps-page__item">
-                <div class="localities-maps-page__item-body">
-                  <div class="localities-maps-page__item-title">Балтранс</div>
-                  <div class="localities-maps-page__item-subtitle">Сервисный центр WABCO</div>
-                  <div class="localities-maps-page__item-loc"><span>адрес:</span>
-                    <p>344091,  г. Саратов, п. Бартоломей, д. 1</p>
-                  </div>
-                  <div class="localities-maps-page__item-contact"><span>контакты:</span><a href="tel:8452799993">8 8452 79 99 93</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
-                  <div class="localities-maps-page__item-contact"><span>отдел продаж</span><a href="tel:8005500161 ">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
-                  <div class="localities-maps-page__item-contact"><span>отдел снабжения</span><a href="mailto:info@bonum-trailer.ru">sales@bonum-traile.ru</a></div>
-                </div>
-                <div class="localities-maps-page__item-map"><img src="img/maps-page/map1.jpg" alt="alt"></div>
-              </div>
-              <div class="localities-maps-page__item-text">
-                <p>Завод BONUM настоятельно советует ремонтировать и обслуживать полуприцепы-цистерны (и любую другую грузовую технику) только на сервисных станциях, рекомендованных непосредственно производителями соответствующих комплектующих или техники.</p><br>
-                <p>Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется. Доверяйте сервис ваших полуприцепов-цистерн, прицепов и полуприцепов только профессионалам.</p><br>
-                <p>Полный и актуальный список сервисных станций Вы можете найти на официальных сайтах WABCO, BPW и SAF. Список сервисных станций, рекомендованных заводом BONUM, вы найдете на карте ниже (можно также кликнуть на кнопку "Сервисный центр рекомендованный BONUM" внизу страницы).</p>
-              </div>
+          </div>
+          <div class="sec1-bottom-page__image-wrapper sec1-bottom-page__image-desk">
+            <div class="sec1-bottom-page__image sec1-bottom-page__image--w100">
+              <picture>
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/d4d/261wfl6z7f7orqhpit4ku2vaxpylsc6n/600_600_1/DSC07008-1.webp" media="(max-width: 768px)">
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/d4d/261wfl6z7f7orqhpit4ku2vaxpylsc6n/952_952_1/DSC07008-1.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/d4d/261wfl6z7f7orqhpit4ku2vaxpylsc6n/1904_1904_1/DSC07008-1.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/d4d/261wfl6z7f7orqhpit4ku2vaxpylsc6n/952_952_1/DSC07008-1.webp" alt="СЕРВИС И ГАРАНТИЯ" title="СЕРВИС И ГАРАНТИЯ" loading="lazy">
+              </picture>
             </div>
           </div>
         </div>
+      </section>
+      <section class="section-contacts-list">
+        <div class="container">
+          <h2 class="service-new-page-h2">	Отдел рекламаций оперативно окажет вам необходимую поддержку и помощь</h2>
+          <div class="contacts-list">
+            <div class="sales-contact-us__row sales-contact-us__row--contacts-list">
+              <div class="sales-contact-us__item card-contact-us" id="bx_3218110189_556">
+                <div class="card-contact-us__column">
+                  <h3>Подгорный Сергей</h3>
+                  <div class="card-contact-us__text">Инженер по гарантии</div>
+                  <div class="card-contact-us__info"><a href="tel:+79381692818"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/phone.svg" alt="icon"><span>+7 938 169-28-18</span></a><a href="mailto:"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/mail.svg" alt="icon"><span>repair2@bonum-trailer.ru</span></a></div>
+                </div>
+              </div>
+              <div class="sales-contact-us__item card-contact-us" id="bx_3218110189_2018">
+                <div class="card-contact-us__column">
+                  <h3>Платунов Антон</h3>
+                  <div class="card-contact-us__text">Инженер по гарантии (Новочеркасск)</div>
+                  <div class="card-contact-us__info"><a href="tel:+79281085113"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/phone.svg" alt="icon"><span>+7 928 108-51-13</span></a><a href="mailto:"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/mail.svg" alt="icon"><span>a.platunov@bonum-trailer.ru</span></a></div>
+                </div>
+              </div>
+              <div class="sales-contact-us__item card-contact-us" id="bx_3218110189_2180">
+                <div class="card-contact-us__column">
+                  <h3>Жмаев Алексей</h3>
+                  <div class="card-contact-us__text">Инженер по гарантии</div>
+                  <div class="card-contact-us__info"><a href="tel:+79281260340"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/phone.svg" alt="icon"><span>+7 928 126-03-40</span></a><a href="mailto:"><img src="https://www.bonum-trailer.ru/local/templates/.default/img/contact-us/mail.svg" alt="icon"><span>a.zhmaev@bonum-trailer.ru</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-contacts-list__warranty-policy">Пожалуйста, ознакомьтесь с гарантийной политикой ООО «БОНУМ» (<a href="https://www.rostov.bonum-trailer.ruhttps://www.bonum-trailer.ru/upload/docs/Гарантийная_политика_ООО_БОНУМ.pdf"> посмотреть pdf</a> )</div>
+        </div>
+      </section>
+      <section class="bonum-service-is">
+        <div class="container">
+          <h2 class="service-new-page-h2">BONUM SERVICE ЭТО -</h2>
+          <div class="bsi-flex">
+            <div class="bsi-item" id="bx_651765591_2000">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Высококвалифицированные сотрудники</div>
+            </div>
+            <div class="bsi-item" id="bx_651765591_2001">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Гарантийное и постгарантийное обслуживание</div>
+            </div>
+            <div class="bsi-item" id="bx_651765591_2002">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Профессиональная экспертиза</div>
+            </div>
+            <div class="bsi-item" id="bx_651765591_2003">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Закрытие всех вопросов с первого обращения</div>
+            </div>
+            <div class="bsi-item" id="bx_651765591_2004">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Готовность в установленные сроки</div>
+            </div>
+            <div class="bsi-item" id="bx_651765591_2005">
+              <div class="bsi-item__digit"></div>
+              <div class="bsi-item__text">Поддержка и консультация</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="service-request-structure">
+        <div class="container">
+          <h2 class="service-new-page-h2">СТРУКТУРА ОБРАЩЕНИЯ</h2>
+          <div class="servrs-flex">
+            <div class="servrs-flex__text">
+              <div class="servrs-text-items">
+                <div class="servrs-text-item">
+                  <div class="servrs-text-item__title">ВЫ ОФОРМЛЯЕТЕ ЗАПРОС</div>
+                  <div class="servrs-text-item__info">Вы можете связаться с нами любым удобным для вас способом. Обязательно подготовьте заранее файлы отчета ODR.</div>
+                </div>
+                <div class="servrs-text-item">
+                  <div class="servrs-text-item__title">МЫ ФОРМИРУЕМ ЗАЯВКУ</div>
+                  <div class="servrs-text-item__info">Наш специалист связывается с вами для уточнения деталей и проведения дальнейшей экспертизы.</div>
+                </div>
+                <div class="servrs-text-item">
+                  <div class="servrs-text-item__title">МЫ БЕРЕМ В РАБОТУ</div>
+                  <div class="servrs-text-item__info">Технические специалисты выявляют неисправности, определяют срок замены с учетом объективного времени доставки деталей заводом.</div>
+                </div>
+                <div class="servrs-text-item">
+                  <div class="servrs-text-item__title">МЫ ВЫПОЛНЯЕМ КАЧЕСТВЕННО И В СРОК</div>
+                  <div class="servrs-text-item__info">Устраняем неисправности в срок, необходимый в соответствии с технологией ремонта.</div>
+                </div>
+                <div class="servrs-text-item">
+                  <div class="servrs-text-item__title">МЫ ПРЕДОСТАВЛЯЕМ ВАМ ГОТОВЫЙ РЕЗУЛЬТАТ</div>
+                  <div class="servrs-text-item__info">Передаем заказчику готовое к эксплуатации транспортное средство.</div>
+                </div>
+              </div>
+            </div>
+            <div class="servrs-flex__image"><img src="https://www.bonum-trailer.ru/upload/iblock/785/6lp8p66iwyds201prk4mer8nk24py88q/service_kaizen-_1_.svg" alt title></div>
+          </div>
+        </div>
+      </section>
+      <div></div>
+      <section class="banner">
+        <div class="container banner__container">
+          <div class="banner__wrapper">
+            <div class="banner__bg">
+              <picture>
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/6f0/c557m403euw31rda75pkg8utbsos1izx/600_600_1/Rectangle-95.webp" media="(max-width: 768px)">
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/6f0/c557m403euw31rda75pkg8utbsos1izx/1314_1314_1/Rectangle-95.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/6f0/c557m403euw31rda75pkg8utbsos1izx/Rectangle-95.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/6f0/c557m403euw31rda75pkg8utbsos1izx/1314_1314_1/Rectangle-95.webp" alt="ДОВЕРЯЙТЕ СЕРВИС ВАШЕЙ ГРУЗОВОЙ ТЕХНИКИ ТОЛЬКО ПРОФЕССИОНАЛАМ" title="ДОВЕРЯЙТЕ СЕРВИС ВАШЕЙ ГРУЗОВОЙ ТЕХНИКИ ТОЛЬКО ПРОФЕССИОНАЛАМ" loading="lazy">
+              </picture>
+            </div>
+            <div class="banner__content">
+              <div class="h1 h1--uppercase banner__title">ДОВЕРЯЙТЕ СЕРВИС ВАШЕЙ ГРУЗОВОЙ ТЕХНИКИ ТОЛЬКО ПРОФЕССИОНАЛАМ</div><a class="button button--big banner__button" href="#js-main-modal-title-from-btn">ОТПРАВИТЬ ЗАЯВКУ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="centers centers--v2">
+        <div class="container">
+          <div class="centers__content">
+            <div class="centers__header">
+              <h2 class="title">Карта сервисных станций</h2>
+              <div class="centers__switcher switcher-buttons"><span class="js-centers-tabs-switcher switcher-buttons__button js-active">Карта</span><span class="js-centers-tabs-switcher switcher-buttons__button" data-anchor="list">Список</span></div>
+            </div>
+            <div class="centers__localities localities-centers" id="switcher-content-map">
+              <select class="localities-centers__select" id="localities-centers__select" name>
+                <option value="false" selected>Выберите населенный пункт</option>
+              </select>
+              <div class="localities-centers__buttons">
+                <div class="localities-centers__button localities-centers__button-active js-map-filter-brand" data-filter="false"><span>Все</span></div>
+                <div class="localities-centers__button js-map-filter-brand" data-filter="56"><span>BONUM</span></div>
+                <div class="localities-centers__button js-map-filter-brand" data-filter="52"><span>WABCO</span></div>
+                <div class="localities-centers__button js-map-filter-brand" data-filter="54"><span>BPW</span></div>
+                <div class="localities-centers__button js-map-filter-brand" data-filter="55"><span>SAF</span></div>
+              </div>
+              <div class="centers-text-before-tabs">
+                <p>Сервисные станции WABCO, BPW и SAF есть в каждом регионе и почти в любом городе. Их список постоянно обновляется.<br>Перед посещением сервисной станции рекомендуем прозвонить и уточнить актуальность работы и наличия необходимых вам запасных частей и вида сервиса.</p>
+              </div>
+              <div class="centers-tabs">
+                <div class="centers-tabs__tab" style="display:block;">
+                  <div class="centers-map-block localities-centers__item-dark">
+                    <div class="cmb-info">
+                      <div class="cmb-info__item" id="cmb-info__item">
+                        <!-- .cmb-info__item--active-->
+                        <div class="localities-centers__item-body">
+                          <div class="localities-centers__item-title js-title"></div>
+                          <div class="localities-centers__item-subtitle js-type"></div>
+                          <div class="localities-centers__item-loc"><span>адрес:</span>
+                            <p class="js-address"></p>
+                          </div>
+                          <div class="localities-centers__item-contact js-contacts-main"><span>контакты:</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cmb__map" id="centers-map"></div>
+                  </div>
+                </div>
+                <div class="centers-tabs__tab">
+                  <div class="localities-centers__items" id="maps-list"></div>
+                </div>
+              </div>
+            </div>
+            <div class="centers__localities localities-centers" id="switcher-content-list"></div>
+          </div>
+        </div>
       </div>
+      <section class="section-with-video">
+        <div class="container">
+          <h2 class="service-new-page-h2">КАК МЫ ЗАБОТИМСЯ О ВАШЕЙ ТЕХНИКЕ?<a class="company__video company__video--section-with-video" href="https://www.youtube.com/watch?v=FvBEBvnbTO0&amp;amp;autoplay=1&amp;amp;rel=0&amp;amp;controls=0&amp;amp;showinfo=0">
+              <picture>
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/296/0ztoto8gl08r9vswz7rd6p06y35jvtwz/600_600_1/service_video-_1_.webp" media="(max-width: 768px)">
+                <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/296/0ztoto8gl08r9vswz7rd6p06y35jvtwz/1314_1314_1/service_video-_1_.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/296/0ztoto8gl08r9vswz7rd6p06y35jvtwz/service_video-_1_.webp 2x"><img class="company__preview" src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/296/0ztoto8gl08r9vswz7rd6p06y35jvtwz/1314_1314_1/service_video-_1_.webp" alt title loading="lazy">
+              </picture><img class="company__play" src="https://www.bonum-trailer.ru/local/templates/.default/img/svg/i-play-2.svg" alt></a></h2>
+        </div>
+      </section>
+      <section class="feedback">
+        <div class="feedback__image">
+          <picture>
+            <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/fde/ie5g0o6vzlh2v8skscnbwypv2gx6sv2n/600_600_1/DSC04925mini-1.webp" media="(max-width: 768px)">
+            <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/fde/ie5g0o6vzlh2v8skscnbwypv2gx6sv2n/960_960_1/DSC04925mini-1.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/fde/ie5g0o6vzlh2v8skscnbwypv2gx6sv2n/DSC04925mini-1.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/fde/ie5g0o6vzlh2v8skscnbwypv2gx6sv2n/960_960_1/DSC04925mini-1.webp" alt="Картинка слева от контактной форме на стр сервис" title="Картинка слева от контактной форме на стр сервис" loading="lazy">
+          </picture>
+        </div>
+        <div class="feedback__outer feedback__outer--service">
+          <!-- 'start_frame_cache_j3ZsDS'-->
+          <div class="wrap-for-b24-form js-wrap-for-b24-form" data-custom-title="Остались вопросы?&lt;p&gt;Обратитесь к нам, заполнив форму обратной связи, и мы свяжемся с вами в ближайшее время&lt;/p&gt;">
+            <script data-b24-form="inline/333/lx64vy" data-skip-moving="true">
+              /*window.roistatVisitCallback = function(visitId) {
+              window.addEventListener('b24:form:init', (event) => {
+              let form = event.detail.object;
+              form.setProperty("roistatID", visitId);
+              });
+              (function(w, d, u) {
+              var s = d.createElement('script');
+              s.async = true;
+              s.src = u + '?' + (Date.now() / 180000 | 0);
+              var h = d.getElementsByTagName('script')[0];
+              h.parentNode.insertBefore(s, h);
+              })(window, document, 'https://cdn-ru.bitrix24.ru/b2565391/crm/form/loader_333.js');
+              };*/
+            </script>
+          </div>
+          <!-- 'end_frame_cache_j3ZsDS'-->
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="d-none-desktop">
@@ -731,11 +852,10 @@
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
+    <!-- перенесено в main.js
+    script(src="/js/libs/fancybox5.umd.js")
+    script(src="js/swiper-bundle.min.js")
+    -->
     <script async src="https://api-maps.yandex.ru/2.1/?apikey=836eadca-bd0f-4ad6-acb9-f8521d8866e1&amp;load=package.full&amp;lang=ru-RU&amp;onload=getYaMap" type="text/javascript"></script>
     <script src="js/main.js"></script>
     <script src="https://www.bonum-trailer.ru/local/templates/.default/js/additional.js"></script>

@@ -32,12 +32,26 @@ $(document).ready(function () {
 	megaMenu.css('height', `calc(100vh - ${headerHeight}px`);
 	megaMenu.find('.mega-menu__wrapper').css('min-height', `calc(100vh - ${headerHeight}px`);
 
-	toggleBtn.click(function () {
+
+
+	$('.js-header-m__link-btn').click(function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		if (window.matchMedia('(max-width: 699px)').matches) {
+			$(this).parent().parent().toggleClass('expand');
+			$(this).parent().parent().find('ul').slideToggle(300);
+		}
+	});
+
+/*
+	toggleBtn.click(function (e) {
+
 		if (window.matchMedia('(max-width: 699px)').matches) {
 			$(this).toggleClass('expand');
 			$(this).find('ul').slideToggle(300);
 		}
 	});
+*/
 
 	burger.click(function () {
 		if (!mobileMenu.hasClass('open')) {

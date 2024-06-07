@@ -1,4 +1,5 @@
 
+
 function getYaMap() {
 
 	$(function () {
@@ -16,14 +17,33 @@ function getYaMap() {
 				item.find('.js-title').html('');
 				item.find('.js-type').html('');
 				item.find('.js-contacts-main a').remove();
+				item.find('.js-contacts-main p').remove();
 				item.find('.js-contacts-other').remove();
 
 				item.find('.js-title').html(obj.title);
 				item.find('.js-type').html(obj.titleSW);
 				item.find('.js-address').html(obj.address);
 
-				var phones=obj.phone.split(/[\/,]+/);
 				var mainLinks='';
+
+				if(typeof(obj.other_contacts!=='undefined')){
+					item.find('.js-contacts-main').after(obj.other_contacts);
+				}
+
+				var mainLinks='';
+				var phones=obj.phone.split(/[\/,]+/);
+
+				if(obj.phone.trim().length>0){
+					phones.forEach(function(el){
+						el=el.trim();
+						mainLinks+='<p>'+el+'</p>';
+					});
+				}
+
+				mainLinks+='<p >'+obj.site+'</p>';
+
+/*
+				var phones=obj.phone.split(/[\/,]+/);
 
 				if(obj.phone.trim().length>0){
 					phones.forEach(function(el){
@@ -60,7 +80,7 @@ function getYaMap() {
 							mainLinks+='<a target="_blank" href="'+el.trim()+'">'+el.trim()+'</a>';
 						}
 					});
-				}
+				}*/
 				/*
 				if(obj.site.trim().length>0){
 
@@ -85,8 +105,7 @@ function getYaMap() {
 
 			}
 
-
-
+			var centersMapsUrl=typeof(window.curlang)!=='undefined' && window.curlang=='en'?'/jsons/encentersMap.json':'/jsons/centersMap.json'
 
 			ymaps.ready(function () {
 				var firstPrintCenters=true;
@@ -95,7 +114,7 @@ function getYaMap() {
 				var myPlacemark1;
 
 				$.ajax({
-					url: '/jsons/map.json?v=2',
+					url: centersMapsUrl,
 					type: 'get',
 					success: function (response) {
 						//var yyy = JSON.parse(response).main;
@@ -222,50 +241,16 @@ function getYaMap() {
 								if ((chosenCity === false || chosenCity === value.city) && (chosenCenterType === false || chosenCenterType === value.type)) {
 
 									var typeSW, titleSW, typeSWActive;
-									if (value.type == 43) {
-										typeSW = 'other.svg';
-										typeSWActive = 'other_act.svg';
-										titleSW = 'Гарантийные сервисные центры BPW';
-									} else
-										if (value.type == 47) {
-											typeSW = 'other.svg';
-											typeSWActive = 'other_act.svg';
-											titleSW = 'Собственный сервисный центр';
-										} else
-											if (value.type == 51) {
-												typeSW = 'wabco.svg';
-												typeSWActive = 'wabco_act.svg';
-												titleSW = 'Авторизированные Магазины Wabco';
-											} else
-												if (value.type == 52) {
-													typeSW = 'wabco.svg';
-													typeSWActive = 'wabco_act.svg';
-													titleSW = 'Сервисные центры Wabco с поддержкой гарантии';
-												} else
-													if (value.type == 53) {
-														typeSW = 'wabco.svg';
-														typeSWActive = 'wabco_act.svg';
-														titleSW = 'Сервисные центры Wabco без поддержки  гарантии';
-													} else
-														if (value.type == 54) {
-															typeSW = 'bpw.svg';
-															typeSWActive = 'bpw_act.svg';
-															titleSW = 'Сервисные центры BPW';
-														} else
-															if (value.type == 55) {
-																typeSW = 'saf.svg';
-																typeSWActive = 'saf_act.svg';
-																titleSW = 'Сервисные станции SAF';
-															} else
-																if (value.type == 56) {
-																	typeSW = 'bonum.svg';
-																	typeSWActive = 'bonum_act.svg';
-																	titleSW = 'Сервисный центр рекомендованный BONUM';
+
+									if (centers_types.hasOwnProperty(value.type)) {
+										typeSW = centers_types[value.type]['UF_INACTIVE_ICON'];
+										typeSWActive = centers_types[value.type]['UF_ACTIVE_ICON'];
+										titleSW  = centers_types[value.type]['UF_NAME'];
 																} else {
 
-																	typeSW = 'other.svg';
-																	typeSWActive = 'other_act.svg';
-																	titleSW = 'Иное';
+										typeSW = '/img/icons_map/other.svg';
+										typeSWActive = '/img/icons_map/other_act.svg';
+										titleSW = 'Other';
 																}
 
 
@@ -289,7 +274,7 @@ function getYaMap() {
 
 										defaultOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSW,
+											iconImageHref:  typeSW,
 											"iconImageSize": [48, 48],
 											"iconImageOffset": [-24, -24],
 											"openBalloonOnClick": false
@@ -298,7 +283,7 @@ function getYaMap() {
 
 										activeOptions: {
 											iconLayout: 'default#image',
-											iconImageHref: '/img/icons_map/' + typeSWActive,
+											iconImageHref:  typeSWActive,
 											"iconImageSize": [48, 48],
 											"iconImageOffset": [-24, -24],
 											"openBalloonOnClick": false
@@ -306,7 +291,7 @@ function getYaMap() {
 										}
 									}, {
 										iconLayout: 'default#image',
-										iconImageHref: '/img/icons_map/' + typeSW,
+										iconImageHref: typeSW,
 										"iconImageSize": [48, 48],
 										"iconImageOffset": [-24, -24],
 										"openBalloonOnClick": false
@@ -320,8 +305,25 @@ function getYaMap() {
 									if(chosenCity !== false){
 
 
-										var phones=value.phone.split(/[\/,]+/);
 										var mainLinks='';
+
+
+										var phones=value.phone.split(/[\/,]+/);
+
+
+
+										if(value.phone.trim().length>0){
+											phones.forEach(function(el){
+												el=el.trim();
+
+												mainLinks+='<p>'+el+'</p>';
+											});
+										}
+
+
+										/*
+										var phones=value.phone.split(/[\/,]+/);
+
 
 										if(value.phone.trim().length>0){
 											phones.forEach(function(el){
@@ -335,6 +337,10 @@ function getYaMap() {
 											});
 										}
 
+										*/
+
+										//mainLinks+='<p >'+value.phone+'</p>';
+										/*
 										if(value.site.trim().length>0){
 											if(value.site.indexOf("@") >= 0){
 												mainLinks+='<a href="mailto:'+value.site.trim()+'">'+value.site.trim()+'</a>';
@@ -343,6 +349,8 @@ function getYaMap() {
 												mainLinks+='<a target="_blank" href="'+value.site.trim()+'">'+value.site.trim()+'</a>';
 											}
 										}
+										*/
+										mainLinks+='<p >'+value.site+'</p>';
 
 
 
@@ -350,13 +358,14 @@ function getYaMap() {
 										'<div class="localities-centers__item-body">'+
 										'<div class="localities-centers__item-title js-title">'+value.title+'</div>'+
 										'<div class="localities-centers__item-subtitle js-type">'+value.titleSW+'</div>'+
-										'<div class="localities-centers__item-loc"><span>адрес:</span>'+
+										'<div class="localities-centers__item-loc"><span>'+window.tanslations['address']+'</span>'+
 										'<p class="js-address">'+value.address+'</p>'+
 										'</div>'+
-										'<div class="localities-centers__item-contact js-contacts-main"><span>контакты:</span>'+mainLinks+'</div>'+
+										'<div class="localities-centers__item-contact js-contacts-main"><span>'+window.tanslations['contacts']+'</span>'+mainLinks+value.other_contacts+'</div>'+
+
 										'</div>'+
 										'<div class="localities-centers__item-map">'+
-										'<div class="simple-map-container js-place-map-here"  data-coords="'+value.coords+'" data-icon="'+'/img/icons_map/' + typeSWActive+'"></div>'+
+										'<div class="simple-map-container js-place-map-here"  data-coords="'+value.coords+'" data-icon="'+ typeSWActive+'"></div>'+
 										'<!--img(src="img/centers/map1.jpg", alt="alt")-->'+
 										'</div>'+
 										'</div>';
