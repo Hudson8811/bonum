@@ -24,7 +24,7 @@ block content
 				.leasing-mult-hero__body
 					.leasing-mult-hero__body-inner
 						.leasing-mult-hero__image.leasing-mult-hero__image-mob
-						.h1 <span>Лизинг от партнёров</span> на выгодных условиях
+						.h1 <b>Лизинг от партнёров</b> на выгодных условиях
 						a(href='').leasing-mult__btn.leasing-mult-hero__btn Узнать подробнее
 				.leasing-mult-hero__image-wrapper
 					.leasing-mult-hero__image
@@ -44,7 +44,7 @@ block content
 							img(src="img/leasing-mult/condition-2.svg" alt="alt")
 						.leasing-condition__info
 							.leasing-condition__title ОНЛАЙН
-							.leasing-condition__text оформление лизинга				
+							.leasing-condition__text оформление лизинга
 					.leasing-mult-conditions__item.leasing-condition
 						.leasing-condition__image
 							img(src="img/leasing-mult/condition-3.svg" alt="alt")
@@ -64,7 +64,7 @@ block content
 								br
 								!= 'Сезонный график платежей'
 							a(href='').leasing-mult__btn.entity-card__btn Подробнее
-						.entity-card__img 
+						.entity-card__img
 							img(src="img/leasing-mult/entity-card-1.png" alt="alt")
 					.entity-card
 						.entity-card__content
@@ -74,7 +74,7 @@ block content
 								br
 								!= 'Сезонный график платежей'
 							a(href='').leasing-mult__btn.entity-card__btn Подробнее
-						.entity-card__img 
+						.entity-card__img
 							img(src="img/leasing-mult/entity-card-2.png" alt="alt")
 					.entity-card
 						.entity-card__content
@@ -84,7 +84,7 @@ block content
 								br
 								!= 'Сезонный график платежей'
 							a(href='').leasing-mult__btn.entity-card__btn Подробнее
-						.entity-card__img 
+						.entity-card__img
 							img(src="img/leasing-mult/entity-card-3.png" alt="alt")
 					.entity-card
 						.entity-card__content
@@ -94,10 +94,129 @@ block content
 								br
 								!= 'Сезонный график платежей'
 							a(href='').leasing-mult__btn.entity-card__btn Подробнее
-						.entity-card__img 
+						.entity-card__img
 							img(src="img/leasing-mult/entity-card-4.png" alt="alt")
+		section.leasing-calc-sec
+			.container
+				h2.h2.leasing-calc-sec__title Расчитайте свой платёж
+				form.leasing-calc.js-prevent-submit.js-calc-leasing
+					.leasing-calc__inner
+						.leasing-calc__left
 
-		section.leasing.leasing-mult__leasing
+							.calculator-input__block.calculator-input__block--leasing.js-rs-block
+								.calculator-input__title-block
+									.calculator-input__title
+										| Стоимость предмета лизинга
+										span (введите данные)
+								.calculator-slider__container
+									.calculator-slider.js-range-slider.js-calc-leasing__price(data-step="1000000" data-min="1000000" data-max="50000000" data-val="5000000" data-format="money")
+										svg.range-tick__container(role='presentation' width='100%' height='10' xmlns='http://www.w3.org/2000/svg')
+											rect.range-tick(x='0%' y='1' width='1' height='8')
+											rect.range-tick(x='10%' y='1' width='1' height='8')
+											rect.range-tick(x='20%' y='1' width='1' height='8')
+											rect.range-tick(x='30%' y='1' width='1' height='8')
+											rect.range-tick(x='40%' y='1' width='1' height='8')
+											rect.range-tick(x='50%' y='1' width='1' height='8')
+											rect.range-tick(x='60%' y='1' width='1' height='8')
+											rect.range-tick(x='70%' y='1' width='1' height='8')
+											rect.range-tick(x='80%' y='1' width='1' height='8')
+											rect.range-tick(x='90%' y='1' width='1' height='8')
+										svg.range-point__container(role='presentation' width='100%' height='9' xmlns='http://www.w3.org/2000/svg')
+											text.range-point(x='0%' y='8' text-anchor='start') 1 млн
+											text.range-point(x='10%' y='8' text-anchor='middle')
+											text.range-point(x='20%' y='8' text-anchor='middle')
+											text.range-point(x='30%' y='8' text-anchor='middle')
+											text.range-point(x='40%' y='8' text-anchor='middle')
+											text.range-point(x='50%' y='8' text-anchor='middle') 25  млн
+											text.range-point(x='60%' y='8' text-anchor='middle')
+											text.range-point(x='70%' y='8' text-anchor='middle')
+											text.range-point(x='80%' y='8' text-anchor='middle')
+											text.range-point(x='90%' y='8' text-anchor='middle')
+											text.range-point(x='100%' y='8' text-anchor='middle') 50 млн
+									input.calculator-input.calculator-input--leasing.input_2.js-rs-input.js-calc-leasing__price-inp(type='text' name='cl_inp_left_1' value='')
+								//.calculator-input_note МЛН
+
+							.calculator-input__block.calculator-input__block--leasing.js-rs-block
+								.calculator-input__title-block
+									.calculator-input__title
+										| Первоначальный взнос
+										span (введите данные)
+								.calculator-slider__container
+									.calculator-slider.js-range-slider.js-calc-leasing__first-payment(data-step="1000" data-min="1000" data-max="1000000" data-val="250000" data-format="money")
+										svg.range-tick__container(role='presentation' width='100%' height='10' xmlns='http://www.w3.org/2000/svg')
+											rect.range-tick(x='0%' y='1' width='1' height='8')
+											rect.range-tick(x='10%' y='1' width='1' height='8')
+											rect.range-tick(x='20%' y='1' width='1' height='8')
+											rect.range-tick(x='30%' y='1' width='1' height='8')
+											rect.range-tick(x='40%' y='1' width='1' height='8')
+											rect.range-tick(x='50%' y='1' width='1' height='8')
+											rect.range-tick(x='60%' y='1' width='1' height='8')
+											rect.range-tick(x='70%' y='1' width='1' height='8')
+											rect.range-tick(x='80%' y='1' width='1' height='8')
+											rect.range-tick(x='90%' y='1' width='1' height='8')
+										svg.range-point__container(role='presentation' width='100%' height='9' xmlns='http://www.w3.org/2000/svg')
+											text.range-point(x='0%' y='8' text-anchor='start') 1 тыс
+											text.range-point(x='10%' y='8' text-anchor='middle')
+											text.range-point(x='20%' y='8' text-anchor='middle')
+											text.range-point(x='30%' y='8' text-anchor='middle')
+											text.range-point(x='40%' y='8' text-anchor='middle')
+											text.range-point(x='50%' y='8' text-anchor='middle') 0.5 млн
+											text.range-point(x='60%' y='8' text-anchor='middle')
+											text.range-point(x='70%' y='8' text-anchor='middle')
+											text.range-point(x='80%' y='8' text-anchor='middle')
+											text.range-point(x='90%' y='8' text-anchor='middle')
+											text.range-point(x='100%' y='8' text-anchor='middle') 1 млн
+									input.calculator-input.calculator-input--leasing.input_2.js-rs-input.js-calc-leasing__first-payment-inp(type='text' name='cl_inp_left_2' value='')
+								//.calculator-input_note МЛН
+
+							.calculator-input__block.calculator-input__block--leasing.js-rs-block
+								.calculator-input__title-block
+									.calculator-input__title
+										| Срок лизинга
+										span (введите данные)
+								.calculator-slider__container
+									.calculator-slider.js-range-slider.js-calc-leasing__month(data-step="1" data-min="12" data-max="72" data-val="59" data-format="month")
+										svg.range-tick__container(role='presentation' width='100%' height='10' xmlns='http://www.w3.org/2000/svg')
+											rect.range-tick(x='0%' y='1' width='1' height='8')
+											rect.range-tick(x='10%' y='1' width='1' height='8')
+											rect.range-tick(x='20%' y='1' width='1' height='8')
+											rect.range-tick(x='30%' y='1' width='1' height='8')
+											rect.range-tick(x='40%' y='1' width='1' height='8')
+											rect.range-tick(x='50%' y='1' width='1' height='8')
+											rect.range-tick(x='60%' y='1' width='1' height='8')
+											rect.range-tick(x='70%' y='1' width='1' height='8')
+											rect.range-tick(x='80%' y='1' width='1' height='8')
+											rect.range-tick(x='90%' y='1' width='1' height='8')
+										svg.range-point__container(role='presentation' width='100%' height='9' xmlns='http://www.w3.org/2000/svg')
+											text.range-point(x='0%' y='8' text-anchor='start') 12 мес
+											text.range-point(x='10%' y='8' text-anchor='middle')
+											text.range-point(x='20%' y='8' text-anchor='middle')
+											text.range-point(x='30%' y='8' text-anchor='middle')
+											text.range-point(x='40%' y='8' text-anchor='middle')
+											text.range-point(x='50%' y='8' text-anchor='middle') 42 мес
+											text.range-point(x='60%' y='8' text-anchor='middle')
+											text.range-point(x='70%' y='8' text-anchor='middle')
+											text.range-point(x='80%' y='8' text-anchor='middle')
+											text.range-point(x='90%' y='8' text-anchor='middle')
+											text.range-point(x='100%' y='8' text-anchor='middle') 72 мес
+									input.calculator-input.calculator-input--leasing.input_2.js-rs-input.js-calc-leasing__month-inp(type='text' name='cl_inp_left_3' value='')
+								//.calculator-input_note МЛНa
+
+
+						.leasing-calc__right
+							.leasing-calc-result
+								.leasing-calc-result__grey
+									.leasing-calc-result__title ВАШ РАСЧЕТ ГОТОВ
+									.leasing-calc-result__white
+										.calc-result.js-calc-result
+											.calc-result.calc-result__btn.js-calc-leasing-minus -
+											.calc-result__val.js-calc-leasing-result
+											.calc-result.calc-result__btn.js-calc-leasing-plus +
+								.leasing-calc-result__bottom
+									.leasing-calc-result__desc Расчёты носят ознакомительный характер и не являются офертой
+									a.leasing-calc-result__btn.leasing-mult__btn.leasing-mult__btn--black(href="")  оставить заявку
+
+		section.leasing.leasing-mult__leasing#leasing-mult__leasing
 			.container
 				.leasing__top
 					.h2 Выгодные предложения
@@ -222,7 +341,7 @@ block content
 								.steps-card__title оставьте заявку
 								.steps-card__text
 									!= 'Мы внимательно изучим ваш запрос и свяжемся с вами'
-							.steps-card__img 
+							.steps-card__img
 								img(src="img/leasing-mult/leasing-step-1.png" alt="alt")
 						.steps-card__number 1
 					.steps-card
@@ -231,7 +350,7 @@ block content
 								.steps-card__title согласуйте документы с лизингом
 								.steps-card__text
 									!= 'Это займёт несколько дней'
-							.steps-card__img 
+							.steps-card__img
 								img(src="img/leasing-mult/leasing-step-2.png" alt="alt")
 						.steps-card__number 2
 					.steps-card
@@ -240,7 +359,7 @@ block content
 								.steps-card__title Заберите технику
 								.steps-card__text
 									!= 'И начните зарабатывать'
-							.steps-card__img 
+							.steps-card__img
 								img(src="img/leasing-mult/leasing-step-3.png" alt="alt")
 						.steps-card__number 3
 
