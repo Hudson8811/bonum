@@ -42,6 +42,19 @@
 			line-height: 150%;
 		}
 	}
+
+	.akcii_head{
+		padding-top: 80px;
+		@media (max-width: 1200px) {
+			padding-top: 40px;
+		}
+		.h1{
+			text-transform: none;
+		}
+		& + .stocks-mult-cards {
+			margin-top: 0;
+		}
+	}
 }
 .stocks-mult-hero {
 	background: #F8F8F8;
