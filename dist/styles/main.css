@@ -7469,6 +7469,18 @@ ul.list-marker li::before,
   line-height: 170%;
 }
 
+.stocks-mult .akcii_head {
+  padding-top: 80px;
+}
+
+.stocks-mult .akcii_head .h1 {
+  text-transform: none;
+}
+
+.stocks-mult .akcii_head + .stocks-mult-cards {
+  margin-top: 0;
+}
+
 .stocks-mult-hero {
   background: #F8F8F8;
   overflow: hidden;
@@ -7969,10 +7981,12 @@ section.leasing {
   line-height: 123%;
 }
 
-.leasing-mult .h1 b {
+.leasing-mult .h1 b,
+.leasing-mult .h1 h1 {
   font-size: 50.56px;
   font-weight: 600;
   display: block;
+  line-height: inherit;
 }
 
 .leasing-mult .h2 {
@@ -14477,7 +14491,8 @@ section.leasing {
     font-size: 40px;
   }
 
-  .leasing-mult .h1 b {
+  .leasing-mult .h1 b,
+  .leasing-mult .h1 h1 {
     font-size: 40px;
   }
 }
@@ -15431,6 +15446,10 @@ section.leasing {
 
   .stocks-mult section {
     margin-top: 70px;
+  }
+
+  .stocks-mult .akcii_head {
+    padding-top: 40px;
   }
 
   .stocks-mult-hero__body {
@@ -19928,7 +19947,8 @@ section.leasing {
     font-size: 30px;
   }
 
-  .leasing-mult .h1 b {
+  .leasing-mult .h1 b,
+  .leasing-mult .h1 h1 {
     font-size: 30px;
   }
 
@@ -20213,7 +20233,8 @@ section.leasing {
     font-size: 24px;
   }
 
-  .leasing-mult .h1 b {
+  .leasing-mult .h1 b,
+  .leasing-mult .h1 h1 {
     font-size: 24px;
   }
 }
@@ -20423,7 +20444,8 @@ section.leasing {
     font-size: 20px;
   }
 
-  .leasing-mult .h1 b {
+  .leasing-mult .h1 b,
+  .leasing-mult .h1 h1 {
     font-size: 20px;
   }
 }

@@ -23,10 +23,11 @@
 			font-size: 20px;
 		}
 
-		b {
+		b, h1 {
 			font-size: 50.56px;
 			font-weight: 600;
 			display: block;
+			line-height: inherit;
 
 			@media (max-width: 1299px) {
 				font-size: 40px;
