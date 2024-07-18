@@ -1975,5 +1975,6 @@ ul.list-marker,
         white-space: nowrap;
     }
     &__old{}
+    &__old{text-decoration: line-through;}
     &__new{}
 }

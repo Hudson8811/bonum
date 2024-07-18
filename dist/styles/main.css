@@ -6694,6 +6694,10 @@ ul.list-marker li::before,
   white-space: nowrap;
 }
 
+.single-product-info-price__old {
+  text-decoration: line-through;
+}
+
 .spare {
   padding: 60px 0 130px;
 }
