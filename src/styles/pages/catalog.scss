@@ -184,6 +184,9 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 16px;
+                &--no-mb{
+                    margin-bottom: 0 !important;
+                }
 
                 &::last-child {
                     margin-bottom: 0;

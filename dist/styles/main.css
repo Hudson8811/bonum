@@ -5675,14 +5675,30 @@ ul.list-marker li::before,
   display: flex;
   justify-content: center;
   position: relative;
+  /* @include max(sm) {
+       max-width: 500px;
+       margin-left: auto;
+       margin-right: auto;
+       justify-content: center;
+       align-items: flex-start;
+       flex-flow: row wrap;
+   }*/
 }
 
 .main-page .slider .slider-info__slide-item {
   display: flex;
   align-items: flex-start;
   width: auto;
-  padding-right: 64px;
-  margin-right: 64px;
+  /*padding-right: 64px;
+  margin-right: 64px;*/
+  padding-right: 25px;
+  margin-right: 25px;
+  /*@include max(sm) {
+      margin-right: 0;
+      padding-right: 0;
+      margin-bottom: 42px;
+      max-width: 49%;
+  }*/
 }
 
 .main-page .slider .slider-info__slide-item:last-child {
@@ -6637,6 +6653,45 @@ ul.list-marker li::before,
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.single-product-price {
+  margin-top: 42px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #1F2120;
+}
+
+.single-product-price__old,
+.single-product-price__new {
+  display: inline-block;
+}
+
+.single-product-price__old {
+  text-decoration: line-through;
+  margin: 0 5px;
+}
+
+.single-product-price__new {
+  font-weight: 600;
+}
+
+.single-product-price + .slider-top--buttons {
+  margin-top: 38px;
+}
+
+.single-product-info-price {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.single-product-info-price__old,
+.single-product-info-price__new {
+  white-space: nowrap;
 }
 
 .spare {
@@ -12477,6 +12532,10 @@ section.leasing {
   margin-bottom: 16px;
 }
 
+.catalog-page .catalog__item--desc--no-mb {
+  margin-bottom: 0 !important;
+}
+
 .catalog-page .catalog__item--desc::last-child {
   margin-bottom: 0;
 }
@@ -14401,8 +14460,10 @@ section.leasing {
 
   .main-page .slider .slider-info__slide-item {
     flex-flow: column nowrap;
-    padding-right: 46px;
-    margin-right: 46px;
+    /*padding-right: 46px;
+    margin-right: 46px;*/
+    padding-right: 24px;
+    margin-right: 24px;
     justify-content: flex-start;
     align-items: center;
   }
@@ -16182,11 +16243,6 @@ section.leasing {
     display: flex;
   }
 
-  .main-page .slider .slider-info__slide-item {
-    padding-right: 20px;
-    margin-right: 20px;
-  }
-
   .layout-one--left {
     width: 266px;
     padding-right: 20px;
@@ -16409,6 +16465,35 @@ section.leasing {
   }
 }
 
+@media (max-width: 920px) {
+  .main-page .slider .slider-info__slide-wrap {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+
+  .main-page .slider .slider-info__slide-item {
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 42px;
+    max-width: 49%;
+    width: 50%;
+  }
+
+  .main-page .slider .slider-info__slide-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .main-page .slider .slider-info__slide-item:nth-child(2n-1):last-child {
+    padding-right: 0 !important;
+  }
+}
+
 @media (max-width: 900px) {
   .stocks-mult-benefits__item {
     flex: 1 1 100%;
@@ -16589,6 +16674,10 @@ section.leasing {
 
   .gallery.gallery--main .photogalary__slide .photogalary__img--double {
     width: 122px;
+  }
+
+  .single-product-price {
+    font-size: 16px;
   }
 
   .bottom-page .resp-desk {
@@ -19470,22 +19559,6 @@ section.leasing {
     padding-top: 42px;
   }
 
-  .main-page .slider .slider-info__slide-wrap {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: flex-start;
-    flex-flow: row wrap;
-  }
-
-  .main-page .slider .slider-info__slide-item {
-    margin-right: 0;
-    padding-right: 0;
-    margin-bottom: 42px;
-    max-width: 49%;
-  }
-
   .main-page .slider .slider-info__slide-item:nth-child(2n-1) {
     padding-right: 37px;
     margin-right: 0;
@@ -20408,6 +20481,10 @@ section.leasing {
 
   .main-page .slider .slider-top--nav {
     top: 42%;
+  }
+
+  .single-product-price + .slider-top--buttons {
+    margin-top: 28px !important;
   }
 
   .centers .h1 {
