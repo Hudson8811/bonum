@@ -1261,6 +1261,8 @@ html.with-fancybox body.hide-scrollbar {
 .has-map .fancybox__content,
 .has-pdf .fancybox__content,
 .has-youtube .fancybox__content,
+.has-rutube .fancybox__content,
+.has-vk .fancybox__content,
 .has-vimeo .fancybox__content,
 .has-html5video .fancybox__content {
   max-width: 100%;
@@ -1284,6 +1286,8 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .has-youtube .fancybox__content,
+.has-rutube .fancybox__content,
+.has-vk .fancybox__content,
 .has-vimeo .fancybox__content,
 .has-html5video .fancybox__content {
   width: 960px;
@@ -1295,6 +1299,8 @@ html.with-fancybox body.hide-scrollbar {
 .has-map .fancybox__content,
 .has-pdf .fancybox__content,
 .has-youtube .fancybox__content,
+.has-rutube .fancybox__content,
+.has-vk .fancybox__content,
 .has-vimeo .fancybox__content,
 .has-html5video .fancybox__content {
   padding: 0;
