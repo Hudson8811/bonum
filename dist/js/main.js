@@ -3066,9 +3066,14 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 			rutube: {
 				controls: 1,
                 frameBorder: 0,
+			},
+			vk: {
+				controls: 1,
+                frameBorder: 0,
+				js_api: 1,
 			}
 		},
-		ht = ["image", "html", "ajax", "inline", "clone", "iframe", "map", "pdf", "html5video", "youtube","rutube", "vimeo", "video"];
+		ht = ["image", "html", "ajax", "inline", "clone", "iframe", "map", "pdf", "html5video", "youtube","rutube","vk", "vimeo", "video"];
 	class dt extends N {
 		onInitSlide(t, e, i) {
 			this.processType(i)
@@ -3105,7 +3110,13 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 					value: "true"
 				}
 			}
-			if("rutube" === i.type){
+			else if("vk" === i.type){
+				o = {
+					method: "pause",
+					value: "true"
+				}
+			}
+			else if("rutube" === i.type){
 				o = {
 					type: 'player:pause',
 					data: {}
@@ -3139,7 +3150,9 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 		}
 		onMessage(t) {
 			try {
+				console.log(t);
 				let e = JSON.parse(t.data);
+				console.log(e);
 
 
 				if ("https://player.vimeo.com" === t.origin) {
@@ -3150,11 +3163,17 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
 					}
 
-				}  else if (t.origin.match(/^https:\/\/(www.)?youtube(-nocookie)?.com$/) && "onReady" === e.event) {
+				} else if (t.origin.match(/^https:\/\/(www.)?youtube(-nocookie)?.com$/) && "onReady" === e.event) {
 					const t = document.getElementById(e.id);
 					t && (t.dataset.ready = "true")
 				}
-			} catch (t) {}
+			} catch (err) {
+				if(t.origin.match(/^.*vk.com.*$/)) {
+					if ("inited" ===t.data.event){
+						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
+					}
+				}
+			}
 		}
 		loadAjaxContent(t) {
 			const e = this.instance.optionFor(t, "src") || "";
@@ -3275,7 +3294,12 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 								data: {}
 							}
 
-						}else{
+						}else if("vk" === t.type){
+							e={
+								method: "play"
+							}
+						}
+						else{
 							e={
 								method: "play",
 								value: "true"
@@ -3292,10 +3316,23 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 						}*/
 						var result;
 						result = e && t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"), void(t.poller = void 0);
-						"youtube" === t.type &&  (e = {
-							event: "listening",
-							id: t.iframeEl.getAttribute("id")
-						}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+
+
+						if("youtube" === t.type){
+							(e = {
+								event: "listening",
+								id: t.iframeEl.getAttribute("id")
+							}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+						}
+
+						else if("vk" === t.type){
+							(e = {
+								method: "init"
+							}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+							console.log('method: "init"');
+
+						}
+
 						return result;
 					}
 				}
@@ -3342,7 +3379,16 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 					o = encodeURIComponent(n[3]),
 					a = n[4] || "";
 				t.videoId = o, t.src = `https://rutube.ru/play/embed/${o}?${a?`h=${a}${s?"&":""}`:""}${s}`, i = "rutube"
+			}else if (n = e.match(/^.+vk.com\/video-(.*)?(.*)\/?/)) {
+				const s = lt(e, this.optionFor(t, "vk")),
+					o = encodeURIComponent(n[1]).replace('_','&id='),
+					a = n[2] || "";
+				t.videoId = o, t.src = `https://vk.com/video_ext.php?oid=-${o}&${a?`h=${a}${s?"&":""}`:""}${s}`, i = "vk"
 			}
+
+			//1212665_456240589
+			//https://vk.com/video-1212665_456240589
+			//https://vk.com/video_ext.php?oid=-1212665&id=456240589
 			if (!i && t.triggerEl) {
 				const e = t.triggerEl.dataset.type;
 				ht.includes(e) && (i = e)
@@ -3372,6 +3418,7 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 					case "youtube":
 					case "vimeo":
 					case "rutube":
+					case "vk":
 						t.preload = !1;
 					case "iframe":
 						this.setIframeContent(t)
@@ -3384,7 +3431,7 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 			const i = t.contentEl,
 				n = this.optionFor(t, "videoRatio"),
 				s = null === (e = t.el) || void 0 === e ? void 0 : e.getBoundingClientRect();
-			if (!(i && s && n && 1 !== n && t.type && ["video", "youtube", "vimeo", "rutube", "html5video"].includes(t.type))) return;
+			if (!(i && s && n && 1 !== n && t.type && ["video", "youtube", "vimeo", "rutube","vk", "html5video"].includes(t.type))) return;
 			const o = s.width,
 				a = s.height;
 			i.style.aspectRatio = n + "", i.style.width = o / a > n ? "auto" : "", i.style.height = o / a > n ? "" : "auto"
@@ -3711,7 +3758,7 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 			if (e)
 				for (const i of this.instance.slides || []) {
 					let n = "";
-					i.type && (n = `for-${i.type}`, i.type && ["video", "youtube", "vimeo", "rutube", "html5video"].includes(i.type) && (n += " for-video")), t.push({
+					i.type && (n = `for-${i.type}`, i.type && ["video", "youtube", "vimeo", "rutube","vk", "html5video"].includes(i.type) && (n += " for-video")), t.push({
 						html: this.formatThumb(i, e),
 						customClass: n
 					})
@@ -3824,7 +3871,7 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 				const i = document.createElement("div");
 				if (P(i, this.cn("slide")), t.type) {
 					let e = `for-${t.type}`;
-					["video", "youtube", "vimeo", "rutube", "html5video"].includes(t.type) && (e += " for-video"), P(i, e)
+					["video", "youtube", "vimeo", "rutube","vk", "html5video"].includes(t.type) && (e += " for-video"), P(i, e)
 				}
 				i.appendChild(s(this.formatThumb(t, n))), t.thumbSlideEl = i, e.appendChild(i), this.resizeModernSlide(t)
 			}
