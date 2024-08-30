@@ -3127,13 +3127,14 @@
 
 
 
-			/*"vimeo" === i.type ? o = {
-				method: "pause",
-				value: "true"
-			} : "youtube" === i.type && (o = {
-				event: "command",
-				func: "pauseVideo"
-			}),*/o && i.iframeEl && i.iframeEl.contentWindow && i.iframeEl.contentWindow.postMessage(JSON.stringify(o), "*"), i.poller && clearTimeout(i.poller)
+			o && i.iframeEl && i.iframeEl.contentWindow && (function () {
+			if("vk" === i.type){
+				return i.iframeEl.contentWindow.postMessage(o, "*")
+			}
+			else{
+				return i.iframeEl.contentWindow.postMessage(JSON.stringify(o), "*")
+			}
+			})(), i.poller && clearTimeout(i.poller)
 		}
 		onDone(t, e) {
 			t.isCurrentSlide(e) && !t.isClosing() && this.playVideo()
@@ -3146,28 +3147,37 @@
 		onMessage(t) {
 			try {
 				console.log(t);
-				let e = JSON.parse(t.data);
-				console.log(e);
 
 
-				if ("https://player.vimeo.com" === t.origin) {
-					if ("ready" === e.event)
-						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
-				}else if(t.origin.match(/^.*rutube.ru.*$/)) {
-					if ("player:ready" === e.type){
-						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
-					}
-
-				} else if (t.origin.match(/^https:\/\/(www.)?youtube(-nocookie)?.com$/) && "onReady" === e.event) {
-					const t = document.getElementById(e.id);
-					t && (t.dataset.ready = "true")
-				}
-			} catch (err) {
 				if(t.origin.match(/^.*vk.com.*$/)) {
 					if ("inited" ===t.data.event){
-						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
+						for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) {
+							e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true");
+							console.log(e);
+
+						}
+					}
+				}else{
+					let e = JSON.parse(t.data);
+					console.log(e);
+
+
+					if ("https://player.vimeo.com" === t.origin) {
+						if ("ready" === e.event)
+							for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
+					}else if(t.origin.match(/^.*rutube.ru.*$/)) {
+						if ("player:ready" === e.type){
+							for (let e of Array.from(document.getElementsByClassName("fancybox__iframe"))) e instanceof HTMLIFrameElement && e.contentWindow === t.source && (e.dataset.ready = "true")
+						}
+
+					} else if (t.origin.match(/^https:\/\/(www.)?youtube(-nocookie)?.com$/) && "onReady" === e.event) {
+						const t = document.getElementById(e.id);
+						t && (t.dataset.ready = "true")
 					}
 				}
+
+
+			} catch (t) {
 			}
 		}
 		loadAjaxContent(t) {
@@ -3271,12 +3281,13 @@
 				}
 			} catch (t) {}
 			if ("youtube" !== t.type && "vimeo" !== t.type && "rutube" !== t.type && "vk" !== t.type) return;
+
+
 			const i = () => {
 				if (t.iframeEl && t.iframeEl.contentWindow) {
 					let e;
 
-					if ("true" === t.iframeEl.dataset.ready) {
-
+					if("true" === t.iframeEl.dataset.ready){
 						if("youtube" === t.type){
 							e={
 								event: "command",
@@ -3300,40 +3311,85 @@
 								value: "true"
 							}
 						}
-
-
-						/*e = "youtube" === t.type ? {
-							event: "command",
-							func: "playVideo"
-						} : {
-							method: "play",
-							value: "true"
-						}*/
 						var result;
-						result = e && t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"), void(t.poller = void 0);
-
-
-						if("youtube" === t.type){
-							(e = {
-								event: "listening",
-								id: t.iframeEl.getAttribute("id")
-							}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
-						}
-
-						else if("vk" === t.type){
-							(e = {
-								method: "init"
-							}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
-							console.log('method: "init"');
-
-						}
-
+						result = e && (function () {
+							if("vk" === t.type){
+								return t.iframeEl.contentWindow.postMessage(e, "*")
+							}
+							else{
+								return t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*")
+							}
+						 })(), void(t.poller = void 0);
 						return result;
 					}
+
+
+
+
+					if("youtube" === t.type){
+						(e = {
+							event: "listening",
+							id: t.iframeEl.getAttribute("id")
+						}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+					}
+
+					else if("vk" === t.type){
+						(e = {
+							method: "init"
+						}, t.iframeEl.contentWindow.postMessage(e, "*"))
+						console.log('method: "init"');
+
+					}
+
 				}
 				t.poller = setTimeout(i, 250)
 			};
 			i()
+
+/*
+			const i = () => {
+				if (t.iframeEl && t.iframeEl.contentWindow) {
+					let e;
+					if ("true" === t.iframeEl.dataset.ready) return e = "youtube" === t.type ? {
+						event: "command",
+						func: "playVideo"
+					} : {
+						method: "play",
+						value: "true"
+					}, e && t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"), void(t.poller = void 0);
+					"youtube" === t.type && (e = {
+						event: "listening",
+						id: t.iframeEl.getAttribute("id")
+					}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+				}
+				t.poller = setTimeout(i, 250)
+			};
+			i()
+*/
+			/*
+
+
+			const i = () => {
+				if (t.iframeEl && t.iframeEl.contentWindow) {
+					let e;
+					if ("true" === t.iframeEl.dataset.ready) return e = "youtube" === t.type ? {
+						event: "command",
+						func: "playVideo"
+					} : {
+						method: "play",
+						value: "true"
+					}, e && t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"), void(t.poller = void 0);
+					"youtube" === t.type && (e = {
+						event: "listening",
+						id: t.iframeEl.getAttribute("id")
+					}, t.iframeEl.contentWindow.postMessage(JSON.stringify(e), "*"))
+				}
+				t.poller = setTimeout(i, 250)
+			};
+			i()
+
+
+			*/
 		}
 		processType(t) {
 			if (t.html) return t.type = "html", t.src = t.html, void(t.html = "");
@@ -3359,16 +3415,11 @@
 					l = lt(e, a),
 					c = encodeURIComponent(n[2]);
 				t.videoId = c, t.src = `https://${r}/embed/${c}?${l}`, t.thumbSrc = t.thumbSrc || `https://i.ytimg.com/vi/${c}/mqdefault.jpg`, i = "youtube"
-
-
-
 			} else if (n = e.match(/^.+vimeo.com\/(?:\/)?([\d]+)((\/|\?h=)([a-z0-9]+))?(.*)?/)) {
 				const s = lt(e, this.optionFor(t, "vimeo")),
 					o = encodeURIComponent(n[1]),
 					a = n[4] || "";
 				t.videoId = o, t.src = `https://player.vimeo.com/video/${o}?${a?`h=${a}${s?"&":""}`:""}${s}`, i = "vimeo"
-
-
 			}else if (n = e.match(/^.+rutube.ru(\/live)?\/video\/(.*\/)?([\w]+)(.*)\/?/)) {
 				const s = lt(e, this.optionFor(t, "rutube")),
 					o = encodeURIComponent(n[3]),
