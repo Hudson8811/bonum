@@ -256,7 +256,7 @@
 					display: block;
 				}
 
-				@include max(sm) {
+				@include max(768) {
 					display: none;
 				}
 			}
@@ -273,17 +273,28 @@
 					display: none;
 				}
 
-				@include max(sm) {
+				@include max(768) {
 					display: block;
 				}
 			}
 		}
 
+		&__link-social-header {
+			@include min(sm) {
+				border-left: 1px solid $grey-2;
+				padding: 0 25px;
+				min-width: 76px;
+			}
+
+			@include max(sm) {
+				order: -99;
+			}
+		}
 		&__link-mail {
 			border-left: 1px solid $grey-2;
 			padding: 0 25px;
 
-			@include max(sm) {
+			@include max(975) {
 				display: none;
 			}
 		}

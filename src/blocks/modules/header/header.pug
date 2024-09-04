@@ -143,12 +143,13 @@ header.header(class=modClass)
 								ul
 							.mega-menu__item
 								ul
-			a.nav__item(href='/akczii-i-lizingovyie-programmyi/') Акции и лизинг
+			a.nav__item(href='/akczii-i-lizingovyie-programmyi/') Акции
+			a.nav__item(href='/akczii-i-lizingovyie-programmyi/') Лизинг
 			a.nav__item(href='/blog/') Блог
 	.header-city-switch
 		// 'start_frame_cache_W3XK6f'
 		#regions_choose_component.select-city-wrap
-			a.select-city__block.js-disable-city-link(href='https://www.bonum-trailer.ru/' data-entity='select-city__block__text-city-wrap')
+			a.select-city__block.select-city__block--show.js-disable-city-link(href='https://www.bonum-trailer.ru/' data-entity='select-city__block__text-city-wrap')
 				span.select-city__block__text
 					svg(width='18' height='22' viewBox='0 0 18 22' fill='none' xmlns='http://www.w3.org/2000/svg')
 						g(clip-path='url(#clip0_1_8)')
@@ -156,7 +157,8 @@ header.header(class=modClass)
 						defs
 							clippath#clip0_1_8
 								rect(width='18' height='22' fill='white')
-				span.select-city__block__text-city(data-entity='select-city__block__text-city')
+				span.select-city__block__text-city(data-entity='select-city__block__text-city') Екатеринбург
+
 		#regions_choose_component_dropdown.select-city__dropdown-wrap(style='display: none;')
 			.select-city__dropdown
 				.select-city__dropdown__title-wrap
@@ -233,6 +235,9 @@ header.header(class=modClass)
 			svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
 				path(d='M20.023 15.488C19.393 15.473 18.6 15.436 18.099 15.348C17.557 15.252 16.905 15.066 16.446 14.923C16.086 14.811 15.694 14.91 15.427 15.176L13.21 17.38C11.678 16.573 10.451 15.633 9.412 14.588C8.367 13.549 7.427 12.322 6.62 10.79L8.824 8.572C9.09 8.305 9.189 7.913 9.077 7.553C8.935 7.095 8.748 6.443 8.653 5.901C8.564 5.4 8.528 4.607 8.512 3.977C8.499 3.432 8.055 3 7.51 3H4C3.562 3 3 3.328 3 4C3 8.539 4.84 12.874 7.966 16.034C11.126 19.16 15.461 21 20 21C20.672 21 21 20.438 21 20V16.49C21 15.945 20.568 15.501 20.023 15.488Z')
 		a.button.header-request-call-btn(href='#js-main-modal-title-from-btn') Заказать звонок
+		a.contact__link.contact__link-social-header(href='https://wa.me/')
+			.contact__link-img
+				<img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjMyNTYgOS43Njc0NEMyLjMyNTYgNS40MDA1NCA1Ljg2NTY4IDEuODYwNDcgMTAuMjMyNiAxLjg2MDQ3QzE0LjU5OTQgMS44NjA0NyAxOC4xMzk1IDUuNDAwNTQgMTguMTM5NSA5Ljc2NzQ0QzE4LjEzOTUgMTQuMTM0MyAxNC41OTk0IDE3LjY3NDQgMTAuMjMyNiAxNy42NzQ0QzguNjc3MDIgMTcuNjc0NCA3LjIyOTA5IDE3LjIyNjIgNi4wMDc0MiAxNi40NTIyQzUuNzgwMDcgMTYuMzA4MiA1LjUwMTQ3IDE2LjI2OTcgNS4yNDM1NyAxNi4zNDY2TDIuNTY1MjkgMTcuMTQ2TDMuNTczNyAxNC43ODYzQzMuNjkyODkgMTQuNTA3NCAzLjY2ODY0IDE0LjE4OCAzLjUwODcyIDEzLjkzMDNDMi43NTg3OSAxMi43MjE5IDIuMzI1NiAxMS4yOTY3IDIuMzI1NiA5Ljc2NzQ0Wk0xMC4yMzI2IDBDNC44MzgxNyAwIDAuNDY1MTM2IDQuMzczMDMgMC40NjUxMzYgOS43Njc0NEMwLjQ2NTEzNiAxMS40NzczIDAuOTA1MjY3IDEzLjA4NjggMS42Nzg3NSAxNC40ODYyTDAuMDc0ODU3MiAxOC4yMzkxQy0wLjA2NjkzMDcgMTguNTcwOSAtMC4wMDQwODIzOSAxOC45NTQ3IDAuMjM2MTEzIDE5LjIyMzlDMC40NzYzMDggMTkuNDkzMiAwLjg1MDUzMiAxOS41OTkzIDEuMTk2MjcgMTkuNDk2TDUuMzgxNzggMTguMjQ3QzYuODExNTggMTkuMDY2NSA4LjQ2ODU2IDE5LjUzNDkgMTAuMjMyNiAxOS41MzQ5QzE1LjYyNyAxOS41MzQ5IDIwIDE1LjE2MTkgMjAgOS43Njc0NEMyMCA0LjM3MzAzIDE1LjYyNyAwIDEwLjIzMjYgMFpNMTIuMzY1MSAxMS43OTc2TDExLjE0MjYgMTIuNjU4N0MxMC41NyAxMi4zMzI2IDkuOTM3MDIgMTEuODc3MyA5LjMwMjA1IDExLjI0MjNDOC42NDE5NSAxMC41ODIyIDguMTUyNTggOS45MDA3NCA3Ljc5MTc0IDkuMjc1NjNMOC41Njg2NSA4LjYxNjE5QzguOTAyMDUgOC4zMzMyMSA4Ljk5MzMgNy44NTYxMiA4Ljc4NzkxIDcuNDcwMDNMNy43OTc5OSA1LjYwOTU2QzcuNjY0NjkgNS4zNTkwNCA3LjQyNDM0IDUuMTgzMDcgNy4xNDUyNiA1LjEzMTY2QzYuODY2MTcgNS4wODAyNyA2LjU3ODg5IDUuMTU5MDcgNi4zNjUwOSA1LjM0NTY3TDYuMDcxNTkgNS42MDE4MUM1LjM2NTggNi4yMTc4IDQuOTQ4MzcgNy4yMzAwNSA1LjI5NDM0IDguMjU0OThDNS42NTMwMSA5LjMxNzQ5IDYuNDE4NDUgMTAuOTg5OCA3Ljk4NjUzIDEyLjU1NzlDOS42NzM1OCAxNC4yNDQ5IDExLjM4NzMgMTQuOTA5MyAxMi4zODk0IDE1LjE2NzNDMTMuMTk2OCAxNS4zNzUyIDEzLjk2MDkgMTUuMDk2NiAxNC40OTkzIDE0LjY1NzlMMTUuMDQ5NiAxNC4yMDk1QzE1LjI4NDkgMTQuMDE3OCAxNS40MTE5IDEzLjcyMzIgMTUuMzg5OCAxMy40MjA0QzE1LjM2NzUgMTMuMTE3NiAxNS4xOTkgMTIuODQ0NyAxNC45MzgxIDEyLjY4OTJMMTMuMzc2OSAxMS43NTlDMTMuMDYxNiAxMS41NzEyIDEyLjY2NTMgMTEuNTg2MiAxMi4zNjUxIDExLjc5NzZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K'/>
 		a.contact__link.contact__link-mail(href='mailto:info@bonum-trailer.ru')
 			svg.contact__link-svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
 				path(d='M4 4C2.895 4 2 4.895 2 6V18C2 19.105 2.895 20 4 20H20C21.105 20 22 19.105 22 18V6C22 4.895 21.105 4 20 4H4ZM4 6H20V7.00195L12 12L4 7.00195V6ZM4 9.00195L12 14L20 9.00195V18H4V9.00195Z')
@@ -288,7 +293,11 @@ header.header(class=modClass)
 							a(href='/kategorii/') Категории товаров
 			.header-m__col
 				a.header-m__link(href='/akczii-i-lizingovyie-programmyi/')
-					span Акции и лизинг
+					span Акции
+					img(src='./img/svg/i-chevron.svg' alt)
+			.header-m__col
+				a.header-m__link(href='/akczii-i-lizingovyie-programmyi/')
+					span Лизинг
 					img(src='./img/svg/i-chevron.svg' alt)
 			.header-m__col
 				.header-m__toggle

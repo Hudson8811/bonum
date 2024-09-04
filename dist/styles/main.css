@@ -14164,6 +14164,14 @@ section.leasing {
   margin-left: -4px;
 }
 
+@media only screen and (min-width: 700px) {
+  .header .contact__link-social-header {
+    border-left: 1px solid #3b3d3c;
+    padding: 0 25px;
+    min-width: 76px;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .main-page--service-new .banner__content {
     padding: 53px 84px 44px;
@@ -16433,6 +16441,12 @@ section.leasing {
   .localities-maps-page__button {
     width: calc(50% - 10px);
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .header .contact__link-mail {
+    display: none;
   }
 }
 
@@ -18751,6 +18765,14 @@ section.leasing {
 }
 
 @media only screen and (max-width: 768px) {
+  .header .contact__link-tel span {
+    display: none;
+  }
+
+  .header .contact__link-tel svg {
+    display: block;
+  }
+
   .stocks-single .leasing__slider .card-leasing__from {
     font-size: 28px;
   }
@@ -19026,16 +19048,8 @@ section.leasing {
     padding: 0 16px;
   }
 
-  .header .contact__link-tel span {
-    display: none;
-  }
-
-  .header .contact__link-tel svg {
-    display: block;
-  }
-
-  .header .contact__link-mail {
-    display: none;
+  .header .contact__link-social-header {
+    order: -99;
   }
 
   .header__burger {
