@@ -1,6 +1,6 @@
 .promo {
 	.h1 b {
-		font-weight: 900;
+		font-weight: 600;
 	}
 
 	.container {
@@ -34,15 +34,6 @@
 
 	}
 
-
-	&__text {
-		margin-top: 53px;
-
-		p {
-			font-size: 24px;
-		}
-	}
-
 	&__button {
 		margin-top: 149px;
 
@@ -64,20 +55,10 @@
 }
 
 .block-promo {
-	padding: 28px 0 34px;
+	padding: 128px 0 113px;
 
 	&__title {
-		font-size: 24px;
-		text-transform: uppercase;
-		font-weight: 800;
-		margin-bottom: 20px;
-		line-height: 1.5em;
-
-		@media (max-width: 700px) {
-			font-size: 18px;
-		}
-
-
+		margin-bottom: 56px;
 	}
 
 	&__slide-body {
@@ -153,8 +134,4 @@
 		line-height: 1.7em;
 		color: #4C4E4D;
 	}
-}
-
-.promo-desc {
-	padding-top: 36px;
 }

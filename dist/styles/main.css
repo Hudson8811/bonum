@@ -14180,7 +14180,7 @@ section.leasing {
 }
 
 .promo .h1 b {
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .promo .container {
@@ -14196,14 +14196,6 @@ section.leasing {
   flex: 0 1 764px;
 }
 
-.hero-promo__text {
-  margin-top: 53px;
-}
-
-.hero-promo__text p {
-  font-size: 24px;
-}
-
 .hero-promo__button {
   margin-top: 149px;
 }
@@ -14213,15 +14205,11 @@ section.leasing {
 }
 
 .block-promo {
-  padding: 28px 0 34px;
+  padding: 128px 0 113px;
 }
 
 .block-promo__title {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 1.5em;
+  margin-bottom: 56px;
 }
 
 .block-promo__slide-body {
@@ -14275,10 +14263,6 @@ section.leasing {
   font-weight: 400;
   line-height: 1.7em;
   color: #4C4E4D;
-}
-
-.promo-desc {
-  padding-top: 36px;
 }
 
 @media only screen and (min-width: 700px) {
@@ -18972,12 +18956,6 @@ section.leasing {
   .centers--v2 .title {
     width: 100%;
     margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 700px) {
-  .block-promo__title {
-    font-size: 18px;
   }
 }
 
