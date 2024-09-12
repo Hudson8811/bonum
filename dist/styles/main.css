@@ -18959,6 +18959,20 @@ section.leasing {
   }
 }
 
+@media (max-width: 700px) {
+  .block-promo {
+    padding: 50px 0;
+  }
+
+  .block-promo__title {
+    margin-bottom: 26px;
+  }
+
+  .promo-desc {
+    padding: 50px 0 0;
+  }
+}
+
 @media only screen and (max-width: 699px) {
   .d-none-mobile {
     display: none !important;
