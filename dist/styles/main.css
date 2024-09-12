@@ -18896,12 +18896,11 @@ section.leasing {
   }
 
   .hero-promo__button {
-    margin-top: 100px;
+    margin-top: 32px;
   }
 
   .hero-promo .hero-vacancy__image-mob {
-    padding-top: 0;
-    left: 57%;
+    display: none;
   }
 }
 
