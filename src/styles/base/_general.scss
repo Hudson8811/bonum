@@ -106,12 +106,16 @@ h1,
 	flex-flow: column nowrap;
 	margin-bottom: 56px;
 
-	img{
+	img {
 		display: block;
 		max-width: 100%;
 		height: auto;
 		margin-top: 20px;
-		&+img,&+p,&+ul,&+ol{
+
+		&+img,
+		&+p,
+		&+ul,
+		&+ol {
 			margin-top: 20px;
 		}
 	}
@@ -132,7 +136,26 @@ h1,
 		li+li {
 			margin-top: 20px;
 		}
-		&+img,&+p,&+ul,&+ol{
+
+		&+img,
+		&+p,
+		&+ul,
+		&+ol {
+			margin-top: 20px;
+		}
+	}
+
+	ol {
+		padding-left: 20px;
+
+		li+li {
+			margin-top: 20px;
+		}
+
+		&+img,
+		&+p,
+		&+ul,
+		&+ol {
 			margin-top: 20px;
 		}
 	}
@@ -183,7 +206,9 @@ h1,
 		font-size: 15px;
 		line-height: 170%;
 
-		&+img,&+ul,&+ol{
+		&+img,
+		&+ul,
+		&+ol {
 			margin-top: 20px;
 		}
 

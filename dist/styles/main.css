@@ -3355,6 +3355,21 @@ h1--uppercase,
   margin-top: 20px;
 }
 
+.normal-text-editor ol {
+  padding-left: 20px;
+}
+
+.normal-text-editor ol li + li {
+  margin-top: 20px;
+}
+
+.normal-text-editor ol + img,
+.normal-text-editor ol + p,
+.normal-text-editor ol + ul,
+.normal-text-editor ol + ol {
+  margin-top: 20px;
+}
+
 .normal-text-editor h3 {
   font-style: normal;
   font-weight: 400;
@@ -14331,6 +14346,92 @@ section.leasing {
   margin-left: -4px;
 }
 
+.promo .h1 b {
+  font-weight: 600;
+}
+
+.promo .container {
+  max-width: 1346px !important;
+}
+
+.hero-promo__body {
+  max-width: 550px;
+  flex: 0 1 550px;
+}
+
+.hero-promo__image-wrapper {
+  flex: 0 1 764px;
+}
+
+.hero-promo__button {
+  margin-top: 149px;
+}
+
+.hero-promo__image img {
+  object-fit: contain;
+}
+
+.block-promo {
+  padding: 128px 0 113px;
+}
+
+.block-promo__title {
+  margin-bottom: 56px;
+}
+
+.block-promo__slide-body {
+  min-height: 422px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promo-stages {
+  padding: 113px 0;
+  background: #F8F8F8;
+}
+
+.promo-stages__items {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.promo-stages__item {
+  padding: 48px;
+  flex: 0 1 calc((100% - 60px) / 3);
+  background: #fff;
+}
+
+.promo-stages__item-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.promo-stages__item-num {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4C4E4D;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1em;
+}
+
+.promo-stages__item-text {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7em;
+  color: #4C4E4D;
+}
+
 @media only screen and (min-width: 700px) {
   .header .contact__link-social-header {
     border-left: 1px solid #3b3d3c;
@@ -16242,6 +16343,21 @@ section.leasing {
   }
 }
 
+@media (max-width: 1161px) {
+  .promo-stages {
+    padding: 50px 0;
+  }
+
+  .promo-stages__items {
+    gap: 20px;
+  }
+
+  .promo-stages__item {
+    padding: 24px;
+    flex: 0 1 calc((100% - 40px) / 3);
+  }
+}
+
 @media (max-width: 1100px) {
   .achievements-about-page__items {
     margin-top: 32px;
@@ -16612,6 +16728,18 @@ section.leasing {
   .localities-maps-page__button {
     width: calc(50% - 10px);
     margin-top: 10px;
+  }
+
+  .hero-promo__body {
+    flex: 0 0 405px;
+  }
+
+  .promo-stages__items {
+    flex-direction: column;
+  }
+
+  .promo-stages__item {
+    flex-basis: auto;
   }
 }
 
@@ -18933,6 +19061,18 @@ section.leasing {
   .centers--v2 .centers__content {
     margin-top: 32px;
   }
+
+  .hero-promo__body {
+    max-width: 405px;
+  }
+
+  .hero-promo__button {
+    margin-top: 32px;
+  }
+
+  .hero-promo .hero-vacancy__image-mob {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -18986,6 +19126,20 @@ section.leasing {
   .centers--v2 .title {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .block-promo {
+    padding: 50px 0;
+  }
+
+  .block-promo__title {
+    margin-bottom: 26px;
+  }
+
+  .promo-desc {
+    padding: 50px 0 0;
   }
 }
 
@@ -20208,6 +20362,10 @@ section.leasing {
 
   .leasing-mult__questions .accordions {
     margin-top: 26px;
+  }
+
+  .hero-promo__body {
+    max-width: 260px;
   }
 }
 
