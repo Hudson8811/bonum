@@ -945,7 +945,7 @@ block content
 			.feedback__image
 				img(src='./img/picture/feedback.jpg', srcset='./img/picture/feedback@2x.jpg 2x', alt='')
 			.feedback__outer
-				form.feedback__form(action='', method='post')
+				//form.feedback__form(action='', method='post')
 					.title.feedback__title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
 					+field('text', 'firstName', 'Имя', 'feedback__field')(required='true')
 					+field('text', 'number', 'Телефон', 'feedback__field')(required='true')
@@ -958,8 +958,25 @@ block content
 					)(required='true')
 					+button('отправить', 'button--outline-inverse feedback__button')(type='submit')
 
-
-
+				//form.feedback__form(action='' data-submit-function="main_form" novalidate data-validate method='post')
+					.title.feedback__title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+					label.field.feedback__field.js-input-block
+						input(type='text' name='name' autocomplete="given-name" placeholder='Имя' required='true')
+						.form-control-alert-message Поле обязательно для заполнения
+					label.field.feedback__field.js-input-block
+						input.js-phone-mask(type='text' name='phone' autocomplete="tel" placeholder='Телефон' required='true')
+						.form-control-alert-message Поле обязательно для заполнения
+					label.field.feedback__field.js-input-block
+						input(type='email' name='email' placeholder='Email')
+					label.field.feedback__field.field--checkbox.js-input-block
+						input(type='checkbox' name='policy' required='true')
+						b
+						span
+							| Я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных
+						.form-control-alert-message Согласие является обязательным условием для отправки формы
+					button.button.button--outline-inverse.feedback__button(type='submit') отправить
+					//
+						<div class="b24-form-state b24-form-success" style="display:none;"><div class="b24-form-state-inner"><div class="b24-form-state-icon b24-form-success-icon"></div> <div class="b24-form-state-text"><!----> <p>Спасибо, ваша заявка отправлена.&nbsp; В ближайшее время&nbsp;с вами свяжется менеджер.</p></div> <!----></div> <div class="b24-form-inner-box"></div></div>
 
 	div(style='display:none;')
 		#calculator-1-modal.mmodal.mmodal--calc
@@ -1139,6 +1156,63 @@ block content
 
 
 	include ../../blocks/modules/footer/footer
+
+
+	div(style='display:none;')
+		noindex
+			#main-modal.mmodal
+				.mmodal-inner
+					//.wrap-for-b24-form.wrap-for-b24-form--in-modal
+						script(data-b24-form='inline/333/lx64vy' data-skip-moving='true').
+							window.roistatVisitCallback = function( visitId ){
+							window.addEventListener( 'b24:form:init', ( event ) => {
+							let form = event.detail.object;
+							form.setProperty( "roistatID", visitId );
+							} );
+							(function( w, d, u ){
+							var s = d.createElement( 'script' );
+							s.async = true;
+							s.src = u + '?' + (Date.now() / 180000 | 0);
+							var h = d.getElementsByTagName( 'script' )[0];
+							h.parentNode.insertBefore( s, h );
+							})( window, document, 'https://cdn-ru.bitrix24.ru/b2565391/crm/form/loader_333.js' );
+							};
+					.mmodal-2024-form-wrap
+
+						form.feedback__form(action='' data-submit-function="main_form" novalidate data-validate method='post')
+							div(style='width: 1px;height: 1px;overflow: hidden;margin-left: -99999px;')
+								input(type='tel' name='phone')
+								input(type='email' name='email2')
+								input(type='text' name='email')
+								input.js-form-name(type='hidden' name='form_hidden_6' value='Заказать звонок' required='')
+								input.js-field-src(type='hidden' name='form_hidden_5' value='https://fishmarket.ru/')
+								input.js-field-comment-additional-data(type='hidden' name='comment-additional-data' value='')
+							.title.feedback__title.js-form-2024-title ПОМОЖЕМ ПОДОБРАТЬ МОДЕЛЬ И КОМПЛЕКТАЦИЮ ТЕХНИКИ
+							label.field.feedback__field.js-input-block
+								input(type='text' name='name' autocomplete="given-name" placeholder='Имя' required='true')
+								.form-control-alert-message Поле обязательно для заполнения
+							label.field.feedback__field.js-input-block
+								input.js-phone-mask(type='text' name='phone' autocomplete="tel" placeholder='Телефон' required='true')
+								.form-control-alert-message Поле обязательно для заполнения
+							label.field.feedback__field.js-input-block
+								input(type='email' name='email' placeholder='Email')
+							label.field.feedback__field.field--checkbox.js-input-block
+								input(type='checkbox' name='policy' required='true')
+								b
+								span
+									| Я принимаю условия политики конфиденциальности и даю согласие на обработку моих персональных данных
+								.form-control-alert-message Согласие является обязательным условием для отправки формы
+							button.button.button--outline-inverse.feedback__button(type='submit') отправить
+							.form-state.form-state--success
+								.form-state-inner
+									.form-state-icon.form-state-icon--success
+									.form-state-text
+										p Спасибо, ваша заявка отправлена.&nbsp; В ближайшее время&nbsp;с вами свяжется менеджер.
+							.form-state.form-state--error
+								.form-state-inner
+									.form-state-icon.form-state-icon--error
+									.form-state-text
+										p Ошибка
 
 	//block scripts
 		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
