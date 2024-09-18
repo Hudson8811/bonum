@@ -3151,7 +3151,7 @@ var __defProp=Object.defineProperty,__defNormalProp=(e,i,t)=>i in e?__defProp(e,
 		}
 		onMessage(t) {
 			try {
-				console.log(t);
+				//console.log(t);
 
 
 				if(t.origin.match(/^.*vk.com.*$/)) {

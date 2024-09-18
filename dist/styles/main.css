@@ -14386,6 +14386,18 @@ section.leasing {
   justify-content: space-between;
 }
 
+.block-promo__slide-title .icon-hot {
+  margin-left: 10px;
+}
+
+.block-promo__slide-text {
+  margin-top: 0;
+}
+
+.block-promo__slide-bottom {
+  margin-top: 28px;
+}
+
 .promo-stages {
   padding: 113px 0;
   background: #F8F8F8;
@@ -16327,6 +16339,30 @@ section.leasing {
 
   .partners--internships .partners__content {
     margin-top: 64px;
+  }
+
+  .block-promo__slide-body {
+    min-height: 320px;
+  }
+
+  .block-promo__slide-text {
+    margin-top: 12px;
+  }
+
+  .block-promo__slide-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .block-promo__slide-bottom .block-vacancy__slide-price {
+    margin-top: 20px;
+    padding-right: 10px;
+  }
+
+  .block-promo__slide-bottom .block-vacancy__slide-btn {
+    margin-top: 20px;
   }
 }
 

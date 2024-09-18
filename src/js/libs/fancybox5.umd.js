@@ -3146,7 +3146,7 @@
 		}
 		onMessage(t) {
 			try {
-				console.log(t);
+				//console.log(t);
 
 
 				if(t.origin.match(/^.*vk.com.*$/)) {
