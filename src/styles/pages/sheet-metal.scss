@@ -63,6 +63,10 @@
 		padding-bottom: 24px;
 	}
 
+	.content-news-single__banner>p>a {
+		color: #fff;
+	}
+
 	.content-news-single__banner>p>a:hover {
 		opacity: 1;
 		transition: opacity 0.3s linear;
@@ -91,6 +95,7 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+		padding-top: 68%;
 
 		@include max(sm) {
 			height: 0;
