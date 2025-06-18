@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>page</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--link(rel="stylesheet" href="https://cdn.min.jsdelivr.net/npm/swiper@9/swiper-bundle.min.min.css")-->
+    <!--link(rel='stylesheet' href='https://cdn.min.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.min.css')-->
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/styles/additional.min.css">
+    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/components/sotbit/regions.choose/template_with_links/style.min.min.css?16952982375675">
+  </head>
+  <body>
+    <header class="header"><a class="header__logo" href="/">
+        <svg class="header__logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 23.11 102 20.76">
+          <path d="M13.787 31.902H3.45v-5.357h10.337ZM102 23.13h-2.842c-.516 0-1.032.242-1.307.69l-6.2 10.232-6.2-10.232c-.275-.448-.791-.69-1.307-.69h-.653c-1.203 0-2.166.932-2.166 2.139V43.87H84.087a.704.704 0 0 0 .676-.69V28.764l5.1 8.162c.378.38.79.69 1.307.69h.962c.516 0 .929-.31 1.307-.69l5.1-8.162V43.18c0 .38.31.69.687.69h2.063a.69.69 0 0 0 .688-.69c.023-6.691.023-13.37.023-20.05Zm-23.78 0h-2.762a.704.704 0 0 0-.677.69v16.59H64.443V23.82a.69.69 0 0 0-.687-.69h-2.063a.69.69 0 0 0-.688.69V43.858H76.1c1.203 0 2.132-.931 2.132-2.138-.012-6.197-.012-12.393-.012-18.59zm-20.332 0H55.126a.704.704 0 0 0-.676.69v14.727L44.765 23.82c-.309-.517-.86-.69-1.306-.69h-.653c-1.204 0-2.132.932-2.132 2.139V43.87h2.762a.704.704 0 0 0 .676-.69V28.522l9.65 14.658c.31.517.86.69 1.306.69h.688A2.112 2.112 0 0 0 57.9 41.73c-.011-6.208-.011-12.404-.011-18.6zm-20.331 0H22.463c-1.203 0-2.132.932-2.132 2.139v18.589h15.082c1.204 0 2.132-.931 2.132-2.138.012-6.197.012-12.393.012-18.59zm-3.439 17.28H23.781V26.58h10.337ZM0 43.87h13.615c1.994 0 3.622-1.587 3.622-3.53v-3.495c0-1.931-1.616-3.529-3.622-3.529v-.138c1.994 0 3.622-1.586 3.622-3.53v-3.011c0-1.932-1.616-3.53-3.622-3.53H.688a.69.69 0 0 0-.688.69v19.36zm13.787-3.426H3.45v-5.806h10.337Z"></path>
+        </svg></a>
+      <div class="container header__container" style="display: flex">
+        <div class="header__catalog catalog">
+          <div class="catalog__btn btn">
+            <svg class="catalog__btn-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 3C3.895 3 3 3.895 3 5C3 6.105 3.895 7 5 7C6.105 7 7 6.105 7 5C7 3.895 6.105 3 5 3ZM12 3C10.895 3 10 3.895 10 5C10 6.105 10.895 7 12 7C13.105 7 14 6.105 14 5C14 3.895 13.105 3 12 3ZM19 3C17.895 3 17 3.895 17 5C17 6.105 17.895 7 19 7C20.105 7 21 6.105 21 5C21 3.895 20.105 3 19 3ZM5 10C3.895 10 3 10.895 3 12C3 13.105 3.895 14 5 14C6.105 14 7 13.105 7 12C7 10.895 6.105 10 5 10ZM12 10C10.895 10 10 10.895 10 12C10 13.105 10.895 14 12 14C13.105 14 14 13.105 14 12C14 10.895 13.105 10 12 10ZM19 10C17.895 10 17 10.895 17 12C17 13.105 17.895 14 19 14C20.105 14 21 13.105 21 12C21 10.895 20.105 10 19 10ZM5 17C3.895 17 3 17.895 3 19C3 20.105 3.895 21 5 21C6.105 21 7 20.105 7 19C7 17.895 6.105 17 5 17ZM12 17C10.895 17 10 17.895 10 19C10 20.105 10.895 21 12 21C13.105 21 14 20.105 14 19C14 17.895 13.105 17 12 17ZM19 17C17.895 17 17 17.895 17 19C17 20.105 17.895 21 19 21C20.105 21 21 20.105 21 19C21 17.895 20.105 17 19 17Z"></path>
+            </svg><a class="catalog__btn-text" href="/kategorii/">Каталог</a>
+            <div class="mega-menu js-mega-menu">
+              <div class="mega-menu__content">
+                <div class="mega-menu__close"><img src="./img/svg/i-close.svg" alt></div>
+                <div class="container mega-menu__container">
+                  <div class="mega-menu__wrapper">
+                    <div class="mega-menu__item"><a class="mega-menu__title" href="/kategorii/polupritsepy-tsisterny/">Цистерны</a><a class="mega-menu__image" href="/kategorii/polupritsepy-tsisterny/">
+                        <picture>
+                          <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e21/654_472_1/5usk80q47sa8qmnd3nhmfet1gl9hwv1e.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e21/5usk80q47sa8qmnd3nhmfet1gl9hwv1e.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e21/654_472_1/5usk80q47sa8qmnd3nhmfet1gl9hwv1e.webp" alt="Цистерны" title="Цистерны" loading="lazy">
+                        </picture></a>
+                      <ul class="mega-menu__list">
+                        <li><a href="/kategorii/benzovozi/">Бензовозы</a></li>
+                        <li><a href="/kategorii/bitumovozyi/">Битумовозы</a></li>
+                        <li><a href="/kategorii/neftevozyi-s-termoizolyacziej/">Нефтевозы с термоизоляцией</a></li>
+                        <li><a href="/kategorii/neftevozyi-bez-termoizolyaczii/">Нефтевозы без термоизоляции</a></li>
+                        <li><a href="/kategorii/czementovozyi/">Цементовозы</a></li>
+                      </ul><a class="mega-menu__catalog" target="_blank" download href="/bonum_zavod.pdf"><span>Скачать презентацию</span>
+                        <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0C0.905745 0 0 0.905745 0 2V18C0 19.0943 0.905745 20 2 20H14C15.0943 20 16 19.0943 16 18V6L10 0H2ZM2 2H9V7H14V18H2V2ZM7.83203 7C7.28203 7 6.87006 7.37344 6.78906 8.02344C6.70906 8.67244 7.0308 9.80733 7.5918 10.8613C7.3508 11.5913 7.11006 12.2397 6.78906 12.8887C5.74606 13.2127 4.78381 13.6985 4.38281 14.1855C3.74181 14.9145 4.06266 15.4015 4.22266 15.6445C4.38366 15.8875 4.62431 16 4.94531 16C5.10631 16 5.26673 15.9677 5.42773 15.8867C6.06973 15.6437 6.70956 14.6702 7.35156 13.5352C7.91256 13.3732 8.47416 13.2119 9.03516 13.1309C9.59616 13.7789 10.1596 14.1857 10.6406 14.3477C11.2016 14.5097 11.6828 14.2653 11.9238 13.6973C12.0838 13.2103 12.0026 12.8065 11.6016 12.5625C11.1196 12.2385 10.3175 12.2374 9.35547 12.3184C9.03447 11.8324 8.71561 11.3464 8.47461 10.8594C8.87561 9.64338 9.035 8.59041 8.875 7.94141C8.714 7.37341 8.38203 7 7.83203 7Z"></path>
+                        </svg></a>
+                    </div>
+                    <div class="mega-menu__item"><a class="mega-menu__title" href="/kategorii/zernovozy/">Зерновозы</a><a class="mega-menu__image" href="/kategorii/zernovozy/">
+                        <picture>
+                          <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/539/654_472_1/94ciy6cbx6q76nkptdsywa62brwylrre.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/539/94ciy6cbx6q76nkptdsywa62brwylrre.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/539/654_472_1/94ciy6cbx6q76nkptdsywa62brwylrre.webp" alt="Зерновозы" title="Зерновозы" loading="lazy">
+                        </picture></a>
+                      <ul class="mega-menu__list">
+                        <li><a href="/kategorii/zernovozyi/">Зерновозы бортовые</a></li>
+                        <li><a href="/kategorii/samosvalnyie-zernovozyi/">Зерновозы самосвальные</a></li>
+                      </ul><a class="mega-menu__catalog" target="_blank" download href="/bonum_zavod.pdf"><span>Скачать презентацию</span>
+                        <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0C0.905745 0 0 0.905745 0 2V18C0 19.0943 0.905745 20 2 20H14C15.0943 20 16 19.0943 16 18V6L10 0H2ZM2 2H9V7H14V18H2V2ZM7.83203 7C7.28203 7 6.87006 7.37344 6.78906 8.02344C6.70906 8.67244 7.0308 9.80733 7.5918 10.8613C7.3508 11.5913 7.11006 12.2397 6.78906 12.8887C5.74606 13.2127 4.78381 13.6985 4.38281 14.1855C3.74181 14.9145 4.06266 15.4015 4.22266 15.6445C4.38366 15.8875 4.62431 16 4.94531 16C5.10631 16 5.26673 15.9677 5.42773 15.8867C6.06973 15.6437 6.70956 14.6702 7.35156 13.5352C7.91256 13.3732 8.47416 13.2119 9.03516 13.1309C9.59616 13.7789 10.1596 14.1857 10.6406 14.3477C11.2016 14.5097 11.6828 14.2653 11.9238 13.6973C12.0838 13.2103 12.0026 12.8065 11.6016 12.5625C11.1196 12.2385 10.3175 12.2374 9.35547 12.3184C9.03447 11.8324 8.71561 11.3464 8.47461 10.8594C8.87561 9.64338 9.035 8.59041 8.875 7.94141C8.714 7.37341 8.38203 7 7.83203 7Z"></path>
+                        </svg></a>
+                    </div>
+                    <div class="mega-menu__item"><a class="mega-menu__title" href="/kategorii/selskokhozyaystvennye-polupritsepy/">Сельхозтехника</a><a class="mega-menu__image" href="/kategorii/selskokhozyaystvennye-polupritsepy/">
+                        <picture>
+                          <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/934/654_472_1/jp0gmghb5ohqe5zjf30w5xr97ux1lixz.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/934/jp0gmghb5ohqe5zjf30w5xr97ux1lixz.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/934/654_472_1/jp0gmghb5ohqe5zjf30w5xr97ux1lixz.webp" alt="Сельхозтехника" title="Сельхозтехника" loading="lazy">
+                        </picture></a>
+                      <ul class="mega-menu__list">
+                        <li><a href="/kategorii/bunkery-peregruzchiki/">Бункеры-перегрузчики</a></li>
+                        <li><a href="/kategorii/samosvalnye-traktornye-polupritsepy/">Самосвальные тракторные полуприцепы</a></li>
+                      </ul><a class="mega-menu__catalog" target="_blank" download href="/bonum_zavod.pdf"><span>Скачать презентацию</span>
+                        <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0C0.905745 0 0 0.905745 0 2V18C0 19.0943 0.905745 20 2 20H14C15.0943 20 16 19.0943 16 18V6L10 0H2ZM2 2H9V7H14V18H2V2ZM7.83203 7C7.28203 7 6.87006 7.37344 6.78906 8.02344C6.70906 8.67244 7.0308 9.80733 7.5918 10.8613C7.3508 11.5913 7.11006 12.2397 6.78906 12.8887C5.74606 13.2127 4.78381 13.6985 4.38281 14.1855C3.74181 14.9145 4.06266 15.4015 4.22266 15.6445C4.38366 15.8875 4.62431 16 4.94531 16C5.10631 16 5.26673 15.9677 5.42773 15.8867C6.06973 15.6437 6.70956 14.6702 7.35156 13.5352C7.91256 13.3732 8.47416 13.2119 9.03516 13.1309C9.59616 13.7789 10.1596 14.1857 10.6406 14.3477C11.2016 14.5097 11.6828 14.2653 11.9238 13.6973C12.0838 13.2103 12.0026 12.8065 11.6016 12.5625C11.1196 12.2385 10.3175 12.2374 9.35547 12.3184C9.03447 11.8324 8.71561 11.3464 8.47461 10.8594C8.87561 9.64338 9.035 8.59041 8.875 7.94141C8.714 7.37341 8.38203 7 7.83203 7Z"></path>
+                        </svg></a>
+                    </div>
+                    <div class="mega-menu__item"><a class="mega-menu__title" href="/kategorii/magistralnye-polupritsepy/">Магистральные</a><a class="mega-menu__image" href="/kategorii/magistralnye-polupritsepy/">
+                        <picture>
+                          <source srcset="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e43/654_472_1/bgjv1twigw8hjnkq9geyem7woqejtl1t.webp 1x, https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e43/bgjv1twigw8hjnkq9geyem7woqejtl1t.webp 2x"><img src="https://www.bonum-trailer.ru/upload/resize_cache/webp/iblock/e43/654_472_1/bgjv1twigw8hjnkq9geyem7woqejtl1t.webp" alt="Магистральные" title="Магистральные" loading="lazy">
+                        </picture></a>
+                      <ul class="mega-menu__list">
+                        <li><a href="/kategorii/tentovannyye-polupritsepy/">Тентованные полуприцепы</a></li>
+                        <li><a href="/kategorii/polupriczepyi-bortovyie/">Бортовые полуприцепы</a></li>
+                        <li><a href="/kategorii/kontejnerovozyi/">Контейнеровозы</a></li>
+                      </ul><a class="mega-menu__catalog" target="_blank" download href="/bonum_zavod.pdf"><span>Скачать презентацию</span>
+                        <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2 0C0.905745 0 0 0.905745 0 2V18C0 19.0943 0.905745 20 2 20H14C15.0943 20 16 19.0943 16 18V6L10 0H2ZM2 2H9V7H14V18H2V2ZM7.83203 7C7.28203 7 6.87006 7.37344 6.78906 8.02344C6.70906 8.67244 7.0308 9.80733 7.5918 10.8613C7.3508 11.5913 7.11006 12.2397 6.78906 12.8887C5.74606 13.2127 4.78381 13.6985 4.38281 14.1855C3.74181 14.9145 4.06266 15.4015 4.22266 15.6445C4.38366 15.8875 4.62431 16 4.94531 16C5.10631 16 5.26673 15.9677 5.42773 15.8867C6.06973 15.6437 6.70956 14.6702 7.35156 13.5352C7.91256 13.3732 8.47416 13.2119 9.03516 13.1309C9.59616 13.7789 10.1596 14.1857 10.6406 14.3477C11.2016 14.5097 11.6828 14.2653 11.9238 13.6973C12.0838 13.2103 12.0026 12.8065 11.6016 12.5625C11.1196 12.2385 10.3175 12.2374 9.35547 12.3184C9.03447 11.8324 8.71561 11.3464 8.47461 10.8594C8.87561 9.64338 9.035 8.59041 8.875 7.94141C8.714 7.37341 8.38203 7 7.83203 7Z"></path>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="header__nav nav"><span class="nav__item"><a href="/o-zavode/" style="color: inherit; text-decoration: none;">О заводе</a>
+            <div class="mega-menu">
+              <div class="mega-menu__close"><img src="./img/svg/i-close.svg" alt></div>
+              <div class="container mega-menu__container">
+                <div class="mega-menu__wrapper"><a class="mega-menu__item" href="/o-zavode/"><span>о заводе</span></a>
+                  <div class="mega-menu__item">
+                    <ul>
+                      <li><a href="/public/">Новости</a></li>
+                      <li><a href="/reviews/">Отзывы</a></li>
+                      <li><a href="/achievements/">Награды</a></li>
+                      <li><a href="/team/">Наша команда</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu__item">
+                    <ul>
+                      <li><a href="https://www.bonum-trailer.ru/upload/files/sistema_menedzhmenta_kachestva.pdf">Система менеджмента качества</a></li>
+                      <li><a href="https://www.bonum-trailer.ru/upload/files/policy.pdf">Политика конфиденциальности</a></li>
+                      <li><a href="/vakansii/">Вакансии</a></li>
+                      <li><a href="/internships/">Стажировки</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu__item">
+                    <ul>
+                      <li><a href="/kontaktyi/">Контакты</a></li>
+                      <li><a href="/kategorii/">Категории товаров</a></li>
+                      <li><a href="/branches/">Представительства</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div></span><span class="nav__item"><a href="/servis-i-garantii/" style="color: inherit; text-decoration: none;">Сервис и гарантия</a>
+            <div class="mega-menu">
+              <div class="mega-menu__close"><img src="./img/svg/i-close.svg" alt></div>
+              <div class="container mega-menu__container">
+                <div class="mega-menu__wrapper"><a class="mega-menu__item" href="/servis-i-garantii/"><span>Сервис и гарантия</span></a>
+                  <div class="mega-menu__item">
+                    <ul>
+                      <li><a href="/servis-i-garantii/zapchasti/">Запчасти</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu__item">
+                    <ul></ul>
+                  </div>
+                  <div class="mega-menu__item">
+                    <ul></ul>
+                  </div>
+                </div>
+              </div>
+            </div></span><a class="nav__item" href="/akczii-i-lizingovyie-programmyi/">Акции</a><a class="nav__item" href="/akczii-i-lizingovyie-programmyi/">Лизинг</a><a class="nav__item" href="/blog/">Блог</a></nav>
+      </div>
+      <div class="header-city-switch">
+        <!-- 'start_frame_cache_W3XK6f'-->
+        <div class="select-city-wrap" id="regions_choose_component"><a class="select-city__block select-city__block--show js-disable-city-link" href="https://www.bonum-trailer.ru/" data-entity="select-city__block__text-city-wrap"><span class="select-city__block__text">
+              <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_8)">
+                  <path d="M9.17452 20.9985L8.62569 21.8344C8.96951 22.0601 9.41646 22.0523 9.7522 21.8147L9.17452 20.9985ZM15.9672 9.05994C16.0159 11.8478 14.2884 14.5917 12.3671 16.7398C11.4251 17.7929 10.4767 18.6584 9.76281 19.2609C9.40661 19.5614 9.11073 19.7949 8.90584 19.9518C8.80343 20.0303 8.7239 20.0895 8.67109 20.1283C8.64469 20.1477 8.62497 20.162 8.61244 20.1711C8.60617 20.1756 8.6017 20.1788 8.59908 20.1806C8.59777 20.1815 8.59693 20.1821 8.59656 20.1824C8.5967 20.1823 8.59685 20.1822 9.17452 20.9985C9.7522 21.8147 9.75192 21.8149 9.7522 21.8147C9.75233 21.8146 9.75316 21.8141 9.75342 21.8139C9.75396 21.8135 9.75461 21.8131 9.75538 21.8125C9.75692 21.8114 9.75894 21.81 9.76143 21.8082C9.76641 21.8047 9.77327 21.7998 9.78195 21.7935C9.79932 21.7809 9.82397 21.7631 9.85543 21.7399C9.91834 21.6937 10.0085 21.6265 10.122 21.5396C10.3489 21.3658 10.6696 21.1126 11.0527 20.7894C11.8172 20.1442 12.8377 19.2137 13.8578 18.0731C15.8605 15.834 18.0293 12.5999 17.9669 9.02503L15.9672 9.05994ZM9.17452 20.9985C9.72336 20.1626 9.72355 20.1627 9.7237 20.1628C9.72332 20.1625 9.72242 20.1619 9.72107 20.161C9.71839 20.1593 9.71382 20.1562 9.70739 20.152C9.69455 20.1434 9.67435 20.1297 9.64728 20.1113C9.59315 20.0743 9.5116 20.0179 9.40652 19.9431C9.19628 19.7934 8.89243 19.5704 8.52596 19.2824C7.79145 18.7053 6.8134 17.8734 5.8353 16.8538C3.84015 14.774 2.018 12.0921 1.96934 9.30427L-0.0303603 9.33917C0.0320387 12.914 2.3124 16.0705 4.392 18.2383C5.45129 19.3426 6.50367 20.237 7.29025 20.855C7.68433 21.1647 8.01369 21.4066 8.24652 21.5724C8.36297 21.6552 8.45542 21.7192 8.51991 21.7632C8.55216 21.7853 8.57742 21.8022 8.59521 21.8142C8.60411 21.8202 8.61114 21.8248 8.61624 21.8282C8.61879 21.8299 8.62085 21.8313 8.62243 21.8322C8.62322 21.8328 8.62389 21.8332 8.62444 21.8336C8.6243 21.8335 8.62471 21.8338 8.62444 21.8336C8.62472 21.8338 8.62569 21.8344 9.17452 20.9985ZM1.96934 9.30427C1.93597 7.39266 2.64676 5.55078 3.9384 4.18282L2.48421 2.80975C0.829284 4.56246 -0.0727349 6.91153 -0.0303603 9.33917L1.96934 9.30427ZM3.9384 4.18282C5.22932 2.81564 6.99404 2.03365 8.84293 2.00138L8.80802 0.00168079C6.4141 0.0434669 4.13987 1.05627 2.48421 2.80975L3.9384 4.18282ZM8.84293 2.00138C10.6918 1.9691 12.4828 2.68903 13.8205 4.01033L15.226 2.58734C13.5102 0.892708 11.202 -0.0401055 8.80802 0.00168079L8.84293 2.00138ZM13.8205 4.01033C15.1592 5.33238 15.9338 7.14833 15.9672 9.05994L17.9669 9.02503C17.9245 6.59739 16.9411 4.28123 15.226 2.58734L13.8205 4.01033ZM10.6347 9.15301C10.6517 10.1281 9.89769 10.8934 8.99841 10.9091L9.03332 12.9088C11.0791 12.8731 12.67 11.155 12.6344 9.11811L10.6347 9.15301ZM8.99841 10.9091C8.09914 10.9248 7.31887 10.1863 7.30185 9.21119L5.30216 9.24609C5.33771 11.283 6.98752 12.9445 9.03332 12.9088L8.99841 10.9091ZM7.30185 9.21119C7.28483 8.23609 8.03885 7.47079 8.93812 7.4551L8.90322 5.4554C6.85742 5.49111 5.2666 7.20919 5.30216 9.24609L7.30185 9.21119ZM8.93812 7.4551C9.8374 7.4394 10.6177 8.17791 10.6347 9.15301L12.6344 9.11811C12.5989 7.08121 10.949 5.41969 8.90322 5.4554L8.93812 7.4551Z" fill="white"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_1_8">
+                    <rect width="18" height="22" fill="white"></rect>
+                  </clippath>
+                </defs>
+              </svg></span><span class="select-city__block__text-city" data-entity="select-city__block__text-city">Екатеринбург</span></a></div>
+        <div class="select-city__dropdown-wrap" id="regions_choose_component_dropdown" style="display: none;">
+          <div class="select-city__dropdown">
+            <div class="select-city__dropdown__title-wrap"><span class="select-city__dropdown__title" data-entity="select-city__dropdown__title">Ваш город ###?</span></div>
+            <div class="select-city__dropdown__choose-wrap">
+              <div class="button button--small button--outline-inverse select-city__dropdown__choose__yes select-city__dropdown__choose" data-entity="select-city__dropdown__choose__yes">Да</div>
+              <div class="button button--small button--inverse select-city__dropdown__choose__no select-city__dropdown__choose" data-entity="select-city__dropdown__choose__no">Нет</div>
+            </div>
+          </div>
+        </div>
+        <div class="select-city__modal" id="regon_choose_select-city__modal" style="display: none;">
+          <div class="select-city__modal-wrap">
+            <div class="select-city__close" data-entity="select-city__close"></div>
+            <div class="select-city__modal__title-wrap">
+              <p class="select-city__modal__title">Ваш город:<span data-entity="select-city__js"></span></p>
+            </div>
+            <div class="select-city__modal__list-wrap"><span class="select-city__modal__list__title">Неправильно определили? Выберите из списка:</span></div>
+            <div class="select-city__modal__list" data-entity="select-city__modal__list">
+              <!-- region names-->
+            </div>
+            <div style="display: none;"><a href="https://www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Москва</a><a href="https://www.spb.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Санкт-Петербург</a><a href="https://www.sochi.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Сочи</a><a href="https://www.pyatigorsk.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Пятигорск</a><a href="https://www.voronezh.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Воронеж</a><a href="https://www.krasnodar.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Краснодар</a><a href="https://www.samara.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Самара</a><a href="https://www.rostov.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Ростов-на-Дону</a><a href="https://www.ufa.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Уфа</a><a href="https://www.kaluga.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Калуга</a><a href="https://www.kazan.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Казань</a><a href="https://www.stavropol.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Ставрополь</a><a href="https://www.nn.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Нижний Новгород</a><a href="https://www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Москва</a><a href="https://spb.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Санкт-Петербург</a><a href="https://sochi.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Сочи</a><a href="https://pyatigorsk.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Пятигорск</a><a href="https://voronezh.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Воронеж</a><a href="https://krasnodar.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Краснодар</a><a href="https://samara.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Самара</a><a href="https://rostov.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Ростов-на-Дону</a><a href="https://ufa.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Уфа</a><a href="https://kaluga.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Калуга</a><a href="https://kazan.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Казань</a><a href="https://stavropol.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Ставрополь</a><a href="https://nn.www.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Нижний новгород</a><a href="https://www.novosibirsk.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Новосибирск</a><a href="https://www.tyumen.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Тюмень</a><a href="https://www.krasnoyarsk.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Красноярск</a><a href="https://www.ekaterinburg.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Екатеринбург</a><a href="https://www.irkutsk.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Иркутск</a><a href="https://www.volgograd.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Волгоград</a><a href="https://www.belgorod.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Белгород</a><a href="https://www.barnaul.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Барнаул (Алтайский край)</a><a href="https://www.lipetsk.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Липецк</a><a href="https://www.ryazan.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/">Рязань</a></div>
+            <div class="select-city__modal__submit-wrap">
+              <div class="select-city__modal__submit__title-wrap"><span class="select-city__modal__submit__title">Если вашего города нет в списке, выберите ближайший.</span></div>
+              <div class="select-city__modal__submit__title-wrap" style="display: none;"><span class="select-city__modal__submit__title">Или укажите в строке ниже:</span></div>
+              <div class="select-city__modal__submit__block-wrap" style="display: none;">
+                <div class="select-city__modal__submit__block-wrap__input_wrap">
+                  <div class="select-city__modal__submit__block-wrap__input_wrap_error" style="display:none;" data-entity="select-city__modal__submit__block-wrap__input_wrap_error">Указанный регион не найден</div>
+                  <input class="select-city__modal__submit__input" value placeholder="Введите город" type="text" data-entity="select-city__modal__submit__input">
+                  <div class="select-city__modal__submit__vars" data-entity="select-city__modal__submit__vars" style="display: none;"></div>
+                </div>
+                <button class="button button--small button--inverse select-city__modal__submit__btn" type="submit" name="submit" data-entity="select-city__modal__submit__btn">Выбрать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__overlay" id="regon_choose_modal__overlay" style="display: none;"></div>
+        <!-- 'end_frame_cache_W3XK6f'-->
+      </div>
+      <div class="header__contact contact"><a class="contact__link contact__link-tel" href="tel:88005500161"><span>8 800 550-01-61</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.023 15.488C19.393 15.473 18.6 15.436 18.099 15.348C17.557 15.252 16.905 15.066 16.446 14.923C16.086 14.811 15.694 14.91 15.427 15.176L13.21 17.38C11.678 16.573 10.451 15.633 9.412 14.588C8.367 13.549 7.427 12.322 6.62 10.79L8.824 8.572C9.09 8.305 9.189 7.913 9.077 7.553C8.935 7.095 8.748 6.443 8.653 5.901C8.564 5.4 8.528 4.607 8.512 3.977C8.499 3.432 8.055 3 7.51 3H4C3.562 3 3 3.328 3 4C3 8.539 4.84 12.874 7.966 16.034C11.126 19.16 15.461 21 20 21C20.672 21 21 20.438 21 20V16.49C21 15.945 20.568 15.501 20.023 15.488Z"></path>
+          </svg></a><a class="button header-request-call-btn" href="#js-main-modal-title-from-btn">Заказать звонок</a><a class="contact__link contact__link-social-header" href="https://wa.me/">
+          <div class="contact__link-img"><img src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yLjMyNTYgOS43Njc0NEMyLjMyNTYgNS40MDA1NCA1Ljg2NTY4IDEuODYwNDcgMTAuMjMyNiAxLjg2MDQ3QzE0LjU5OTQgMS44NjA0NyAxOC4xMzk1IDUuNDAwNTQgMTguMTM5NSA5Ljc2NzQ0QzE4LjEzOTUgMTQuMTM0MyAxNC41OTk0IDE3LjY3NDQgMTAuMjMyNiAxNy42NzQ0QzguNjc3MDIgMTcuNjc0NCA3LjIyOTA5IDE3LjIyNjIgNi4wMDc0MiAxNi40NTIyQzUuNzgwMDcgMTYuMzA4MiA1LjUwMTQ3IDE2LjI2OTcgNS4yNDM1NyAxNi4zNDY2TDIuNTY1MjkgMTcuMTQ2TDMuNTczNyAxNC43ODYzQzMuNjkyODkgMTQuNTA3NCAzLjY2ODY0IDE0LjE4OCAzLjUwODcyIDEzLjkzMDNDMi43NTg3OSAxMi43MjE5IDIuMzI1NiAxMS4yOTY3IDIuMzI1NiA5Ljc2NzQ0Wk0xMC4yMzI2IDBDNC44MzgxNyAwIDAuNDY1MTM2IDQuMzczMDMgMC40NjUxMzYgOS43Njc0NEMwLjQ2NTEzNiAxMS40NzczIDAuOTA1MjY3IDEzLjA4NjggMS42Nzg3NSAxNC40ODYyTDAuMDc0ODU3MiAxOC4yMzkxQy0wLjA2NjkzMDcgMTguNTcwOSAtMC4wMDQwODIzOSAxOC45NTQ3IDAuMjM2MTEzIDE5LjIyMzlDMC40NzYzMDggMTkuNDkzMiAwLjg1MDUzMiAxOS41OTkzIDEuMTk2MjcgMTkuNDk2TDUuMzgxNzggMTguMjQ3QzYuODExNTggMTkuMDY2NSA4LjQ2ODU2IDE5LjUzNDkgMTAuMjMyNiAxOS41MzQ5QzE1LjYyNyAxOS41MzQ5IDIwIDE1LjE2MTkgMjAgOS43Njc0NEMyMCA0LjM3MzAzIDE1LjYyNyAwIDEwLjIzMjYgMFpNMTIuMzY1MSAxMS43OTc2TDExLjE0MjYgMTIuNjU4N0MxMC41NyAxMi4zMzI2IDkuOTM3MDIgMTEuODc3MyA5LjMwMjA1IDExLjI0MjNDOC42NDE5NSAxMC41ODIyIDguMTUyNTggOS45MDA3NCA3Ljc5MTc0IDkuMjc1NjNMOC41Njg2NSA4LjYxNjE5QzguOTAyMDUgOC4zMzMyMSA4Ljk5MzMgNy44NTYxMiA4Ljc4NzkxIDcuNDcwMDNMNy43OTc5OSA1LjYwOTU2QzcuNjY0NjkgNS4zNTkwNCA3LjQyNDM0IDUuMTgzMDcgNy4xNDUyNiA1LjEzMTY2QzYuODY2MTcgNS4wODAyNyA2LjU3ODg5IDUuMTU5MDcgNi4zNjUwOSA1LjM0NTY3TDYuMDcxNTkgNS42MDE4MUM1LjM2NTggNi4yMTc4IDQuOTQ4MzcgNy4yMzAwNSA1LjI5NDM0IDguMjU0OThDNS42NTMwMSA5LjMxNzQ5IDYuNDE4NDUgMTAuOTg5OCA3Ljk4NjUzIDEyLjU1NzlDOS42NzM1OCAxNC4yNDQ5IDExLjM4NzMgMTQuOTA5MyAxMi4zODk0IDE1LjE2NzNDMTMuMTk2OCAxNS4zNzUyIDEzLjk2MDkgMTUuMDk2NiAxNC40OTkzIDE0LjY1NzlMMTUuMDQ5NiAxNC4yMDk1QzE1LjI4NDkgMTQuMDE3OCAxNS40MTE5IDEzLjcyMzIgMTUuMzg5OCAxMy40MjA0QzE1LjM2NzUgMTMuMTE3NiAxNS4xOTkgMTIuODQ0NyAxNC45MzgxIDEyLjY4OTJMMTMuMzc2OSAxMS43NTlDMTMuMDYxNiAxMS41NzEyIDEyLjY2NTMgMTEuNTg2MiAxMi4zNjUxIDExLjc5NzZaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K'/></div></a><a class="contact__link contact__link-mail" href="mailto:info@bonum-trailer.ru">
+          <svg class="contact__link-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4C2.895 4 2 4.895 2 6V18C2 19.105 2.895 20 4 20H20C21.105 20 22 19.105 22 18V6C22 4.895 21.105 4 20 4H4ZM4 6H20V7.00195L12 12L4 7.00195V6ZM4 9.00195L12 14L20 9.00195V18H4V9.00195Z"></path>
+          </svg></a></div>
+      <div class="header__lang lang"><a class="lang__btn btn js-lang-link lang-link-state-loading" href="https://www.en.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/?changed_lang=true">
+          <svg class="lang__btn-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C12.2483 4 12.5204 4.10164 12.8672 4.43164C13.214 4.76164 13.5905 5.31488 13.9141 6.04297C14.1604 6.59722 14.3619 7.27368 14.5352 8H9.46484C9.63808 7.27368 9.8396 6.59722 10.0859 6.04297C10.4095 5.31488 10.7861 4.76164 11.1328 4.43164C11.4796 4.10164 11.7517 4 12 4ZM8.45117 4.83398C8.38604 4.96489 8.31884 5.09315 8.25781 5.23047C7.8961 6.04433 7.61534 6.98621 7.4043 8H5.07227C5.85871 6.63718 7.03488 5.53436 8.45117 4.83398ZM15.5488 4.83398C16.9651 5.53436 18.1413 6.63718 18.9277 8H16.5957C16.3847 6.98621 16.1039 6.04433 15.7422 5.23047C15.6812 5.09315 15.614 4.96489 15.5488 4.83398ZM4.26172 10H7.09766C7.03627 10.6469 7 11.3136 7 12C7 12.6864 7.03627 13.3531 7.09766 14H4.26172C4.09755 13.3598 4 12.6926 4 12C4 11.3074 4.09755 10.6402 4.26172 10ZM9.11719 10H14.8828C14.9524 10.6426 15 11.3066 15 12C15 12.6934 14.9524 13.3574 14.8828 14H9.11719C9.04758 13.3574 9 12.6934 9 12C9 11.3066 9.04758 10.6426 9.11719 10ZM16.9023 10H19.7383C19.9024 10.6402 20 11.3074 20 12C20 12.6926 19.9024 13.3598 19.7383 14H16.9023C16.9637 13.3531 17 12.6864 17 12C17 11.3136 16.9637 10.6469 16.9023 10ZM5.07227 16H7.4043C7.61534 17.0138 7.8961 17.9557 8.25781 18.7695C8.31884 18.9068 8.38604 19.0351 8.45117 19.166C7.03488 18.4656 5.85871 17.3628 5.07227 16ZM9.46484 16H14.5352C14.3619 16.7263 14.1604 17.4028 13.9141 17.957C13.5905 18.6851 13.2139 19.2384 12.8672 19.5684C12.5204 19.8984 12.2483 20 12 20C11.7517 20 11.4796 19.8984 11.1328 19.5684C10.786 19.2384 10.4095 18.6851 10.0859 17.957C9.8396 17.4028 9.63808 16.7263 9.46484 16ZM16.5957 16H18.9277C18.1413 17.3628 16.9651 18.4656 15.5488 19.166C15.614 19.0351 15.6812 18.9068 15.7422 18.7695C16.1039 17.9557 16.3847 17.0138 16.5957 16Z"></path>
+          </svg><span class="lang__btn-text">EN</span></a></div>
+      <div class="header__burger">
+        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="19" height="2"></rect>
+          <rect y="16" width="19" height="2"></rect>
+          <rect y="8" width="12" height="2"></rect>
+        </svg>
+      </div>
+      <div class="header-m js-mobile-menu">
+        <div class="header-m__top">
+          <div class="header-m__group">
+            <div class="header-m__lang"><a class="js-lang-link lang-link-state-loading" href="https://www.en.bonum-trailer.ru/akczii-i-lizingovyie-programmyi/?changed_lang=true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C12.2483 4 12.5204 4.10164 12.8672 4.43164C13.214 4.76164 13.5905 5.31488 13.9141 6.04297C14.1604 6.59722 14.3619 7.27368 14.5352 8H9.46484C9.63808 7.27368 9.8396 6.59722 10.0859 6.04297C10.4095 5.31488 10.7861 4.76164 11.1328 4.43164C11.4796 4.10164 11.7517 4 12 4ZM8.45117 4.83398C8.38604 4.96489 8.31884 5.09315 8.25781 5.23047C7.8961 6.04433 7.61534 6.98621 7.4043 8H5.07227C5.85871 6.63718 7.03488 5.53436 8.45117 4.83398ZM15.5488 4.83398C16.9651 5.53436 18.1413 6.63718 18.9277 8H16.5957C16.3847 6.98621 16.1039 6.04433 15.7422 5.23047C15.6812 5.09315 15.614 4.96489 15.5488 4.83398ZM4.26172 10H7.09766C7.03627 10.6469 7 11.3136 7 12C7 12.6864 7.03627 13.3531 7.09766 14H4.26172C4.09755 13.3598 4 12.6926 4 12C4 11.3074 4.09755 10.6402 4.26172 10ZM9.11719 10H14.8828C14.9524 10.6426 15 11.3066 15 12C15 12.6934 14.9524 13.3574 14.8828 14H9.11719C9.04758 13.3574 9 12.6934 9 12C9 11.3066 9.04758 10.6426 9.11719 10ZM16.9023 10H19.7383C19.9024 10.6402 20 11.3074 20 12C20 12.6926 19.9024 13.3598 19.7383 14H16.9023C16.9637 13.3531 17 12.6864 17 12C17 11.3136 16.9637 10.6469 16.9023 10ZM5.07227 16H7.4043C7.61534 17.0138 7.8961 17.9557 8.25781 18.7695C8.31884 18.9068 8.38604 19.0351 8.45117 19.166C7.03488 18.4656 5.85871 17.3628 5.07227 16ZM9.46484 16H14.5352C14.3619 16.7263 14.1604 17.4028 13.9141 17.957C13.5905 18.6851 13.2139 19.2384 12.8672 19.5684C12.5204 19.8984 12.2483 20 12 20C11.7517 20 11.4796 19.8984 11.1328 19.5684C10.786 19.2384 10.4095 18.6851 10.0859 17.957C9.8396 17.4028 9.63808 16.7263 9.46484 16ZM16.5957 16H18.9277C18.1413 17.3628 16.9651 18.4656 15.5488 19.166C15.614 19.0351 15.6812 18.9068 15.7422 18.7695C16.1039 17.9557 16.3847 17.0138 16.5957 16Z"></path>
+                </svg><span>EN</span></a></div><a class="header-m__mail" href="mailto:mail.com">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4C2.895 4 2 4.895 2 6V18C2 19.105 2.895 20 4 20H20C21.105 20 22 19.105 22 18V6C22 4.895 21.105 4 20 4H4ZM4 6H20V7.00195L12 12L4 7.00195V6ZM4 9.00195L12 14L20 9.00195V18H4V9.00195Z"></path>
+              </svg></a>
+          </div>
+          <div class="header-m__close"><img src="./img/svg/i-close.svg" alt></div>
+        </div>
+        <div class="header-m__wrapper header-m__wrapper--mob-main">
+          <div class="header-m__col">
+            <div class="header-m__link js-mega-menu-link"><span>Техника</span><img src="./img/svg/i-chevron.svg" alt></div>
+            <div class="header-m__toggle"><a class="header-m__link" href="/o-zavode/"><span>о заводе</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/public/">Новости</a></li>
+                <li><a href="/reviews/">Отзывы</a></li>
+                <li><a href="/achievements/">Награды</a></li>
+                <li><a href="/team/">Наша команда</a></li>
+                <li><a href="https://www.bonum-trailer.ru/upload/files/sistema_menedzhmenta_kachestva.pdf">Система менеджмента качества</a></li>
+                <li><a href="https://www.bonum-trailer.ru/upload/files/policy.pdf">Политика конфиденциальности</a></li>
+                <li><a href="/kontaktyi/">Контакты</a></li>
+                <li><a href="/kategorii/">Категории товаров</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-m__col"><a class="header-m__link" href="/akczii-i-lizingovyie-programmyi/"><span>Акции</span><img src="./img/svg/i-chevron.svg" alt></a></div>
+          <div class="header-m__col"><a class="header-m__link" href="/akczii-i-lizingovyie-programmyi/"><span>Лизинг</span><img src="./img/svg/i-chevron.svg" alt></a></div>
+          <div class="header-m__col">
+            <div class="header-m__toggle"><a class="header-m__link" href="/servis-i-garantii/"><span>Сервис и гарантия</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/servis-i-garantii/zapchasti/">Запчасти</a></li>
+              </ul>
+            </div><a class="header-m__link" href="/blog/"><span>Блог</span><img src="./img/svg/i-chevron.svg" alt></a><a class="header-m__link" href="/vakansii/"><span>Вакансии</span><img src="./img/svg/i-chevron.svg" alt></a><a class="header-m__link" href="/internships/"><span>Стажировки</span><img src="./img/svg/i-chevron.svg" alt></a><a class="header-m__link" href="/branches/"><span>представительства</span><img src="./img/svg/i-chevron.svg" alt></a>
+          </div><a class="button header-request-call-btn--mob" href="#js-main-modal-title-from-btn">Заказать звонок</a>
+        </div>
+      </div>
+      <div class="header-m js-mobile-mega-menu">
+        <div class="header-m__top">
+          <div class="header-m__back">
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21L2 11L12 1" stroke="#1F2120" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <div class="header-m__top-title">каталог техники</div>
+          <div class="header-m__close"><img src="./img/svg/i-close.svg" alt></div>
+        </div>
+        <div class="header-m__wrapper">
+          <div class="header-m__col">
+            <div class="header-m__toggle"><a class="header-m__link" href="/kategorii/polupritsepy-tsisterny/"><span>Цистерны</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/kategorii/benzovozi/">Бензовозы</a></li>
+                <li><a href="/kategorii/bitumovozyi/">Битумовозы</a></li>
+                <li><a href="/kategorii/neftevozyi-s-termoizolyacziej/">Нефтевозы с термоизоляцией</a></li>
+                <li><a href="/kategorii/neftevozyi-bez-termoizolyaczii/">Нефтевозы без термоизоляции</a></li>
+                <li><a href="/kategorii/czementovozyi/">Цементовозы</a></li>
+              </ul>
+            </div>
+            <div class="header-m__toggle"><a class="header-m__link" href="/kategorii/zernovozy/"><span>Зерновозы</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/kategorii/zernovozyi/">Зерновозы бортовые</a></li>
+                <li><a href="/kategorii/samosvalnyie-zernovozyi/">Зерновозы самосвальные</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-m__col">
+            <div class="header-m__toggle"><a class="header-m__link" href="/kategorii/selskokhozyaystvennye-polupritsepy/"><span>Сельхозтехника</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/kategorii/bunkery-peregruzchiki/">Бункеры-перегрузчики</a></li>
+                <li><a href="/kategorii/samosvalnye-traktornye-polupritsepy/">Самосвальные тракторные полуприцепы</a></li>
+              </ul>
+            </div>
+            <div class="header-m__toggle"><a class="header-m__link" href="/kategorii/magistralnye-polupritsepy/"><span>Магистральные</span><img src="./img/svg/i-chevron.svg" alt><span class="header-m__link-btn js-header-m__link-btn"></span></a>
+              <ul>
+                <li><a href="/kategorii/tentovannyye-polupritsepy/">Тентованные полуприцепы</a></li>
+                <li><a href="/kategorii/polupriczepyi-bortovyie/">Бортовые полуприцепы</a></li>
+                <li><a href="/kategorii/kontejnerovozyi/">Контейнеровозы</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-m__col"></div>
+        </div>
+      </div>
+    </header>
+    <!--бэкап до подтягивания с сервака акутальной версии-->
+    <!--header.header(class=modClass)
+    a(href="#").header__logo
+    	svg.header__logo-svg( viewBox='0 23.11 102 20.76' fill='none' xmlns='http://www.w3.org/2000/svg')
+    		path(d='M13.787 31.902H3.45v-5.357h10.337ZM102 23.13h-2.842c-.516 0-1.032.242-1.307.69l-6.2 10.232-6.2-10.232c-.275-.448-.791-.69-1.307-.69h-.653c-1.203 0-2.166.932-2.166 2.139V43.87H84.087a.704.704 0 0 0 .676-.69V28.764l5.1 8.162c.378.38.79.69 1.307.69h.962c.516 0 .929-.31 1.307-.69l5.1-8.162V43.18c0 .38.31.69.687.69h2.063a.69.69 0 0 0 .688-.69c.023-6.691.023-13.37.023-20.05Zm-23.78 0h-2.762a.704.704 0 0 0-.677.69v16.59H64.443V23.82a.69.69 0 0 0-.687-.69h-2.063a.69.69 0 0 0-.688.69V43.858H76.1c1.203 0 2.132-.931 2.132-2.138-.012-6.197-.012-12.393-.012-18.59zm-20.332 0H55.126a.704.704 0 0 0-.676.69v14.727L44.765 23.82c-.309-.517-.86-.69-1.306-.69h-.653c-1.204 0-2.132.932-2.132 2.139V43.87h2.762a.704.704 0 0 0 .676-.69V28.522l9.65 14.658c.31.517.86.69 1.306.69h.688A2.112 2.112 0 0 0 57.9 41.73c-.011-6.208-.011-12.404-.011-18.6zm-20.331 0H22.463c-1.203 0-2.132.932-2.132 2.139v18.589h15.082c1.204 0 2.132-.931 2.132-2.138.012-6.197.012-12.393.012-18.59zm-3.439 17.28H23.781V26.58h10.337ZM0 43.87h13.615c1.994 0 3.622-1.587 3.622-3.53v-3.495c0-1.931-1.616-3.529-3.622-3.529v-.138c1.994 0 3.622-1.586 3.622-3.53v-3.011c0-1.932-1.616-3.53-3.622-3.53H.688a.69.69 0 0 0-.688.69v19.36zm13.787-3.426H3.45v-5.806h10.337Z')
+    
+    .container.header__container(style='display: flex')
+    	.header__catalog.catalog
+    		.catalog__btn.btn
+    			svg.catalog__btn-svg(viewBox='0 23.11 102 20.76' fill='none' xmlns='http://www.w3.org/2000/svg')
+    				path(d='M13.787 31.902H3.45v-5.357h10.337ZM102 23.13h-2.842c-.516 0-1.032.242-1.307.69l-6.2 10.232-6.2-10.232c-.275-.448-.791-.69-1.307-.69h-.653c-1.203 0-2.166.932-2.166 2.139V43.87H84.087a.704.704 0 0 0 .676-.69V28.764l5.1 8.162c.378.38.79.69 1.307.69h.962c.516 0 .929-.31 1.307-.69l5.1-8.162V43.18c0 .38.31.69.687.69h2.063a.69.69 0 0 0 .688-.69c.023-6.691.023-13.37.023-20.05Zm-23.78 0h-2.762a.704.704 0 0 0-.677.69v16.59H64.443V23.82a.69.69 0 0 0-.687-.69h-2.063a.69.69 0 0 0-.688.69V43.858H76.1c1.203 0 2.132-.931 2.132-2.138-.012-6.197-.012-12.393-.012-18.59zm-20.332 0H55.126a.704.704 0 0 0-.676.69v14.727L44.765 23.82c-.309-.517-.86-.69-1.306-.69h-.653c-1.204 0-2.132.932-2.132 2.139V43.87h2.762a.704.704 0 0 0 .676-.69V28.522l9.65 14.658c.31.517.86.69 1.306.69h.688A2.112 2.112 0 0 0 57.9 41.73c-.011-6.208-.011-12.404-.011-18.6zm-20.331 0H22.463c-1.203 0-2.132.932-2.132 2.139v18.589h15.082c1.204 0 2.132-.931 2.132-2.138.012-6.197.012-12.393.012-18.59zm-3.439 17.28H23.781V26.58h10.337ZM0 43.87h13.615c1.994 0 3.622-1.587 3.622-3.53v-3.495c0-1.931-1.616-3.529-3.622-3.529v-.138c1.994 0 3.622-1.586 3.622-3.53v-3.011c0-1.932-1.616-3.53-3.622-3.53H.688a.69.69 0 0 0-.688.69v19.36zm13.787-3.426H3.45v-5.806h10.337Z')
+    			span.catalog__btn-text Каталог
+    			include ../mega-menu/mega-menu.pug
+    
+    	nav.header__nav.nav
+    		span.nav__item О заводе
+    			.mega-menu
+    				.mega-menu__close
+    					img(src='./img/svg/i-close.svg', alt="")
+    				.container.mega-menu__container
+    					.mega-menu__wrapper
+    						.mega-menu__item
+    							span о заводе
+    						.mega-menu__item
+    							ul
+    								li
+    									a(href='#') Новости
+    								li
+    									a(href='#') Партнёры
+    								li
+    									a(href='#') Отзывы и награды
+    						.mega-menu__item
+    							ul
+    								li
+    									a(href='#') Философия производства
+    								li
+    									a(href='#') Система менеджмента качества
+    								li
+    									a(href='#') Сертификат ИСО
+    						.mega-menu__item
+    							ul
+    								li
+    									a(href='#') Политика конфиденциальности
+    								li
+    									a(href='#') Кодекс этики
+    								li
+    									a(href='#') Контакты
+    
+    		a(href="#").nav__item Вакансии
+    		a(href="#").nav__item Сервис и гарантии
+    		a(href="#").nav__item Акции и лизинг
+    		a(href="#").nav__item Блог
+    		a(href="#").nav__item Представительства
+    
+    	.header__lang.lang
+    		button(type='button').lang__btn.btn
+    			svg.lang__btn-svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    				path(d='M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C12.2483 4 12.5204 4.10164 12.8672 4.43164C13.214 4.76164 13.5905 5.31488 13.9141 6.04297C14.1604 6.59722 14.3619 7.27368 14.5352 8H9.46484C9.63808 7.27368 9.8396 6.59722 10.0859 6.04297C10.4095 5.31488 10.7861 4.76164 11.1328 4.43164C11.4796 4.10164 11.7517 4 12 4ZM8.45117 4.83398C8.38604 4.96489 8.31884 5.09315 8.25781 5.23047C7.8961 6.04433 7.61534 6.98621 7.4043 8H5.07227C5.85871 6.63718 7.03488 5.53436 8.45117 4.83398ZM15.5488 4.83398C16.9651 5.53436 18.1413 6.63718 18.9277 8H16.5957C16.3847 6.98621 16.1039 6.04433 15.7422 5.23047C15.6812 5.09315 15.614 4.96489 15.5488 4.83398ZM4.26172 10H7.09766C7.03627 10.6469 7 11.3136 7 12C7 12.6864 7.03627 13.3531 7.09766 14H4.26172C4.09755 13.3598 4 12.6926 4 12C4 11.3074 4.09755 10.6402 4.26172 10ZM9.11719 10H14.8828C14.9524 10.6426 15 11.3066 15 12C15 12.6934 14.9524 13.3574 14.8828 14H9.11719C9.04758 13.3574 9 12.6934 9 12C9 11.3066 9.04758 10.6426 9.11719 10ZM16.9023 10H19.7383C19.9024 10.6402 20 11.3074 20 12C20 12.6926 19.9024 13.3598 19.7383 14H16.9023C16.9637 13.3531 17 12.6864 17 12C17 11.3136 16.9637 10.6469 16.9023 10ZM5.07227 16H7.4043C7.61534 17.0138 7.8961 17.9557 8.25781 18.7695C8.31884 18.9068 8.38604 19.0351 8.45117 19.166C7.03488 18.4656 5.85871 17.3628 5.07227 16ZM9.46484 16H14.5352C14.3619 16.7263 14.1604 17.4028 13.9141 17.957C13.5905 18.6851 13.2139 19.2384 12.8672 19.5684C12.5204 19.8984 12.2483 20 12 20C11.7517 20 11.4796 19.8984 11.1328 19.5684C10.786 19.2384 10.4095 18.6851 10.0859 17.957C9.8396 17.4028 9.63808 16.7263 9.46484 16ZM16.5957 16H18.9277C18.1413 17.3628 16.9651 18.4656 15.5488 19.166C15.614 19.0351 15.6812 18.9068 15.7422 18.7695C16.1039 17.9557 16.3847 17.0138 16.5957 16Z')
+    			span.lang__btn-text Eng
+    
+    .header__contact.contact
+    	a(href='tel:88005500161').contact__link.contact__link-tel
+    		span 8 800 550-01-61
+    		svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    			path(d='M20.023 15.488C19.393 15.473 18.6 15.436 18.099 15.348C17.557 15.252 16.905 15.066 16.446 14.923C16.086 14.811 15.694 14.91 15.427 15.176L13.21 17.38C11.678 16.573 10.451 15.633 9.412 14.588C8.367 13.549 7.427 12.322 6.62 10.79L8.824 8.572C9.09 8.305 9.189 7.913 9.077 7.553C8.935 7.095 8.748 6.443 8.653 5.901C8.564 5.4 8.528 4.607 8.512 3.977C8.499 3.432 8.055 3 7.51 3H4C3.562 3 3 3.328 3 4C3 8.539 4.84 12.874 7.966 16.034C11.126 19.16 15.461 21 20 21C20.672 21 21 20.438 21 20V16.49C21 15.945 20.568 15.501 20.023 15.488Z')
+    	a(href='mailto:mail.com').contact__link.contact__link-mail
+    		svg.contact__link-svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    			path(d='M4 4C2.895 4 2 4.895 2 6V18C2 19.105 2.895 20 4 20H20C21.105 20 22 19.105 22 18V6C22 4.895 21.105 4 20 4H4ZM4 6H20V7.00195L12 12L4 7.00195V6ZM4 9.00195L12 14L20 9.00195V18H4V9.00195Z')
+    .header__burger
+    	svg(width='19' height='18' viewBox='0 0 19 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+    		rect(width='19' height='2')
+    		rect(y='16' width='19' height='2')
+    		rect(y='8' width='12' height='2')
+    
+    .header-m.min.js-mobile-menu
+    	.header-m__top
+    		.header-m__group
+    			.header-m__lang
+    				button(type='button')
+    					svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    						path(d='M12 2C6.489 2 2 6.489 2 12C2 17.511 6.489 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C12.2483 4 12.5204 4.10164 12.8672 4.43164C13.214 4.76164 13.5905 5.31488 13.9141 6.04297C14.1604 6.59722 14.3619 7.27368 14.5352 8H9.46484C9.63808 7.27368 9.8396 6.59722 10.0859 6.04297C10.4095 5.31488 10.7861 4.76164 11.1328 4.43164C11.4796 4.10164 11.7517 4 12 4ZM8.45117 4.83398C8.38604 4.96489 8.31884 5.09315 8.25781 5.23047C7.8961 6.04433 7.61534 6.98621 7.4043 8H5.07227C5.85871 6.63718 7.03488 5.53436 8.45117 4.83398ZM15.5488 4.83398C16.9651 5.53436 18.1413 6.63718 18.9277 8H16.5957C16.3847 6.98621 16.1039 6.04433 15.7422 5.23047C15.6812 5.09315 15.614 4.96489 15.5488 4.83398ZM4.26172 10H7.09766C7.03627 10.6469 7 11.3136 7 12C7 12.6864 7.03627 13.3531 7.09766 14H4.26172C4.09755 13.3598 4 12.6926 4 12C4 11.3074 4.09755 10.6402 4.26172 10ZM9.11719 10H14.8828C14.9524 10.6426 15 11.3066 15 12C15 12.6934 14.9524 13.3574 14.8828 14H9.11719C9.04758 13.3574 9 12.6934 9 12C9 11.3066 9.04758 10.6426 9.11719 10ZM16.9023 10H19.7383C19.9024 10.6402 20 11.3074 20 12C20 12.6926 19.9024 13.3598 19.7383 14H16.9023C16.9637 13.3531 17 12.6864 17 12C17 11.3136 16.9637 10.6469 16.9023 10ZM5.07227 16H7.4043C7.61534 17.0138 7.8961 17.9557 8.25781 18.7695C8.31884 18.9068 8.38604 19.0351 8.45117 19.166C7.03488 18.4656 5.85871 17.3628 5.07227 16ZM9.46484 16H14.5352C14.3619 16.7263 14.1604 17.4028 13.9141 17.957C13.5905 18.6851 13.2139 19.2384 12.8672 19.5684C12.5204 19.8984 12.2483 20 12 20C11.7517 20 11.4796 19.8984 11.1328 19.5684C10.786 19.2384 10.4095 18.6851 10.0859 17.957C9.8396 17.4028 9.63808 16.7263 9.46484 16ZM16.5957 16H18.9277C18.1413 17.3628 16.9651 18.4656 15.5488 19.166C15.614 19.0351 15.6812 18.9068 15.7422 18.7695C16.1039 17.9557 16.3847 17.0138 16.5957 16Z')
+    					span Eng
+    			a.header-m__mail(href='mailto:mail.com')
+    				svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    					path(d='M4 4C2.895 4 2 4.895 2 6V18C2 19.105 2.895 20 4 20H20C21.105 20 22 19.105 22 18V6C22 4.895 21.105 4 20 4H4ZM4 6H20V7.00195L12 12L4 7.00195V6ZM4 9.00195L12 14L20 9.00195V18H4V9.00195Z')
+    		.header-m__close
+    			img(src='./img/svg/i-close.svg', alt="")
+    	.header-m__wrapper
+    		.header-m__col
+    			.header-m__link.min.js-mega-menu-link
+    				span Техника
+    				img(src='./img/svg/i-chevron.svg', alt="")
+    			.header-m__toggle
+    				.header-m__link
+    					span о заводе
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Новости
+    					li
+    						a(href='#') Партнёры
+    					li
+    						a(href='#') Отзывы и награды
+    					li
+    						a(href='#') Философия производства
+    					li
+    						a(href='#') Система менеджмента качества
+    					li
+    						a(href='#') Сертификат ИСО
+    					li
+    						a(href='#') Политика конфиденциальности
+    					li
+    						a(href='#') Кодекс этики
+    					li
+    						a(href='#') Контакты
+    		.header-m__col
+    			.header-m__toggle
+    				.header-m__link
+    					span Акции и лизинг
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Спецпредложение для клиентов BONUM
+    					li
+    						a(href='#') Акция на технику BONUM
+    					li
+    						a(href='#') Акция на технику BONUM AGRO
+    					li
+    						a(href='#') Акция на сельхозтехнику BONUM
+    					li
+    						a(href='#') Акция на полуприцепы и сельхозтехнику BONUM
+    					li
+    						a(href='#') Спецпредложение для клиентов из Татарстана
+    		.header-m__col
+    			.header-m__toggle
+    				.header-m__link
+    					span Сервис и гарантии
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Гарантийное обслуживание
+    					li
+    						a(href='#') Запчасти
+    			a.header-m__link(href='#')
+    				span Блог
+    				img(src='./img/svg/i-chevron.svg', alt="")
+    			a.header-m__link(href='#')
+    				span Вакансии
+    				img(src='./img/svg/i-chevron.svg', alt="")
+    			a.header-m__link(href='#')
+    				span представительства
+    				img(src='./img/svg/i-chevron.svg', alt="")
+    
+    
+    
+    .header-m.min.js-mobile-mega-menu
+    	.header-m__top
+    		.header-m__back
+    			svg(width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+    				path(d='M12 21L2 11L12 1' stroke='#1F2120' stroke-width='1.5')
+    		.header-m__top-title каталог техники
+    		.header-m__close
+    			img(src='./img/svg/i-close.svg', alt="")
+    	.header-m__wrapper
+    		.header-m__col
+    			.header-m__toggle
+    				.header-m__link
+    					span Полуприцепы-цистерны
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Бензовозы Битумовозы
+    					li
+    						a(href='#') Нефтевозы с термоизоляцией
+    					li
+    						a(href='#') Нефтевозы без термоизоляции
+    					li
+    						a(href='#') Цементовозы
+    			.header-m__toggle
+    				.header-m__link
+    					span Зерновозы
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Зерновозы бортовые
+    					li
+    						a(href='#') Зерновозы самосвальные
+    		.header-m__col
+    			.header-m__toggle
+    				.header-m__link
+    					span Сельскохозяйственные полуприцепы
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Бункеры-перегрузчики
+    					li
+    						a(href='#') Самосвальные тракторные полуприцепы
+    			.header-m__toggle
+    				.header-m__link
+    					span Магистральные полуприцепы
+    					img(src='./img/svg/i-chevron.svg', alt="")
+    					.header-m__link-btn.min.js-header-m__link-btn
+    				ul
+    					li
+    						a(href='#') Тентованные полуприцепы
+    					li
+    						a(href='#') Бортовые открытые полуприцепы
+    					li
+    						a(href='#') Контейнеровозы
+    		.header-m__col
+    -->
+    <div class="breakpoints">
+      <div class="breakpoints__container container-new">
+        <ul class="breakpoints__list">
+          <li class="breakpoints__item"><a class="breakpoints__text" href="#">Главная</a></li>
+          <li class="breakpoints__item"><a class="breakpoints__text" href="#">Сервис и гарантии</a></li>
+          <li class="breakpoints__item"><span class="breakpoints__text">Обработка листового металла</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="philosophy-page">
+      <section class="hero-philosophy-page hero-sheet-matal">
+        <div class="hero-philosophy-page__row">
+          <div class="hero-philosophy-page__body">
+            <div class="hero-philosophy-page__body-inner">
+              <div class="title">обработка листового металла полного цикла</div>
+              <div class="hero-philosophy-page__image hero-philosophy-page__image-mob"><img src="img/sheet-metal/intro.png" alt="alt"></div>
+              <div class="h1"><span>Высокая точность, скорость и&nbsp;экономия</span></div>
+              <p>Комплексное решение для сложных металлоконструкций</p>
+            </div>
+          </div>
+          <div class="hero-philosophy-page__image-wrapper hero-philosophy-page__image-desk">
+            <div class="hero-philosophy-page__image"><img src="img/sheet-metal/intro.png" alt="alt"></div>
+          </div>
+        </div>
+      </section>
+      <section class="losses-philosophy-page losses-sheet-matal">
+        <div class="container">
+          <div class="h1">ЛАЗЕРНАЯ РЕЗКА</div>
+          <p>Скорость, чистота, толщина</p>
+          <div class="losses-philosophy-page__items">
+            <div class="losses-philosophy-page__row">
+              <div class="losses-philosophy-page__item">
+                <div class="losses-philosophy-page__column">
+                  <div class="losses-philosophy-page__top"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+</svg>
+                    <div class="losses-philosophy-page__subtitle">Мощные лазеры (15–30 кВт)</div>
+                  </div>
+                  <div class="losses-philosophy-page__text"> Обеспечивают высокую скорость обработки, даже при работе с крупными партиями.</div>
+                </div>
+              </div>
+              <div class="losses-philosophy-page__item">
+                <div class="losses-philosophy-page__column">
+                  <div class="losses-philosophy-page__top"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+</svg>
+                    <div class="losses-philosophy-page__subtitle">Чистый рез и точная геометрия кромки</div>
+                  </div>
+                  <div class="losses-philosophy-page__text">Идеально подходящие условия для последующей гибки.</div>
+                </div>
+              </div>
+              <div class="losses-philosophy-page__item">
+                <div class="losses-philosophy-page__column">
+                  <div class="losses-philosophy-page__top"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+</svg>
+                    <div class="losses-philosophy-page__subtitle">Работаем с листами толщиной до 50 мм</div>
+                  </div>
+                  <div class="losses-philosophy-page__text">Без потери качества и скорости.</div>
+                </div>
+              </div>
+              <div class="losses-philosophy-page__item">
+                <div class="losses-philosophy-page__column">
+                  <div class="losses-philosophy-page__top"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+</svg>
+                    <div class="losses-philosophy-page__subtitle">Рабочая зона 8x2 м</div>
+                  </div>
+                  <div class="losses-philosophy-page__text">Сменные столы позволяют обрабатывать крупные детали с высокой точностью благодаря современному ЧПУ-управлению.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="full-img"><img src="img/sheet-metal/full_1.jpg" alt="alt"></div>
+        </div>
+      </section>
+      <section class="losses-philosophy-page bending-sheet-matal">
+        <div class="container">
+          <div class="h1">Прецизионная гибка: точность и повторяемость</div>
+          <div class="bending-sheet-matal__items">
+            <div class="bending-sheet-matal__row">
+              <div class="bending-sheet-matal__item">
+                <div class="bending-sheet-matal__text"><b>Изготовление сложногнутых деталей</b> любой конфигурации.</div>
+              </div>
+              <div class="bending-sheet-matal__item">
+                <div class="bending-sheet-matal__text"><b>ЧПУ-управление</b> гарантирует точность углов и полную повторяемость в серийном производстве.</div>
+              </div>
+              <div class="bending-sheet-matal__item">
+                <div class="bending-sheet-matal__text"><b>Гибка длинномерных деталей</b> — включая элементы до 6 метров в тандемном режиме.</div>
+              </div>
+            </div>
+          </div>
+          <div class="full-img"><img src="img/sheet-metal/full_2.jpg" alt="alt"></div>
+        </div>
+      </section>
+      <section class="indicators-philosophy-page avantages-sheet-metal">
+        <div class="container">
+          <div class="h1">Преимущества комплексного подхода</div>
+          <p>Резка + гибка в одном месте</p>
+          <div class="indicators-philosophy-page__row">
+            <div class="indicators-philosophy-page__img"><img src="img/sheet-metal/advantages_1.jpg" alt="alt"></div>
+            <div class="indicators-philosophy-page__body">
+              <ul class="list-marker">
+                <li><b>Идеальная стыковка</b> — все этапы выполняются на одном производстве с единой цифровой моделью. Исключены ошибки при передаче между подрядчиками.</li>
+                <li><b>Экономия времени</b> — устранены логистические операции между цехами.</li>
+                <li>
+                  <b>Снижение затрат:</b><br>- Нет расходов на транспортировку заготовок.
+<br>- Сокращено количество сварочных работ за счет цельной конструкции.
+<br>- Повышена прочность и эстетика изделий.
+                </li>
+                <li><b>Полный контроль качества</b> — от резки до сборки.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="indicators-philosophy-page__row">
+            <div class="indicators-philosophy-page__body">
+              <h1>РЕШЕНИЕ СЛОЖНЫХ И&nbsp;НЕСТАНДАРТНЫХ ЗАДАЧ</h1>
+              <ul class="list-marker">
+                <li><b>Работаем с крупногабаритными деталями</b> (более 4 метров) и сложными проектами.</li>
+                <li><b>Технологическая поддержка</b> — консультации на этапе проектирования, согласование чертежей с нашим технологом.</li>
+                <li><b>Изготовление по индивидуальным чертежам</b> — мы реализуем любые уникальные задачи.</li>
+              </ul>
+            </div>
+            <div class="indicators-philosophy-page__img"><img src="img/sheet-metal/advantages_2.jpg" alt="alt"></div>
+          </div>
+        </div>
+      </section>
+      <section class="company acordion-sheet-metal">
+        <div class="container">
+          <div class="h1">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</div>
+          <p>Для максимальной комплексности предлагаем:</p>
+        </div>
+        <div class="company__accordion js-accordion">
+          <div class="company__toggle js-toggle open">
+            <div class="container company__toggle-inner">
+              <div class="company__name">
+                <div class="company__icon"><img src="./img/sheet-metal/spoiler_icon.svg" alt=""></div><span>Резку на гильотине</span>
+              </div>
+              <div class="company__dots"><img src="./img/svg/i-dots.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="company__content js-content" style="display: block">
+            <div class="container">
+              <div class="company__wrapper">
+                <div class="company__col">
+                  <div class="h1 h1--uppercase">Резку на гильотине</div>
+                  <div class="media__block d-none-desktop"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+                <div class="company__col">
+                  <div class="media__block d-none-mobile"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company__toggle js-toggle">
+            <div class="container company__toggle-inner">
+              <div class="company__name">
+                <div class="company__icon"><img src="./img/sheet-metal/spoiler_icon.svg" alt=""></div><span>Трубную резку на ленточно-пильном станке</span>
+              </div>
+              <div class="company__dots"><img src="./img/svg/i-dots.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="company__content js-content">
+            <div class="container">
+              <div class="company__wrapper">
+                <div class="company__col">
+                  <div class="h1 h1--uppercase">Трубную резку на ленточно-пильном станке</div>
+                  <div class="media__block d-none-desktop"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+                <div class="company__col">
+                  <div class="media__block d-none-mobile"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company__toggle js-toggle">
+            <div class="container company__toggle-inner">
+              <div class="company__name">
+                <div class="company__icon"><img src="./img/sheet-metal/spoiler_icon.svg" alt=""></div><span>Сварочные работы</span>
+              </div>
+              <div class="company__dots"><img src="./img/svg/i-dots.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="company__content js-content">
+            <div class="container">
+              <div class="company__wrapper">
+                <div class="company__col"> 
+                  <div class="h1 h1--uppercase">Сварочные работы</div>
+                  <div class="media__block d-none-desktop"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+                <div class="company__col">
+                  <div class="media__block d-none-mobile"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="company__toggle js-toggle">
+            <div class="container company__toggle-inner">
+              <div class="company__name">
+                <div class="company__icon"><img src="./img/sheet-metal/spoiler_icon.svg" alt=""></div><span>Вальцовку</span>
+              </div>
+              <div class="company__dots"><img src="./img/svg/i-dots.svg" alt=""></div>
+            </div>
+          </div>
+          <div class="company__content js-content">
+            <div class="container">
+              <div class="company__wrapper">
+                <div class="company__col">
+                  <div class="h1 h1--uppercase">Вальцовку</div>
+                  <div class="media__block d-none-desktop"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+                <div class="company__col">
+                  <div class="media__block d-none-mobile"><img class="company__preview" src="./img/sheet-metal/spoiler_img.jpg" srcset="./img/sheet-metal/spoiler_img.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-news-single contacts-sheet-metal">
+        <div class="container">
+          <div class="content-news-single__container">
+            <div class="content-news-single__banner">
+              <p>Свяжитесь с нами</p>
+              <p>тел.: <a href="tel:+79281827011">+79281827011</a></p>
+              <p>e-mail: <a href="mailto:order@bonum-trust.ru">order@bonum-trust.ru</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="d-none-desktop">
+        <div class="container footer__top-mobile">
+          <div class="footer__logo">
+            <svg viewBox="0 23.11 102 20.76" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.787 31.902H3.45v-5.357h10.337ZM102 23.13h-2.842c-.516 0-1.032.242-1.307.69l-6.2 10.232-6.2-10.232c-.275-.448-.791-.69-1.307-.69h-.653c-1.203 0-2.166.932-2.166 2.139V43.87H84.087a.704.704 0 0 0 .676-.69V28.764l5.1 8.162c.378.38.79.69 1.307.69h.962c.516 0 .929-.31 1.307-.69l5.1-8.162V43.18c0 .38.31.69.687.69h2.063a.69.69 0 0 0 .688-.69c.023-6.691.023-13.37.023-20.05Zm-23.78 0h-2.762a.704.704 0 0 0-.677.69v16.59H64.443V23.82a.69.69 0 0 0-.687-.69h-2.063a.69.69 0 0 0-.688.69V43.858H76.1c1.203 0 2.132-.931 2.132-2.138-.012-6.197-.012-12.393-.012-18.59zm-20.332 0H55.126a.704.704 0 0 0-.676.69v14.727L44.765 23.82c-.309-.517-.86-.69-1.306-.69h-.653c-1.204 0-2.132.932-2.132 2.139V43.87h2.762a.704.704 0 0 0 .676-.69V28.522l9.65 14.658c.31.517.86.69 1.306.69h.688A2.112 2.112 0 0 0 57.9 41.73c-.011-6.208-.011-12.404-.011-18.6zm-20.331 0H22.463c-1.203 0-2.132.932-2.132 2.139v18.589h15.082c1.204 0 2.132-.931 2.132-2.138.012-6.197.012-12.393.012-18.59zm-3.439 17.28H23.781V26.58h10.337ZM0 43.87h13.615c1.994 0 3.622-1.587 3.622-3.53v-3.495c0-1.931-1.616-3.529-3.622-3.529v-.138c1.994 0 3.622-1.586 3.622-3.53v-3.011c0-1.932-1.616-3.53-3.622-3.53H.688a.69.69 0 0 0-.688.69v19.36zm13.787-3.426H3.45v-5.806h10.337Z" fill="white"></path>
+            </svg>
+          </div>
+          <div class="footer__lang-switcher"><img src="./img/svg/i-lang.svg" alt=""><a href="#">Eng</a><a href="#" style="display: none">Rus</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__col footer__col--contacts">
+            <div class="footer__logo d-none-mobile">
+              <svg viewBox="0 23.11 102 20.76" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.787 31.902H3.45v-5.357h10.337ZM102 23.13h-2.842c-.516 0-1.032.242-1.307.69l-6.2 10.232-6.2-10.232c-.275-.448-.791-.69-1.307-.69h-.653c-1.203 0-2.166.932-2.166 2.139V43.87H84.087a.704.704 0 0 0 .676-.69V28.764l5.1 8.162c.378.38.79.69 1.307.69h.962c.516 0 .929-.31 1.307-.69l5.1-8.162V43.18c0 .38.31.69.687.69h2.063a.69.69 0 0 0 .688-.69c.023-6.691.023-13.37.023-20.05Zm-23.78 0h-2.762a.704.704 0 0 0-.677.69v16.59H64.443V23.82a.69.69 0 0 0-.687-.69h-2.063a.69.69 0 0 0-.688.69V43.858H76.1c1.203 0 2.132-.931 2.132-2.138-.012-6.197-.012-12.393-.012-18.59zm-20.332 0H55.126a.704.704 0 0 0-.676.69v14.727L44.765 23.82c-.309-.517-.86-.69-1.306-.69h-.653c-1.204 0-2.132.932-2.132 2.139V43.87h2.762a.704.704 0 0 0 .676-.69V28.522l9.65 14.658c.31.517.86.69 1.306.69h.688A2.112 2.112 0 0 0 57.9 41.73c-.011-6.208-.011-12.404-.011-18.6zm-20.331 0H22.463c-1.203 0-2.132.932-2.132 2.139v18.589h15.082c1.204 0 2.132-.931 2.132-2.138.012-6.197.012-12.393.012-18.59zm-3.439 17.28H23.781V26.58h10.337ZM0 43.87h13.615c1.994 0 3.622-1.587 3.622-3.53v-3.495c0-1.931-1.616-3.529-3.622-3.529v-.138c1.994 0 3.622-1.586 3.622-3.53v-3.011c0-1.932-1.616-3.53-3.622-3.53H.688a.69.69 0 0 0-.688.69v19.36zm13.787-3.426H3.45v-5.806h10.337Z"></path>
+              </svg>
+            </div>
+            <div class="footer__contacts">
+              <p>контакты:</p>
+              <div class="footer__contacts-group"><a class="footer__contacts-bold" href="tel:88005500161">8 800 550-01-61</a><a href="mailto:info@bonum-trailer.ru">info@bonum-trailer.ru</a></div>
+            </div>
+            <div class="footer__contacts">
+              <p>адрес:</p>
+              <div class="footer__contacts-group">
+                <address>Россия, г. Ростов-на-Дону <br> ул. Пескова, д. 1</address>
+              </div>
+            </div>
+            <div class="footer__socials">
+              <p class="d-none-desktop">соцсети:</p>
+              <div class="footer__socials-group"><a class="footer__socials-item footer__socials-item--yt" href="#" target="_blank"><img src="./img/svg/i-socials-yt.svg" alt=""></a><a class="footer__socials-item" href="#" target="_blank"><img src="./img/svg/i-socials-tg.svg" alt=""></a><a class="footer__socials-item" href="#" target="_blank"><img src="./img/svg/i-socials-ok.svg" alt=""></a><a class="footer__socials-item" href="#" target="_blank"><img src="./img/svg/i-socials-vk.svg" alt=""></a></div>
+            </div>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__menu">
+              <li class="footer__menu-item-bold"><span>Техника</span></li>
+              <li><a href="#">Бензовозы</a></li>
+              <li><a href="#">Битумовозы</a></li>
+              <li><a href="#">Нефтевозы с термоизоляцией</a></li>
+              <li><a href="#">Нефтевозы без термоизоляции</a></li>
+              <li><a href="#">Цементовозы</a></li>
+              <li><a href="#">Зерновозы бортовые</a></li>
+              <li><a href="#">Зерновозы самосвальные</a></li>
+              <li><a href="#">Сельскохозяйственная техника</a></li>
+              <li><a href="#">Полуприцепы тентованные</a></li>
+              <li><a href="#">Полуприцепы бортовые</a></li>
+              <li><a href="#">Контейнеровозы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__menu">
+              <li class="footer__menu-item-bold"><span>о заводе</span></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Партнёры</a></li>
+              <li><a href="#">Отзывы и награды</a></li>
+              <li><a href="#">Философия производства</a></li>
+              <li><a href="#">Система менеджмента качества</a></li>
+              <li><a href="#">Сертификат ИСО</a></li>
+              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="#">Кодекс этики</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__menu">
+              <li class="footer__menu-item-bold"><a href="#">Вакансии</a></li>
+              <li class="footer__menu-item-bold"><a href="#">Сервис и гарантии</a></li>
+              <li><a href="#">Гарантийное обслуживание</a></li>
+              <li><a href="#">Запчасти</a></li>
+              <li class="footer__menu-item-bold"><a href="#">Акции и лизинг</a></li>
+              <li class="footer__menu-item-bold"><a href="#">Блог</a></li>
+              <li class="footer__menu-item-bold"><a href="#">Представительства</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__copyrights">
+            <p>© 2021-2022 BONUM - Машиностроительный завод</p>
+            <div class="footer__lang-switcher d-none-mobile"><img src="./img/svg/i-lang.svg" alt=""><a href="#">Eng</a><a href="#" style="display: none">Rus</a></div>
+          </div>
+          <div class="footer__info">
+            <p>
+              Пожалуйста, ознакомьтесь с политикой конфиденциальности ООО «БОНУМ». Оставляя Ваши данные на любой странице сайта, Вы автоматически соглашаетесь с политикой конфиденциальности ООО «БОНУМ» (посмотреть pdf). Обращаем Ваше внимание,
+               что в целях улучшения качества обслуживания Ваш разговор с представителем компании может быть записан.
+            </p>
+            <p>
+              Вся представленная на сайте информация, касающаяся технических характеристик, наличия, стоимости товаров, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями
+               Статьи 437 Гражданского кодекса РФ.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--block scripts
+    script(src="https://cdn.min.jsdelivr.net/npm/swiper@9/swiper-bundle.min.min.js")
+    script(src="https://cdn.min.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.min.js")
+    -->
+    <!-- перенесено в main.min.js
+    script(src="/js/libs/fancybox5.umd.min.js")
+    script(src="js/swiper-bundle.min.min.js")
+    -->
+    <script async src="https://api-maps.yandex.ru/2.1/?apikey=836eadca-bd0f-4ad6-acb9-f8521d8866e1&amp;load=package.full&amp;lang=ru-RU&amp;onload=getYaMap" type="text/javascript"></script>
+    <script src="js/main.min.js"></script>
+    <script src="https://www.bonum-trailer.ru/local/templates/.default/js/additional.min.js"></script>
+  </body>
+</html>

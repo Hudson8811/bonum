@@ -1,0 +1,228 @@
+extends ../layouts/default.pug
+include ../helpers/mixins.pug
+
+block variables
+	- const title = "page";
+
+block content
+	include ../../blocks/modules/header/header
+
+
+	.breakpoints
+		.breakpoints__container.container-new
+			ul.breakpoints__list
+				li.breakpoints__item
+					a(href='#').breakpoints__text Главная
+				li.breakpoints__item
+					a(href='#').breakpoints__text Сервис и гарантии
+				li.breakpoints__item
+					span.breakpoints__text Обработка листового металла
+
+
+
+	.philosophy-page
+		section.hero-philosophy-page.hero-sheet-matal
+			.hero-philosophy-page__row
+				.hero-philosophy-page__body
+					.hero-philosophy-page__body-inner
+						.title обработка листового металла полного цикла
+						.hero-philosophy-page__image.hero-philosophy-page__image-mob
+							img(src="img/sheet-metal/intro.png" alt="alt")
+						.h1
+							span Высокая точность, скорость и&nbsp;экономия
+						p Комплексное решение для сложных металлоконструкций
+				.hero-philosophy-page__image-wrapper.hero-philosophy-page__image-desk
+					.hero-philosophy-page__image
+						img(src="img/sheet-metal/intro.png" alt="alt")
+
+		section.losses-philosophy-page.losses-sheet-matal
+			.container
+				.h1 ЛАЗЕРНАЯ РЕЗКА
+				p Скорость, чистота, толщина
+				.losses-philosophy-page__items
+					.losses-philosophy-page__row
+						.losses-philosophy-page__item
+							.losses-philosophy-page__column
+								.losses-philosophy-page__top
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+									<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+									</svg>
+
+									.losses-philosophy-page__subtitle Мощные лазеры (15–30 кВт)
+								.losses-philosophy-page__text  Обеспечивают высокую скорость обработки, даже при работе с крупными партиями.
+
+						.losses-philosophy-page__item
+							.losses-philosophy-page__column
+								.losses-philosophy-page__top
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+									<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+									</svg>
+									.losses-philosophy-page__subtitle Чистый рез и точная геометрия кромки
+								.losses-philosophy-page__text Идеально подходящие условия для последующей гибки.
+
+						.losses-philosophy-page__item
+							.losses-philosophy-page__column
+								.losses-philosophy-page__top
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+									<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+									</svg>
+									.losses-philosophy-page__subtitle Работаем с листами толщиной до 50 мм
+								.losses-philosophy-page__text Без потери качества и скорости.
+
+						.losses-philosophy-page__item
+							.losses-philosophy-page__column
+								.losses-philosophy-page__top
+									<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="20" cy="20" r="20" fill="#EC3E3E"/>
+									<path d="M17.55 26L11.85 20.3L13.275 18.875L17.55 23.15L26.725 13.975L28.15 15.4L17.55 26Z" fill="white"/>
+									</svg>
+									.losses-philosophy-page__subtitle Рабочая зона 8x2 м
+								.losses-philosophy-page__text Сменные столы позволяют обрабатывать крупные детали с высокой точностью благодаря современному ЧПУ-управлению.
+
+				.full-img
+					img(src="img/sheet-metal/full_1.jpg" alt="alt")
+
+		section.losses-philosophy-page.bending-sheet-matal
+			.container
+				.h1 Прецизионная гибка: точность и повторяемость
+				.bending-sheet-matal__items
+					.bending-sheet-matal__row
+						.bending-sheet-matal__item
+							.bending-sheet-matal__text <b>Изготовление сложногнутых деталей</b> любой конфигурации.
+
+						.bending-sheet-matal__item
+							.bending-sheet-matal__text <b>ЧПУ-управление</b> гарантирует точность углов и полную повторяемость в серийном производстве.
+
+						.bending-sheet-matal__item
+							.bending-sheet-matal__text <b>Гибка длинномерных деталей</b> — включая элементы до 6 метров в тандемном режиме.
+
+				.full-img
+					img(src="img/sheet-metal/full_2.jpg" alt="alt")
+
+		section.indicators-philosophy-page.avantages-sheet-metal
+			.container
+				.h1 Преимущества комплексного подхода
+				p Резка + гибка в одном месте
+				.indicators-philosophy-page__row
+					.indicators-philosophy-page__img
+						img(src="img/sheet-metal/advantages_1.jpg" alt="alt")
+					.indicators-philosophy-page__body
+						ul.list-marker
+							li <b>Идеальная стыковка</b> — все этапы выполняются на одном производстве с единой цифровой моделью. Исключены ошибки при передаче между подрядчиками.
+							li <b>Экономия времени</b> — устранены логистические операции между цехами.
+							li <b>Снижение затрат:</b>
+								<br>- Нет расходов на транспортировку заготовок.
+								<br>- Сокращено количество сварочных работ за счет цельной конструкции.
+								<br>- Повышена прочность и эстетика изделий.
+							li <b>Полный контроль качества</b> — от резки до сборки.
+
+				.indicators-philosophy-page__row
+					.indicators-philosophy-page__body
+						h1 РЕШЕНИЕ СЛОЖНЫХ И&nbsp;НЕСТАНДАРТНЫХ ЗАДАЧ
+						ul.list-marker
+							li <b>Работаем с крупногабаритными деталями</b> (более 4 метров) и сложными проектами.
+							li <b>Технологическая поддержка</b> — консультации на этапе проектирования, согласование чертежей с нашим технологом.
+							li <b>Изготовление по индивидуальным чертежам</b> — мы реализуем любые уникальные задачи.
+					.indicators-philosophy-page__img
+						img(src="img/sheet-metal/advantages_2.jpg" alt="alt")
+
+		section.company.acordion-sheet-metal
+			.container
+				.h1 ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+				p Для максимальной комплексности предлагаем:
+			.company__accordion.js-accordion
+				.company__toggle.js-toggle.open
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/sheet-metal/spoiler_icon.svg' alt="")
+							span Резку на гильотине
+						.company__dots
+							img(src='./img/svg/i-dots.svg' alt="")
+				.company__content.js-content(style='display: block')
+					.container
+						.company__wrapper
+							.company__col
+								.h1.h1--uppercase Резку на гильотине
+								.media__block.d-none-desktop
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+							.company__col
+								.media__block.d-none-mobile
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/sheet-metal/spoiler_icon.svg' alt="")
+							span Трубную резку на ленточно-пильном станке
+						.company__dots
+							img(src='./img/svg/i-dots.svg' alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col
+								.h1.h1--uppercase Трубную резку на ленточно-пильном станке
+								.media__block.d-none-desktop
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+							.company__col
+								.media__block.d-none-mobile
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/sheet-metal/spoiler_icon.svg' alt="")
+							span Сварочные работы
+						.company__dots
+							img(src='./img/svg/i-dots.svg' alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col 
+								.h1.h1--uppercase Сварочные работы
+								.media__block.d-none-desktop
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+							.company__col
+								.media__block.d-none-mobile
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+
+				.company__toggle.js-toggle
+					.container.company__toggle-inner
+						.company__name
+							.company__icon
+								img(src='./img/sheet-metal/spoiler_icon.svg' alt="")
+							span Вальцовку
+						.company__dots
+							img(src='./img/svg/i-dots.svg' alt="")
+				.company__content.js-content
+					.container
+						.company__wrapper
+							.company__col
+								.h1.h1--uppercase Вальцовку
+								.media__block.d-none-desktop
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+							.company__col
+								.media__block.d-none-mobile
+									img.company__preview(src='./img/sheet-metal/spoiler_img.jpg' srcset='./img/sheet-metal/spoiler_img.jpg' alt='')
+
+		section.content-news-single.contacts-sheet-metal
+			.container
+				.content-news-single__container
+					.content-news-single__banner
+						p Свяжитесь с нами
+						p тел.: <a href="tel:+79281827011">+79281827011</a>
+						p e-mail: <a href="mailto:order@bonum-trust.ru">order@bonum-trust.ru</a>
+
+
+	include ../../blocks/modules/footer/footer
+
+
+
+	//block scripts
+		script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js")

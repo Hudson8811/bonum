@@ -1,0 +1,172 @@
+.hero-philosophy-page.hero-sheet-matal {
+	background-color: #fff;
+
+	.hero-philosophy-page__body {
+		padding-right: 30px;
+
+		@media (max-width: 768px) {
+			padding: 0px 16px 40px;
+		}
+
+	}
+
+	.hero-philosophy-page__body-inner {
+		max-width: 650px;
+	}
+
+	.hero-philosophy-page__body-inner .title {
+		max-width: 420px;
+	}
+}
+
+
+.indicators-philosophy-page.avantages-sheet-metal {
+	margin-top: 67px;
+
+	@media (max-width: 768px) {
+		margin-top: 40px;
+	}
+
+	.container>p {
+		margin-top: 64px;
+
+		@media (max-width: 768px) {
+			margin-top: 40px;
+		}
+	}
+
+	.indicators-philosophy-page__row h1 {
+		margin-bottom: 48px;
+	}
+}
+
+.contacts-sheet-metal.content-news-single {
+	margin: 0;
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	@media (max-width: 768px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.content-news-single__container {
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.content-news-single__banner {
+		margin: 0;
+	}
+
+	.content-news-single__banner>p:first-child {
+		padding-bottom: 24px;
+	}
+
+	.content-news-single__banner>p>a:hover {
+		opacity: 1;
+		transition: opacity 0.3s linear;
+	}
+}
+
+.acordion-sheet-metal.company {
+	margin-top: 83px;
+	padding-top: 47px;
+
+	@media (max-width: 768px) {
+		margin-top: 40px;
+	}
+
+	.container>p {
+		margin-top: 64px;
+
+		@media (max-width: 768px) {
+			margin-top: 40px;
+		}
+	}
+
+	.media__block {
+
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		@include max(sm) {
+			height: 0;
+			padding-top: 68%;
+			margin-top: 15px;
+		}
+
+
+		.company__preview {
+			@include adaptive-image;
+		}
+	}
+}
+
+.losses-philosophy-page.losses-sheet-matal {
+	margin-top: 0;
+
+	@media (max-width: 1200px) {
+		margin-top: 0;
+	}
+}
+
+
+.losses-philosophy-page.bending-sheet-matal {
+	margin-top: 0;
+	padding-top: 0;
+	overflow: hidden;
+
+	@media (max-width: 1200px) {
+		margin-top: 0;
+	}
+
+	.bending-sheet-matal__items {
+		margin-top: 67px;
+
+		@media (max-width: 992px) {
+			margin-top: 40px;
+		}
+
+	}
+
+	.bending-sheet-matal__row {
+		display: flex;
+		align-items: stretch;
+		gap: 30px;
+
+		@media (max-width: 992px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+
+	.bending-sheet-matal__item {
+		flex: 0 1 33%;
+		background-color: #fff;
+		padding: 39px 48px;
+
+		@media (max-width: 992px) {
+			flex-basis: auto;
+			width: 100%;
+		}
+
+		@media (max-width: 768px) {
+			padding: 32px;
+		}
+	}
+
+	.bending-sheet-matal__text {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 150%;
+		color: #1F2120;
+
+		@media (max-width: 768px) {
+			font-size: 16px;
+		}
+	}
+}

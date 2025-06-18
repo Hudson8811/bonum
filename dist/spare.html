@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Spare</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!--link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css")-->
-    <!--link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')-->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/styles/additional.css">
-    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/components/sotbit/regions.choose/template_with_links/style.min.css?16952982375675">
+    <!--link(rel="stylesheet" href="https://cdn.min.jsdelivr.net/npm/swiper@9/swiper-bundle.min.min.css")-->
+    <!--link(rel='stylesheet' href='https://cdn.min.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.min.css')-->
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/styles/additional.min.css">
+    <link rel="stylesheet" href="https://www.bonum-trailer.ru/local/templates/.default/components/sotbit/regions.choose/template_with_links/style.min.min.css?16952982375675">
   </head>
   <body>
     <header class="header"><a class="header__logo" href="/">
@@ -365,7 +365,7 @@
     		rect(y='16' width='19' height='2')
     		rect(y='8' width='12' height='2')
     
-    .header-m.js-mobile-menu
+    .header-m.min.js-mobile-menu
     	.header-m__top
     		.header-m__group
     			.header-m__lang
@@ -380,14 +380,14 @@
     			img(src='./img/svg/i-close.svg', alt="")
     	.header-m__wrapper
     		.header-m__col
-    			.header-m__link.js-mega-menu-link
+    			.header-m__link.min.js-mega-menu-link
     				span Техника
     				img(src='./img/svg/i-chevron.svg', alt="")
     			.header-m__toggle
     				.header-m__link
     					span о заводе
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Новости
@@ -412,7 +412,7 @@
     				.header-m__link
     					span Акции и лизинг
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Спецпредложение для клиентов BONUM
@@ -431,7 +431,7 @@
     				.header-m__link
     					span Сервис и гарантии
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Гарантийное обслуживание
@@ -449,7 +449,7 @@
     
     
     
-    .header-m.js-mobile-mega-menu
+    .header-m.min.js-mobile-mega-menu
     	.header-m__top
     		.header-m__back
     			svg(width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -463,7 +463,7 @@
     				.header-m__link
     					span Полуприцепы-цистерны
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Бензовозы Битумовозы
@@ -477,7 +477,7 @@
     				.header-m__link
     					span Зерновозы
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Зерновозы бортовые
@@ -488,7 +488,7 @@
     				.header-m__link
     					span Сельскохозяйственные полуприцепы
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Бункеры-перегрузчики
@@ -498,7 +498,7 @@
     				.header-m__link
     					span Магистральные полуприцепы
     					img(src='./img/svg/i-chevron.svg', alt="")
-    					.header-m__link-btn.js-header-m__link-btn
+    					.header-m__link-btn.min.js-header-m__link-btn
     				ul
     					li
     						a(href='#') Тентованные полуприцепы
@@ -754,12 +754,12 @@
       </div>
     </footer>
     <!--block scripts-->
-    <!-- перенесено в main.js
-    script(src="/js/libs/fancybox5.umd.js")
-    script(src="js/swiper-bundle.min.js")
+    <!-- перенесено в main.min.js
+    script(src="/js/libs/fancybox5.umd.min.js")
+    script(src="js/swiper-bundle.min.min.js")
     -->
     <script async src="https://api-maps.yandex.ru/2.1/?apikey=836eadca-bd0f-4ad6-acb9-f8521d8866e1&amp;load=package.full&amp;lang=ru-RU&amp;onload=getYaMap" type="text/javascript"></script>
-    <script src="js/main.js"></script>
-    <script src="https://www.bonum-trailer.ru/local/templates/.default/js/additional.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="https://www.bonum-trailer.ru/local/templates/.default/js/additional.min.js"></script>
   </body>
 </html>
