@@ -127,7 +127,7 @@
 }
 
 .select2-search.select2-search--dropdown {
-	display: none;
+	//display: none;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
@@ -495,7 +495,8 @@
 
 .centers-tabs {
 	margin-top: 52px;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		margin-top: 32px;
 	}
 }
