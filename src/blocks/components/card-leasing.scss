@@ -17,6 +17,35 @@
 		background-color: $yellow;
 	}
 
+	&--secured {
+		position: relative;
+		background-color: #1F2120;
+		color: $white;
+	}
+
+	&__paperclip {
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		border-radius: 100%;
+		border: 1px solid $white;
+
+		img {
+			width: 16px;
+			height: 16px;
+			object-fit: contain;
+		}
+	}
+
+	&--secured &__paperclip {
+		display: flex;
+	}
+
 	&__subtitle {
 		font-size: 13px;
 		font-weight: 600;
@@ -101,8 +130,12 @@
 		}
 	}
 
+	&--secured &__bottom {
+		border-top: 1px solid $white;
+	}
+
 	&__offer {
-		& > span {
+		&>span {
 			display: inline-block;
 			font-size: 15px;
 			line-height: 135%;

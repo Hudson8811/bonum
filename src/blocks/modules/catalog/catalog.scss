@@ -1,7 +1,7 @@
 .catalog-block {
 	$parent: &;
 
-	padding: 107px 0 152px;
+	padding: 107px 0 120px;
 
 	@include max(lg) {
 		padding: 100px 0 98px;
@@ -188,7 +188,7 @@
 		position: relative;
 		overflow: hidden;
 
-		& > a {
+		&>a {
 			position: absolute;
 			inset: 0;
 			z-index: 2;

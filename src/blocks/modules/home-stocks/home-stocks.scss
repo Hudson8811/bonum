@@ -1,0 +1,79 @@
+.home-stocks {
+	padding-bottom: 64px;
+
+	&__title {
+		width: 100%;
+		text-align: center;
+	}
+
+	&__items {
+		margin: -1.5px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 35px;
+
+	}
+
+	&__item {
+		flex: 0 1 33.33%;
+		padding: 1.5px;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 1200px) {
+			flex: 1 1 50%;
+		}
+
+		@media (max-width: 768px) {
+			flex: 1 1 100%;
+		}
+
+		figure {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+		}
+
+		.card-leasing {
+			padding: 80px 30px 30px;
+			flex-grow: 1;
+		}
+
+		.card-leasing__image {
+			margin-bottom: 63px;
+		}
+
+		.card-leasing__from {
+			font-size: 20px;
+		}
+
+		.card-leasing__offer>span {
+			font-size: 15px;
+			font-weight: 300;
+		}
+	}
+
+	&__bottom {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 46px;
+	}
+
+	&__subtitle {
+		font-weight: 400;
+		font-size: 19.45px;
+		line-height: 156.25%;
+		text-transform: uppercase;
+	}
+
+	&__button {
+		flex: 0 0 33.33%;
+	}
+}
