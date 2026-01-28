@@ -1,1 +1,125 @@
-.s-subscribe {}
+.s-subscribe {
+    background-color: #1F2120;
+    padding-top: 31px;
+    color: $white;
+    overflow: hidden;
+
+    &__container {
+        position: relative;
+        padding-bottom: 37px;
+    }
+
+    &__content {
+        max-width: 550px;
+        position: relative;
+        z-index: 3;
+
+        @include max(lg) {
+            max-width: 430px;
+        }
+
+        @include max(1000) {
+            padding-bottom: 40vw;
+            max-width: 550px;
+        }
+
+        @include max(sm) {
+            max-width: 330px;
+            width: 100%;
+
+        }
+    }
+
+    &__title {
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 170%;
+        letter-spacing: 0.03em;
+        color: #AAAAAA;
+        margin-top: 37px;
+
+        @include max(sm) {
+            font-size: 16px;
+            margin-top: 16px;
+
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    &__social {
+        width: 42px;
+        height: 42px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__img {
+        position: absolute;
+
+        img {
+            width: 100%;
+
+            @include max(1000) {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    &__hand {
+        right: 27%;
+        bottom: 0;
+        width: 41.868%;
+
+        @include max(xl2) {
+            right: 24%;
+            width: 39%;
+        }
+
+        @include max(1200) {
+            right: 5%;
+        }
+
+        @include max(1000) {
+            right: 52%;
+            width: auto;
+            height: 39vw;
+        }
+    }
+
+    &__laptop {
+        right: -7%;
+        bottom: 6px;
+        width: 49.696%;
+
+        @include max(xl2) {
+            width: 47%;
+        }
+
+        @include max(1200) {
+            right: -28%;
+        }
+
+        @include max(1000) {
+            right: 0;
+            width: auto;
+            height: 39vw;
+        }
+    }
+}

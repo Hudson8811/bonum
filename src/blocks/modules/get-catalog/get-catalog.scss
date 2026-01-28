@@ -11,6 +11,29 @@
 		gap: 60px;
 		margin-left: -24.5px;
 		margin-right: -24.5px;
+
+		@include max(xl2) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@include max(lg) {
+			gap: 32px 12px;
+		}
+
+		@include max(1200) {
+			display: grid;
+			grid-template-columns: minmax(auto, 450px) minmax(0, 1fr);
+		}
+
+		@include max(sm) {
+			grid-template-columns: minmax(auto, 320px) minmax(0, 1fr);
+		}
+
+		@include max(xs) {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 16px;
+		}
 	}
 
 	&__title {
@@ -35,6 +58,19 @@
 		flex-direction: column;
 		gap: 10px;
 		flex: 0 0 290px;
+
+		@include max(lg) {
+			flex: 0 0 240px;
+		}
+
+		@include max(1200) {
+			grid-column: 1 / 3;
+		}
+
+		@include max(xs) {
+			grid-column: 1 / 2;
+
+		}
 	}
 
 	&__note {

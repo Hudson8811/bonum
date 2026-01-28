@@ -16,6 +16,10 @@
 		flex-wrap: wrap;
 		margin-top: 35px;
 
+		@include max(xs) {
+			margin-top: 24px;
+		}
+
 	}
 
 	&__item {
@@ -42,6 +46,10 @@
 		.card-leasing {
 			padding: 80px 30px 30px;
 			flex-grow: 1;
+
+			@include max(xs) {
+				padding: 60px 12px 24px;
+			}
 		}
 
 		.card-leasing__image {
@@ -64,6 +72,20 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 46px;
+
+		@include max(1000) {
+			gap: 24px;
+		}
+
+		@include max(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		@include max(xs) {
+			gap: 16px;
+		}
+
 	}
 
 	&__subtitle {
@@ -71,9 +93,26 @@
 		font-size: 19.45px;
 		line-height: 156.25%;
 		text-transform: uppercase;
+
+		@include max(1200) {
+			font-size: 16px;
+		}
+
+		@include max(xs) {
+			font-size: 12px;
+		}
 	}
 
 	&__button {
 		flex: 0 0 33.33%;
+
+		@include max(1200) {
+			flex: 0 0 50%;
+		}
+
+		@include max(sm) {
+			flex: 0 0 auto;
+			width: 100%;
+		}
 	}
 }
