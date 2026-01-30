@@ -1,38 +1,48 @@
 .blogs {
 	margin-bottom: 130px;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		margin-bottom: 56px;
 	}
+
 	section {
 		margin-top: 130px;
-		@media (max-width: 1200px){
+
+		@media (max-width: 1200px) {
 			margin-top: 70px;
 		}
+
 		&:first-child {
 			margin: 0;
 		}
 	}
+
 	.container {
-		max-width: 1346px!important;
+		max-width: 1346px !important;
 	}
+
 	.resp-desk {
-		@media (max-width: 768px){
+		@media (max-width: 768px) {
 			display: none;
 		}
 	}
+
 	.resp-mob {
 		display: none;
-		@media (max-width: 768px){
+
+		@media (max-width: 768px) {
 			display: block;
 		}
 	}
+
 	.h1 {
-		@media (max-width: 391px){
+		@media (max-width: 391px) {
 			font-size: 20px;
 		}
 	}
+
 	.title {
-		@media (max-width: 391px){
+		@media (max-width: 391px) {
 			font-size: 13px;
 		}
 	}
@@ -41,7 +51,8 @@
 	.breakpoints {
 		&__container {
 			padding: 25px 0;
-			@media (max-width: 768px){
+
+			@media (max-width: 768px) {
 				padding: 16px 0;
 			}
 		}
@@ -56,31 +67,40 @@
 	position: relative;
 	z-index: 2;
 	margin-top: 90px;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		margin-top: 24px;
 	}
+
 	&__row {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		//align-items: center;
+		align-items: flex-start;
 		border-bottom: 1px solid#E3E3E3;
-		@media (max-width: 1100px){
+
+		@media (max-width: 1100px) {
 			display: block;
 		}
 	}
+
 	&__buttons {
 		margin: 0 -40px;
-		@media (max-width: 1100px){
+
+		@media (max-width: 1100px) {
 			margin: 40px -16px 0;
 		}
+
 		.swiper-slide {
 			padding: 0 40px;
 			width: auto;
-			@media (max-width: 1100px){
+
+			@media (max-width: 1100px) {
 				padding: 0 16px;
 			}
 		}
 	}
+
 	&__button {
 		a {
 			display: inline-block;
@@ -91,12 +111,14 @@
 			text-align: right;
 			color: #1F2120;
 			position: relative;
-			@media (max-width: 768px){
+
+			@media (max-width: 768px) {
 				padding: 24px 0;
 				font-size: 13px;
 			}
-			&::before{
-				content:'';
+
+			&::before {
+				content: '';
 				position: absolute;
 				left: 0;
 				bottom: 0;
@@ -105,8 +127,9 @@
 				background-color: #1F2120;
 				transition: all 0.3s ease 0s;
 			}
-			&.js-active  {
-				&::before{
+
+			&.js-active {
+				&::before {
 					width: 100%;
 				}
 			}
@@ -117,53 +140,66 @@
 .blogs {
 	&__items {
 		margin: -40px -15px 0;
+
 		&-h {
 			margin-top: 72px;
 			margin-bottom: 80px;
-			@media (max-width: 768px){
+
+			@media (max-width: 768px) {
 				margin-top: 40px;
 				margin-bottom: 0px;
 			}
+
 			.blogs__item {
-				&:first-child{
+				&:first-child {
 					padding: 0 15px 0;
 				}
 			}
 		}
 	}
+
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 48px;
-		@media (max-width: 768px){
+
+		@media (max-width: 768px) {
 			margin-top: 32px;
 		}
 	}
+
 	&__item {
 		flex: 0 1 50%;
 		padding: 40px 15px 0;
-		@media (max-width: 500px){
+
+		@media (max-width: 500px) {
 			flex: 1 1 100%;
 		}
+
 		.card-item__img {
 			padding-top: 48%;
-			@media (max-width: 768px){
+
+			@media (max-width: 768px) {
 				padding-top: 74%;
 			}
 		}
+
 		.card-item__text {
-			@media (max-width: 768px){
+			@media (max-width: 768px) {
 				margin-top: 10px;
 			}
 		}
 	}
+
 	&__button {
 		a {
 			padding-bottom: 55px;
 			display: block;
-			@media (max-width: 768px){
+
+			@media (max-width: 768px) {
 				padding-bottom: 15px;
 			}
+
 			&.js-active {
 				border-bottom: 2px solid #1F2120;
 			}

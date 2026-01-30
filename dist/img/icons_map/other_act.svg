@@ -1,8 +1,1 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="48" height="48" rx="24" fill="#8F9190"/>
-<defs>
-<clipPath id="clip0_1553_1682">
-<rect width="35" height="23" fill="#8F9190" transform="translate(7 13)"/>
-</clipPath>
-</defs>
-</svg>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="24" fill="#8F9190"/><defs><clipPath id="clip0_1553_1682"><path fill="#8F9190" transform="translate(7 13)" d="M0 0h35v23H0z"/></clipPath></defs></svg>
